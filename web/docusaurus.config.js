@@ -131,7 +131,7 @@ const config = {
       //   searchPagePath: 'search',
       // },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ["csharp", "java", "dart"],
       },

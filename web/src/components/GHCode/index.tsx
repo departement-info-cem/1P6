@@ -12,6 +12,7 @@ export default function GHCode({
   showLineNumber = false,
   branch = "main",
   ignore,
+  trimLineStart = false,
 }: {
   language?: string;
   user?: string;
@@ -22,6 +23,7 @@ export default function GHCode({
   endLine?: number;
   branch?: string;
   ignore?: string;
+  trimLineStart?: boolean;
 }) {
   const [code, setCode] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -63,6 +65,18 @@ export default function GHCode({
   lines = lines.filter(
     (line: Line) => line.lineNumber >= startLine && line.lineNumber <= endLine
   );
+
+  if( trimLineStart ) {
+    let firstline = true;
+    let nbWhitespacesToTrim = 0;
+    lines.forEach((line: Line) => {
+      if( firstline ) {
+        nbWhitespacesToTrim = line.code.length - line.code.trimStart().length;
+        firstline = false;
+      }
+      line.code = line.code.substring(nbWhitespacesToTrim);
+    });
+  }
 
   return (
     <CodeBlock showLineNumbers={showLineNumber} language={language}>
