@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "switch_case", "switch_case\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tableau_2D", "tableau_2D\tableau_2D.csproj", "{63926E39-5BE4-410A-9DCF-0ED9D9D8248A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tableau", "tableau\tableau.csproj", "{AFA58D30-1D0A-4803-A935-90219CECA5BF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{63926E39-5BE4-410A-9DCF-0ED9D9D8248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63926E39-5BE4-410A-9DCF-0ED9D9D8248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63926E39-5BE4-410A-9DCF-0ED9D9D8248A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFA58D30-1D0A-4803-A935-90219CECA5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFA58D30-1D0A-4803-A935-90219CECA5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFA58D30-1D0A-4803-A935-90219CECA5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFA58D30-1D0A-4803-A935-90219CECA5BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
