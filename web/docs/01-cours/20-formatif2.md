@@ -15,7 +15,7 @@ Disponible ici 👇
 
 Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le fichier `formatif_2_1p6.sln`** dans Visual Studio.
 
-
+## Extraits du projet de départ
 ### 1. Boucle while
 <GHCode 
   repo="1P6" 
