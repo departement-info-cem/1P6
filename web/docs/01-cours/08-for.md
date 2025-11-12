@@ -1,5 +1,5 @@
 ---
-Description: Répétitions de code
+description: Répétitions de code
 ---
 
 
