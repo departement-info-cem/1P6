@@ -109,7 +109,7 @@ private void btnMessage_Click(object sender, EventArgs e)
 > - Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
 
 ---
-#### **Quelques évènements communes à tous les contrôles**
+#### **Quelques évènements communs à tous les contrôles**
 | Événement                           | Description                                            |
 | ------------------------------------|------------------------------------------------------- |
 | **Click**                           | Quand on clique sur le contrôle.                       |
@@ -120,20 +120,6 @@ private void btnMessage_Click(object sender, EventArgs e)
 | **GotFocus / LostFocus**            | Quand le contrôle reçoit ou perd le focus.             | 
 | **TextChanged**                     | Quand le texte change (pour les contrôles avec texte). | 
 
-```csharp
-private void button1_DoubleClick(object sender, EventArgs e)
-{
-   // Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
-    MessageBox.Show("Bonjour !");
-}
-```
-```csharp
-private void txtNom_TextChanged(object sender, EventArgs e)
-{
-   // Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
-    MessageBox.Show("Bonjour !");
-}
-```
 ---
 
 ## 🧰 **TextBox**
@@ -168,7 +154,7 @@ private void btnMessage_Click(object sender, EventArgs e)
 }
 ````
 ---
-## 1️⃣ Le controle ListBox
+## 🧰 **ListBox**
 
 
 ### 🎯 **Principales propriétés et méthodes**
@@ -269,7 +255,7 @@ private void lstFruits_SelectedIndexChanged(object sender, EventArgs e)
 
 ---
 ---
-## 1️⃣ Le controle ComboBox
+## 🧰 **ComboBox**
 
 Nous pouvons manipuler ce contrôle de la même façon qu’un ListBox, car ils partagent des propriétés et des méthodes similaires. Les opérations courantes comme l’ajout, la suppression d’éléments ou la gestion des événements de sélection se réalisent donc de manière pratiquement identique.
 
@@ -287,59 +273,12 @@ Elle correspond soit à l’élément sélectionné dans la liste, soit au texte
 ### 🎯 **Principales manipulations**
 Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
 ````csharp
-
-   
-
     // Récupérer la valeur affiché dans le ComboBox
     string valeur = cmbFruits.Text;
-
-     // Supprimer l'élément sélectionné
-    lstFruits.Items.Remove(lstFruitsFavoris.SelectedItem);
-    // Supprimer par Index
-    lstFruits.Items.RemoveAt(1);
-    // Supprimer par valeur
-    lstFruits.Items.Remove("Banane");
-
-    // Vérifier qu'un élément est bien sélectionné (évite les erreurs)
-    if (cmbFruitsts.SelectedIndex != -1)
-    {
-        // Traitement
-    }
-  
 ````
 
-### 🎯 **Gérer les événements**
-
-
-### ▶️ Quand la sélection change
-
-```csharp
-private void lstFruits_SelectedIndexChanged(object sender, EventArgs e)
-{
-    // Traitement
-}
-```
 
 
 ---
 ## 📎 Références
 
-Ah, parfait ! Pour un **titre "Exemple"**, tu peux ajouter une icône/emoji qui suggère une démonstration ou un exemple. Voici quelques suggestions :
-
-```markdown
-# 💡 Exemple
-# 📝 Exemple
-# 🔹 Exemple
-# 📌 Exemple
-# 🧪 Exemple
-```
-
-* 💡 → idée, astuce
-* 📝 → note ou exemple écrit
-* 🔹 → simple point ou mise en avant
-* 📌 → à retenir
-* 🧪 → test ou expérience
-
-💡 **Astuce** : Pour Markdown classique, les emojis Unicode fonctionnent partout sans souci.
-
-Si tu veux, je peux te créer **une petite palette de 10 icônes idéales pour tous tes titres “Exemple”**. Veux‑tu que je fasse ça ?
