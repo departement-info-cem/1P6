@@ -58,7 +58,8 @@ Dans une application **WinForms**, les **contrôles** représentent les élémen
 * **bouton radio (RadioButton)** 
 * **liste (déroulantes) (ComboBox et ListBox)**. 
 
-L’ajout de contrôles se fait facilement dans **Visual Studio** grâce à l’outil de conception visuelle : il suffit de **glisser-déposer** les éléments souhaités depuis la boîte à outils vers le formulaire.
+>💡 **Ajout du contrôle au formulaire** :
+>L’ajout de contrôles se fait facilement dans **Visual Studio** grâce à l’outil de conception visuelle : il suffit de **glisser-déposer** les éléments souhaités depuis la boîte à outils 🧰 vers le formulaire.
 
 
 ![Contrôles](_24-winform/winform-controles.png)
@@ -94,17 +95,20 @@ Chaque contrôle dispose également d’un ensemble de méthodes permettant d’
 ### 🖱️ **Les événements**
 
 Dans une interface WinForms, les **événements** représentent les actions effectuées par l’utilisateur — comme un **clic sur un bouton**, une **saisie de texte**, ou encore le **chargement d’un formulaire**. Chaque contrôle peut générer différents événements, et le programmeur définit la **réaction du programme** à ces actions en écrivant du code spécifique appelé **gestionnaire d’événement** (*event handler*).
-Par exemple, pour un bouton nommé *button1*, on peut écrire une méthode en C# comme :
 
+---
+
+#### 🧪 **Exemple**
 ```csharp
-private void button1_Click(object sender, EventArgs e)
-{
-   // Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
+private void btnMessage_Click(object sender, EventArgs e)
+{   
     MessageBox.Show("Bonjour !");
 }
 ```
+> #### 💡 **Explication**
+> - Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
 
-
+---
 #### **Quelques évènements communes à tous les contrôles**
 | Événement                           | Description                                            |
 | ------------------------------------|------------------------------------------------------- |
@@ -166,59 +170,176 @@ private void btnMessage_Click(object sender, EventArgs e)
 ---
 ## 1️⃣ Le controle ListBox
 
-Le Button est un contrôle **cliquable** qui permet à l’utilisateur de déclencher une action.
 
-### Principales propriétés et méthodes
-| Propriété       | Description                                               | Exemple                                                 |
-| --------------- | --------------------------------------------------------- | ------------------------------------------------------- |
-| `Items`         | Contient la liste des éléments                            | `lstFruits.Items.Add("Banane");`                          |
-| `SelectedIndex` | Index de l’élément sélectionné                            | `int index = lstFruits.SelectedIndex;`                   |
-| `SelectedItem`  | L’élément sélectionné                                     | `string ville = (string)listBox1.SelectedItem;`         |
-| `SelectionMode` | Mode de sélection (`One`, `MultiSimple`, `MultiExtended`) | `listBox1.SelectionMode = SelectionMode.MultiExtended;` |
-| `Sorted`        | Tri automatique des éléments                              | `listBox1.Sorted = true;`                               |
+### 🎯 **Principales propriétés et méthodes**
+| Propriété       | Description                                               | 
+| --------------- | --------------------------------------------------------- |
+| `Items`         | Contient la liste des éléments                            |
+| `SelectedIndex` | Index de l’élément sélectionné (**-1**, si aucun élément n'est sélectionné)  | 
+| `SelectedItem`  | L’élément sélectionné  (**null**, si aucun élément n'est sélectionné)   |   
 
-Chacun des éléments contient la valeur par défaut du type de données du tableau :
-| Propriété                           | Description       | Exemple |
-|--------------------------------|-----------------------------|--------------------------------|
-| Text                           | Contenu du TextBox    | <code>//Récupérer le contenu d'un TextBox<br />string nom = txtNom.Text;<br /> //Modifier le contenu<br />txtNom.Text = "Adam";</code>|
-| Visible                        | Afficher ou masuqer le contrôle | <code>//Afficher un TextBox<br />txtNom.Visible = true;<br /> //Masquer un TextBox<br />txtNom.Visible = false;</code>|
-| ReadOnly            | Empêcher la modification du texte | <code>txtNom.ReadOnly = true;</code>|
-| MaxLength              | Limite le nombre de caractères   | <code>txtNom.MaxLength = 50;</code>|
-| ...                            | ...                         | ...                             |
 
-### 1️⃣ Remplir un ListBox
-Maintenant, nous allons remplir le contrôle lstFruits par des noms de fruit.
+### 🎯 **Principales manipulations**
 
-````csharp
-private void btnRemplirListBox_Click(object sender, EventArgs e)
-{
-    // supprimer tous les éléments
+
+#### ▶️ Supprimer tous les éléments
+
+```csharp
     lstFruits.Items.Clear();
+```
+#### ▶️ Ajouter des éléments
 
-    // Ajouter des éléments
+```csharp  
     lstFruits.Items.Add("Kiwi");
     lstFruits.Items.Add("Banane");
     lstFruits.Items.Add("Pomme");
-  
-}
-````
-1. Ouvrez votre projet WinForms dans Visual Studio
-2. Ouvrez le Form1.cs [Design]
-3. Dans la Boîte à outils (Toolbox), faites glisser un TextBox sur votre formulaire
-4. Ajustez sa taille et sa position avec la souris
+```
+#### ▶️ Sélectionner un élément
 
-### Principales propriétés et méthodes
-Chacun des éléments contient la valeur par défaut du type de données du tableau :
-| Propriété                           | Description       | Exemple |
-|--------------------------------|-----------------------------|--------------------------------|
-| Text                           | Contenu du TextBox    | <code>//Récupérer le contenu d'un TextBox<br />string nom = txtNom.Text;<br /> //Modifier le contenu<br />txtNom.Text = "Adam";</code>|
-| Visible                        | Afficher ou masuqer le contrôle | <code>//Afficher un TextBox<br />txtNom.Visible = true;<br /> //Masquer un TextBox<br />txtNom.Visible = false;</code>|
-| ReadOnly            | Empêcher la modification du texte | <code>txtNom.ReadOnly = true;</code>|
-| MaxLength              | Limite le nombre de caractères   | <code>txtNom.MaxLength = 50;</code>|
-| ...                            | ...                         | ...                             |
+```csharp
+    // Sélectionner par index
+    lstFruits.SelectedIndex = 1;// Sélectionne l'élément à la position 1 (Banane)
+    // Sélectionner par valeur
+    lstFruits.SelectedItem = "Banane"; // Sélectionne l'élément qui contient Banane
+
+```
+#### ▶️ Récupérer un élément
+
+```csharp
+   // Récupérer l'index de l'élément sélectionné
+    int index = lstFruits.SelectedIndex
+
+    // Récupérer la valeur de l'élément sélectionné
+    string valeur = lstFruits.SelectedItem.ToString();
+
+```
+
+#### ▶️ Supprimer un élément
+
+```csharp
+    // Supprimer l'élément sélectionné
+    lstFruits.Items.Remove(lstFruitsFavoris.SelectedItem);
+    // Supprimer par Index
+    lstFruits.Items.RemoveAt(1);
+    // Supprimer par valeur
+    lstFruits.Items.Remove("Banane");
+
+```
+#### ▶️ Bonne pratique : Vérifier toujours la sélection
+```csharp
+     // Vérifier qu'un élément est bien sélectionné (évite les erreurs)
+    if (lstFruits.SelectedIndex != -1)
+    {
+        // Traitement
+    }
+
+```
+#### ▶️ Parcourir un ListBox
+```csharp  
+    // Parcourir la liste des fruits dans un ListBox
+    for (int i = 0; i < lstFruits.Items.Count; i++)
+    {
+        // Récupérer le fruit à la position i
+        string valeur = lstFruits.Items[i].ToString();
+
+    }
+    // Parcourir la liste des notes dans un ListBox
+    for (int i = 0; i < lstFruits.Items.Count; i++)
+    {
+        // Récupérer la note à la position i
+        double note = double.Parse(lstFruits.Items[i].ToString());
+
+    }
+
+```
+
+
+### 🎯 **Gérer les événements**
+
+
+### ▶️ Quand la sélection change
+
+```csharp
+private void lstFruits_SelectedIndexChanged(object sender, EventArgs e)
+{
+    // Traitement
+}
+```
 
 
 ---
+---
+## 1️⃣ Le controle ComboBox
 
+Nous pouvons manipuler ce contrôle de la même façon qu’un ListBox, car ils partagent des propriétés et des méthodes similaires. Les opérations courantes comme l’ajout, la suppression d’éléments ou la gestion des événements de sélection se réalisent donc de manière pratiquement identique.
+
+- Le mode d’affichage et d’interaction est différent : Le ComboBox présente l’ensemble des éléments dans une liste déroulante et n’affiche qu’un seul élément à la fois.
+- Le ComboBox peut permettre la saisie de texte, contrairement au ListBox.
+représente le texte actuellement affiché dans le contrôle.
+Elle correspond soit à l’élément sélectionné dans la liste, soit au texte saisi par l’utilisateur lorsque le ComboBox est en mode saisie
+
+### 🎯 **Principales propriétés et méthodes**
+| Propriété       | Description                                               | 
+| --------------- | --------------------------------------------------------- |
+| `Text`         | Contient le texte actuellement affiché dans le contrôle. Soit à l’élément sélectionné dans la liste, soit au texte saisi par l’utilisateur.                            |
+
+
+### 🎯 **Principales manipulations**
+Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
+````csharp
+
+   
+
+    // Récupérer la valeur affiché dans le ComboBox
+    string valeur = cmbFruits.Text;
+
+     // Supprimer l'élément sélectionné
+    lstFruits.Items.Remove(lstFruitsFavoris.SelectedItem);
+    // Supprimer par Index
+    lstFruits.Items.RemoveAt(1);
+    // Supprimer par valeur
+    lstFruits.Items.Remove("Banane");
+
+    // Vérifier qu'un élément est bien sélectionné (évite les erreurs)
+    if (cmbFruitsts.SelectedIndex != -1)
+    {
+        // Traitement
+    }
+  
+````
+
+### 🎯 **Gérer les événements**
+
+
+### ▶️ Quand la sélection change
+
+```csharp
+private void lstFruits_SelectedIndexChanged(object sender, EventArgs e)
+{
+    // Traitement
+}
+```
+
+
+---
 ## 📎 Références
 
+Ah, parfait ! Pour un **titre "Exemple"**, tu peux ajouter une icône/emoji qui suggère une démonstration ou un exemple. Voici quelques suggestions :
+
+```markdown
+# 💡 Exemple
+# 📝 Exemple
+# 🔹 Exemple
+# 📌 Exemple
+# 🧪 Exemple
+```
+
+* 💡 → idée, astuce
+* 📝 → note ou exemple écrit
+* 🔹 → simple point ou mise en avant
+* 📌 → à retenir
+* 🧪 → test ou expérience
+
+💡 **Astuce** : Pour Markdown classique, les emojis Unicode fonctionnent partout sans souci.
+
+Si tu veux, je peux te créer **une petite palette de 10 icônes idéales pour tous tes titres “Exemple”**. Veux‑tu que je fasse ça ?
