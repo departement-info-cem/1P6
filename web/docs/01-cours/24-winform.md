@@ -141,10 +141,8 @@ Le TextBox est un **champ de saisie** permettant à l’utilisateur d’entrer d
 ## 🧰 **Button**
 
 Le Button est un contrôle **cliquable** qui permet à l’utilisateur de déclencher une action.
-
-### **Associer un bouton à l'évènement click**
-Nous voulons 
-
+### 🎯 **Exemples de manipulations**
+#### ▶️ Associer un bouton à l'évènement clic
 ````csharp
 private void btnMessage_Click(object sender, EventArgs e)
 {
@@ -153,6 +151,79 @@ private void btnMessage_Click(object sender, EventArgs e)
     MessageBox.Show("Bonjour " + nom);
 }
 ````
+#### ▶️ Activer ou désactiver un bouton
+````csharp
+    // Activer un bouton de suppression
+    btnSupprimer.Enabled = true;
+     // Désactiver un bouton de suppression
+    btnMessage.Enabled = false;
+
+````
+---
+## 🧰 **RadioButton**
+
+Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour savoir s’il est sélectionné et la propriété Text pour récupérer le texte affiché.
+
+### 🎯 **Exemples de manipulations**
+#### ▶️ Vérifier si un RadioButton est sélectionné et récupérer son texte
+```csharp
+    char genre;
+    // On veut récupérer le genre du client       
+    if (rdoFemme.Checked)
+    {
+        genre= 'F';
+
+    }else if (rdoHomme.Checked)
+    {
+         genre= 'H';
+    }else
+    {
+        MessageBox.Show("Veuillez choisir le genre!");
+        return;
+    }
+```
+#### ▶️ Modifier l'état d'un RadioButton avec le code
+```csharp
+    // Cocher la case   
+    rdoFemme.Checked = true;
+    // Décocher la case
+    rdoFemme.Checked = false;  
+```
+---
+## 🧰 **CheckBox**
+
+Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour savoir s’il est sélectionné et la propriété Text pour récupérer le texte affiché.
+
+### 🎯 **Exemples de manipulations**
+#### ▶️ Vérifier si un CheckBox est sélectionné et récupérer son texte
+```csharp
+    List<string> centreInterets = new List();
+    // On veut récupérer les centres d'interêts du client       
+    if (chkSport.Checked)
+    {
+        centresInteret.Add(schkSport.Text);
+
+    }else if (chkLecture.Checked)
+    {
+         centresInteret.Add(chkLecture.Text);
+
+    }else if (vhkVoyage.Checked)
+    {
+         centresInteret.Add(chkVoyage.Text);
+    }
+```
+
+#### ▶️ Modifier l'état d'un CheckBox avec le code
+```csharp
+    // Cocher la case   
+    chkSport.Checked = true;
+    // Décocher la case
+    chkSport.Checked = false;  
+```
+>
+> ### 💡 Événement utile pour le CheckBox et le RadioButton
+> L'évènement **CheckedChanged** est déclenché quand l’état du contrôle change.
+
 ---
 ## 🧰 **ListBox**
 
@@ -162,7 +233,8 @@ private void btnMessage_Click(object sender, EventArgs e)
 | --------------- | --------------------------------------------------------- |
 | `Items`         | Contient la liste des éléments                            |
 | `SelectedIndex` | Index de l’élément sélectionné (**-1**, si aucun élément n'est sélectionné)  | 
-| `SelectedItem`  | L’élément sélectionné  (**null**, si aucun élément n'est sélectionné)   |   
+| `SelectedItem`  | L’élément sélectionné  (**null**, si aucun élément n'est sélectionné)   |  
+| `SelectedValue`  | La valeur de l’élément sélectionné  (**null**, si aucun élément n'est sélectionné)   |   
 
 
 ### 🎯 **Principales manipulations**
@@ -181,25 +253,22 @@ private void btnMessage_Click(object sender, EventArgs e)
     lstFruits.Items.Add("Pomme");
 ```
 #### ▶️ Sélectionner un élément
-
 ```csharp
     // Sélectionner par index
     lstFruits.SelectedIndex = 1;// Sélectionne l'élément à la position 1 (Banane)
     // Sélectionner par valeur
     lstFruits.SelectedItem = "Banane"; // Sélectionne l'élément qui contient Banane
-
 ```
 #### ▶️ Récupérer un élément
 
 ```csharp
    // Récupérer l'index de l'élément sélectionné
     int index = lstFruits.SelectedIndex
-
     // Récupérer la valeur de l'élément sélectionné
-    string valeur = lstFruits.SelectedItem.ToString();
+    string valeur = lstFruits.SelectedItem.ToString(); // ou lstFruits.SelectedValue
+    
 
 ```
-
 #### ▶️ Supprimer un élément
 
 ```csharp
@@ -209,7 +278,6 @@ private void btnMessage_Click(object sender, EventArgs e)
     lstFruits.Items.RemoveAt(1);
     // Supprimer par valeur
     lstFruits.Items.Remove("Banane");
-
 ```
 #### ▶️ Bonne pratique : Vérifier toujours la sélection
 ```csharp
@@ -218,7 +286,6 @@ private void btnMessage_Click(object sender, EventArgs e)
     {
         // Traitement
     }
-
 ```
 #### ▶️ Parcourir un ListBox
 ```csharp  
@@ -227,7 +294,6 @@ private void btnMessage_Click(object sender, EventArgs e)
     {
         // Récupérer le fruit à la position i
         string valeur = lstFruits.Items[i].ToString();
-
     }
     // Parcourir la liste des notes dans un ListBox
     for (int i = 0; i < lstFruits.Items.Count; i++)
@@ -236,24 +302,15 @@ private void btnMessage_Click(object sender, EventArgs e)
         double note = double.Parse(lstFruits.Items[i].ToString());
 
     }
-
 ```
-
-
 ### 🎯 **Gérer les événements**
-
-
 ### ▶️ Quand la sélection change
-
 ```csharp
 private void lstFruits_SelectedIndexChanged(object sender, EventArgs e)
 {
     // Traitement
 }
 ```
-
-
----
 ---
 ## 🧰 **ComboBox**
 
@@ -264,11 +321,10 @@ Nous pouvons manipuler ce contrôle de la même façon qu’un ListBox, car ils 
 représente le texte actuellement affiché dans le contrôle.
 Elle correspond soit à l’élément sélectionné dans la liste, soit au texte saisi par l’utilisateur lorsque le ComboBox est en mode saisie
 
-### 🎯 **Principales propriétés et méthodes**
+### 🎯 **Propriétés et méthodes spécifiques**
 | Propriété       | Description                                               | 
 | --------------- | --------------------------------------------------------- |
 | `Text`         | Contient le texte actuellement affiché dans le contrôle. Soit à l’élément sélectionné dans la liste, soit au texte saisi par l’utilisateur.                            |
-
 
 ### 🎯 **Principales manipulations**
 Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
@@ -276,6 +332,7 @@ Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
     // Récupérer la valeur affiché dans le ComboBox
     string valeur = cmbFruits.Text;
 ````
+
 
 
 
