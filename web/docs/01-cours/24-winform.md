@@ -58,6 +58,8 @@ Dans une application **WinForms**, les **contrôles** représentent les élémen
 * **bouton radio (RadioButton)** 
 * **liste (déroulantes) (ComboBox et ListBox)**. 
 
+Nous pouvons mettre plusieurs éléments graphiques dans un conteneur. Par exemple, le **GroupBox** sert à regroupe des contrôles liés logiquement (ex. RadioButtons, Labels, TextBox).
+
 >💡 **Ajout du contrôle au formulaire** :
 >L’ajout de contrôles se fait facilement dans **Visual Studio** grâce à l’outil de conception visuelle : il suffit de **glisser-déposer** les éléments souhaités depuis la boîte à outils 🧰 vers le formulaire.
 
@@ -169,11 +171,11 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
 ```csharp
     char genre;
     // On veut récupérer le genre du client       
-    if (rdoFemme.Checked)
+    if (rbFemme.Checked)
     {
         genre= 'F';
 
-    }else if (rdoHomme.Checked)
+    }else if (rbHomme.Checked)
     {
          genre= 'H';
     }else
@@ -197,20 +199,21 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
 ### 🎯 **Exemples de manipulations**
 #### ▶️ Vérifier si un CheckBox est sélectionné et récupérer son texte
 ```csharp
-    List<string> centreInterets = new List();
+    string centreInterets = "";
     // On veut récupérer les centres d'interêts du client       
     if (chkSport.Checked)
     {
-        centresInteret.Add(schkSport.Text);
+        centresInteret += chkSport.Text + ",";
 
     }else if (chkLecture.Checked)
     {
-         centresInteret.Add(chkLecture.Text);
+         centresInteret += chkLecture.Text + ",";
 
-    }else if (vhkVoyage.Checked)
+    }else if (chkVoyage.Checked)
     {
-         centresInteret.Add(chkVoyage.Text);
+         centresInteret += chkVoyage.Text + ",";
     }
+
 ```
 
 #### ▶️ Modifier l'état d'un CheckBox avec le code
@@ -330,9 +333,9 @@ Elle correspond soit à l’élément sélectionné dans la liste, soit au texte
 Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
 ````csharp
     // Récupérer la valeur affiché dans le ComboBox
-    string valeur = cmbFruits.Text;
+    string valeur = cbFruits.Text;
 ````
-
+## Note : Ajouter du contenu sur le conteneur **GroupBox** et la boite de dialogue **MessageBox**
 
 
 
