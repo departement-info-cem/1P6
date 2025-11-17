@@ -34,10 +34,10 @@ const g1120 = [
   "2025-12-01", // cours/poo
   "2025-12-03", // cours/integration-poo
   "2025-12-08", // cours/integration-tp4-1
-  "2025-12-09", // cours/integration-tp4-2
+  "2025-12-09", 
+  "2025-12-22", // cours/integration-tp4-2
   "2025-12-10", // cours/formatif3
-  "2025-12-18",
-  "2025-12-22"  // cours/examen3
+  "2025-12-18"  // cours/examen3
 ];
 
 const g1080 = [
@@ -69,8 +69,8 @@ const g1080 = [
   "2025-12-01", // cours/integration-tp4-1
   "2025-12-04", // cours/integration-tp4-2
   "2025-12-08", // cours/formatif3
-  "2025-12-15",  // cours/examen3
-  "2025-12-22"  // cours/examen3
+  "2025-12-11", // cours/examen3
+  "2025-12-18"  // cours/examen3
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
