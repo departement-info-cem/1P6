@@ -4,7 +4,7 @@ title: Interface graphique
 
 # 🧪 Labo 12.2 – Interface graphique
 
-📎 **Référence** : [WinForm](http://localhost:3000/1P6/cours/winform)
+📎 **Référence** : [Introduction à l'interface graphique (WinForm)](https://info.cegepmontpetit.ca/1P6/cours/winform)
 ---
 
 ## 🟢 Exercice 1 : Créer ma première application **WinForms** 
