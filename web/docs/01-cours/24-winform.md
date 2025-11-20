@@ -109,6 +109,7 @@ private void btnMessage_Click(object sender, EventArgs e)
 ```
 > #### 💡 **Explication**
 > - Ici, l’événement `Click` déclenche l’exécution de cette ligne de code pour afficher un message à l’écran. 
+> - La méthode **MessageBox.Show** permet d'afficher le message dans une une **boite de dialogue**.  
 
 ---
 #### **Quelques évènements communs à tous les contrôles**
@@ -335,6 +336,13 @@ Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
     // Récupérer la valeur affiché dans le ComboBox
     string valeur = cbFruits.Text;
 ````
+---
+## 📦 **Le Conteneur GroupBox**
+
+**GroupBox** est un conteneur simple utilisé pour **regrouper logiquement des contrôles**.
+Il ajoute un **encadré avec un titre**, ce qui permet de structurer visuellement une interface.
+La propriété **Text** permet de définir le titre en haut du conteneur.
+
 ---
 ## 📎 Références
 * [GUI - Contrôles](https://info.cegepmontpetit.ca/notions-csharp/documentation/gui-controles)
