@@ -335,10 +335,6 @@ Nous pouvons manipuler ce contrôle de la même facon qu'un ListBox.
     // Récupérer la valeur affiché dans le ComboBox
     string valeur = cbFruits.Text;
 ````
-## Note : Ajouter du contenu sur le conteneur **GroupBox** et la boite de dialogue **MessageBox**
-
-
-
 ---
 ## 📎 Références
-
+* [GUI - Contrôles](https://info.cegepmontpetit.ca/notions-csharp/documentation/gui-controles)
