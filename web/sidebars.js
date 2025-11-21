@@ -467,7 +467,7 @@ const sidebars = {
       id: "cours/integration-tp3-1",
       customProps: {
         avancementLabel: "TP3",
-        avancement: 0.1,
+        avancement: 0.7,
         calendrier: {
           "David": [{"1090":"2025-11-17"}, {"1100":"2025-11-17"}],
           "Éric": [{"1050":"2025-11-19"}, {"1060":"2025-11-19"}],
