@@ -205,12 +205,14 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
     if (chkSport.Checked)
     {
         centresInteret += chkSport.Text + ",";
+    }
 
-    }else if (chkLecture.Checked)
+    if (chkLecture.Checked)
     {
          centresInteret += chkLecture.Text + ",";
-
-    }else if (chkVoyage.Checked)
+    }
+    
+    if (chkVoyage.Checked)
     {
          centresInteret += chkVoyage.Text + ",";
     }

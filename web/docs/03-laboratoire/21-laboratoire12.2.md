@@ -354,9 +354,9 @@ private void lstFruits_SelectedIndexChanged_Click(object sender, EventArgs e)
 
 | Contrôle | Nom (Name)       | Texte (Description affichée)  | Description et Informations supplémentaires |
 | -------- | ---------------- | ------------- |  --------------------------  |
-| Label    | `lblNom`     | `Fruit`  | Identifie la zone de saisie du nom de client|
+| Label    | `lblNom`     | `Nom`  | Identifie la zone de saisie du nom de client|
 | TextBox  | `txtNom`     | *(vide)*      | Saisie du nom de client|
-| Label    | `lblGenre`     | `Fruit`  | Identifie la zone de choix du genre|
+| Label    | `lblGenre`     | `Genre`  | Identifie la zone de choix du genre|
 | RadioButton  | `rbHomme`     | `Homme`     | Choix du genre Homme|
 | RadioButton  | `rbFemme`     | `Femme`     | Choix du genre Femme|
 | Label    | `lblVille`     | `Ville`  | Identifie la zone de saisie/choix de la ville|
@@ -368,7 +368,7 @@ private void lstFruits_SelectedIndexChanged_Click(object sender, EventArgs e)
 | ListBox | `lstClients`     | --      | Affiche les données de chaque client |
 | Button   | `btnAjouter` | `Ajouter` | Ajoute une entrée (données d'un client) dans le ListBox|
 | Button   | `btnEffacer` | `Effacer` | Vider le ListBox|
-| Button   | `btnQuitter` | `Auitter` | Quitter l'application|
+| Button   | `btnQuitter` | `Quitter` | Quitter l'application|
 
 
 ---
