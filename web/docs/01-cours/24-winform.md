@@ -125,6 +125,40 @@ private void btnMessage_Click(object sender, EventArgs e)
 
 ---
 
+---
+
+## 🪟 **Form**
+
+Un **Form** est la fenêtre principale d’une application WinForms. C’est l’interface où l’utilisateur voit les boutons, labels, zones de texte, etc.
+Chaque application WinForms contient au moins un Form, mais peut en avoir plusieurs (fenêtre de login, fenêtre principale, fenêtre d’options…).
+
+### **Principales propriétés et méthodes**
+
+| **Propriété/Méthodes**       | **Description**                                                  |
+| ------------------- | ---------------------------------------------------------------- |
+| **StartPosition**   | La position d’ouverture : centre écran, manuel, etc.             |
+| **Icon**            | L’icône affichée dans la barre de titre.                         |
+| **Controls**        | La liste des contrôles (boutons, labels…) contenus dans le Form. |
+| **Show()**           | Affiche le Form sans bloquer le reste de l’application.        |
+| **ShowDialog()**     | Affiche le Form en mode modal (bloque jusqu’à fermeture).      |
+| **Close()**          | Ferme la fenêtre actuelle.                                     |
+| **Hide()**           | Cache temporairement la fenêtre sans la fermer.                |
+| **Refresh()**        | Redessine immédiatement le Form et ses contrôles.              |
+| **CenterToScreen()** | Centre la fenêtre sur l’écran.                                 |
+| **Dispose()**        | Libère toutes les ressources utilisées par le Form.            |
+
+### **Principaux événements d’un Form**
+
+| **Événement**   | **Description**                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Load**        | Se déclenche quand le Form est sur le point d’être affiché pour la première fois. Parfait pour initialiser des données. |
+| **Shown**       | Se produit juste après l’apparition du Form à l’écran.                                                                  |
+| **Activated**   | Quand le Form prend le focus (devient la fenêtre active).                                                               |
+| **Deactivate**  | Quand le Form perd le focus.                                                                                            |
+| **FormClosing** | Se déclenche avant la fermeture du Form (permet d’annuler la fermeture).                                                |
+| **FormClosed**  | Se produit après la fermeture du Form.                                                                                  |
+
+---
 ## 🧰 **TextBox**
 
 Le TextBox est un **champ de saisie** permettant à l’utilisateur d’entrer du **texte** (comme un nom, une adresse, un mot de passe, etc.).
@@ -257,6 +291,11 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
     lstFruits.Items.Add("Kiwi");
     lstFruits.Items.Add("Banane");
     lstFruits.Items.Add("Pomme");
+    // Nous pouvons aussi remplir un ListBox à partir d'un tableau avec la méthode AddRange
+    string[] tabVilles = {"Kiwi", "Banane", "Pomme"};
+    lstFruits.Items.AddRange(tabVilles);
+   
+            
 ```
 #### ▶️ Sélectionner un élément
 ```csharp

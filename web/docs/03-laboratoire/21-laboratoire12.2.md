@@ -413,23 +413,18 @@ private void btnAjouter_Click(object sender, EventArgs e)
 }
 ```
 ```csharp
-private void btnSupprimer_Click(object sender, EventArgs e)
+private void btnEffacer_Click(object sender, EventArgs e)
 {
-    // 1. Vérifier s'il y a un élément sélectionné dans le ListBox
-    //    Afficher un message d'erreur si aucun élément n'est sélectionné et arrêter le traitement
-    // 2. Récupérer la position de l'élément sélectionné
-    // 3. Supprimer l'élément à cette position dans le ListBox 
-      
+     // Vider le contenu du ListBox
+    
 }
 ```
 
 ```csharp
-private void lstFruits_SelectedIndexChanged_Click(object sender, EventArgs e)
-{
-    // 1. Vérifier s'il y a un élément sélectionné dans le ListBox
-    //    Afficher la position de l'élément sélectionné dans lblPosition
-    //    Afficher la valeur de l'élément sélectionné (fruit) dans lblSeelection
-      
-}
+ private void btnQuitter_Click(object sender, EventArgs e)
+ {
+    // Fermer le formulaire
+     
+ }
 ```
 ---
