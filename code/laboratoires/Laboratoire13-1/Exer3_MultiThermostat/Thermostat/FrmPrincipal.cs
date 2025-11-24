@@ -6,17 +6,17 @@ namespace MultiThermostat
 {
     public partial class FrmPrincipal : Form
     {
-        public const string APP_INFO = "(Matériel)";
+        public const string APP_INFO = "(DÉMO)";
 
         /// =================================================================================
         // TODO 01A : Déclarer une variable et Instancier un Thermostat pour la chambre à 25
-        
-
-        // TODO 01B : Déclarer une variable et Instancier un Thermostat pour la cuisine à 20
        
 
+        // TODO 01B : Déclarer une variable et Instancier un Thermostat pour la cuisine à 20
+        
+
         // TODO 01C : Déclarer une variable et Instancier un Thermostat pour le salon à 22
-      
+       
 
         // TODO 01D : Déclarer une variable supplémentaire pour référer sur le Thermostat courant (NE PAS INSTANCIER)
        
@@ -27,7 +27,7 @@ namespace MultiThermostat
             Text += APP_INFO;
 
             // TODO 02A : Fixer le Thermostat courant à celui de la chambre
-          
+            
 
             // TODO 02B : Afficher la température du Thermostat courant
             
@@ -37,9 +37,9 @@ namespace MultiThermostat
         private void radChambre_CheckedChanged(object sender, EventArgs e)
         {
             // TODO 03A : Modifier le Thermostat courant pour référer sur celui de la chambre
-            
+           
             // TODO 03B : Afficher la température du Thermostat courant
-        
+           
             // TODO 03C : Appeler la méthode ActualiserBoutonsSelonContexte
            
         }
@@ -47,19 +47,19 @@ namespace MultiThermostat
         private void radCuisine_CheckedChanged(object sender, EventArgs e)
         {
             // TODO 04A : Modifier le Thermostat courant pour référer sur celui de la cuisine
-           
+            
             // TODO 04B : Afficher la température du Thermostat courant
-           
+            
             // TODO 04C : Appeler la méthode ActualiserBoutonsSelonContexte
-           
+            
         }
         //====================================================================================
         private void radSalon_CheckedChanged(object sender, EventArgs e)
         {
             // TODO 05A : Modifier le Thermostat courant pour référer sur celui du salon
-          
-            // TODO 05B : Afficher la température du Thermostat courant
            
+            // TODO 05B : Afficher la température du Thermostat courant
+          
             // TODO 05C : Appeler la méthode ActualiserBoutonsSelonContexte
           
         }
@@ -77,7 +77,7 @@ namespace MultiThermostat
         private void btnDiminuer_Click(object sender, System.EventArgs e)
         {
             // TODO 07A : Diminuer la température du Thermostat courant
-           
+          
             // TODO 07B : Afficher la température du Thermostat courant
            
             // TODO 07C : Appeler la méthode ActualiserBoutonsSelonContexte
@@ -86,29 +86,31 @@ namespace MultiThermostat
         //====================================================================================
         private void mnuAffichageTempMin_Click(object sender, EventArgs e)
         {
-            // TODO 08A : Afficher la température minimale permise par un Thermostat
-
+            // TODO 08 : Afficher la température minimale permise par un Thermostat
+           
 
             #region NE PAS MODIFIER // Démarrer l'horloge tmrTempératureCourante
             tmrTempératureCourante.Start();
             #endregion
-
         }
         //====================================================================================
         private void mnuAffichageTempMax_Click(object sender, EventArgs e)
         {
-            // TODO 09A : Afficher la température maximale permise par un Thermostat
+            // TODO 09 : Afficher la température maximale permise par un Thermostat
+           
 
-            #region NE PAS MODIFIER // Démarrer l'horloge tmrTempératureCourante
+            #region NE PAS MODIFIER //  Démarrer l'horloge tmrTempératureCourante
             tmrTempératureCourante.Start();
             #endregion
         }
         //====================================================================================
         private void TmrTempératureCourante_Tick(object sender, EventArgs e)
         {
-            // TODO 10A : Arrêter l'horloge tmrTempérature
-           
-            // TODO 10B : Afficher la température actuelle du Thermostat courant
+            #region NE PAS MODIFIER // Arrêter l'horloge tmrTempérature
+            tmrTempératureCourante.Stop();
+            #endregion
+
+            // TODO 10 : Afficher la température actuelle du Thermostat courant
            
         }
         //====================================================================================

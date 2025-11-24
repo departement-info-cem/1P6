@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Compte.Properties
+namespace CompteBancaire.Properties
 {
 
 

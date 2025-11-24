@@ -53,9 +53,9 @@
             this.btnDiminuer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDiminuer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDiminuer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiminuer.Location = new System.Drawing.Point(229, 144);
+            this.btnDiminuer.Location = new System.Drawing.Point(229, 141);
             this.btnDiminuer.Name = "btnDiminuer";
-            this.btnDiminuer.Size = new System.Drawing.Size(24, 28);
+            this.btnDiminuer.Size = new System.Drawing.Size(25, 38);
             this.btnDiminuer.TabIndex = 1;
             this.btnDiminuer.UseVisualStyleBackColor = false;
             this.btnDiminuer.Click += new System.EventHandler(this.BtnDiminuer_Click);
@@ -68,9 +68,9 @@
             this.btnAugmenter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAugmenter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAugmenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAugmenter.Location = new System.Drawing.Point(229, 101);
+            this.btnAugmenter.Location = new System.Drawing.Point(229, 98);
             this.btnAugmenter.Name = "btnAugmenter";
-            this.btnAugmenter.Size = new System.Drawing.Size(24, 28);
+            this.btnAugmenter.Size = new System.Drawing.Size(25, 37);
             this.btnAugmenter.TabIndex = 0;
             this.btnAugmenter.UseVisualStyleBackColor = false;
             this.btnAugmenter.Click += new System.EventHandler(this.BtnAugmenter_Click);
@@ -93,7 +93,7 @@
             this.mnuAffichage});
             this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnuPrincipal.Name = "mnuPrincipal";
-            this.mnuPrincipal.Size = new System.Drawing.Size(333, 24);
+            this.mnuPrincipal.Size = new System.Drawing.Size(334, 24);
             this.mnuPrincipal.TabIndex = 3;
             this.mnuPrincipal.Text = "menuStrip1";
             // 
@@ -148,7 +148,7 @@
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackgroundImage = global::ExerciceThermostat.Properties.Resources.BackgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(333, 287);
+            this.ClientSize = new System.Drawing.Size(334, 292);
             this.Controls.Add(this.lblTemperature);
             this.Controls.Add(this.btnAugmenter);
             this.Controls.Add(this.btnDiminuer);

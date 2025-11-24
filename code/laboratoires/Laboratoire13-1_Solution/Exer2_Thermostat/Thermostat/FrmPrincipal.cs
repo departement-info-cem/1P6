@@ -57,25 +57,31 @@ namespace ExerciceThermostat
         //====================================================================================
         private void MnuAffichageTempMin_Click(object sender, EventArgs e)
         {
-            // TODO 07A : Afficher la température minimale d'un Thermostat
+            // TODO 07 : Afficher la température minimale d'un Thermostat
             lblTemperature.Text = Thermostat.TEMPÉRATURE_MINIMALE.ToString();
-            // TODO 07A : Démarrer l'horloge tmrTempérature
+
+            #region NE PAS MODIFIER // Démarrer l'horloge tmrTempérature
             tmrTempérature.Start();
+            #endregion
         }
         //====================================================================================
         private void MnuAffichageTempMax_Click(object sender, EventArgs e)
         {
-            // TODO 08A : Afficher la température maximale d'un Thermostat
+            // TODO 08 : Afficher la température maximale d'un Thermostat
             lblTemperature.Text = Thermostat.TEMPÉRATURE_MAXIMALE.ToString();
-            // TODO 08B : Démarrer l'horloge tmrTempérature
+
+            #region NE PAS MODIFIER // Démarrer l'horloge tmrTempérature
             tmrTempérature.Start();
+            #endregion
         }
         //====================================================================================
         private void TmrTempérature_Tick(object sender, EventArgs e)
         {
-            // TODO 09A : Arrêter l'horloge tmrTempérature
+            #region NE PAS MODIFIER // Arrêter l'horloge tmrTempérature
             tmrTempérature.Stop();
-            // TODO 09B : Afficher la température actuelle du Thermostat
+            #endregion
+
+            // TODO 09 : Afficher la température actuelle du Thermostat
             lblTemperature.Text = m_objThermostat.Température.ToString();
         }
         //====================================================================================

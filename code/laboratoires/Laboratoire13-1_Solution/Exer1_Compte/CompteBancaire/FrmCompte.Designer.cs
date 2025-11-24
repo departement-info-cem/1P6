@@ -1,4 +1,4 @@
-﻿namespace Compte
+﻿namespace CompteBancaire
 {
     partial class FrmCompte
     {
@@ -156,4 +156,5 @@
         private System.Windows.Forms.Label lblSoldeInfo;
     }
 }
+
 

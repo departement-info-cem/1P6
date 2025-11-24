@@ -56,7 +56,7 @@
             this.btnDiminuer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDiminuer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDiminuer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiminuer.Location = new System.Drawing.Point(238, 99);
+            this.btnDiminuer.Location = new System.Drawing.Point(238, 98);
             this.btnDiminuer.Name = "btnDiminuer";
             this.btnDiminuer.Size = new System.Drawing.Size(24, 28);
             this.btnDiminuer.TabIndex = 1;
@@ -71,7 +71,7 @@
             this.btnAugmenter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAugmenter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAugmenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAugmenter.Location = new System.Drawing.Point(238, 60);
+            this.btnAugmenter.Location = new System.Drawing.Point(238, 62);
             this.btnAugmenter.Name = "btnAugmenter";
             this.btnAugmenter.Size = new System.Drawing.Size(24, 28);
             this.btnAugmenter.TabIndex = 0;

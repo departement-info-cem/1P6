@@ -86,25 +86,31 @@ namespace MultiThermostat
         //====================================================================================
         private void mnuAffichageTempMin_Click(object sender, EventArgs e)
         {
-            // TODO 08A : Afficher la température minimale permise par un Thermostat
+            // TODO 08 : Afficher la température minimale permise par un Thermostat
             lblTemperature.Text = Thermostat.TEMPÉRATURE_MINIMALE.ToString();
-            // TODO 08B : Démarrer l'horloge tmrTempératureCourante
+
+            #region NE PAS MODIFIER // Démarrer l'horloge tmrTempératureCourante
             tmrTempératureCourante.Start();
+            #endregion
         }
         //====================================================================================
         private void mnuAffichageTempMax_Click(object sender, EventArgs e)
         {
-            // TODO 09A : Afficher la température maximale permise par un Thermostat
+            // TODO 09 : Afficher la température maximale permise par un Thermostat
             lblTemperature.Text = Thermostat.TEMPÉRATURE_MAXIMALE.ToString();
-            // TODO 09B : Démarrer l'horloge tmrTempératureCourante
+
+            #region NE PAS MODIFIER //  Démarrer l'horloge tmrTempératureCourante
             tmrTempératureCourante.Start();
+            #endregion
         }
         //====================================================================================
         private void TmrTempératureCourante_Tick(object sender, EventArgs e)
         {
-            // TODO 10A : Arrêter l'horloge tmrTempérature
+            #region NE PAS MODIFIER // Arrêter l'horloge tmrTempérature
             tmrTempératureCourante.Stop();
-            // TODO 10B : Afficher la température actuelle du Thermostat courant
+            #endregion
+
+            // TODO 10 : Afficher la température actuelle du Thermostat courant
             lblTemperature.Text = m_objThermostatCourant.Température.ToString();
         }
         //====================================================================================

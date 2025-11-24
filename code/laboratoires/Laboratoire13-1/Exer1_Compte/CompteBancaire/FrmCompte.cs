@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librairie1P6;
 
-namespace Compte
+
+namespace CompteBancaire
 {
     public partial class FrmCompte : Form
     {
@@ -19,11 +21,11 @@ namespace Compte
         {
             InitializeComponent();
 
-
-            // TODO 02 : Instancier la variable compte pour créer un compte à votre nom            
-            
-            // TODO 03 : Utiliser la méthode AfficherInfosCompte pour afficher les informations du compte
            
+            // TODO 02 : Instancier la variable compte pour créer un compte à votre nom            
+
+            // TODO 03 : Utiliser la méthode AfficherInfosCompte pour afficher les informations du compte
+
 
         }
 
@@ -31,23 +33,24 @@ namespace Compte
         {
             // TODO 05 : Compléter le code pour permettre de déposer un montant et actualiser l'affichage des informations du compte
             // Utiliser la méthode Deposer() de l'objet
-            
+
         }
 
         private void btnRetrait_Click(object sender, EventArgs e)
         {
             // TODO 06 : Compléter le code pour permettre de retirer un montant et actualiser l'affichage des informations du compte
             // Utiliser la méthode Retirer() de l'objet
-           
+
         }
         private void AfficherInfosCompte()
         {
             // TODO 04 : Compléter le code pour afficher les informations du compte    
-           
+
 
         }
 
-       
+
     }
 }
+
 

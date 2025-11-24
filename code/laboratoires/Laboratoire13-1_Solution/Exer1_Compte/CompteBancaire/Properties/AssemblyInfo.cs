@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Compte")]
+[assembly: AssemblyTitle("CompteBancaire")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CÉGEP Édouard-Montpetit")]
-[assembly: AssemblyProduct("Compte")]
+[assembly: AssemblyProduct("CompteBancaire")]
 [assembly: AssemblyCopyright("Copyright © CÉGEP Édouard-Montpetit 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("186bc6ac-b664-45a5-ba73-a7f2c14d923e")]
+[assembly: Guid("88762344-ce9b-4dc8-b858-fdb90968cf60")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

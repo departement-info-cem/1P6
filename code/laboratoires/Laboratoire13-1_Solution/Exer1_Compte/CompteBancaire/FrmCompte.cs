@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librairie1P6;
 
-namespace Compte
+namespace CompteBancaire
 {
     public partial class FrmCompte : Form
     {
@@ -68,7 +69,10 @@ namespace Compte
 
         }
 
-       
+
     }
 }
+
+
+
 

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Librairie1P6;
 namespace DemoPouleMagique
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+
             // Créer une nouvelle instance de PouletMagique
             PouletMagique poule = new PouletMagique();
 
@@ -43,3 +43,5 @@ namespace DemoPouleMagique
         }
     }
 }
+
+
