@@ -1,0 +1,11 @@
+C:\EspaceLabo\Compte\Compte\bin\Debug\Compte.exe.config
+C:\EspaceLabo\Compte\Compte\bin\Debug\Compte.exe
+C:\EspaceLabo\Compte\Compte\bin\Debug\Compte.pdb
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.csproj.AssemblyReference.cache
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.FrmCompte.resources
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.Properties.Resources.resources
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.csproj.GenerateResource.cache
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.csproj.CoreCompileInputs.cache
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.exe
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.pdb
+C:\EspaceLabo\Compte\Compte\obj\Debug\Compte.exe.config

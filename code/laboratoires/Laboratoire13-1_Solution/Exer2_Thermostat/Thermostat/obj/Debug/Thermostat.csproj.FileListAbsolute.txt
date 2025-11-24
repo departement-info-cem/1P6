@@ -1,0 +1,18 @@
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipalChauffage.resources
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.csproj.GenerateResource.Cache
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\Thermostat.exe
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\Thermostat.pdb
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\bin\Debug\Thermostat.exe
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\bin\Debug\Thermostat.pdb
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\Thermostat.FrmPrincipalChauffage.resources
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+N:\A08-106\7-Classes A07\Exemples\Code source exemples\Exem2_Thermostat Web\Thermostat\obj\Debug\Thermostat.csproj.GenerateResource.Cache
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.pdb

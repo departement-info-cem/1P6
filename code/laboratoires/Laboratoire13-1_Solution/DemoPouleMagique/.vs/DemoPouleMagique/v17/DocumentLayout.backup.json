@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\EspaceLabo\\DemoPouleMagique\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{036550C9-3267-42A4-979A-0C76222D1F6C}|DemoPouleMagique\\DemoPouleMagique.csproj|c:\\espacelabo\\demopoulemagique\\demopoulemagique\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{036550C9-3267-42A4-979A-0C76222D1F6C}|DemoPouleMagique\\DemoPouleMagique.csproj|solutionrelative:demopoulemagique\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{036550C9-3267-42A4-979A-0C76222D1F6C}|DemoPouleMagique\\DemoPouleMagique.csproj|c:\\espacelabo\\demopoulemagique\\demopoulemagique\\poulemagique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{036550C9-3267-42A4-979A-0C76222D1F6C}|DemoPouleMagique\\DemoPouleMagique.csproj|solutionrelative:demopoulemagique\\poulemagique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PouleMagique.cs",
+              "DocumentMoniker": "C:\\EspaceLabo\\DemoPouleMagique\\DemoPouleMagique\\PouleMagique.cs",
+              "RelativeDocumentMoniker": "DemoPouleMagique\\PouleMagique.cs",
+              "ToolTip": "C:\\EspaceLabo\\DemoPouleMagique\\DemoPouleMagique\\PouleMagique.cs",
+              "RelativeToolTip": "DemoPouleMagique\\PouleMagique.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T06:07:18.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\EspaceLabo\\DemoPouleMagique\\DemoPouleMagique\\Program.cs",
+              "RelativeDocumentMoniker": "DemoPouleMagique\\Program.cs",
+              "ToolTip": "C:\\EspaceLabo\\DemoPouleMagique\\DemoPouleMagique\\Program.cs",
+              "RelativeToolTip": "DemoPouleMagique\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwBYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T06:06:55.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\bin\Debug\DemoPouleMagique.exe.config
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\bin\Debug\DemoPouleMagique.exe
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\bin\Debug\DemoPouleMagique.pdb
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\obj\Debug\DemoPouleMagique.csproj.AssemblyReference.cache
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\obj\Debug\DemoPouleMagique.csproj.CoreCompileInputs.cache
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\obj\Debug\DemoPouleMagique.exe
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\obj\Debug\DemoPouleMagique.pdb
+C:\EspaceLabo\DemoPouleMagique\DemoPouleMagique\obj\Debug\DemoPouleMagique.exe.config

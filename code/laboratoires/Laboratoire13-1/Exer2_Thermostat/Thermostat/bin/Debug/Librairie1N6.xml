@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Librairie1N6</name>
+    </assembly>
+    <members>
+        <member name="T:Librairie1N6.CollectionPistes">
+             <summary>
+             Collections qui contient les pistes d'un disque compact.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.CollectionPistes.#ctor(System.Int32)">
+            --------------------------------------------------------------------------------
+             <summary>
+             Obtient un objet représentant la collection des pistes d'un disque compact.
+             </summary>
+             <param name="pNbPistes">Le nombre de pistes de la collection.</param>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.CollectionPistes.Length">
+            --------------------------------------------------------------------------------
+             <summary>
+             Obtient le nombre d'éléments de la collection.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.CollectionPistes.Item(System.Int32)">
+            --------------------------------------------------------------------------------
+             <summary>
+             Obtient ou définit la durée d'une piste.
+             </summary>
+             <param name="index">Un index de la collection.</param>
+             <returns>La durée en secondes.</returns>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="T:Librairie1N6.CollectionPistes.PisteEnumerator">
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.CollectionPistes.PisteEnumerator.Current">
+            ----------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.CollectionPistes.PisteEnumerator.MoveNext">
+            ---------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.CollectionPistes.PisteEnumerator.Reset">
+            ---------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.CollectionPistes.GetEnumerator">
+             <summary>
+             
+             </summary>
+             <returns></returns>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="T:Librairie1N6.SorteDeDisque">
+            --------------------------------------------------------------------------------
+             <summary>
+            		Les sortes de disque disponibles: Normal, Test1, Test2 ou Test3.
+             </summary>
+        </member>
+        <member name="F:Librairie1N6.SorteDeDisque.Normal">
+            <summary>Un disque Normal: 
+            	     le nombre de pistes, la durée des pistes et le genre sont aléatoires.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.SorteDeDisque.Test1">
+            <summary>Un disque ayant 2 pistes: la première de 59 secondes et la deuxième de 5 minutes 1 seconde.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.SorteDeDisque.Test2">
+            <summary>Un disque ayant 8 pistes d'une durée de 5 minutes chacune
+                     </summary>
+        </member>
+        <member name="F:Librairie1N6.SorteDeDisque.Test3">
+            <summary>Un disque ayant 12 pistes d'une durée totale de 48 minutes. La durée des pistes alterne entre 3:59 et 4:01.
+            </summary>        
+        </member>
+        <member name="T:Librairie1N6.StyleDeMusique">
+            <summary>
+            Les différents styles de musique disponibles.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Ambient">
+            <summary>
+            Le style de musique Ambient.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Blues">
+            <summary>
+            Le style de musique Blues.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Classical">
+            <summary>
+            Le style de musique Classique.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Country">
+            <summary>
+            Le style de musique Country.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Disco">
+            <summary>
+            Le style de musique Disco.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Funk">
+            <summary>
+            Le style de musique Funk.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Folk">
+            <summary>
+            Le style de musique Folk.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.HeavyMetal">
+            <summary>
+            Le style de musique Heavy-Metal.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.HipHop">
+            <summary>
+            Le style de musique Hip-Hop.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.House">
+            <summary>
+            Le style de musique House.
+            </summary>        
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Jazz">
+            <summary>
+            Le style de musique Jazz.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Pop">
+            <summary>
+            Le style de musique Populaire.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Rap">
+            <summary>
+            Le style de musique Rap.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Reggae">
+            <summary>
+            Le style de musique Reggae.
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.StyleDeMusique.Rock">
+            <summary>
+            Le style de musique Rock.
+            </summary>
+        </member>
+        <member name="T:Librairie1N6.DisqueCompact">
+            ------------------------------------------------------------------------------------
+             <summary>
+                Modèlise un CD de musique, contenant un certain nombre de pistes chacune d'une certaine durée.
+             </summary>
+            ------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.#ctor">
+            --------------------------------------------------------------------------------
+             <summary>
+            	Initialise une nouvelle instance de la classe DisqueCompact
+             </summary>
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.#ctor(Librairie1N6.SorteDeDisque)">
+            --------------------------------------------------------------------------------
+             <summary>
+            	Initialise une nouvelle instance de la classe DisqueCompact. 
+             </summary>
+             <param name="pSorteDeDisque">Une sorte de disque soit : Normal, Test1, Test2 ou Test3.</param>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.InitialiserUnDisqueNormal">
+            --------------------------------------------------------------------------------
+             <summary>
+            		Initialise un disque compact ayant un nombre de pistes, une durée des pistes et un genre aléatoires.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.InitialiserUnDisqueTest1">
+            --------------------------------------------------------------------------------
+             <summary>
+            	Initialise un disque test1 de 2 pistes :
+            			la durée de la piste 0 est 59 et la durée de la piste 1 est 301.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.InitialiserUnDisqueTest2">
+            --------------------------------------------------------------------------------
+             <summary>
+            		Initialise un disque test1 de 8 pistes :
+            			la durée de chaque piste est 300 secondes.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.InitialiserUnDisqueTest3">
+            --------------------------------------------------------------------------------
+             <summary>
+            		Initialise un disque test3 de 12 pistes :
+            			la durée des pistes paires est 239 secondes, soit  3 minutes 59 secondes;
+            			la durée des pistes impaires est 241 secondes, soit 4 minutes 1 seconde.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.GenererGenre">
+            --------------------------------------------------------------------------------
+             <summary>
+             Génère un genre de disque au hasard.
+             </summary>        
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.DisqueCompact.Genre">
+            --------------------------------------------------------------------------------
+             <summary>
+            	    Obtient le genre de musique du disque compact.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.DisqueCompact.Durée">
+            --------------------------------------------------------------------------------
+             <summary>
+                 Obtient la durée totale du disque en secondes.
+             </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.DisqueCompact.Pistes">
+            --------------------------------------------------------------------------------
+             <summary>
+             Obtient la collection des pistes du disque
+             </summary>
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.FormatMMSS(System.Int32)">
+            --------------------------------------------------------------------------------
+             <summary>
+              Formate une durée en secondes en minutes et secondes.
+             </summary>
+             <param name="pDuree">Une durée en secondes.</param>
+             <returns>Une chaîne en format MM:SS.</returns>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.DisqueCompact.FormatHHMMSS(System.Int32)">
+            --------------------------------------------------------------------------------
+             <summary>
+                 Formate une durée en secondes au format HH:MM:SS
+             </summary>
+             <param name="pDuree">Une durée en secondes.</param>
+             <returns>Une chaîne en format HH:MM:SS.</returns>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="T:Librairie1N6.Montre">
+            ===================================================================================
+            <summary>
+            Modélise une montre avec les heures, les minutes et les secondes.
+            </summary>
+            ===================================================================================
+        </member>
+        <member name="P:Librairie1N6.Montre.TempsCourant">
+            <summary>
+            Obtient le temps courant de la montre au format HH:MM:SS
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.Montre.m_heures">
+            ================================================================================
+        </member>
+        <member name="P:Librairie1N6.Montre.Heures">
+            -------------------------------------------------------------------------------
+            <summary>
+            Obtient l'heure courante de la montre
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.Montre.m_minutes">
+            ================================================================================
+        </member>
+        <member name="P:Librairie1N6.Montre.Minutes">
+            -------------------------------------------------------------------------------
+            <summary>
+            Obtient les minutes courantes de la montre
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.Montre.m_secondes">
+            ================================================================================
+        </member>
+        <member name="P:Librairie1N6.Montre.Secondes">
+            -------------------------------------------------------------------------------
+            <summary>
+            Obtient les secondes courantes de la montre
+            </summary>-
+        </member>
+        <member name="M:Librairie1N6.Montre.#ctor">
+            ===================================================================================
+             <summary>
+              Initialise une nouvelle instance de la classe Montre à 00:00:00
+             </summary>
+        </member>
+        <member name="M:Librairie1N6.Montre.#ctor(System.Int32,System.Int32,System.Int32)">
+            ===================================================================================
+             <summary>
+             Initialise une nouvelle instance de la classe Montre.
+             </summary>
+             <param name="pHeures">Heures courantes</param>
+             <param name="pMinutes">Minutes courantes</param>
+             <param name="pSecondes">Secondes courantes</param>
+        </member>
+        <member name="M:Librairie1N6.Montre.AvancerUneSeconde">
+            <summary>
+            Augmente le temps courant d'une seconde, à 23:59:59 elle recommence à 0:00:00 
+            </summary>
+        </member>
+        <member name="M:Librairie1N6.Montre.AjusterAutomatiquement">
+            <summary>
+            Synchronise automatiquement la montre avec l’heure du système
+            </summary>
+        </member>
+        <member name="T:Librairie1N6.Personne">
+            -----------------------------------------------------------------------------------------------------
+            <summary>
+             Modélise une personne avec son nom, son prénom ainsi que son numéro d'assurance sociale.
+            </summary>
+            -----------------------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.Personne.Nom">
+            ----------------------------------------------------
+            <summary>
+            Obtient ou définit le nom d'une personne.
+            </summary>
+            ----------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.Personne.Prénom">
+            ----------------------------------------------------
+            <summary>
+            Obtient ou définit le prénom d'une personne.
+            </summary>
+            ----------------------------------------------------
+        </member>
+        <member name="P:Librairie1N6.Personne.Nas">
+            ----------------------------------------------------
+            <summary>
+            Obtient ou définit le numéro sociale d'une personne.
+            </summary>
+            ----------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.Personne.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialise une nouvelle instance de la classe Personne avec les données passées en paramètre.
+            </summary>
+            <param name="pNom">Nom de la personne</param>
+            <param name="pPrénom">Prénom de la personne</param>
+            <param name="pNas">NAS de la personne</param>
+            -------------------------------------------------------------
+        </member>
+        <member name="T:Librairie1N6.Thermostat">
+            ------------------------------------------------------------------------------------
+            <summary>
+            Modélise un thermostat électronique contrôlant la température d'une pièce. 
+            </summary>
+            ------------------------------------------------------------------------------------
+        </member>
+        <member name="F:Librairie1N6.Thermostat.TEMPÉRATURE_MINIMALE">
+            ================================================================================
+            <summary>
+            Température minimale autorisée par un Thermostat électronique
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.Thermostat.TEMPÉRATURE_MAXIMALE">
+            ================================================================================
+            <summary>
+            Température maximale autorisée par un Thermostat électronique
+            </summary>
+        </member>
+        <member name="F:Librairie1N6.Thermostat.TEMPÉRATURE_INITIALE">
+            ================================================================================
+            <summary>
+            Température initiale d'un Thermostat
+            </summary>
+        </member>
+        <member name="P:Librairie1N6.Thermostat.Température">
+            ==================================================================================
+             <summary>
+                Obtient la température actuelle du Thermostat
+             </summary>
+        </member>
+        <member name="M:Librairie1N6.Thermostat.#ctor">
+            ======================================================================================
+             <summary>
+               Initialise une nouvelle instance de la classe Thermostat à TEMPERATURE_INITIALE. 
+             </summary>
+            --------------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.Thermostat.#ctor(System.Int32)">
+            ======================================================================================
+             <summary>
+               Initialise une nouvelle instance de la classe Thermostat à une certaine température 
+             </summary>
+             <param name="pTempérature">Température du thermostat (entre 5 et 35)</param>
+        </member>
+        <member name="M:Librairie1N6.Thermostat.AugmenterTemperature">
+            ==================================================================================
+             <summary>
+               Augmente la température d'un degré. 
+             </summary>
+             ---------------------------------------------------------------------------------
+        </member>
+        <member name="M:Librairie1N6.Thermostat.DiminuerTemperature">
+            ==================================================================================
+             <summary>
+               Diminue la température d'un degré.
+             </summary>
+             ---------------------------------------------------------------------------------
+        </member>
+    </members>
+</doc>
