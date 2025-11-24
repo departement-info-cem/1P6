@@ -1,0 +1,18 @@
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipalChauffage.resources
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemC_MultiThermostat\Thermostat\obj\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemC_MultiThermostat\Thermostat\obj\Debug\Thermostat.pdb

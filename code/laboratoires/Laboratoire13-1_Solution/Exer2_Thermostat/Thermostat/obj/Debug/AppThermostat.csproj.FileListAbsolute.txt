@@ -1,0 +1,231 @@
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipalChauffage.resources
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Exemples\Code source exemples\Exem2_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\Exem_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+K:\_Cours 206-H10\_Module 1\Kit jeudi V0.5\ExemA_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+N:\206 H10\02-Intro aux classes\Kit classes CT1 v1.0\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.exe
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\GenerateResource-ResGen.read.4.tlog
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\_Cours 206-H11\_Module 1\Temp VA\02-Intro aux classes\ExemA_Thermostat vs2010\Sol_ExemA_Thermostat\Thermostat\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\_Mes Cours\_420-206 H11\Module 1\Théorie 3 V1.0\ExerA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.exe
+E:\_Mes Cours\_420-206 H11\Module 1\Théorie 3 V1.0\ExerA_Thermostat\Sol_ExemA_Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\Thermostat.exe
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\bin\Debug\Thermostat.exe
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\bin\Debug\Thermostat.pdb
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\GenerateResource-ResGen.read.4.tlog
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\ResGen.read.1.tlog
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\_Cours 206-H13\R04 Intro Classes\ExerA_Thermostat\Theo03_ExerA(Solution)\Thermostat\obj\Debug\ResGen.write.1.tlog
+E:\_Cours 206-H13\R04 Intro Classes v0.9\ExerA_Thermostat v1.0\Theo03_ExerA (Solution) v1.0\Thermostat\obj\Debug\Thermostat.exe
+E:\_Cours 206-H13\R04 Intro Classes v0.9\ExerA_Thermostat v1.0\Theo03_ExerA (Solution) v1.0\Thermostat\obj\Debug\Thermostat.pdb
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\Thermostat.exe
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\Thermostat.pdb
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\bin\Debug\Thermostat.exe
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\bin\Debug\Thermostat.pdb
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\GenerateResource-ResGen.read.4.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\ResGen.read.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.0\Thermostat\obj\Debug\ResGen.write.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.exe
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.pdb
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\bin\Debug\Thermostat.exe
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\bin\Debug\Thermostat.pdb
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\ResolveAssemblyReference.cache
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\GenerateResource-ResGen.read.4.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\ResGen.read.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.0\ExerB_Thermostat v1.1\Thermostat\obj\Debug\ResGen.write.1.tlog
+J:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.2\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.exe
+J:\__Cours\420-206 H13\Module 1\R04 Intro Classes (Solution) v1.2\ExerB_Thermostat v1.1\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.exe
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.pdb
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\bin\Debug\Thermostat.exe
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\bin\Debug\Thermostat.pdb
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\AppThermostat.csprojResolveAssemblyReference.cache
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\_Cours 206-H14\_Module #1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\bin\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\bin\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\AppThermostat.csprojResolveAssemblyReference.cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB Thermostat (Solution)\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\bin\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\bin\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\AppThermostat.csprojResolveAssemblyReference.cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\bin\Debug\Thermostat.exe
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\bin\Debug\Thermostat.pdb
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\AppThermostat.csprojResolveAssemblyReference.cache
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+G:\_420-206 H15\Module 1\R03 Intro Classes (Solution) v1.0\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.exe
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.pdb
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\bin\Debug\Thermostat.exe
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\bin\Debug\Thermostat.pdb
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\AppThermostat.csprojResolveAssemblyReference.cache
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+E:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H15.1.0\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.Cache
+G:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H16.1.0\Thermostat\obj\Debug\Thermostat.exe
+G:\_420-206 A16\Module 1\R03 Intro Classes (Solution) H15.1.2\ExB1 Thermostat (Solution) H16.1.0\Thermostat\obj\Debug\Thermostat.pdb
+H:\_Cours 206 H18\R04 Intro Classes\R04 Intro Classes (Solution) H16.1.0\ExB1 Thermostat (Solution) H16.1.0\Thermostat\obj\Debug\Thermostat.exe
+H:\_Cours 206 H18\R04 Intro Classes\R04 Intro Classes (Solution) H16.1.0\ExB1 Thermostat (Solution) H16.1.0\Thermostat\obj\Debug\Thermostat.pdb
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.exe
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csprojAssemblyReference.cache
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.exe
+F:\_Cours 2N6 H20\R03 Introduction aux classes\R03 Intro Classes (Solution) H20.1.0\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csprojAssemblyReference.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R03 Intro Classes (Solution) H20.2.1\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.FrmPrincipal.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.Properties.Resources.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\bin\Debug\Thermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Ex2 Thermostat\Thermostat\obj\Debug\Thermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\AppThermostat.csproj.CopyComplete
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\bin\Debug\ExerciceThermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\bin\Debug\ExerciceThermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\ExerciceThermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\ExerciceThermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\Thermostat (avec DLL)\Thermostat\obj\Debug\AppThermostat.csprojAssemblyReference.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.pdb
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.xml
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csprojAssemblyReference.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CopyComplete
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe
+J:\A20 1N6 Les Capsules\R21 Instanciation avec new\_Code C#\R21 Exercices (Solution)\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.pdb
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.pdb
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.pdb
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.xml
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csprojAssemblyReference.cache
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CopyComplete
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe
+E:\A20_1N6\R21 Objets et instanciation\v20.1.0\Nouveau dossier\R21 Exercices (Solution) v20.1.1\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.xml
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.AssemblyReference.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CopyComplete
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v22.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe.config
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.pdb
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.xml
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.AssemblyReference.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppTherm.0E0988DA.Up2Date
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe
+C:\Users\stephane.desmeules\Downloads\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.pdb
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe.config
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.exe
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\ExerciceThermostat.pdb
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.pdb
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\bin\Debug\Librairie1N6.xml
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.AssemblyReference.cache
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe.config
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.FrmPrincipal.resources
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.Properties.Resources.resources
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.GenerateResource.cache
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\AppTherm.0E0988DA.Up2Date
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.exe
+C:\EspaceLabo\R21 Exercices (Solution) v24.1.0\Exer2 -Thermostat\Thermostat\obj\Debug\ExerciceThermostat.pdb

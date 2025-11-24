@@ -1,0 +1,8 @@
+bin\Debug\Thermostat.exe
+bin\Debug\Thermostat.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Thermostat.Properties.Resources.resources
+obj\Debug\Thermostat.csproj.GenerateResource.Cache
+obj\Debug\Thermostat.exe
+obj\Debug\Thermostat.pdb
+obj\Debug\Thermostat.FrmPrincipalChauffage.resources
