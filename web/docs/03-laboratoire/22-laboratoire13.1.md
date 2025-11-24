@@ -207,7 +207,7 @@ Utiliser la démonstration pour comprendre le fonctionnement attendu de l'applic
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-1\Exer2_MultiThermostat"
+  folder="code\laboratoires\Laboratoire13-1\Exer3_MultiThermostat"
   label="📁 Exercice 3 - MultiThermostat" 
 />
 
