@@ -220,7 +220,13 @@ Faites-moi **danser**, **manger**, **pondre** ou même **activer mon pouvoir sp�
 et venez percer **mon secret** ! »
 
 ---
-## 📎 Références
-* [Instanciation objet](https://info.cegepmontpetit.ca/notions-csharp/documentation/instanciation-objet)
+
+## 📚 Ressources supplémentaires
+
+👉 Notions C# : [Instanciation objet](https://info.cegepmontpetit.ca/notions-csharp/documentation/instanciation-objet)
 
 
+Vous devez réaliser le labo suivant :
+ [🧪 Labo 13.1](/laboratoire/laboratoire13.1)
+
+---
