@@ -38,7 +38,7 @@ namespace DemoPouleMagique
             nbPoules = PouletMagique.NombrePoules;
 
             // Obtenir la taille maximale possible d'une poule (constante de la classe)
-            int tailleMax = PouletMagique.TailleMax;
+            int tailleMax = PouletMagique.TAILLE_MAX;
 
         }
     }

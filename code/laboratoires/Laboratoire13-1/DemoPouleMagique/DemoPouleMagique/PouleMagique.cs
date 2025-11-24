@@ -8,7 +8,7 @@ namespace DemoPouleMagique
 {
     public class PouletMagique
     {
-        public const int TailleMax = 20;
+        public const int TAILLE_MAX = 20;
         public static int NombrePoules { get; private set; } = 0;
 
         public int Taille { get; private set; } = 10;
@@ -25,8 +25,8 @@ namespace DemoPouleMagique
             Taille += quantite;
 
             // On limite la taille maximale à la constante TailleMax
-            if (Taille > TailleMax)
-                Taille = TailleMax;
+            if (Taille > TAILLE_MAX)
+                Taille = TAILLE_MAX;
         }
 
         public void Danser()
