@@ -7,10 +7,47 @@ title: Intégration
 
 ## 🎯 Objectifs
 
+* Créer et manipuler des **objets** graphiques **WinForms** via le **code** 
 * Créer une application **WinForms** complexe
-* Utiliser les fichiers texte dans une application **WinForms**
-* Créer et manipuler des **objets** graphiques **WinForms** via le **code**
+  * Utiliser les fichiers texte dans une application **WinForms**
 
+
+
+---
+
+## 🧭 Démonstration  : Création dynamique d’une grille de boutons (TP4)
+---
+Vous devez créer un projet Visual Studio WinForms pour la démonstration.
+
+### 🎯 Objectifs
+
+Créer une application Windows Forms qui affiche une **grille de boutons**. Chaque bouton représente une case identifiée par ses coordonnées `(ligne, colonne)`. L’objectif est de manipuler ces boutons dynamiquement, d’utiliser la propriété `Tag` pour stocker des informations, et de gérer les événements clic.
+
+---
+### 🧩 Travail demandé
+
+1. **Création de la grille**
+
+   * Créer un tableau de boutons de dimension `rows x cols` (par exemple 10x10).
+   * Chaque bouton doit avoir une taille définie (`buttonSize`) et une position calculée en fonction de ses indices `(i,j)`.
+   * Stocker dans la propriété `Tag` de chaque bouton ses coordonnées `(ligne, colonne)` sous forme d’un `Point`.
+
+2. **Ajout des boutons au formulaire**
+
+   * Ajouter chaque bouton à la collection `Controls` du formulaire pour qu’ils soient visibles.
+   * Stocker chaque bouton dans un tableau 2D `buttons[,]` pour pouvoir y accéder facilement.
+
+3. **Gestion du clic**
+
+   * Ajouter un événement `Click` pour chaque bouton, en utilisant une **lambda**.
+   * Quand un bouton est cliqué :
+
+     * Changer la couleur du bouton (ex. `LightGray`).
+     * Récupérer ses coordonnées via `Tag` et les afficher (ex. `MessageBox.Show`).
+
+4. **Ajustement du formulaire**
+
+   * Modifier la taille du formulaire pour qu’il s’adapte à la grille (`ClientSize = cols*buttonSize, rows*buttonSize`).
 
 ---
 ## 🔵 Mini-Projet  : Gestion de tâches
