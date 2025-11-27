@@ -29,7 +29,7 @@ title: Interface graphique
 
 ✅ **Sortie attendue** :
 
-![Démo de l'exercice1](_21-winform/demo-ex1.png)
+![Démo de l'exercice1. winform contenant 2 label pour prénom et nom, 2 textBox, 1 boutton, et 1 label contenant le message final.](_21-winform/demo-ex1.png)
 ---
 ## 🧩 Étape 1 – Créer le projet
 
@@ -44,19 +44,19 @@ title: Interface graphique
 ### 🔍 Étape 2 Explorer l'environnement 
 Avant de commencer à placer des contrôles, prenez un moment pour explorer l’environnement de développement afin de bien comprendre à quoi servent les principales fenêtres.
 
-🔹 Explorateur de solutions
+🔹 Explorateur de solutions (Ctl + Alt + L)
 
     * 📂 Rôle : affiche la structure du projet (fichiers .cs, formulaires, ressources, etc.).
     * 🔍 Utilité : permet d’ouvrir, renommer ou gérer les fichiers de ton application.
     * 💡 Astuce : si tu ne la vois pas, ouvre-la via Affichage > Explorateur de solutions.
 
-🔹 Fenêtre des propriétés
+🔹 Fenêtre des propriétés (f4)
 
     * ⚙️ Rôle : affiche et modifie les propriétés du contrôle sélectionné (Formulaire, Label, TextBox, etc.).
     * 🖋️ Utilité : change le texte, le nom (Name), la taille, la couleur, la position, etc.
     * 💡 Astuce : sélectionne un contrôle sur le formulaire et regarde comment ses propriétés changent.
 
-🔹 Boîte à outils (Toolbox)
+🔹 Boîte à outils (Toolbox) (Ctl + Alt + X )
 
     * 🧰 Rôle : contient tous les contrôles standards que tu peux glisser sur le formulaire (Label, TextBox, Button, etc.).
     * 🧱 Utilité : c’est à partir de cette boîte que tu construis ton interface graphique.
@@ -158,6 +158,7 @@ private void btnAfficher_Click(object sender, EventArgs e)
 * Afficher un message d'erreur si un nombre est invalide.
 
 ✅ **Sortie attendue** :
+
 
 ![Démo de l'exercice2](_21-winform/demo-ex2.png)
 ---

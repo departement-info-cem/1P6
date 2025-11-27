@@ -25,7 +25,7 @@ Concevoir et développer une application Windows simple avec une interface graph
 
 Une interface graphique (**Graphical User Interface**) permet à l’utilisateur d’interagir avec l’ordinateur à l’aide d’éléments visuels comme des fenêtres, boutons, menus ou icônes. Contrairement aux applications console, elle est plus intuitive : l’utilisateur clique, sélectionne ou saisit des données au lieu de taper des commandes. Les interfaces graphiques rendent les applications plus faciles à utiliser et moins sujettes aux erreurs. Dans ce cours, nous utiliserons WinForms en C# pour apprendre à créer des fenêtres, ajouter des contrôles et gérer les actions de l’utilisateur.
 
-![Démonstration](_24-winform/winform-demo.png)
+![Démo Fiche Client 1.](_24-winform/winform-demo.png)
 
 ---
 ## 🧩 **2. Structure d’une application WinForms**
@@ -42,7 +42,7 @@ Le **concepteur graphique** de Visual Studio permet de **placer et configurer vi
 
 
 
-![Contrôles](_24-winform/winform-environnement.png)
+![Démo des fenêtres [design] de winform ouverte, propriété (f4) et Boîte à outils (Ctl + alt + x).](_24-winform/winform-environnement.png)
 
 ---
 
@@ -64,7 +64,7 @@ Nous pouvons mettre plusieurs éléments graphiques dans un conteneur. Par exemp
 >L’ajout de contrôles se fait facilement dans **Visual Studio** grâce à l’outil de conception visuelle : il suffit de **glisser-déposer** les éléments souhaités depuis la boîte à outils 🧰 vers le formulaire.
 
 
-![Contrôles](_24-winform/winform-controles.png)
+![Démo Fiche Client 2. Contenant en ordre : 1 label, 1 txtbox, 1 label, 2 button radios, 1 label, 1 liste déroulante, 1 label, 3 checkbox, 3 buttons, et un listbox  ](_24-winform/winform-controles.png)
 
 ---
 
