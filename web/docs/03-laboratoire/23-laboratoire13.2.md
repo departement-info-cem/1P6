@@ -15,34 +15,97 @@ title: Intégration
 
 ---
 
-## 🧭 Démonstration  : Création dynamique d’un bouton (TP4)
+## 🧭 Création et manipulation d’un contrôle Button
 ---
-Vous devez créer un projet Visual Studio WinForms pour la démonstration.
 
 ### 🎯 Objectifs
 
-* Créer un contrôle graphique dynamiquement 
-* Rajouter dynamiquement un évènement à ce contrôle
+* l’instanciation dynamique de contrôles
+* la configuration de leurs propriétés
+* la gestion des événements via des délégués (ici, une lambda expression)
+* l’intégration du contrôle dans le formulaire
 ---
-### 🧩 Travail demandé
 
-1. **Création d'un bouton**
+### 🔸 1. Création d’un contrôle dynamiquement
 
-   * Créer un bouton de dimension `rows x cols` (par exemple 10x10).
-   * Changer la taille du bouton en utilisant sa propriété Size
-   * Stocker dans la propriété `Tag` de chaque bouton ses coordonnées `(ligne, colonne)` sous forme d’un `Point`.
+Au lieu d’utiliser l’interface designer, on peut créer les contrôles directement par code.
+Ici, un objet de type **Button** est instancié :
 
-2. **Ajout le bouton au formulaire**
+```csharp
+Button b = new Button();
+```
 
-   * Utiliser la propriété `Controls` du formulaire pour lui ajouter le bouton
-  
-3. **Gestion du clic**
+L’avantage de cette approche est la **flexibilité** : on peut générer des contrôles à la volée, en fonction de conditions ou de données.
 
-   * Ajouter un événement `Click` pour chaque bouton, en utilisant une **lambda**.
-   * Quand un bouton est cliqué :
+---
 
-     * Changer la couleur du bouton (ex. `LightGray`).
-     * Récupérer ses coordonnées via `Tag` et les afficher (ex. `MessageBox.Show`).
+### 🔸 2. Configuration des propriétés du contrôle
+
+Chaque contrôle possède des **propriétés** permettant de définir son apparence et son comportement.
+Par exemple :
+
+* `Text` : texte affiché sur le bouton
+* `Location` : position (x,y) du contrôle dans la fenêtre
+* `Size` : dimensions du contrôle
+* `Tag` : champ polyvalent permettant d’associer au contrôle des données supplémentaires
+
+```csharp
+b.Text = "Bonjour";
+b.Location = new Point(50, 50);
+b.Tag = 10;
+b.Size = new Size(100, 100);
+```
+
+Ces propriétés permettent de personnaliser le contrôle avant son affichage.
+
+---
+
+### 🔸 3. Gestion des événements (Programmation événementielle)
+
+Ici, l’événement **Click** du bouton est associé à un *gestionnaire d’événement* (event handler) :
+
+```csharp
+b.Click += (s, e) =>
+{
+    Button btn = (Button) s;
+    MessageBox.Show("Je suis là");
+};
+```
+
+#### Explications :
+
+* `b.Click += ...` : on abonne une méthode à l’événement `Click`
+* `(s, e)` :
+
+  * `s` représente l’objet émetteur de l’événement (ici, le bouton cliqué)
+  * `e` contient les informations relatives à l’événement
+* `Button btn = (Button)s;` : on récupère le bouton qui a généré l'événement
+* `MessageBox.Show("Je suis là");` : action effectuée lorsque l’utilisateur clique
+
+Cela illustre clairement la notion **d’action-réaction** : *l’utilisateur clique → le programme exécute une méthode*.
+
+---
+
+### 🔸 4. Ajout du contrôle à la fenêtre
+
+Une fois configuré, le bouton doit être ajouté à la collection `Controls` du formulaire :
+
+```csharp
+Controls.Add(b);
+```
+### 🔸 5. Ajout du contrôle à la fenêtre
+
+Tu peux définir la taille d’une fenêtre en ajustant la propriété Size du formulaire (Form). Par exemple :
+```csharp
+this.Size = new Size(800, 600); // Redimensionner la fenêtre à 800x600 pixels
+```
+
+Tu peux également redimensionner la fenêtre en ajustant la largeur et la hauteur individuellement :
+```csharp
+this.Width = 800;  // Largeur de la fenêtre
+this.Height = 600; // Hauteur de la fenêtre
+```
+Cela permet de définir une taille spécifique pour la fenêtre de ton application.
 
 ---
 ## 🔵 Mini-Projet  : Gestion de tâches
