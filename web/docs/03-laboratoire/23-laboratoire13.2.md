@@ -5,7 +5,6 @@ title: Intégration
 # 🧪 Labo 13.2 – Intégration  
 
 
-
 ## 🎯 Objectifs
 
 * Créer une application **WinForms** complexe
@@ -14,7 +13,7 @@ title: Intégration
 
 
 ---
-## 🔵 Exercice  : Gestion de tâches
+## 🔵 Mini-Projet  : Gestion de tâches
 
 ---
 ### Télécharger le projet de départ
@@ -131,7 +130,7 @@ Vous devez implémenter les méthodes nécessaires et compléter le code des év
 
 
 ---
-## 🔵 Exercice  : Gestion de Panier
+## 🔵 Mini-Projet  : Gestion de Panier
 
 ---
 ### Télécharger le projet de départ
