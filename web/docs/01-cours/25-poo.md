@@ -193,6 +193,17 @@ Accessibles partout dans la classe.
 ---
   ##  Démonstration : Découvrir l'objet avec la Poule Magique
 
+
+---
+### Télécharger le projet de départ
+Disponible ici 👇
+<GithubDownload
+  repo="1P6"
+  folder="code\laboratoires\Laboratoire13-1\DemoPouleMagique"
+  label="📁 Demonstration - Poule Magique" 
+/>
+
+Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le fichier `DemoPouleMagique.sln`** dans Visual Studio.
 ## 🪄🐔 **Message de la Poule Magique**
 
  « **Bonjour, humain curieux !**
