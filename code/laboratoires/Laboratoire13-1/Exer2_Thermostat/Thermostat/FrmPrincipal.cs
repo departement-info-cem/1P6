@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Librairie1N6;
 
 namespace ExerciceThermostat
 {
@@ -13,15 +12,13 @@ namespace ExerciceThermostat
         /// </summary>
         /// ----------------------------------------------------------------------------------
         // TODO 01 : Définir une variable pour objet Thermostat
-       
+        // TODO 02 : Instancier un objet Thermostat et l'affecter dans m_objThermostat
+        
         //====================================================================================
         public FrmPrincipal()
         {
             InitializeComponent();
             Text += APP_INFO;
-
-            // TODO 02 : Instancier un objet Thermostat et l'affecter dans m_objThermostat
-           
 
             // TODO 03 : Afficher la température courante dans lblTemperature
             

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Librairie1N6;
 
 namespace MultiThermostat
 {
@@ -10,7 +9,7 @@ namespace MultiThermostat
 
         /// =================================================================================
         // TODO 01A : Déclarer une variable et Instancier un Thermostat pour la chambre à 25
-       
+        
 
         // TODO 01B : Déclarer une variable et Instancier un Thermostat pour la cuisine à 20
         

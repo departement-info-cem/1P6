@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Librairie1N6;
 
 namespace MultiThermostat
 {

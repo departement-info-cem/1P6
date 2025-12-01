@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Librairie1P6;
 
 
 namespace CompteBancaire
@@ -15,14 +14,11 @@ namespace CompteBancaire
     public partial class FrmCompte : Form
     {
         // TODO 01 : Définir une variable m_objCompte de type Compte
-       
+        // TODO 02 : Et instancier la variable compte pour créer un compte à votre nom    
 
         public FrmCompte()
         {
             InitializeComponent();
-
-           
-            // TODO 02 : Instancier la variable compte pour créer un compte à votre nom            
 
             // TODO 03 : Utiliser la méthode AfficherInfosCompte pour afficher les informations du compte
 
