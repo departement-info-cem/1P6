@@ -14,7 +14,7 @@ title: Programmation orientée objet
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-1\Exer1_Compte"
+  folder="code/laboratoires/Laboratoire13-1/Exer1_Compte"
   label="📁 Exercice 1 - Compte bancaire" 
 />
 
@@ -87,7 +87,7 @@ Utiliser la démonstration pour comprendre le fonctionnement attendu de l'applic
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-1\Exer2_Thermostat"
+  folder="code/laboratoires/Laboratoire13-1/Exer2_Thermostat"
   label="📁 Exercice 2 - Thermostat" 
 />
 
@@ -207,7 +207,7 @@ Utiliser la démonstration pour comprendre le fonctionnement attendu de l'applic
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-1\Exer3_MultiThermostat"
+  folder="code/laboratoires/Laboratoire13-1/Exer3_MultiThermostat"
   label="📁 Exercice 3 - MultiThermostat" 
 />
 

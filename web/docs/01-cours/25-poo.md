@@ -199,7 +199,7 @@ Accessibles partout dans la classe.
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-1\DemoPouleMagique"
+  folder="code/laboratoires/Laboratoire13-1/DemoPouleMagique"
   label="📁 Demonstration - Poule Magique" 
 />
 
