@@ -29,13 +29,13 @@ const g1120 = [
   "2025-11-12",
   "2025-11-17", // cours/examen2
   "2025-11-19", // cours/integration-tp3-1
-  "2025-11-24", // cours/integration-tp3-2
   "2025-11-26", // cours/winform
   "2025-12-01", // cours/poo
   "2025-12-03", // cours/integration-poo
   "2025-12-08", // cours/integration-tp4-1
   "2025-12-09", 
   "2025-12-10", // cours/integration-tp4-2
+  "2025-12-22", // cours/integration-tp4-2
   "2025-12-15", // cours/formatif3
   "2025-12-18"  // cours/examen3
 ];
@@ -64,12 +64,13 @@ const g1080 = [
   "2025-11-13", // cours/integration-tp3-1
   "2025-11-17", // cours/integration-tp3-2
   "2025-11-20", // cours/winform
-  "2025-11-24", // cours/poo
+  
   "2025-11-27", // cours/integration-poo
   "2025-12-01", // cours/integration-tp4-1
   "2025-12-04", // cours/integration-tp4-2
   "2025-12-08", // cours/formatif3
   "2025-12-11", // cours/examen3
+  "2025-12-15", // cours/examen3
   "2025-12-18"  // cours/examen3
 ];
 
