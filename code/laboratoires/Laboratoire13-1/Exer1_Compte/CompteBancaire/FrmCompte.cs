@@ -14,7 +14,7 @@ namespace CompteBancaire
 {
     public partial class FrmCompte : Form
     {
-        // TODO 01 : Définir une variable m_objThermostat pour Thermostat
+        // TODO 01 : Définir une variable m_objCompte de type Compte
        
 
         public FrmCompte()
