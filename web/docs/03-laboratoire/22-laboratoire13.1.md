@@ -220,7 +220,7 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
 * Utiliser l'objet comme variable globale dans une application WinForm
 
 **Instructions** : Compléter un application WinForm qui pernet à l'utilisateur de :
-* Ajouter un thermostat dans chsaque pièce de sa maison
+* Ajouter un thermostat dans chaque pièce de sa maison
 * Augmenter et diminuer la température de chaque pièce avec son propre thermostat
 
 
