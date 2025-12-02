@@ -115,7 +115,7 @@ Cela permet de définir une taille spécifique pour la fenêtre de ton applicati
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-2\Task2Do"
+  folder="code/laboratoires/Laboratoire13-2/Task2Do"
   label="📁 Exercice - Gestion de tâches" 
 />
 
@@ -232,7 +232,7 @@ Vous devez implémenter les méthodes nécessaires et compléter le code des év
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code\laboratoires\Laboratoire13-2\Panier"
+  folder="code/laboratoires/Laboratoire13-2/Panier"
   label="📁 Exercice - Gestion de Panier" 
 />
 
