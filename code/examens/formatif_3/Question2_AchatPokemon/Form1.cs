@@ -2,7 +2,7 @@
  * QUESTION 2 - Interface d'achat de cartes Pokemon
  * 
  * DESCRIPTION:
- * À partir des mêmes données qu'à la première question, mais cette fois c'est un tableau 3D directement 
+ * À partir des mêmes données qu'à la première question, mais cette fois c'est un tableau 2D directement 
  * dans le code, compléter l'interface pour qu'on puisse acheter une carte Pokemon.
  * 
  * OBJECTIF:
