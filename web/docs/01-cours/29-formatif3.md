@@ -14,3 +14,17 @@ Disponible ici 👇
 />
 
 Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le fichier `formatif.sln`** avec Visual Studio.
+
+
+## Solutionnaire
+
+:::danger
+**Ne pas regarder le solutionaire avant d'avoir complété l'examen formatif!**
+:::
+
+Disponible ici 👇
+<GithubDownload
+  repo="1P6"
+  folder="code/examens/formatif_3"
+  label="📁 Solutionnaire Formatif 3" 
+/>
