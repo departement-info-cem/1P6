@@ -25,6 +25,6 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
 Disponible ici 👇
 <GithubDownload
   repo="1P6"
-  folder="code/examens/formatif_3"
+  folder="code/examens/formatif_3_solution"
   label="📁 Solutionnaire Formatif 3" 
 />
