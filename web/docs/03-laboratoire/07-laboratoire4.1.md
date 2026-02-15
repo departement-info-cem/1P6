@@ -19,7 +19,7 @@ Il devrait y avoir **un commit** pour **chaque** exercice.
 
 ## 🟢 Exercice 1 – Type valeur
 
-Cosidérez le code suivant :
+Considérez le code suivant :
 
 ```csharp
 static void Main(string[] args)
