@@ -10,9 +10,9 @@ hide_table_of_contents: true
 
 <Column>
 
-Bienvenue au cours de 2P6 - Programmation orientée objet! Dans ce cours, tu apprendras la programmation orientée objet à l'aide du language C#.
+Bienvenue au cours de 1P6 - Introduction à la programmation! Dans ce cours, tu apprendras la programmation à l'aide du language C#.
 
-Le contenu des cours ainsi que les énoncés de TP sont disponibles dans les onglets **[Cours](cours/introduction)** et **[Travaux Pratiques](tp/tp1)**. Tu trouveras également les exercices et les solutions aux exercices dans les onglets **[Laboratoires](laboratoire/laboratoire1.1)** et **[Solutions](solution/Laboratoire-Solution)**
+Le contenu des cours ainsi que les énoncés de TP sont disponibles dans les onglets **[Cours](cours/introduction)** et **[Travaux Pratiques](tp/tp1)**. Tu trouveras également les exercices et les solutions aux exercices dans les onglets **[Laboratoires](laboratoire/laboratoire1.1)** et **[Solutions](solution/Laboratoire-Solution1.1)**
 
 :::info Installation à la maison
 
@@ -58,13 +58,25 @@ La matière est expliquée dans chacun des cours, mais tu peux trouver plus d'in
             label: "David",
             icon: "📅",
             component: <MainDocsCalendar professorName="David" />,
-        },       
+        },
+        {
+            id: "calendar-eric",
+            label: "Éric",
+            icon: "📅",
+            component: <MainDocsCalendar professorName="Éric" />,
+        },
         {
             id: "calendar-jamil",
             label: "Jamil",
             icon: "📅",
             component: <MainDocsCalendar professorName="Jamil" />,
-        },       
+        },
+        {
+            id: "calendar-jean",
+            label: "Jean-Michel",
+            icon: "📅",
+            component: <MainDocsCalendar professorName="Jean-Michel" />,
+        },
         {
             id: "calendar-philippe",
             label: "Philippe",
@@ -72,10 +84,16 @@ La matière est expliquée dans chacun des cours, mais tu peux trouver plus d'in
             component: <MainDocsCalendar professorName="Philippe" />,
         },
         {
-            id: "calendar-jimmy",
-            label: "Jimmy",
+            id: "calendar-pierre",
+            label: "Pierre-Paul",
             icon: "📅",
-            component: <MainDocsCalendar professorName="Jimmy" />,
+            component: <MainDocsCalendar professorName="Pierre-Paul" />,
+        },
+        {
+            id: "calendar-tommy",
+            label: "Tommy",
+            icon: "📅",
+            component: <MainDocsCalendar professorName="Tommy" />,
         },
     ]}
     defaultTabId="grid"
