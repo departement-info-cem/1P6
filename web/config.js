@@ -1,7 +1,7 @@
 const config = {
-    nom: "1P6 - Programmation 1",
+    nom: "2P6 - Programmation orientée objet",
     description: "Site de référence du cours de x",
-    nomUrl: "1P6"
+    nomUrl: "2P6"
 }
 
 module.exports = config;

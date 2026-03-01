@@ -1,0 +1,14 @@
+C:\H26\ConsoleApp1\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.exe.config
+C:\H26\ConsoleApp1\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.exe
+C:\H26\ConsoleApp1\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.pdb
+C:\H26\ConsoleApp1\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.csproj.AssemblyReference.cache
+C:\H26\ConsoleApp1\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.csproj.CoreCompileInputs.cache
+C:\H26\ConsoleApp1\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.exe
+C:\H26\ConsoleApp1\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.pdb
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.exe.config
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.exe
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\bin\Debug\Labo1-1_Ex2.pdb
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.csproj.AssemblyReference.cache
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.csproj.CoreCompileInputs.cache
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.exe
+C:\Users\jamil.gammoudi\Downloads\Labo1-1_Solution\Labo1-1_Ex2\obj\Debug\Labo1-1_Ex2.pdb

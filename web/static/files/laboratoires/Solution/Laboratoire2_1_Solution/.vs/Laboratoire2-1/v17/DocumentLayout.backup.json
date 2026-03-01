@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|c:\\h26\\2p6\\nouveau dossier\\laboratoire2-1\\appthermostat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|solutionrelative:appthermostat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmultithermostat\\thermostat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|solutionrelative:appmultithermostat\\thermostat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D453291C-B901-4C34-B327-E46988E4ED0C}|AppParcometre\\AppParcometre.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appparcometre\\parcometre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D453291C-B901-4C34-B327-E46988E4ED0C}|AppParcometre\\AppParcometre.csproj|solutionrelative:appparcometre\\parcometre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appthermostat\\thermostat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|solutionrelative:appthermostat\\thermostat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D453291C-B901-4C34-B327-E46988E4ED0C}|AppParcometre\\AppParcometre.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appparcometre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D453291C-B901-4C34-B327-E46988E4ED0C}|AppParcometre\\AppParcometre.csproj|solutionrelative:appparcometre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmultithermostat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|solutionrelative:appmultithermostat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmontre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|solutionrelative:appmontre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F46186B4-3902-40EE-B397-C689006DE6E7}|AppCompteurHydro\\AppCompteurHydro.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appcompteurhydro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F46186B4-3902-40EE-B397-C689006DE6E7}|AppCompteurHydro\\AppCompteurHydro.csproj|solutionrelative:appcompteurhydro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmontre\\montre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|solutionrelative:appmontre\\montre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmultithermostat\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{60F28994-535B-4163-A422-5BBDFB5424DB}|AppMultiThermostat\\AppMultiThermostat.csproj|solutionrelative:appmultithermostat\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appthermostat\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{578B082E-3CED-4F3A-A94E-CD8997326ECD}|AppThermostat\\AppThermostat.csproj|solutionrelative:appthermostat\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F46186B4-3902-40EE-B397-C689006DE6E7}|AppCompteurHydro\\AppCompteurHydro.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appcompteurhydro\\compteurhydro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F46186B4-3902-40EE-B397-C689006DE6E7}|AppCompteurHydro\\AppCompteurHydro.csproj|solutionrelative:appcompteurhydro\\compteurhydro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\appmontre\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{544DC6DD-D742-4619-BE27-9C22A07A32A0}|AppMontre\\AppMontre.csproj|solutionrelative:appmontre\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\Program.cs",
+              "RelativeDocumentMoniker": "AppMultiThermostat\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\Program.cs",
+              "RelativeToolTip": "AppMultiThermostat\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:39:08.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\Program.cs",
+              "RelativeDocumentMoniker": "AppThermostat\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\Program.cs",
+              "RelativeToolTip": "AppThermostat\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:37:57.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Thermostat.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\Thermostat.cs",
+              "RelativeDocumentMoniker": "AppThermostat\\Thermostat.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\Thermostat.cs",
+              "RelativeToolTip": "AppThermostat\\Thermostat.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:37:13.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppParcometre\\Program.cs",
+              "RelativeDocumentMoniker": "AppParcometre\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppParcometre\\Program.cs",
+              "RelativeToolTip": "AppParcometre\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:24:54.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Parcometre.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppParcometre\\Parcometre.cs",
+              "RelativeDocumentMoniker": "AppParcometre\\Parcometre.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppParcometre\\Parcometre.cs",
+              "RelativeToolTip": "AppParcometre\\Parcometre.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:23:58.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "AppMontre\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\ClassDiagram1.cd",
+              "RelativeToolTip": "AppMontre\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-02-07T18:18:40.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Montre.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\Montre.cs",
+              "RelativeDocumentMoniker": "AppMontre\\Montre.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\Montre.cs",
+              "RelativeToolTip": "AppMontre\\Montre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:16:44.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\Program.cs",
+              "RelativeDocumentMoniker": "AppMontre\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMontre\\Program.cs",
+              "RelativeToolTip": "AppMontre\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:15:27.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppCompteurHydro\\Program.cs",
+              "RelativeDocumentMoniker": "AppCompteurHydro\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppCompteurHydro\\Program.cs",
+              "RelativeToolTip": "AppCompteurHydro\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:08:34.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Thermostat.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\Thermostat.cs",
+              "RelativeDocumentMoniker": "AppMultiThermostat\\Thermostat.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\Thermostat.cs",
+              "RelativeToolTip": "AppMultiThermostat\\Thermostat.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:39:33.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "AppMultiThermostat\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppMultiThermostat\\ClassDiagram1.cd",
+              "RelativeToolTip": "AppMultiThermostat\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-02-08T13:21:07.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "AppThermostat\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppThermostat\\ClassDiagram1.cd",
+              "RelativeToolTip": "AppThermostat\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-02-07T18:40:30.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CompteurHydro.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppCompteurHydro\\CompteurHydro.cs",
+              "RelativeDocumentMoniker": "AppCompteurHydro\\CompteurHydro.cs",
+              "ToolTip": "C:\\H26\\2P6\\Nouveau dossier\\Laboratoire2-1\\AppCompteurHydro\\CompteurHydro.cs",
+              "RelativeToolTip": "AppCompteurHydro\\CompteurHydro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:08:06.013Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

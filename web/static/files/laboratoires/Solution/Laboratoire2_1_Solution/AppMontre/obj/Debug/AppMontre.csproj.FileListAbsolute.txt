@@ -1,0 +1,8 @@
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\bin\Debug\AppMontre.exe.config
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\bin\Debug\AppMontre.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\bin\Debug\AppMontre.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\obj\Debug\AppMontre.csproj.AssemblyReference.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\obj\Debug\AppMontre.csproj.CoreCompileInputs.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\obj\Debug\AppMontre.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\obj\Debug\AppMontre.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppMontre\obj\Debug\AppMontre.exe.config

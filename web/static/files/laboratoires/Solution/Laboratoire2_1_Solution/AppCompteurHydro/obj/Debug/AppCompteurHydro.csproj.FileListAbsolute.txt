@@ -1,0 +1,8 @@
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\bin\Debug\AppCompteurHydro.exe.config
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\bin\Debug\AppCompteurHydro.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\bin\Debug\AppCompteurHydro.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\obj\Debug\AppCompteurHydro.csproj.AssemblyReference.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\obj\Debug\AppCompteurHydro.csproj.CoreCompileInputs.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\obj\Debug\AppCompteurHydro.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\obj\Debug\AppCompteurHydro.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppCompteurHydro\obj\Debug\AppCompteurHydro.exe.config

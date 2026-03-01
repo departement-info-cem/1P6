@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\apppersonnage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|solutionrelative:apppersonnage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\apppersonnage\\personnage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|solutionrelative:apppersonnage\\personnage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|c:\\h26\\2p6\\laboratoires\\solution\\laboratoire2-2_solution\\apppersonnage\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{CD3D28D4-1415-4D83-8931-87044C658F24}|AppPersonnage\\AppPersonnage.csproj|solutionrelative:apppersonnage\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\approbot\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|solutionrelative:approbot\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\approbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|solutionrelative:approbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\approbot\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{47374114-3BFE-4319-8570-7CE7598E50EB}|AppRobot\\AppRobot.csproj|solutionrelative:approbot\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "AppPersonnage\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\ClassDiagram1.cd",
+              "RelativeToolTip": "AppPersonnage\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-02-08T14:18:49.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "AppRobot\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\ClassDiagram1.cd",
+              "RelativeToolTip": "AppRobot\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-02-04T03:15:48.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Robot.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\Robot.cs",
+              "RelativeDocumentMoniker": "AppRobot\\Robot.cs",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\Robot.cs",
+              "RelativeToolTip": "AppRobot\\Robot.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T03:08:07.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\Program.cs",
+              "RelativeDocumentMoniker": "AppRobot\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppRobot\\Program.cs",
+              "RelativeToolTip": "AppRobot\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwF8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T03:07:52.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Personnage.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\Personnage.cs",
+              "RelativeDocumentMoniker": "AppPersonnage\\Personnage.cs",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\Personnage.cs",
+              "RelativeToolTip": "AppPersonnage\\Personnage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T01:54:49.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\Program.cs",
+              "RelativeDocumentMoniker": "AppPersonnage\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\Laboratoires\\Solution\\Laboratoire2-2_Solution\\AppPersonnage\\Program.cs",
+              "RelativeToolTip": "AppPersonnage\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T01:54:27.467Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

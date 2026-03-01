@@ -1,0 +1,8 @@
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\bin\Debug\AppThermostat.exe.config
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\bin\Debug\AppThermostat.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\bin\Debug\AppThermostat.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\obj\Debug\AppThermostat.csproj.AssemblyReference.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\obj\Debug\AppThermostat.csproj.CoreCompileInputs.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\obj\Debug\AppThermostat.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\obj\Debug\AppThermostat.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppThermostat\obj\Debug\AppThermostat.exe.config

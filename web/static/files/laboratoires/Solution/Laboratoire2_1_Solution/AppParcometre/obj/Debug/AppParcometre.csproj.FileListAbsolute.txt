@@ -1,0 +1,7 @@
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\bin\Debug\AppParcometre.exe.config
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\bin\Debug\AppParcometre.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\bin\Debug\AppParcometre.pdb
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\obj\Debug\AppParcometre.csproj.AssemblyReference.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\obj\Debug\AppParcometre.csproj.CoreCompileInputs.cache
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\obj\Debug\AppParcometre.exe
+C:\H26\2P6\Nouveau dossier\Laboratoire2-1\AppParcometre\obj\Debug\AppParcometre.pdb

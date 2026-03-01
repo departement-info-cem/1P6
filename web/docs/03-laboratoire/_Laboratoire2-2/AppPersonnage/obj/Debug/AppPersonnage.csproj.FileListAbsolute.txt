@@ -1,0 +1,16 @@
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.exe.config
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.exe
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.pdb
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.csproj.AssemblyReference.cache
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.csproj.CoreCompileInputs.cache
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.exe
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.pdb
+C:\Users\jamil.gammoudi\Downloads\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.exe.config
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.exe.config
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.exe
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\bin\Debug\AppPersonnage.pdb
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.csproj.AssemblyReference.cache
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.exe.config
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.csproj.CoreCompileInputs.cache
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.exe
+C:\H26\2P6\Laboratoire2-2\AppPersonnage\obj\Debug\AppPersonnage.pdb

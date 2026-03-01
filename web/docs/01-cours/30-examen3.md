@@ -32,8 +32,7 @@ L'examen dure 2h (plus si vous avez droit à du temps supplémentaire). Il s'agi
 
 Vous avez le droit à :
 
-- [Notions C#](https://info.cegepmontpetit.ca/notions-csharp/)
-- Le site principal du cours ([1P6](https://info.cegepmontpetit.ca/1P6/))
+- Une feuille de note manuscrite recto-verso de format lettre. (Soit 8½ x 11)
 
 :::
 
