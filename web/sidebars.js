@@ -294,8 +294,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.1 - rencontre11",
-      id: "cours/rencontre11",
+      label: "6.1 - Windows Forms",
+      id: "cours/winforms",
       customProps: {
         calendrier: {
           "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
