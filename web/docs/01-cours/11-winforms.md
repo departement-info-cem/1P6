@@ -183,6 +183,7 @@ Il faudra se pratiquer à chercher à l'intérieur de cet outil.
 
 La fenêtre est un élément important d'une application Winforms. Elle est le point d'acrage de toutes les composantes. Elle est tellement important que si on décide de fermer la fenêtre, l'application va s'arrêter.
 
+
 ```csharp
 public partial class FenetrePrincipale : Form
 {
@@ -194,6 +195,24 @@ public partial class FenetrePrincipale : Form
         Application.Exit();
     }
 ```
+
+### ➕ Ajouter une fenêtre
+
+Il est possible que l'on veuille ajouter des fenêtres (formulaires) à notre projet. Il suffit de faire un **`clic droit`** de la souris sur le **`projet`**, sélectionner **`Ajouter...`** et ensuite cliquer sur **`Formulaire (Windows Form)`**.
+
+![Ajouter une fenêtre clique droit souris sur projet, Ajouter..., Formulaire (Windows Form)](@site/static/img/R11/ajouterForm.png)
+
+:::tip
+N'oubliez pas de mettre à jour le fichier **`Program.cs`** si c'est la fenêtre principale que vous changez!
+
+```csharp
+Application.EnableVisualStyles();
+Application.SetCompatibleTextRenderingDefault(false);
+// ... peut-être appeler une méthode d'initialisation ici? 🤔
+Application.Run(new Form1()); // ❌
+Appication.Run(new NouvelleFenetre()); // ✅
+```
+:::
 ### 🥊 `Form.cs` vs `Form.Designer.cs`
 Un petit mot clé C# s'est glissé sans que l'on s'en rende compte. Vous remarquerez dans la définition de la classe que le mot **`partial`** est apparu. Il est très important, car il indique que la classe FenetrePricipale est définie à **deux endroits**! On retrouve la classe **`FenetrePricipale`** dans **`FenetrePricipale.cs`** **ET** dans **`FenetrePrincipale.Designer.cs`**.
 
