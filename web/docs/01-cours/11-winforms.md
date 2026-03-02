@@ -107,7 +107,7 @@ public class FenetrePrincipale : Form
 ### 🧰 La boîte à outil
 Écrire tout ceci à la main est long et fastidieux. La boîte à outil est là pour nous aider. Elle est accessible par le menu **`Affichage➡️Boîte à outils`** ou tout simplement avec le raccourcis **`ctrl-alt-x`**. Avec cet outil, il est maintenant possible d'ajouter, positionner, dimensionner les contrôles de la fenêtre en n'utilisant que la souris. Nous aurons donc rarement à créer objets de contrôles manuellement.
 
-![La boîte à outil accessible par ctrl-alt-x](@site/static/img/R09/boiteOutil.png)
+![La boîte à outil accessible par ctrl-alt-x](@site/static/img/R11/boiteOutil.png)
 
 Comme vous pouvez remarquer, il y a une quantité incroyable de contrôles. Nous explorerons les principaux tout au long de la session, mais nous allons nous restreindre aux 
 - Fenêtres (`Form`)
@@ -120,7 +120,7 @@ Comme vous pouvez remarquer, il y a une quantité incroyable de contrôles. Nous
 L'outil de conception, appelé **Designer** dans Visual Studio, est pratique et complexe. Il permet de générer le code des contrôles automatiquement lorsqu'on les glisse de la boîte à outils vers la fenêtre et lorsqu'on les modifie à partir de la fenêtre de propriétés. Le designer remarque les changements apportés aux contrôles et ajuste le code au fur et à mesure des changements.
 
 Prenons par exemple l'ajout d'un simple bouton **`Quitter`**:
-![Insertion d'un bouton "Quitter" dans la fenêtre principale](@site/static/img/R09/btnQuitter.png)
+![Insertion d'un bouton "Quitter" dans la fenêtre principale](@site/static/img/R11/btnQuitter.png)
 
 
 <Row>
@@ -151,7 +151,7 @@ private void InitializeComponent()
 
 <Column>
 
-![La fenêtre de propriété d'un contrôle](@site/static/img/R09/proprietes.png)
+![La fenêtre de propriété d'un contrôle](@site/static/img/R11/proprietes.png)
 
 </Column>
 
@@ -160,7 +160,7 @@ private void InitializeComponent()
 :::tip
 Lorsqu'on utilise le volet graphique du designer, les propriétés des objets peuvent être changées sans avoir à écrire du code. Il suffit de choisir sa composante en cliquant dessus ou en choississant son nom dans le menu déroulant de la **`🔧Fenêtre de propriété (F4)`**.
 
-![Fenêtre de propriétés](@site/static/img/R09/tipProprietes.png)
+![Fenêtre de propriétés](@site/static/img/R11/tipProprietes.png)
 
 :::
 
@@ -197,7 +197,7 @@ public partial class FenetrePrincipale : Form
 ### 🥊 `Form.cs` vs `Form.Designer.cs`
 Un petit mot clé C# s'est glissé sans que l'on s'en rende compte. Vous remarquerez dans la définition de la classe que le mot **`partial`** est apparu. Il est très important, car il indique que la classe FenetrePricipale est définie à **deux endroits**! On retrouve la classe **`FenetrePricipale`** dans **`FenetrePricipale.cs`** **ET** dans **`FenetrePrincipale.Designer.cs`**.
 
-![FenetrePricipale.cs et FenetrePricipale.Designer.cs](@site/static/img/R09/designer.png)
+![FenetrePricipale.cs et FenetrePricipale.Designer.cs](@site/static/img/R11/designer.png)
 
 Le code que nous allons écrire devra être inséré dans **`FenetrePrincipale.cs`**. Cependant, le code généré par le designer va se retrouver dans **`FenetrePrincipale.Designer.cs`**. Il est important d'éviter de modifier le code dans le **`.Designer.cs`** car nous n'avons pas nécessairement le contrôle de ce qui est écrit.
 
@@ -256,7 +256,7 @@ Une étiquette est un contrôle de la classe **`System.Windows.Forms.Label`**. E
 Le préfixe pour une étiquette est **`lbl`**.
 :::
 
-![Visuel d'une boîte de texte de la classe Textbox](@site/static/img/R09/label.png)
+![Visuel d'une boîte de texte de la classe Textbox](@site/static/img/R11/label.png)
 
 ```csharp
 /// <summary>
@@ -286,7 +286,7 @@ Une boîte de texte est un contrôle de la classe **`System.Windows.Forms.TextBo
 Le préfixe pour une boîte de texte est **`txt`**.
 :::
 
-![Visuel d'une étiquette de la classe Label](@site/static/img/R09/textBox.png)
+![Visuel d'une étiquette de la classe Label](@site/static/img/R11/textBox.png)
 
 ```csharp
 /// <summary>
@@ -313,7 +313,7 @@ Un bouton est un contrôle de la classe **`System.Windows.Forms.Button`**. Il pe
 Le préfixe pour un bouton est **`btn`**.
 :::
 
-![Visuel d'un bouton de la classe Button](@site/static/img/R09/button.png)
+![Visuel d'un bouton de la classe Button](@site/static/img/R11/button.png)
 
 ```csharp
 /// <summary>
@@ -342,11 +342,11 @@ Un événement en C# WinForms est un signal émis par un contrôle (bouton, form
 
 Dans la fenêtre **`Propriétés`**, il est possible d'ajouter des événements. Sous le nom de l'objet de contrôle sélectionné, il existe plusieurs boutons. Le quatrième est le bouton **`Événements'** qui va basculer la liste des propriétés vers la liste des événements disponibles pour ce contrôle.
 
-![Événements](@site/static/img/R09/events.png)
+![Événements](@site/static/img/R11/events.png)
 
 :::tip
 Il arrive souvent d'ajouter un événement clic par erreur en double cliquant le contrôle au lieu de le sélectionner. Il est possible d'effacer cet événements. Parcontre si l'événement à été effacé dans le fichier de la fenêtre (**`FenetrePricipale.cs`**), il est possible de venir corriger le designer en allant effacer l'événement dans l'**`InitializeComponent()`** du designer de la fenêtre (**`FenetrePricipale.Designer.cs`**).
-![Erreur commun](@site/static/img/R09/erreurCommun.png)
+![Erreur commun](@site/static/img/R11/erreurCommun.png)
 
 :::
 
@@ -354,7 +354,7 @@ Il arrive souvent d'ajouter un événement clic par erreur en double cliquant le
 
 Les événements générés par le designer sont placés dans le fichier de notre fenêtre. Dans l'exemple ici, il sera dans **`FenetrePrincipale.cs`**. Malheureusement lorsqu'on clique sur notre fenêtre dans l'**`Explorateur de solutions`**, Visual Studio nous ouvre le designer. Pour voir le code derrière, il faut faire un clique droit de la souris sur notre fenêtre et choisir **`<> Afficher le code`**. Un raccourcis clavier existe qui est **`F7`**.
 
-![Emplacement de l'événements](@site/static/img/R09/eventLocation.png)
+![Emplacement de l'événements](@site/static/img/R11/eventLocation.png)
 
 ### 🔎 À quoi ressemble un événement
 
@@ -370,3 +370,10 @@ private void btnQuitter_Click(object sender, EventArgs e)
     Application.Exit();
 }
 ```
+## 📚 Ressources supplémentaires
+
+
+Vous devez réaliser le labo suivant :
+ [🧪 Labo 6.1](/laboratoire/laboratoire6.1A)
+
+---
