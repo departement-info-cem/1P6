@@ -25,7 +25,7 @@ Vous retrouverez Windows Forms dans plusieurs contextes comme:
 - Prototype et preuve de concept
 - Projets personnels
 
-Windows Forms repose sur le principe de la **programmation événementielle**. C'est-à-dire que l'application est en **attente** d'un stimuli pour ensuite **réagir**. Elle est comparable à nos menus console. C'est le même principe que nous utilison lorsque l'application tourne en boucle en attendant que l'utilisateur choisisse et appuie sur la touche `entrée`.
+Windows Forms repose sur le principe de la **programmation événementielle**. C'est-à-dire que l'application est en **attente** d'un stimulus pour ensuite **réagir**. Elle est comparable à nos menus console. C'est le même principe que nous utilisons lorsque l'application tourne en boucle en attendant que l'utilisateur choisisse et appuie sur la touche `entrée`.
 
 ### 🌟 Créer un projet
 Commençons par créer un projet d'application Windows Forms et nous explorerons ensuite sa structure.
@@ -52,7 +52,7 @@ Le point d'entrée reste le même fichier, soit **`Program.cs`**. Parcontre, on 
         }
     }
 ```
-Nous retrouvons notre **`static void Main()`** auquel nous sommes habitués. L'attribut de classe **`[STAThread]`** est ajouté et nous indique que l'application sera exécutée sur le fil d'exécution pricinpale. Sans pour autant entrer dans les détails, Winforms **ne supporte pas le multithread**. Il faudra faire attention de ne pas bloquer l'interface utilisateur et éviter les longues opérations.
+Nous retrouvons notre **`static void Main()`** auquel nous sommes habitués. L'attribut de classe **`[STAThread]`** est ajouté et nous indique que l'application sera exécutée sur le fil d'exécution principal. Sans pour autant entrer dans les détails, Winforms **ne supporte pas le multithread**. Il faudra faire attention de ne pas bloquer l'interface utilisateur et éviter les longues opérations.
 
 La ligne importante pour nous est **`Application.Run(new FenetrePrincipale());`**, c'est notre point d'entrée. Avec cette ligne, nous informons que l'application va être exécutée en ouvrant une fenêtre de type **`Form`** et que nous avons nommé **`FenetrePrincipale`**.
 
@@ -69,9 +69,9 @@ Application.Run(new FenetrePrincipale());
 
 ### 🧑‍🔧Le code-behind 
 
-Chaques fenêtres, chaques boutons, chaques zone de textes, bref... **TOUT** est un **objet** dans Windows Forms. Comme on vient de le voir au point d'entrée, pour démarrer une fenêtre, il faut instancier un objet de type `Form` avec le mot clé `new`. 
+Chaque fenêtre, chaque bouton, chaque boîte de texte, brefs... **TOUT** est un **objet** dans Windows Forms. Comme on vient de le voir au point d'entrée, pour démarrer une fenêtre, il faut instancier un objet de type `Form` avec le mot clé `new`. 
 
-Si l'on observe cette section de code, on peut y lire qu'un bouton est ajouté à la fenêtre pricipale:
+Si l'on observe cette section de code, on peut y lire qu'un bouton est ajouté à la fenêtre principale:
 ```csharp
 public class FenetrePrincipale : Form
 {
@@ -91,9 +91,9 @@ public class FenetrePrincipale : Form
         this.Controls.Add(btnQuitter);
     }            
 ```
-En effet, tout les contrôles que nous allons créer et ajouter à la fenêtre sont des objets avec des propriétés que nous devrons initialiser. Une fois initialiser, ces objets seront contenu dans une collection de contrôle de la fenêtre. On peut se le représenter comme un liste d'objet où les boutons, les champs de textes, les étiquettes vont être gardé en mémoire.
+En effet, tous les contrôles que nous allons créer et ajouter à la fenêtre sont des objets avec des propriétés que nous devrons initialiser. Une fois initialisés, ces objets seront contenus dans une collection de contrôle de la fenêtre. On peut se le représenter comme une liste d'objet où les boutons, les champs de textes, les étiquettes vont être gardés en mémoire.
 
-Ils seront emmagasinés dans cette collection appelé **`components`**.
+Ils seront emmagasinés dans cette collection appelée**`components`**.
 
 ```csharp
 public class FenetrePrincipale : Form
@@ -105,7 +105,7 @@ public class FenetrePrincipale : Form
 ``` 
 
 ### 🧰 La boîte à outil
-Écrire tout ceci à la main est long et fastidieux. La boîte à outil est là pour nous aider. Elle est accessible par le menu **`Affichage➡️Boîte à outils`** ou tout simplement avec le raccourcis **`ctrl-alt-x`**. Avec cet outil, il est maintenant possible d'ajouter, positionner, dimensionner les contrôles de la fenêtre en n'utilisant que la souris. Nous aurons donc rarement à créer objets de contrôles manuellement.
+Écrire tout ceci à la main est long et fastidieux. La boîte à outils est là pour nous aider. Elle est accessible par le menu **`Affichage➡️Boîte à outils`** ou tout simplement avec le raccourci **`ctrl-alt-x`**. Avec cet outil, il est maintenant possible d'ajouter, positionner, dimensionner les contrôles de la fenêtre en n'utilisant que la souris. Nous aurons donc rarement à créer des objets de contrôles manuellement.
 
 ![La boîte à outil accessible par ctrl-alt-x](@site/static/img/R11/boiteOutil.png)
 
@@ -119,13 +119,13 @@ Comme vous pouvez remarquer, il y a une quantité incroyable de contrôles. Nous
 
 L'outil de conception, appelé **Designer** dans Visual Studio, est pratique et complexe. Il permet de générer le code des contrôles automatiquement lorsqu'on les glisse de la boîte à outils vers la fenêtre et lorsqu'on les modifie à partir de la fenêtre de propriétés. Le designer remarque les changements apportés aux contrôles et ajuste le code au fur et à mesure des changements.
 
-Prenons par exemple l'ajout d'un simple bouton **`Quitter`**:
+Prenons, par exemple, l'ajout d'un simple bouton **`Quitter`**:
 ![Insertion d'un bouton "Quitter" dans la fenêtre principale](@site/static/img/R11/btnQuitter.png)
 
 
 <Row>
 
-Remarquez maintenant que le designer reflète dans le code les propriétés que nous avons spécifiées comme par exemple la position (Location = 198; 59).
+Remarquez maintenant que le designer reflète dans le code les propriétés que nous avons spécifiées, comme par exemple, la position (Location = 198; 59).
 <Column>
 
 ```csharp
@@ -158,13 +158,13 @@ private void InitializeComponent()
 </Row>
 
 :::tip
-Lorsqu'on utilise le volet graphique du designer, les propriétés des objets peuvent être changées sans avoir à écrire du code. Il suffit de choisir sa composante en cliquant dessus ou en choississant son nom dans le menu déroulant de la **`🔧Fenêtre de propriété (F4)`**.
+Lorsqu'on utilise le volet graphique du designer, les propriétés des objets peuvent être changées sans avoir à écrire du code. Il suffit de choisir sa composante en cliquant dessus ou en choisissant son nom dans le menu déroulant de la **`🔧Fenêtre de propriété (F4)`**.
 
 ![Fenêtre de propriétés](@site/static/img/R11/tipProprietes.png)
 
 :::
 
-On ne va pas se le cacher, il y a une quantité incroyable de contrôles et chaques contrôles a beaucoup de propriétés. Il nous sera impossible de tout montrer pendant le cours. Nous devrons alors nous familiariser avec l'interface d'application logiciel(API) de Microsft pour Winforms. 
+On ne va pas se le cacher, il y a une quantité incroyable de contrôle et chaque contrôle a beaucoup de propriétés. Il nous sera impossible de tout montrer pendant le cours. Nous devrons alors nous familiariser avec l'interface d'application logicielle (API) de Microsft pour Winforms. 
 
 Voici un lien vers une description générale des contrôles et des leurs propriétés:
 [Control Classe](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.control?view=netframework-4.7.2)
@@ -181,7 +181,7 @@ Il faudra se pratiquer à chercher à l'intérieur de cet outil.
 
 [Lien vers l'API pour la classe Form](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.form?view=netframework-4.7.2)
 
-La fenêtre est un élément important d'une application Winforms. Elle est le point d'acrage de toutes les composantes. Elle est tellement important que si on décide de fermer la fenêtre, l'application va s'arrêter.
+La fenêtre est un élément important d'une application Winforms. Elle est le point d'ancrage de toutes les composantes. Elle est tellement importante que si on décide de fermer la fenêtre, l'application va s'arrêter.
 
 
 ```csharp
@@ -222,7 +222,7 @@ Le code que nous allons écrire devra être inséré dans **`FenetrePrincipale.c
 
 ### 🔰 InitializeComponent()
 
-La méthode **`InitializeComponent()`** généré par le designer se retrouve dans le fichier **`*.Designer.cs`** de notre fenêtre. On y retrouve **TOUS** nos contrôles tel que nos boutons, étiquettes et boîtes de texte que nous ajoutons avec la boîte à outils. Cette section change dès que l'on modifie la propriété d'un contrôle. 
+La méthode **`InitializeComponent()`** générée par le designer se retrouve dans le fichier **`*.Designer.cs`** de notre fenêtre. On y retrouve **TOUS** nos contrôles, tel que nos boutons, étiquettes et boîtes de texte que nous ajoutons avec la boîte à outils. Cette section change dès que l'on modifie la propriété d'un contrôle. 
 
 ```csharp
 #region Code généré par le Concepteur Windows Form
@@ -255,21 +255,21 @@ private void InitializeComponent()
 ```
 
 :::danger
-Il est fortement **déconseillé** d'ajouter ou de modifier soit même du code dans cette section. Il n'est pas garantie que nos changements seront gardés.
+Il est fortement **déconseillé** d'ajouter ou de modifier soit même du code dans cette section. Il n'est pas garanti que nos changements seront gardés.
 :::
 
 ## ✅ Contrôles
 
 [Lien vers la classe générale de Control](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.control?view=netframework-4.7.2)
 
-Les contrôles dans Winforms prennent plusieurs formes. Ce sont des composantes d'interface utilisateur réutiilisables qui permetttent d'afficher des données, de structurer la mise en page et de receuillir les entrées de l'utilisateur. Ils sont des éléments visuels interactifs. Chaque contrôle possède des propriétés, des méthodes et des événements communs.
+Les contrôles dans Winforms prennent plusieurs formes. Ce sont des composantes d'interface utilisateur réutilisables qui permettent d'afficher des données, de structurer la mise en page et de recueillir les entrées de l'utilisateur. Ils sont des éléments visuels interactifs. Chaque contrôle possède des propriétés, des méthodes et des événements communs.
 
-Les noms que nous allons donner à nos contrôles doivent respecter un standard. Le nom doit commmencer par un **préfix de trois lettres**.
+Les noms que nous allons donner à nos contrôles doivent respecter un standard. Le nom doit commencer par un **préfixe de trois lettres**.
 
 ### 🏷️ Étiquette (Label)
 [Lien vers la classe Label](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.label?view=netframework-4.7.2)
 
-Une étiquette est un contrôle de la classe **`System.Windows.Forms.Label`**. Elle permet d'afficher du texte à l'utilisteur. On s'en sert principalement pour identifier les contrôles présentés dans une fenêtre, fournir des instructions ou pour afficher des information dynamique à l'exécution (statut, résultats).
+Une étiquette est un contrôle de la classe **`System.Windows.Forms.Label`**. Elle permet d'afficher du texte à l'utilisateur. On s'en sert principalement pour identifier les contrôles présentés dans une fenêtre, fournir des instructions ou pour afficher des informations dynamiques à l'exécution (statut, résultats).
 
 :::warning
 Le préfixe pour une étiquette est **`lbl`**.
@@ -299,7 +299,7 @@ private void InitializeComponent()
 ### ⌨️ Boîte de texte (TextBox)
 [Lien vers la classe TextBox](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.textbox?view=netframework-4.7.2)
 
-Une boîte de texte est un contrôle de la classe **`System.Windows.Forms.TextBox`**. Elle permet à l'utilisteur d'écrire du texte dans une zone spécifique. On s'en sert principalement pour permettre à l'utilisateur de saisir, modifier ou visualiser du texte (une ou plusieurs lignes) dans une application. C'est un contrôle essentiel pour la collecte de données, prenant en charge le clavier, le copier-coller et la personnalisation.
+Une boîte de texte est un contrôle de la classe **`System.Windows.Forms.TextBox`**. Elle permet à l'utilisateur d'écrire du texte dans une zone spécifique. On s'en sert principalement pour permettre à l'utilisateur de saisir, modifier ou visualiser du texte (une ou plusieurs lignes) dans une application. C'est un contrôle essentiel pour la collecte de données, prenant en charge le clavier, le copier-coller et la personnalisation.
 
 :::warning
 Le préfixe pour une boîte de texte est **`txt`**.
@@ -326,7 +326,7 @@ private void InitializeComponent()
 ### 🖱️ Bouton (Button)
 [Lien vers la classe Button](https://learn.microsoft.com/fr-fr/dotnet/api/system.windows.forms.button?view=netframework-4.7.2)
 
-Un bouton est un contrôle de la classe **`System.Windows.Forms.Button`**. Il permet à l'utilisteur de déclencher une action spécifique, telle que la soumission d'un formulaire, l'enregistrement de données, l'ouverture ou la fermeture d'une fenêtre. Il s'agit d'un composant fondamental de l'interface graphique.
+Un bouton est un contrôle de la classe **`System.Windows.Forms.Button`**. Il permet à l'utilisateur de déclencher une action spécifique, telle que la soumission d'un formulaire, l'enregistrement de données, l'ouverture ou la fermeture d'une fenêtre. Il s'agit d'un composant fondamental de l'interface graphique.
 
 :::warning
 Le préfixe pour un bouton est **`btn`**.
@@ -357,21 +357,21 @@ private void InitializeComponent()
 
 Un événement en C# WinForms est un signal émis par un contrôle (bouton, formulaire) pour notifier qu'une action s'est produite, telle qu'un clic (Click), une touche pressée (KeyDown) ou le chargement d'une fenêtre (Load). Ils sont au cœur de la programmation événementielle : le code réagit en réponse à l'action de l'utilisateur.
 
-### ➕ Ajouter un événements
+### ➕ Ajouter un événement
 
 Dans la fenêtre **`Propriétés`**, il est possible d'ajouter des événements. Sous le nom de l'objet de contrôle sélectionné, il existe plusieurs boutons. Le quatrième est le bouton **`Événements'** qui va basculer la liste des propriétés vers la liste des événements disponibles pour ce contrôle.
 
 ![Événements](@site/static/img/R11/events.png)
 
 :::tip
-Il arrive souvent d'ajouter un événement clic par erreur en double cliquant le contrôle au lieu de le sélectionner. Il est possible d'effacer cet événements. Parcontre si l'événement à été effacé dans le fichier de la fenêtre (**`FenetrePricipale.cs`**), il est possible de venir corriger le designer en allant effacer l'événement dans l'**`InitializeComponent()`** du designer de la fenêtre (**`FenetrePricipale.Designer.cs`**).
+Il arrive souvent d'ajouter un événement clic par erreur en double cliquant le contrôle au lieu de le sélectionner. Il est possible d'effacer cet événement. Parcontre, si l'événement à été effacé dans le fichier de la fenêtre (**`FenetrePricipale.cs`**), il est possible de venir corriger le designer en allant effacer l'événement dans l'**`InitializeComponent()`** du designer de la fenêtre (**`FenetrePricipale.Designer.cs`**).
 ![Erreur commun](@site/static/img/R11/erreurCommun.png)
 
 :::
 
 ### 🗺️ Où sont placés les événements?
 
-Les événements générés par le designer sont placés dans le fichier de notre fenêtre. Dans l'exemple ici, il sera dans **`FenetrePrincipale.cs`**. Malheureusement lorsqu'on clique sur notre fenêtre dans l'**`Explorateur de solutions`**, Visual Studio nous ouvre le designer. Pour voir le code derrière, il faut faire un clique droit de la souris sur notre fenêtre et choisir **`<> Afficher le code`**. Un raccourcis clavier existe qui est **`F7`**.
+Les événements générés par le designer sont placés dans le fichier de notre fenêtre. Dans l'exemple ici, il sera dans **`FenetrePrincipale.cs`**. Malheureusement, lorsqu'on clique sur notre fenêtre dans l'**`Explorateur de solutions`**, Visual Studio nous ouvre le designer. Pour voir le code derrière, il faut faire un clic droit de la souris sur notre fenêtre et choisir **`<> Afficher le code`**. Un raccourci clavier existe qui est **`F7`**.
 
 ![Emplacement de l'événements](@site/static/img/R11/eventLocation.png)
 
@@ -380,8 +380,8 @@ Les événements générés par le designer sont placés dans le fichier de notr
 Un événement va toujours avoir la même signature. Le nom est écrit sous le format `nomControl_Evenement`. 
 
 Les deux paramètres sont très importants:
-- **`object sender`**: Est une référence sur l'objet qui a déclanché l'événement. Il est possible d'associer le même événement à plusieurs contrôles! Il est donc primordial d'être en mesure de déterminer **QUI** a généré l'événement.
-- **`EventArgs e`**: Est un objet contenant tous les arguments passés en paramètre à l'événements. 
+- **`object sender`**: Est une référence sur l'objet qui a déclenché l'événement. Il est possible d'associer le même événement à plusieurs contrôles! Il est donc primordial d'être en mesure de déterminer **QUI** a généré l'événement.
+- **`EventArgs e`**: Est un objet contenant tous les arguments passés en paramètre à l'événement. 
 
 ```csharp
 private void btnQuitter_Click(object sender, EventArgs e)
