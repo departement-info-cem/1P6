@@ -13,6 +13,8 @@ description: Windows Forms (suite)
 
 ## ✅ Introduction
 
+Modèle du domaine/métier (Domain Model)
+
 - Testabilité
 - Maintenance (entretien du système)
 - Développement parallèle
@@ -21,19 +23,19 @@ description: Windows Forms (suite)
 
 ## ✅ Où placer notre code?
 
-### Modèle du domaine/métier (Domain Model)
+Nous allons ajouter une nouvelle structure pour bien placer nos objets du domaine.
 
-### Créer un projet de biblothèque de classe
+### ✨ Créer un projet de biblothèque de classe
 
 ![Ajouter un nouveau projet Bibliothèque de classe](@site/static/img/R12/bibliothequeClasse.png)
 
-### Ajouter une référence
+### ➕ Ajouter une référence
 
 ![Ajouter une référence de la bibliothèque au projet Winforms](@site/static/img/R12/ajouterReference.png)
 
 ![Cochez la bibliothèque que l'on vient de créer](@site/static/img/R12/cocherBibliotheque.png)
 
-### Utiliser l'objet provenant d'un autre espace de nom (Namespace)
+### 🛂 Utiliser un objet provenant d'un autre espace de nom (Namespace)
 
 ```csharp
 using Modele;
@@ -74,7 +76,7 @@ namespace Modele
 
 ## ✅ Écrire une suite de tests.
 
-### Introduction aux instructions de précompilation
+### 🦖 Introduction aux instructions de précompilation
 Ce sont des instructions qui sont exécutées avant la compilation.
 
 ```csharp
@@ -89,11 +91,69 @@ Ce sont des instructions qui sont exécutées avant la compilation.
 
 ```
 
-### Ajouter un dossier (répertoire) pour nos classes de tests.
+### ➕ Ajouter un dossier (répertoire) pour nos classes de tests.
 ![Ajouter un nouveau dossier dans notre projet de bibliothèque de classe](@site/static/img/R12/ajouterDossier.png)
 
 ![La structure de notre solution](@site/static/img/R12/apercuSolution.png)
 
-### Structure d'une classe de test
+### ⚙️ Structure d'une classe de test
 
-### Comment rédiger de bons tests
+### 👨‍💻 Comment rédiger de bons tests
+
+#### 🎯 Cibler les comportements, pas l'implémentation
+Même si une classe de modèle est simple (souvent juste des getters/setters), tu peux :
+
+Vérifier la bonne initialisation des propriétés via le constructeur.
+Tester des méthodes du mdodèle de domaine (validation, calculs dérivés, etc.).
+
+#### 🏗️ Structure AAA (Arrange-Act-Assert)
+Tout test bien structuré suit cette règle :
+
+- Arrange : Prépare le contexte du test (données, instances).
+- Act : Exécute l'action à tester.
+- Assert : Vérifie que le résultat est celui attendu.
+
+#### 🚧 Tester les valeurs limites et cas extrêmes
+- Valeurs null
+- Chaînes vides
+- Valeurs négatives ou très grandes
+- Cas par défaut (objet non initialisé)
+
+#### 🔒 Indépendance des tests
+Chaque test doit être autonome et ne pas dépendre de l'ordre d'exécution ou de l'état d'un autre test.
+
+#### 🚫 Ne teste pas les getters/setters "purs"
+Les propriétés sans traitement vont toujours fonctionner. 
+```csharp
+private int m_age;
+private string m_prenom;
+public string Prenom // 🙅 Ne pas tester! ❌ 
+{ 
+    get
+    {
+        return m_prenom;
+    }
+    set
+    {
+        m_prenom = value;
+    }
+}
+public string Nom { get; set; } // 🙅 Ne pas tester! ❌ 
+public bool EstMajeur // 💁 à tester! ✅
+{
+    get
+    {
+        return age < 18;
+    }
+}
+```
+
+#### 📋 Récapitulatif — Que tester sur un modèle ?
+
+
+|À tester ✅	| À ne pas tester ❌| 
+|---|---|
+|Propriétés calculées (NomComplet)|	Getters/setters purs sans logique|
+|Méthodes du domaine (EstMajeur())	|Dépendances externes (BD, réseau)|
+|Contraintes / validations	|Code de l'infrastructure|
+|Valeurs limites et cas null	|| 
