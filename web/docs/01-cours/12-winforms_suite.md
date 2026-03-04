@@ -2,14 +2,12 @@
 description: Windows Forms (suite)
 ---
 
-# Windows Forms
+# Windows Forms (suite)
 
 ## 🎯 Objectifs
 1. Consolider la connaissance de Windows Forms
 2. Comment utiliser nos classes et objets avec Windows Form
 3. Comprendre ce qu'est un modèle de domaine/métier (Domain model)
-4. Tester notre modèle sans s'entremêler dans l'interface graphique
-5. Introduction aux instructions de précompilation
 
 ## ✅ Introduction
 
