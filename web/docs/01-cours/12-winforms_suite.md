@@ -44,7 +44,8 @@ Une fenêtre de **`Gestionnaire de références`** devrait ouvrir. Cochez le pro
 
 ### 🛂 Utiliser un objet provenant d'un autre espace de nom (Namespace)
 
-Il nous reste maintenant à utiliser notre bibliothèque de classe dans notre fenêtre principale. Par défaut, l'espace de nom (Namespace) de note bibliothèque
+Il nous reste maintenant à utiliser notre bibliothèque de classe dans notre fenêtre principale. Par défaut, l'espace de nom (Namespace) de notre
+bibliothèque
 devrait être le même que le nom de notre bibliothèque (**`Modele`**). Le mot clé **`using`** nous permet d'importer la bibliothèque et d'utiliser les classes qui si retrouvent.
 
 Dans l'exemple ci-bas, la **`Class1`** de notre bilbiothèque est maintenant accessible:
