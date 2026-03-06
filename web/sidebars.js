@@ -294,8 +294,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.1 - rencontre11",
-      id: "cours/rencontre11",
+      label: "6.1 - Windows Forms",
+      id: "cours/winforms",
       customProps: {
         calendrier: {
           "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
@@ -308,12 +308,14 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.2 - rencontre12",
-      id: "cours/rencontre12",
+      label: "6.2 - Windows Forms (suite)",
+      id: "cours/winforms_suite",
       customProps: {
         calendrier: {
-          "Jamil": [{ "1010": g1010[11] }, { "1020": g1010[11] }],
-          "Philippe": [{ "1050": g1010[11] }]
+          "Jamil": [{ "1010": g1010[10] }, { "1020": g1010[10] }],
+          "Philippe": [{ "1050": g1010[10] }],
+          "David": [{ "1030": g1030[10] }, { "1040": g1030[10] }],
+          "Jimmy": [{ "1060": g1010[10] }],
         },
         tooltip: "cache"
       }
@@ -670,16 +672,32 @@ const sidebars = {
       label: 'Laboratoire 4.2',
       collapsible: true,
       collapsed: collapseBloc2,
-      items: ['laboratoire/laboratoire4.2A','laboratoire/laboratoire4.2B', 'laboratoire/laboratoire4.2C']      
-      
+      items: ['laboratoire/laboratoire4.2A', 'laboratoire/laboratoire4.2B', 'laboratoire/laboratoire4.2C']
+
     },
-     {
+    {
       type: 'category',
       label: 'Laboratoire 5.1',
       collapsible: true,
       collapsed: collapseBloc2,
-      items: ['laboratoire/laboratoire5.1A','laboratoire/laboratoire5.1B']      
-      
+      items: ['laboratoire/laboratoire5.1A', 'laboratoire/laboratoire5.1B']
+
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 6.1',
+      collapsible: true,
+      collapsed: collapseBloc2,
+      items: ['laboratoire/laboratoire6.1A', 'laboratoire/laboratoire6.1B', 'laboratoire/laboratoire6.1C']
+
+    },
+    {
+      type: 'category',
+      label: 'Laboratoire 6.2',
+      collapsible: true,
+      collapsed: collapseBloc2,
+      items: ['laboratoire/laboratoire6.2A', 'laboratoire/laboratoire6.2B', 'laboratoire/laboratoire6.2C']
+
     }
 
   ],
