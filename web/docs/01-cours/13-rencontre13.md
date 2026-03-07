@@ -2,143 +2,345 @@
 description: Relations
 ---
 
-# Type par énumération
+# La relation d'association
 
 ## 🎯 Objectifs
-1. Comprendre la notion d’entité métier
-   * Identifier les objets du domaine réel (Chat, Proprietaire)
-   * Différencier ce qui appartient à chaque entité
-2. Comprendre et implémenter une association entre objets
-   * Relier `Chat` et `Proprietaire` via un lien bidirectionnel
+1. Comprendre et implémenter une association entre objets
+   * Relier `Chat` et `Proprietaire` via un lien unidirectionnel/bidirectionnel
    * Introduire la notion de multiplicité (1 propriétaire → plusieurs chats)
-
+2. Comprendre les relations d'agrégation et de composition
+3. Utiliser les contrôles WinForms : `ListBox` et `ComboBox`
 ---
 
 💡 À la fin de ce cours, l’étudiant saura modéliser correctement des entités du domaine et créer des relations entre objets.
 
 ---
-## ✅ Situation initiale : modèle actuel
+## 🐱🔍👤 Situation initiale : modèle actuel
 
-> « Dans notre application **AdopteTonChaton**, nous voulons gérer des chats et leurs propriétaires. Chaque chat a des informations de base comme son nom et son âge, et appartient à un propriétaire.
+Dans notre application de gestion d’un salon de toilettage pour chats, nous voulons gérer les chats et leurs propriétaires. 
+Le salon doit donc être capable de connaître le propriétaire d’un chat afin de gérer les rendez-vous et les services.
 
-> On commence avec une classe `Chat` qui contient :
->
-> * Le **nom** du chat
-> * L’**âge**
-> * Le **nom du propriétaire** sous forme de `string`
+* Chaque chat possède des informations de base, comme son nom et son âge, et est associé à un client du salon.
+* Chaque client possède des infytomations de base, comme son nom et son numéro de téléphone.
 
+### 🧠 Représentation conceptuelle
+
+![](@site/static/img/R13/noRelationChatClient.png)
+
+### 💻 Implémentation avec C#
+
+**Classe Chat**
+``` csharp
+ public class Chat
+ {
+     public string Nom { get; private set; }
+     public string Age { get; private set; }       
+ }
+```
+**Classe Client**
+``` csharp
+public class Client
+{ 
+   public string Nom { get; private set;}           
+   public string Prenom { get; private set;}
+   public string Telephone { get; private set;}
+}
+```
 ℹ️ **Remarque :**
 
 > On utilise uniquement des **propriétés automatiques** sans validation pour se concentrer sur la **structure des classes et leurs relations**.
+---
 
-![](@site/static/img/R13/chat.png)
+## 🐱👤 Amélioration du modèle : Un chat doit connaitre son propriétaire
+Dans notre modèle initial, les classes Chat et Client existent indépendamment.
+Or, dans la réalité, chaque chat appartient à un client.
+Nous devons donc modifier notre modèle afin de représenter cette relation entre les deux classes.
+
+### 🎯 Besoin métier
+
+> * Chaque chat est associé à un seul client, qui est son propriétaire.
+
+> 👉 Comment peut-on savoir qui est le propriétaire d’un chat ?
 
 
-Ici, le propriétaire est représenté par une simple chaîne de caractères.
+### 🧠 Représentation conceptuelle
+
+![](@site/static/img/R13/relationChatClientUni.png)
+
+### 💻 Implémentation avec C#
+
+**Classe Chat modifiée**
+``` csharp
+ public class Chat
+ {
+   public string Nom { get; private set; }
+   public int Age { get; private set; }       
+   // Un chat connaît son propriétaire, qui est un client.
+   public Client Proprietaire { get; private set; }
+
+   public Chat(string nom, int age, Client proprietaire)
+   {
+      Nom = nom;
+      Age = age;
+      Proprietaire = proprietaire;
+   } 
+       
+ }
+```
+#### 📦 Exemples d'objets en relations
+
+* La cliente Sophie est la proprétaire du chat Milo.
+``` csharp
+ Client client = new Client("Martin", "Sophie", "514-123-4567"),
+ Chat chatMilo = new Chat("Milo", 2, client);
+```
+👉 Le chat Milo possède une propriété Proprietaire qui référence l’objet client.
+
+---
+
+## 🐱🔢👤 Amélioration du modèle : Cardinalité de la relation
+Nous savons maintenant qu’il existe une relation entre les classes Chat et Client : Un chat possède un propriétaire.
+Cependant, cette relation soulève plusieurs questions importantes :
+> * 👉 Combien de clients peut avoir un chat ?
+> * 👉 Combien de chats peut avoir un client ?
+
+### 🎯 Besoin métier
+Supposons maintenant les règles suivantes :
+
+> * Chaque chat possède  **un** seul client propriétaire ;
+> * Un client peut posséder **plusieurs** chats.
+
+### 🧠 Représentation conceptuelle
+
+Pour préciser combien de chats et de clients peuvent être liés dans cette relation, on ajoute la notion de cardinalité dans le modèle conceptuel.
+
+![](@site/static/img/R13/relationChatClientUniAvecCard.png)
+
+### 💻 Implémentation avec C#
+
+
+#### 📦 Exemples d'objets en relations
+
+* La cliente Sophie est la proprétaire des chats Milo et Luna.
+``` csharp
+Client client = new Client("Martin", "Sophie", "514-123-4567"),
+
+Chat chatMilo = new Chat("Milo", 2, client);
+Chat chatLuna = new Chat("Luna", 1, client);
+```
+👉 Les deux chats Milo et Luna possèdent chacun une propriété **Proprietaire** qui référence au même objet **client**.
+
+
+### Accéder aux informations du propriétaire
+
+
+``` csharp
+// Obtenir le nom du propriétaire du chat Milo
+string nom = chatMilo.Proprietaire.Nom
+
+// Obtenir le propriétaire du chat Milo
+Client proprietaireMilo = chatMilo.Proprietaire
 
 ```
-Chat c1 = new Chat("Milo", 2, "Jean Dupont");
+---
+## 🐱🔢👤 Amélioration du modèle : Le client connais-il ses chats ?
+Dans le modèle amélioré, chaque chat connaît son propriétaire grâce à la propriété Proprietaire.
+
+> * 👉 Comment peut-on trouver tous les chats d’un client ?
+
+``` csharp
+// Supposons que nous avon une liste contenant tous les chats
+// et une autre contenant tous les clients
+List<Client> clients = new List<Client>
+{
+    new Client("Martin", "Sophie", "514-123-4567"),
+    new Client("Dubois", "Marc", "514-987-6543"),
+    new Client("Lefebvre", "Julie", "514-555-1111")
+};
+
+List<Chat> chats = new List<Chat>
+{
+    new Chat("Milo", 2, clients[0]),
+    new Chat("Luna", 1, clients[0]),
+    new Chat("Tiger", 3, clients[1]),
+    new Chat("Nala", 4, clients[2]),
+    new Chat("Simba", 2, clients[0])
+};
 ```
-Pour le moment, le propriétaire est représenté uniquement par son nom : "Jean Dupont".
+🧠 **Question**
 
----
+👉 Trouver tous les chats de Sophie.
 
-❓ **Question :**
+💻 Solution possible: Pour trouver les chats d’un client, il faudrait parcourir tous les chats.
 
-> Est-ce que "Jean Dupont" est un objet ou simplement un texte ?
-
----
-✔️ Réponse : c’est juste un texte.
-________________________________________
-
-## ✅ Nouveau besoin métier
-
-On veut maintenant stocker :
-
-> * Le prénom du propriétaire
-> * Le numéro de téléphone du propriétaire
-
----
-
-❓ **Question :**
-
-> Comment peut-on stocker ces informations?
-
----
-✔️ Réponse : ???
-________________________________________
-
-### ✅ Première solution : Ajouter des propriétés dans la classe `Chat`
-
-* On remplace le simple `string` du propriétaire par plusieurs propriétés :
-
-  * `NomProprietaire`
-  * `PrenomProprietaire`
-  * `TelephoneProprietaire`
-
-![](@site/static/img/R13/chatV2.png)
-
-**Avantages :**
-
-* Permet d’accéder directement à plusieurs informations sur le propriétaire.
-* Plus structuré qu’un simple texte.
-
-**Limites :**
-
-* Si un propriétaire a plusieurs chats, ses informations sont **dupliquées dans chaque chat**.
-* Toute modification (ex. changement de téléphone) doit être faite **dans tous les chats**, ce qui peut provoquer **incohérence et erreurs**.
-* Le chat gère des informations qui **ne lui appartiennent pas réellement**, ce qui va à l’encontre des principes de la POO.
-
----
-#### Problème 1 : duplication
-
+``` csharp
+// On veut trouver les chats de Sophie Martin
+List<Chat> chatsDeSophie = new List<Chat>();
+foreach(Chat chat in chats)
+{
+    if(chat.Proprietaire.Prenom == "Sophie" &&
+        chat.Proprietaire.Nom == "Martin")
+    {
+        chatsDeAdam.Add(chat);
+    }
+}
 ```
-ChatV2 c1 = new ChatV2("Milo", 2, "Dupont", "Jean", "0600000000");
-ChatV2 c2 = new ChatV2("Luna", 1, "Dupont", "Jean", "0600000000");
+
+### 🎯 Besoin métier: Le client doit connaitre ses chats
+Avec le modèle actuel, le client ne connaît pas ses chats. Pour trouver les chats d’un client, il faudrait parcourir tous les chats.
+Pour résoudre ce problème, on ajoute une liste de chats dans la classe Client. Cela permet au client de connaître dircetement ses chats.
+
+### 🧠 Représentation conceptuelle
+
+![](@site/static/img/R13/relationChatClientBiAvecCard.png)
+
+### 💻 Implémentation avec C#
+Afin de pouvoir retrouver facilement les chats d’un client, la classe Client possède maintenant une propriété qui contient une liste de chats. Cette liste permet de représenter tous les chats appartenant à ce client.
+
+**Classe Client modifiée**
+``` csharp
+public class Client
+{ 
+   public string Nom { get; private set;}           
+   public string Prenom { get; private set;}
+   public string Telephone { get; private set;}
+   // Un client connaît ses chats
+   public List<Chat> MesChats { get; private set; }   
+}
 ```
-Les informations du propriétaire sont copiées dans chaque chat.
+#### ⚠️ Remarque importante
 
----
+Maintenant que la classe Client possède une liste de chats, il faut s’assurer que cette liste reste cohérente.
 
-❓ **Question :**
+Autrement dit :
 
-> Que se passe-t-il si le téléphone change ?
+> Lorsqu’un chat est créé ou associé à un client, il faut mettre à jour la liste des chats de ce client.
 
-✔️ Réponse : Il faut modifier tous les chats du propriétaire!
+Sinon, le modèle devient incohérent :
+* le chat connaît son propriétaire
+* mais le client ne connaît pas ce chat
 
-⚠️ Risque :
->  * Chat 1 : Milo, 2, Dupont, Jean, <span style={{ color: 'red' }}>0600000000</span>
->  * Chat 1 : Milo, 1, Dupont, Jean, <span style={{ color: 'red' }}>0600000001</span>
+Nous ajoutons maintenant dans la classe Client une méthode **AjouterChat** qui permet d’ajouter un chat à la liste des chats du client. Cette méthode sera appelée automatiquement lors de la création d’un chat afin de maintenir la cohérence entre les deux classes.
 
-👉 Incohérence des données: Le numéro de téléphone d’un même propriétaire peut varier d’un chat à l’autre
-________________________________________
+**Classe Client**
+``` csharp
+public class Client
+{
+    public string Nom { get; private set;}
+    public string Prenom { get; private set;}
 
-#### Problème 2 : Responsabilité
+    public List<Chat> Meschats { get; private set;}
 
-Un principe fondamental en POO :
-Une classe doit gérer uniquement les informations qui lui appartiennent.
+    public Client(string nom, string prenom, string Telephone)
+    {
+        Nom = nom;
+        Prenom = prenom;
+        Telephone = telephone;
+        MesChats = new List<Chat>();
+    }
 
-Un Chat doit gérer :
->  * Son nom
->  * Son âge
+    public void AjouterChat(Chat chat)
+    {
+        MesChats.Add(chat);
+    }
+}
+```
+**Classe Chat** 
+``` csharp
+public class Chat
+{
+    public string Nom { get; private set;}
+    public int Age { get; private set;}
 
-❓ **Question :**
+    public Client Proprietaire { get; private set;}
 
-> Est-ce son rôle de gérer toutes les informations du propriétaire ?
+    public Chat(string nom, int age, Client proprietaire)
+    {
+        Nom = nom;
+        Age = age;
+        Proprietaire = proprietaire;
 
-✔️ Réponse : Non. On mélange deux entités différentes.
+        // Mise à jour de la liste des chats du client
+        proprietaire.AjouterChat(this);
+    }
+}
+```
+## ⭐ Récapitulatif
+Pour représenter fidèlement la relation entre les chats et les clients, nous avons apporté les modifications suivantes aux deux classes (modèles): 
 
-________________________________________
+* Dans la classe Chat, une propriété a été ajoutée afin de stocker une référence vers l’objet Client représentant le propriétaire du chat. Cela permet à chaque chat de connaître son propriétaire.
 
-### ✅ Deuxième solution : Identifier l’entité métier `Prioprietaire`
+* Dans la classe Client, une liste de chats a été ajoutée. Cette liste permet de conserver tous les chats appartenant à ce client et de faciliter leur accès.
 
-Dans la réalité :
->  * Un propriétaire existe indépendamment du chat
->  * Il peut posséder plusieurs chats
->  * Il possède ses propres informations
+* De plus, lorsqu’un chat est associé à un client, la liste des chats du client est automatiquement mise à jour afin de maintenir la cohérence entre les deux classes.
 
-👉 Conclusion logique : Le propriétaire doit devenir une classe
+## 🔢 Cardinalités
+Lorsqu’on établit une relation entre deux classes, il faut préciser combien d’objets d’une classe peuvent être liés à combien d’objets de l’autre classe.
+Conceptuellement, nous avons utilisé les cardinalités dans notre diagramme de classe. Dans le tableau suivant, nous trouvons les différentes configuations possibles que nous pouvons utiliser en fonction du besoin métier.
+
+| Cardinalité | Signification                                          | Exemple                                                                            |
+| ----------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| 1 – 1   | Chaque objet est lié à un seul objet de l’autre classe | Une voiture possède une seule plaque                                               |
+| 1 – *   | Un objet peut être lié à plusieurs objets              | Un client peut avoir plusieurs chats                                               |
+| * – *   | Plusieurs objets peuvent être liés à plusieurs objets  | Un étudiant peut suivre plusieurs cours et un cours peut avoir plusieurs étudiants |
+| 0..1    | Zéro ou un objet                                       | Un chat peut ne pas avoir encore de propriétaire                                   |
+| 0..*    | Zéro, un ou plusieurs objets                           | Un client peut n’avoir aucun chat ou plusieurs                                  
 
 
-![](@site/static/img/R13/proprietaire.png)
+De point de vue implémentation, la cardinalité influence directement la façon dont la relation est représentée dans le code.
 
+* Une cardinalité 0..1 peut être représentée par une propriété nullable, ce qui signifie que la relation est optionnelle.
+``` csharp
+// Ici, un chat peut ne pas avoir de propriétaire.
+// Par exemple, dans un refuge, s’il n’a pas encore été adopté.
+public Client? Proprietaire { get; private set;}
+```
+* Une cardinalité 1 est représentée par une propriété simple, car l’objet doit toujours exister.
+``` csharp
+// Dans le contexte d’un salon de beauté pour chats, chaque chat doit avoir un propriétaire.
+// Un chat ne peut pas être enregistré dans le système sans client associé.
+public Client Proprietaire { get; private set;}
+```
+* Une cardinalité * est généralement représentée par une liste d’objets, par exemple `List<T>`.
+``` csharp
+// Un client peut posséder plusieurs chats.
+public List<Chat> MesChats { get; private set;}
+```
+
+## ⭐ Types particuliers d'associations
+### Agrégation
+Une association entre deux classes peut avoir différentes sémantiques. Par exemple, elle peut représenter une relation **tout–partie**, comme dans le cas d’une équipe et de ses joueurs.
+
+* Une équipe peut être composée d’un ou de plusieurs joueurs. Les joueurs font donc partie de l’équipe.
+* L'équipe et ses joueurs sont liés par une relation de type **« se compose de »** ou encore **tout–partie**.
+
+Ce type de relation est appelée **agrégation**.
+
+
+Dans un diagramme de classes, cette association particulière est représentée par un lien dont l’extrémité du côté du tout (dans notre exemple, l’équipe) est indiquée par un **losange vide**. 
+
+
+<div align="center">
+
+![](@site/static/img/R13/agregationEquipeJoueur.png)
+
+</div>
+
+En implémentation, l’agrégation est représentée de la même manière qu’une association.
+
+### Composition
+
+La composition modélise un lien d'agrégation fort. La destruction du tout implique automatiquement la destruction des parties.
+Prenons l’exemple d’une maison. 
+* Une maison est composée de plusieurs pièces (salon, cuisine, chambres, etc.).
+* Les pièces font donc partie de la maison.
+* Une maison et ses pièces sont liées par une relation **tout–partie**.
+* Dans ce cas, les pièces n’ont pas de sens sans la maison : si la maison disparaît, les pièces disparaissent aussi.
+
+👉 On parle alors d’une relation de composition.
+
+<div align="center">
+
+![](@site/static/img/R13/compositionMaisonPiece.png)
+
+</div>
