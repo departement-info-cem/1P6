@@ -335,8 +335,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.2 - rencontre14",
-      id: "cours/rencontre14",
+      label: "7.2 - Exceptions",
+      id: "cours/exceptions",
       customProps: {
         calendrier: {
           "Jamil": [{ "1010": g1010[13] }, { "1020": g1010[13] }],
