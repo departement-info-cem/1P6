@@ -21,7 +21,7 @@ Dans notre application de gestion d’un salon de toilettage pour chats, nous vo
 Le salon doit donc être capable de connaître le propriétaire d’un chat afin de gérer les rendez-vous et les services.
 
 * Chaque chat possède des informations de base, comme son nom et son âge, et est associé à un client du salon.
-* Chaque client possède des infytomations de base, comme son nom et son numéro de téléphone.
+* Chaque client possède des informations de base, comme son nom et son numéro de téléphone.
 
 ### 🧠 Représentation conceptuelle
 
@@ -89,7 +89,7 @@ Nous devons donc modifier notre modèle afin de représenter cette relation entr
 ```
 #### 📦 Exemples d'objets en relations
 
-* La cliente Sophie est la proprétaire du chat Milo.
+* La cliente Sophie est la propriétaire du chat Milo.
 ``` csharp
  Client client = new Client("Martin", "Sophie", "514-123-4567"),
  Chat chatMilo = new Chat("Milo", 2, client);
@@ -121,7 +121,7 @@ Pour préciser combien de chats et de clients peuvent être liés dans cette rel
 
 #### 📦 Exemples d'objets en relations
 
-* La cliente Sophie est la proprétaire des chats Milo et Luna.
+* La cliente Sophie est la propriétaire des chats Milo et Luna.
 ``` csharp
 Client client = new Client("Martin", "Sophie", "514-123-4567"),
 
@@ -149,7 +149,7 @@ Dans le modèle amélioré, chaque chat connaît son propriétaire grâce à la 
 > * 👉 Comment peut-on trouver tous les chats d’un client ?
 
 ``` csharp
-// Supposons que nous avon une liste contenant tous les chats
+// Supposons que nous avons une liste contenant tous les chats
 // et une autre contenant tous les clients
 List<Client> clients = new List<Client>
 {
@@ -188,7 +188,7 @@ foreach(Chat chat in chats)
 
 ### 🎯 Besoin métier: Le client doit connaitre ses chats
 Avec le modèle actuel, le client ne connaît pas ses chats. Pour trouver les chats d’un client, il faudrait parcourir tous les chats.
-Pour résoudre ce problème, on ajoute une liste de chats dans la classe Client. Cela permet au client de connaître dircetement ses chats.
+Pour résoudre ce problème, on ajoute une liste de chats dans la classe Client. Cela permet au client de connaître directement ses chats.
 
 ### 🧠 Représentation conceptuelle
 
@@ -276,7 +276,7 @@ Pour représenter fidèlement la relation entre les chats et les clients, nous a
 
 ## 🔢 Cardinalités
 Lorsqu’on établit une relation entre deux classes, il faut préciser combien d’objets d’une classe peuvent être liés à combien d’objets de l’autre classe.
-Conceptuellement, nous avons utilisé les cardinalités dans notre diagramme de classe. Dans le tableau suivant, nous trouvons les différentes configuations possibles que nous pouvons utiliser en fonction du besoin métier.
+Conceptuellement, nous avons utilisé les cardinalités dans notre diagramme de classe. Dans le tableau suivant, nous trouvons les différentes configurations possibles que nous pouvons utiliser en fonction du besoin métier.
 
 | Cardinalité | Signification                                          | Exemple                                                                            |
 | ----------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------- |

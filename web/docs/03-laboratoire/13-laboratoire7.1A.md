@@ -55,7 +55,7 @@ Pour construire le diagramme de classes, procédez selon les étapes suivantes :
 * Chaque **pièce** appartient à **une seule maison**.
 ---
 
-# 🟢 Exercice 2 : Implémentation d'un diagrammes de classes 
+# 🟢 Exercice 2 : Implémentation d'un diagramme de classes 
 Dans ce deuxième exercice, un diagramme de classes vous sera fourni.
 À partir de ce diagramme, vous devrez réaliser son implémentation en C#.
 * Implémenter les relations entre les classes ;
@@ -106,8 +106,8 @@ public class Cours
 public class Etudiant
 {
     public string Matricule { get; private set; }
-    public double Nom { get; private set; }     
-    public double Prenom { get; private set; }    
+    public string Nom { get; private set; }     
+    public string Prenom { get; private set; }    
 }
 ```
 ```csharp
