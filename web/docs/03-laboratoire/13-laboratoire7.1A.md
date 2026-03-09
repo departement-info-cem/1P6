@@ -111,7 +111,7 @@ public class Etudiant
 }
 ```
 ```csharp
-public class Etudiant
+public class Stage
 {
     public string Entreprise { get; private set; }
     public int Duree { get; private set; }        
