@@ -344,3 +344,255 @@ Prenons l’exemple d’une maison.
 ![](@site/static/img/R13/compositionMaisonPiece.png)
 
 </div>
+
+---
+
+# 🪟 ListBox et ComboBox en C# (WinForms)
+
+## 1. Présentation des contrôles
+
+### ListBox
+
+Un **ListBox** est un contrôle qui permet d’afficher une **liste d’éléments** parmi lesquels l’utilisateur peut faire une sélection.
+
+Caractéristiques :
+
+* Peut afficher plusieurs éléments.
+* Peut permettre une **sélection simple ou multiple**.
+* Utilisé pour afficher une liste d’objets ou de valeurs.
+
+Exemples d’utilisation :
+
+* Liste de clients
+* Liste de produits
+* Liste de fichiers
+
+---
+
+### ComboBox
+
+Un **ComboBox** est une **liste déroulante** combinée avec une zone de texte.
+
+Caractéristiques :
+
+* Permet de choisir un élément dans une liste.
+* Peut permettre la saisie manuelle.
+* Prend moins d’espace qu’une ListBox.
+
+Exemples d’utilisation :
+
+* Choix d’une ville
+* Choix d’un type
+* Choix d’une catégorie
+
+---
+
+# 2. Ajouter des éléments
+
+Les deux contrôles utilisent la propriété :
+
+```
+Items
+```
+
+qui contient les éléments de la liste.
+
+---
+
+## Ajouter un élément
+
+```csharp
+listBox1.Items.Add("Jean");
+comboBox1.Items.Add("Marie");
+```
+
+---
+
+## Ajouter plusieurs éléments
+
+```csharp
+listBox1.Items.Add("Jean");
+listBox1.Items.Add("Paul");
+listBox1.Items.Add("Marie");
+```
+
+ou
+
+```csharp
+comboBox1.Items.AddRange(new string[] { "Rouge", "Vert", "Bleu" });
+```
+
+---
+
+## Vider la liste
+
+```csharp
+listBox1.Items.Clear();
+comboBox1.Items.Clear();
+```
+
+---
+
+# 3. Récupérer l’élément sélectionné
+
+## Avec SelectedItem
+
+Retourne **l’objet sélectionné**.
+
+```csharp
+string nom = listBox1.SelectedItem.ToString();
+```
+
+ou
+
+```csharp
+string couleur = comboBox1.SelectedItem.ToString();
+```
+
+⚠️ Toujours vérifier qu’un élément est sélectionné.
+
+```csharp
+if (listBox1.SelectedItem != null)
+{
+    string nom = listBox1.SelectedItem.ToString();
+}
+```
+
+---
+
+## Avec SelectedIndex
+
+Retourne **la position de l’élément** sélectionné.
+
+```csharp
+int index = listBox1.SelectedIndex;
+```
+
+Exemple :
+
+```csharp
+if (listBox1.SelectedIndex != -1)
+{
+    MessageBox.Show("Index : " + listBox1.SelectedIndex);
+}
+```
+
+---
+
+# 4. Ajouter des objets dans un ListBox ou ComboBox
+
+On peut ajouter **des objets complets** et pas seulement des chaînes de caractères.
+
+Exemple avec une classe.
+
+### Classe
+
+```csharp
+public class Client
+{
+    public string Nom { get; set; }
+    public string Prenom { get; set; }
+
+    public override string ToString()
+    {
+        return Nom + " " + Prenom;
+    }
+}
+```
+
+---
+
+## Ajouter un objet
+
+```csharp
+Client c1 = new Client();
+c1.Nom = "Dupont";
+c1.Prenom = "Jean";
+
+listBox1.Items.Add(c1);
+```
+
+Le **ListBox affichera automatiquement le résultat de `ToString()`**.
+
+---
+
+## Récupérer l’objet sélectionné
+
+```csharp
+if (listBox1.SelectedItem != null)
+{
+    Client c = (Client)listBox1.SelectedItem;
+    MessageBox.Show(c.Nom);
+}
+```
+
+Même principe pour un **ComboBox**.
+
+```csharp
+Client c = (Client)comboBox1.SelectedItem;
+```
+
+---
+
+# 5. Supprimer un élément
+
+## Supprimer l’élément sélectionné
+
+```csharp
+if (listBox1.SelectedIndex != -1)
+{
+    listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+}
+```
+ou
+```csharp
+if (listBox1.SelecselectedItem != null)
+{
+    listBox1.Items.Remove(listBox1.SelectedItem);
+}
+```
+
+---
+
+# 6. Événement de sélection
+
+On peut exécuter du code lorsqu’un élément est sélectionné.
+
+### ListBox
+
+```csharp
+private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+    if (listBox1.SelectedItem != null)
+    {
+        MessageBox.Show(listBox1.SelectedItem.ToString());
+    }
+}
+```
+
+---
+
+### ComboBox
+
+```csharp
+private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+    MessageBox.Show(comboBox1.SelectedItem.ToString());
+}
+```
+
+---
+
+# 7. Résumé
+
+| Action                | Code               |
+| --------------------- | ------------------ |
+| Ajouter un élément    | `Items.Add()`      |
+| Ajouter plusieurs     | `Items.AddRange()` |
+| Vider la liste        | `Items.Clear()`    |
+| Élément sélectionné   | `SelectedItem`     |
+| Position sélectionnée | `SelectedIndex`    |
+| Supprimer             | `RemoveAt()`       |
+
+---
+

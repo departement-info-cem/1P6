@@ -322,7 +322,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.1 - rencontre13",
+      label: "7.1 - Relation d'association",
       id: "cours/rencontre13",
       customProps: {
 
@@ -704,7 +704,7 @@ const sidebars = {
       label: 'Laboratoire 7.1',
       collapsible: true,
       collapsed: collapseBloc2,
-      items: ['laboratoire/laboratoire7.1A']
+      items: ['laboratoire/laboratoire7.1A', 'laboratoire/laboratoire7.1B']
 
     },
 
