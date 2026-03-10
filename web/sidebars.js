@@ -707,6 +707,14 @@ const sidebars = {
       items: ['laboratoire/laboratoire7.1A', 'laboratoire/laboratoire7.1B']
 
     },
+    {
+      type: 'category',
+      label: 'Laboratoire 7.2',
+      collapsible: true,
+      collapsed: collapseBloc3,
+      items: ['laboratoire/laboratoire7.2A', 'laboratoire/laboratoire7.2B', 'laboratoire/laboratoire7.2C']
+
+    }
 
 
   ],
