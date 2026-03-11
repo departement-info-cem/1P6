@@ -3,9 +3,9 @@ title: Trace d’exécution
 ---
 # 🧪 Labo 7.2C – Trace d’exécution
 
-Reprenons le code développé lors de la démonstration de la séance **7.2**
+Reprenons le code de la démonstration de la séance **7.2**
 
-Pour rappel, lorsqu’un utilisateur clique sur le bouton **+**, l’application tente d’augmenter la température d'un objet ``Thermostat``.
+Pour rappel, lorsqu’un utilisateur clique sur le bouton **+**, l’application tente d’augmenter la température d'un objet de la classe ``Thermostat``.
 
 Considérez l'évènement suivant :
 
@@ -55,17 +55,18 @@ public double Temperature
 ---
 # ✏️ Travail à faire
 
-Complétez la trace d’exécution suivante en indiquant :
+Complétez la trace d’exécution ci-dessous en indiquant :
 
 * les **instructions exécutées**
 
 * **l’effet** de chaque instruction
 
 :::tip
-* Pour éviter de produire une trace trop longue, vous pouvez modifier la valeur de la constante `MAX_TEMPERATURE` :
+* Pour éviter de produire une trace trop longue, vous pouvez modifier la valeur de la constante `TEMPERATURE_DÉFAUT` :
 ```csharp
-public const double MAX_TEMPERATURE = 21.0;
+public const double TEMPERATURE_DÉFAUT = 34.0;
 ```
+    Ainsi, il vous suffira d'une itération avant qu'une exception ne soit lancée.
 
 * Pour vous aider à compléter la trace :
     * placez un **point d’arrêt** au début de ``btnAugmenter_Click()``
@@ -75,17 +76,16 @@ public const double MAX_TEMPERATURE = 21.0;
     ```
     
     * Exécutez ensuite le programme en utilisant le *pas à pas détaillé (F11).*
-
-* Vous pouvez assumer que l’application est déjà en cours d’exécution et que l’utilisateur vient de cliquer sur le bouton **+**.
-
 :::
 
-# 📋 Trace d’exécution
+# 🟡 Trace d’exécution
+
+Complétez le tableau suivant. Pour simplifier la trace, nous allons assumer que l’application est déjà en cours d’exécution et que l’utilisateur vient de cliquer sur le bouton **+** pour augmenter la température de 34 à 35 degrés. Les 2 premières lignes de la trace vous sont fournies à titre d'exemple. 
 
 | Code exécuté | Effet |
 |---|---|
-|*thermostat.augmenterTemperature();*|Appel de la méthode `augmenterTemperature()` de l'objet `thermostat`|
-|*Temperature++;*| On tente de modifier la propriété `Temperature`. Le setter est appelé. ``value = 21``|
+|*thermostat.augmenterTemperature();*|Appelle la méthode `augmenterTemperature()` de l'objet `thermostat`. `Temperature = 34`|
+|*Temperature++;*| Tente d'augmenter la propriété `Temperature` de 1. L'opération lit d'abord la valeur actuelle (`34`), calcule `34 + 1`, puis appelle le *setter* avec ``value = 35``. `Temperature = 34`|
 |||
 |||
 |||
@@ -95,6 +95,7 @@ public const double MAX_TEMPERATURE = 21.0;
 |||
 |||
 |*MessageBox.Show(exception.Message);*||
+|lblTemperature.Text = thermostat.Temperature.ToString();||
 
 
 
