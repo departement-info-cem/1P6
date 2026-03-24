@@ -1,0 +1,303 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{564B8678-16C8-4731-8410-844D48992E6D}|Models\\Models.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\models\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{564B8678-16C8-4731-8410-844D48992E6D}|Models\\Models.csproj|solutionrelative:models\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\frmlisteclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmlisteclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|C:\\H26\\2P6\\AppGuichetV6_Materiel\\appguichet\\frmlisteclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmlisteclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\frmlistetransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmlistetransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|C:\\H26\\2P6\\AppGuichetV6_Materiel\\appguichet\\frmlistetransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmlistetransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|C:\\H26\\2P6\\AppGuichetV6_Materiel\\appguichet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\serviceguichettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\serviceguichettests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\scoretransaction.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\scoretransaction.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\clienttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\clienttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\scoreserviceguichet.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\scoreserviceguichet.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\scoreclient.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\scoreclient.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\modelstests\\transactiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D35F264-BAD3-4723-8176-C1E0F5430E3A}|ModelsTests\\ModelsTests.csproj|solutionrelative:modelstests\\transactiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\fichiers\\clients.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\fichiers\\clients.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\fichiers\\transactions.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\fichiers\\transactions.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|c:\\h26\\2p6\\appguichetv6_materiel\\appguichet\\frmlisteclients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0129EC8E-FF56-448D-AE11-DEC1BA7B49DC}|AppGuichet\\AppGuichet.csproj|solutionrelative:appguichet\\frmlisteclients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ServiceGuichetTests.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ServiceGuichetTests.cs",
+              "RelativeDocumentMoniker": "ModelsTests\\ServiceGuichetTests.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ServiceGuichetTests.cs",
+              "RelativeToolTip": "ModelsTests\\ServiceGuichetTests.cs",
+              "ViewState": "AgIAAKUCAAAAAAAAAAAQwLMCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T02:49:50.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmListeTransactions.cs [Conception]",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeTransactions.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmListeTransactions.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeTransactions.cs [Conception]",
+              "RelativeToolTip": "AppGuichet\\FrmListeTransactions.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:44:20.182Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmListeTransactions.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeTransactions.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmListeTransactions.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeTransactions.cs",
+              "RelativeToolTip": "AppGuichet\\FrmListeTransactions.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T10:22:50.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmPrincipal.cs [Conception]",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmPrincipal.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmPrincipal.cs [Conception]",
+              "RelativeToolTip": "AppGuichet\\FrmPrincipal.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:54:40.996Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmPrincipal.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmPrincipal.cs",
+              "RelativeToolTip": "AppGuichet\\FrmPrincipal.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:06:53.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmListeClients.cs [Conception]",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmListeClients.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.cs [Conception]",
+              "RelativeToolTip": "AppGuichet\\FrmListeClients.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:20:46.349Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmListeClients.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmListeClients.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.cs",
+              "RelativeToolTip": "AppGuichet\\FrmListeClients.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:34:58.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\Models\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "Models\\ClassDiagram1.cd",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\Models\\ClassDiagram1.cd",
+              "RelativeToolTip": "Models\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2026-03-13T15:25:59.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Program.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\Program.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Program.cs",
+              "RelativeToolTip": "AppGuichet\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T10:02:45.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ScoreTransaction.txt",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreTransaction.txt",
+              "RelativeDocumentMoniker": "ModelsTests\\ScoreTransaction.txt",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreTransaction.txt",
+              "RelativeToolTip": "ModelsTests\\ScoreTransaction.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-24T10:35:01.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientTests.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ClientTests.cs",
+              "RelativeDocumentMoniker": "ModelsTests\\ClientTests.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ClientTests.cs",
+              "RelativeToolTip": "ModelsTests\\ClientTests.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T15:01:28.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ScoreClient.txt",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreClient.txt",
+              "RelativeDocumentMoniker": "ModelsTests\\ScoreClient.txt",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreClient.txt",
+              "RelativeToolTip": "ModelsTests\\ScoreClient.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-24T10:58:46.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ScoreServiceGuichet.txt",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreServiceGuichet.txt",
+              "RelativeDocumentMoniker": "ModelsTests\\ScoreServiceGuichet.txt",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\ScoreServiceGuichet.txt",
+              "RelativeToolTip": "ModelsTests\\ScoreServiceGuichet.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-24T10:58:58.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TransactionTests.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\TransactionTests.cs",
+              "RelativeDocumentMoniker": "ModelsTests\\TransactionTests.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\ModelsTests\\TransactionTests.cs",
+              "RelativeToolTip": "ModelsTests\\TransactionTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T08:09:13.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Transactions.csv",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Fichiers\\Transactions.csv",
+              "RelativeDocumentMoniker": "AppGuichet\\Fichiers\\Transactions.csv",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Fichiers\\Transactions.csv",
+              "RelativeToolTip": "AppGuichet\\Fichiers\\Transactions.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-03-13T15:45:59.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Clients.csv",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Fichiers\\Clients.csv",
+              "RelativeDocumentMoniker": "AppGuichet\\Fichiers\\Clients.csv",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\Fichiers\\Clients.csv",
+              "RelativeToolTip": "AppGuichet\\Fichiers\\Clients.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-03-13T15:45:54.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FrmListeClients.Designer.cs",
+              "DocumentMoniker": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.Designer.cs",
+              "RelativeDocumentMoniker": "AppGuichet\\FrmListeClients.Designer.cs",
+              "ToolTip": "C:\\H26\\2P6\\AppGuichetV6_Materiel\\AppGuichet\\FrmListeClients.Designer.cs",
+              "RelativeToolTip": "AppGuichet\\FrmListeClients.Designer.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T14:25:22.739Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

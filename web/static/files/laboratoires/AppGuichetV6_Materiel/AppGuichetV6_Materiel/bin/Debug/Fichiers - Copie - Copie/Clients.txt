@@ -1,0 +1,8 @@
+000,-1,Administrateur,0,abc
+101,0,Jean Lapointe,200,abc
+1RL,2,Robert Laporte,5000,abc
+203,2,Louise Masson,24510,abc
+204,1,Jules Tremblay,18504,abc
+2JP,1,Jean-Pierre,230,abc
+444,2,Paul Letarte,4900,abc
+222,0,Francine,4900,abc
