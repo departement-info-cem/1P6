@@ -1,6 +1,0 @@
-C001,Durand,mdp123
-C002,Martin,pass456
-C003,Leroy,password789
-C004,Smith,
-C005,,motdepasse
-C006,Dupont,1234
