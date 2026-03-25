@@ -347,8 +347,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.1 - rencontre15",
-      id: "cours/rencontre15",
+      label: "8.1 - TP2",
+      id: "cours/tp2",
       customProps: {
         calendrier: {
           "David": [{ "1090": "2026-10-20" }, { "1100": "2026-10-20" }],
