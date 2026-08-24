@@ -640,6 +640,12 @@ const sidebars = {
   laboratoire: [
     {
       type: 'category',
+      label: 'Laboratoire',
+      collapsible: false,
+      items: ['laboratoire/laboratoire']
+    },
+    {
+      type: 'category',
       label: 'Laboratoire 1.1',
       collapsible: true,
       collapsed: collapseBloc1,
