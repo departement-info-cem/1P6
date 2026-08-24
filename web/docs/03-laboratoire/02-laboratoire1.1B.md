@@ -17,6 +17,10 @@ Les exercices sont organisés en quatre niveaux. Chaque niveau demande progressi
 
 > 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
+> ⚠️ Ces exercices doivent être réalisés sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+
+
 Pour chaque question, **lisez l'objectif et le code fourni**.
 
 **Le code est-il correct?**
@@ -432,7 +436,7 @@ Votre activité préférée sera : Visiter des musées.
 
 Ici, on ne donne **ni code ni démarche détaillée**.
 
-### Exercice 1 — Profil musical 🎵
+### Exercice 4 — Profil musical 🎵
 
 Créez un programme permettant de présenter les préférences musicales d'un utilisateur.
 
@@ -457,7 +461,7 @@ Alex aime la musique pop.
 Son artiste préféré est Stromae et sa chanson préférée est Alors on danse.
 ```
 
-### Exercice 2 — Billet de cinéma
+### Exercice 5 — Billet de cinéma
 
 Créez un programme permettant de générer un billet de cinéma.
 
@@ -485,7 +489,7 @@ Séance : 19h30
 ----------------------------
 ```
 
-### Exercice 3 — Fiche d'un animal
+### Exercice 6 — Fiche d'un animal
 
 Créez un programme permettant de générer une fiche d'un animal.
 

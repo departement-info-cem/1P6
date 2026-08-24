@@ -14,6 +14,9 @@ Chaque niveau correspond à ce qui est attendu de vous lors de la réalisation d
 
 > 🧠 **Je comprends** : je peux lire, interpréter et expliquer un programme simple.
 
+> ⚠️ Ces exercices doivent être réalisés sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+
 À ce niveau, l'objectif est de vérifier votre compréhension des notions vues en classe.
 
 Vous pourriez être amené à :
@@ -25,6 +28,7 @@ Vous pourriez être amené à :
 * compléter quelques lignes dans un programme fortement guidé.
 
 L'accent est mis sur la compréhension du code plutôt que sur son écriture.
+
 
 ---
 
