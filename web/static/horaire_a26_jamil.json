@@ -1,0 +1,89 @@
+{
+  "name": "Jamil Gammoudi",
+  "startHour": "08:00",
+  "endHour": "18:00",
+  "slotMinutes": 60,
+  "days": ["lundi", "mardi", "mercredi", "jeudi", "vendredi"],
+  "events": [
+    { "id": "1p6-1020-t", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1020", 
+      "day": "lundi", "start": "08:10", "end": "11:00", "room": "D0604"
+    },
+    { "id": "983-1040-t", "category": "yellow", "courseCode": "420-983-EM", 
+      "title": "Gestion de données", "courseGroup": "1040", 
+      "day": "mardi", "start": "08:10", "end": "11:00", "room": "D0008"
+    },
+    { "id": "1p6-1010-l", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1010", 
+      "day": "jeudi", "start": "08:10", "end": "11:00", "room": "D0605"
+    },
+    { "id": "1p6-1010-t", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1010", 
+      "day": "lundi", "start": "12:10", "end": "15:00", "room": "D0604"
+    },
+    { "id": "983-1050-t", "category": "yellow", "courseCode": "420-983-EM", 
+      "title": "Gestion de données", "courseGroup": "1050", 
+      "day": "mardi", "start": "12:10", "end": "15:00", "room": "D0604"
+    },
+    { "id": "1p6-1020-l", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1020", 
+      "day": "jeudi", "start": "12:10", "end": "15:00", "room": "D0605"
+    },
+    { "id": "dispo-bur-1", "category": "green",
+      "title": "Disponibilité à mon bureau",
+      "day": "null", "start": "00:10", "end": "03:00", "room": "E212"
+    },
+    { "id": "dispo-bur-2", "category": "green",
+      "title": "Disponibilité à mon bureau",
+      "day": "null", "start": "00:10", "end": "03:00", "room": "E212"
+    },
+    { "id": "reunion-dep", "category": "gray",
+      "title": "Réunion départementale",
+      "day": "null", "start": "12:30", "end": "14:00"
+    }
+  ],
+  "categories": {
+    "blue": {
+      "backgroundColor": "#dbeafe",
+      "textColor": "#1e3a8a",
+      "darkBackgroundColor": "#1e3a8a",
+      "darkTextColor": "#dbeafe"
+    },
+    "yellow": {
+      "backgroundColor": "#fef3c7",
+      "textColor": "#78350f",
+      "darkBackgroundColor": "#7c5e00",
+      "darkTextColor": "#fff4cc"
+    },
+    "green": {
+      "backgroundColor": "#dcfce7",
+      "textColor": "#14532d",
+      "darkBackgroundColor": "#14532d",
+      "darkTextColor": "#dcfce7"
+    },
+    "red": {
+      "backgroundColor": "#fce7f3",
+      "textColor": "#831843",
+      "darkBackgroundColor": "#831843",
+      "darkTextColor": "#fce7f3"
+    },
+    "purple": {
+      "backgroundColor": "#ede9fe",
+      "textColor": "#5b21b6",
+      "darkBackgroundColor": "#5b21b6",
+      "darkTextColor": "#ede9fe"
+    },
+    "orange": {
+      "backgroundColor": "#ffedd5",
+      "textColor": "#9a3412",
+      "darkBackgroundColor": "#9a3412",
+      "darkTextColor": "#ffedd5"
+    },
+    "gray": {
+      "backgroundColor": "#f3f4f6",
+      "textColor": "#374151",
+      "darkBackgroundColor": "#374151",
+      "darkTextColor": "#f3f4f6"
+    }
+  }
+}

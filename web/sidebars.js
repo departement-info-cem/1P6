@@ -7,72 +7,182 @@ let collapseBloc1 = !(month <= 9);
 let collapseBloc2 = !(month >= 9 && month <= 11);
 let collapseBloc3 = !(month >= 11);
 
-const g1120 = [
-  "2025-08-25", // 1.1
-  "2025-08-29", // cours/variables
-  "2025-09-03", // cours/ifelse
-  "2025-09-08", // cours/fonctions
-  "2025-09-10", // cours/integration-fonctions
-  "2025-09-15", // cours/integration-tp1
-  "2025-09-17", // cours/for
-  "2025-09-22", // cours/tableaux1d
-  "2025-09-24", // cours/integration-for
-  "2025-09-29", // cours/formatif1
-  "2025-10-01", // cours/examen1
-  "2025-10-06", // cours/tableaux2d
-  "2025-10-08", // cours/integration-2d
-  "2025-10-20", // cours/integration-tp2-1
-  "2025-10-27", // cours/ecriture-texte
-  "2025-10-29", // cours/lecture-texte
-  "2025-11-03", // cours/csv
-  "2025-11-05", // cours/formatif2
-  "2025-11-12",
-  "2025-11-17", // cours/examen2
-  "2025-11-19", // cours/integration-tp3-1
-  "2025-11-26", // cours/winform
-  "2025-12-01", // cours/poo
-  "2025-12-03", // cours/integration-poo
-  "2025-12-08", // cours/integration-tp4-1
-  "2025-12-09", 
-  "2025-12-10", // cours/integration-tp4-2
-  "2025-12-22", // cours/integration-tp4-2
-  "2025-12-15", // cours/formatif3
-  "2025-12-18"  // cours/examen3
+const g1010 = [
+  "2026-08-24",
+  "2026-08-27",
+  "2026-08-31",
+  "2026-09-03",
+  "2026-09-10",
+  "2026-09-14",
+  "2026-09-17",
+  "2026-09-21",
+  "2026-09-24",
+  "2026-09-28",
+  "2026-10-01",
+  "2026-10-06",
+  "2026-10-08",
+  "2026-10-19",
+  "2026-10-22",
+  "2026-10-26",
+  "2026-10-29",
+  "2026-11-02",
+  "2026-11-05",
+  "2026-11-09",
+  "2026-11-12",
+  "2026-11-16",
+  "2026-11-19",
+  "2026-11-23",
+  "2026-11-26",
+  "2026-11-30",
+  "2026-12-03",
+  "2026-12-07",
+  "2026-12-14",
+  "2026-12-17"
 ];
 
-const g1080 = [
-  "2025-08-25", // cours/introduction
-  "2025-08-28", // cours/variables
-  "2025-08-29", // cours/ifelse
-  "2025-09-04", // cours/fonctions
-  "2025-09-08", // cours/integration-fonctions
-  "2025-09-11", // cours/integration-tp1
-  "2025-09-15", // cours/for
-  "2025-09-18", // cours/tableaux1d
-  "2025-09-22", // cours/integration-for
-  "2025-09-25", // cours/formatif1
-  "2025-09-29", // cours/examen1
-  "2025-10-02", // cours/tableaux2d
-  "2025-10-06", // cours/integration-2d
-  "2025-10-09", // cours/integration-tp2-1
-  "2025-10-20", // cours/integration-tp2-2
-  "2025-10-23", // cours/ecriture-texte
-  "2025-10-27", // cours/lecture-texte
-  "2025-10-30", // cours/csv
-  "2025-11-03", // cours/formatif2
-  "2025-11-06", // cours/examen2
-  "2025-11-13", // cours/integration-tp3-1
-  "2025-11-17", // cours/integration-tp3-2
-  "2025-11-20", // cours/winform
-  
-  "2025-11-27", // cours/integration-poo
-  "2025-12-01", // cours/integration-tp4-1
-  "2025-12-04", // cours/integration-tp4-2
-  "2025-12-08", // cours/formatif3
-  "2025-12-11", // cours/examen3
-  "2025-12-15", // cours/examen3
-  "2025-12-18"  // cours/examen3
+const g1020 = [...g1010];
+
+const g1030 = [
+  "2026-08-25",
+  "2026-08-28",
+  "2026-09-01",
+  "2026-09-04",
+  "2026-09-08",
+  "2026-09-11",
+  "2026-09-15",
+  "2026-09-18",
+  "2026-09-22",
+  "2026-09-25",
+  "2026-09-29",
+  "2026-10-02",
+  "2026-10-09",
+  "2026-10-20",
+  "2026-10-23",
+  "2026-10-27",
+  "2026-10-30",
+  "2026-11-03",
+  "2026-11-06",
+  "2026-11-10",
+  "2026-11-13",
+  "2026-11-17",
+  "2026-11-20",
+  "2026-11-24",
+  "2026-12-01",
+  "2026-12-04",
+  "2026-12-08",
+  "2026-12-11",
+  "2026-12-15",
+  "2026-12-18"
 ];
+
+const g1040 = [...g1030];
+
+const g1050 = [
+  "2026-08-25",
+  "2026-08-27",
+  "2026-09-01",
+  "2026-09-03",
+  "2026-09-08",
+  "2026-09-10",
+  "2026-09-15",
+  "2026-09-17",
+  "2026-09-22",
+  "2026-09-24",
+  "2026-09-29",
+  "2026-10-01",
+  "2026-10-08",
+  "2026-10-20",
+  "2026-10-22",
+  "2026-10-27",
+  "2026-10-29",
+  "2026-11-03",
+  "2026-11-05",
+  "2026-11-10",
+  "2026-11-12",
+  "2026-11-17",
+  "2026-11-19",
+  "2026-11-24",
+  "2026-11-26",
+  "2026-12-01",
+  "2026-12-03",
+  "2026-12-08",
+  "2026-12-15",
+  "2026-12-17"
+];
+
+const g1060 = [...g1050];
+
+const g1070 = [...g1010];
+
+const g1080 = [...g1010];
+
+const g1090 = [
+  "2026-08-24",
+  "2026-08-26",
+  "2026-08-31",
+  "2026-09-02",
+  "2026-09-09",
+  "2026-09-14",
+  "2026-09-16",
+  "2026-09-21",
+  "2026-09-23",
+  "2026-09-28",
+  "2026-09-30",
+  "2026-10-06",
+  "2026-10-07",
+  "2026-10-19",
+  "2026-10-21",
+  "2026-10-26",
+  "2026-10-28",
+  "2026-11-02",
+  "2026-11-04",
+  "2026-11-09",
+  "2026-11-11",
+  "2026-11-16",
+  "2026-11-18",
+  "2026-11-23",
+  "2026-11-25",
+  "2026-11-30",
+  "2026-12-02",
+  "2026-12-07",
+  "2026-12-09",
+  "2026-12-14"
+];
+
+const groupSchedules = {
+  "1010": g1010,
+  "1020": g1020,
+  "1030": g1030,
+  "1040": g1040,
+  "1050": g1050,
+  "1060": g1060,
+  "1070": g1070,
+  "1080": g1080,
+  "1090": g1090,
+};
+
+const teacherGroups = {
+  "Éric": ["1070", "1080"],
+  "Jamil": ["1010", "1020"],
+  "Jean-Michel": ["1090"],
+  "Sébastien": ["1030", "1040"],
+  "Pierre-Paul": ["1050", "1060"],
+};
+
+function buildCalendrierForIndex(index) {
+  if (index < 0 || index >= g1010.length) {
+    return {};
+  }
+
+  const calendrier = {};
+  for (const [teacher, groups] of Object.entries(teacherGroups)) {
+    calendrier[teacher] = groups.map((group) => ({
+      [group]: groupSchedules[group][index],
+    }));
+  }
+
+  return calendrier;
+}
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -82,15 +192,7 @@ const sidebars = {
       label: "1.1 - Introduction 🏁",
       id: "cours/introduction",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-08-25"}, {"1100":"2025-08-25"}],
-          "Éric": [{"1070":"2026-08-24"}, {"1080":"2026-08-24"}],
-          "Jamil": [{"1010":"2025-08-26"}, {"1020":"2025-08-26"}],
-          "Jean-Michel": [{ "1120": g1120[0] }, { "1080": g1080[0] }],
-          "Pierre-Paul": [{"1030":"2025-08-25"}, {"1040":"2025-08-25"}],
-          "Tommy": [{"1130":"2025-08-22"}],
-          "Philippe": [{"1070":"2025-08-25"}]
-        },
+        calendrier: buildCalendrierForIndex(0),
         tooltip:"cache"
       },
     },
@@ -99,15 +201,7 @@ const sidebars = {
       label: "1.2 - Variables et opérations",
       id: "cours/variables",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-08-28"}, {"1100":"2025-08-28"}],
-          "Éric": [{"1070":"2026-08-27"}, {"1080":"2026-08-27"}],
-          "Jamil": [{"1010":"2025-08-28"}, {"1020":"2025-08-28"}],
-          "Jean-Michel": [{ "1120": g1120[1] }, { "1080": g1080[1] }],
-          "Pierre-Paul": [{"1030":"2025-08-27"}, {"1040":"2025-08-27"}],
-          "Tommy": [{"1130":"2025-08-26"}],
-          "Philippe": [{"1070":"2025-08-28"}]
-        },
+        calendrier: buildCalendrierForIndex(1),
 
         tooltip:"cache"
       },
@@ -117,15 +211,7 @@ const sidebars = {
       label: "2.1 - Structures conditionnelles (if/else)",
       id: "cours/ifelse",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-08-29"}, {"1100":"2025-08-29"}],
-          "Éric": [{"1070":"2026-08-31"}, {"1080":"2026-08-31"}],
-          "Jamil": [{"1010":"2025-09-02"}, {"1020":"2025-09-02"}],
-          "Jean-Michel": [{ "1120": g1120[2] }, { "1080": g1080[2] }],
-          "Pierre-Paul": [{"1030":"2025-08-29"}, {"1040":"2025-08-29"}],
-          "Tommy": [{"1130":"2025-09-02"}],
-          "Philippe": [{"1070":"2025-08-29"}]
-        },
+        calendrier: buildCalendrierForIndex(2),
         tooltip:"cache"
       },
     },
@@ -136,15 +222,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 0.1,
-        calendrier: {
-          "David": [{"1090":"2025-09-04"}, {"1100":"2025-09-04"}],
-          "Éric": [{"1070":"2026-09-03"}, {"1080":"2026-09-03"}],
-          "Jamil": [{"1010":"2025-09-04"}, {"1020":"2025-09-04"}],
-          "Jean-Michel": [{ "1120": g1120[3] }, { "1080": g1080[3] }],
-          "Pierre-Paul": [{"1030":"2025-09-03"}, {"1040":"2025-09-03"}],
-          "Tommy": [{"1130":"2025-09-05"}],
-          "Philippe": [{"1070":"2025-09-04"}]
-        },
+        calendrier: buildCalendrierForIndex(3),
         tooltip:"cache"
       },
     },
@@ -155,15 +233,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 0.4,
-        calendrier: {
-          "David": [{"1090":"2025-09-08"}, {"1100":"2025-09-08"}],
-          "Éric": [{"1070":"2026-09-10"}, {"1080":"2026-09-10"}],
-          "Jamil": [{"1010":"2025-09-09"}, {"1020":"2025-09-09"}],
-          "Jean-Michel": [{ "1120": g1120[4] }, { "1080": g1080[4] }],
-          "Pierre-Paul": [{"1030":"2025-09-08"}, {"1040":"2025-09-08"}],
-          "Tommy": [{"1130":"2025-09-09"}],
-          "Philippe": [{"1070":"2025-09-08"}]
-        },
+        calendrier: buildCalendrierForIndex(4),
         tooltip:"cache"
       },
     },
@@ -175,15 +245,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 1.0,
-        calendrier: {
-          "David": [{"1090":"2025-09-11"}, {"1100":"2025-09-11"}],
-          "Éric": [{"1070":"2026-09-14"}, {"1080":"2026-09-14"}],
-          "Jamil": [{"1010":"2025-09-11"}, {"1020":"2025-09-11"}],
-          "Jean-Michel": [{ "1120": g1120[5] }, { "1080": g1080[5] }],
-          "Pierre-Paul": [{"1030":"2025-09-10"}, {"1040":"2025-06-10"}],
-          "Tommy": [{"1130":"2025-09-12"}],
-          "Philippe": [{"1070":"2025-09-11"}]
-        },
+        calendrier: buildCalendrierForIndex(5),
         tooltip:"cache"
       },
     },
@@ -192,15 +254,7 @@ const sidebars = {
       label: "4.1 - Boucles for",
       id: "cours/for",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-09-15"}, {"1100":"2025-09-15"}],
-          "Éric": [{"1070":"2026-09-17"}, {"1080":"2026-09-17"}],
-          "Jamil": [{"1010":"2025-09-16"}, {"1020":"2025-09-16"}],
-          "Jean-Michel": [{ "1120": g1120[6] }, { "1080": g1080[6] }],
-          "Pierre-Paul": [{"1030":"2025-09-15"}, {"1040":"2025-09-15"}],
-          "Tommy": [{"1130":"2025-09-16"}],
-          "Philippe": [{"1070":"2025-09-15"}]
-        },
+        calendrier: buildCalendrierForIndex(6),
         tooltip:"cache"
       }
     },
@@ -209,15 +263,7 @@ const sidebars = {
       label: "4.2 - Tableaux 1D",
       id: "cours/tableaux1d",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-09-18"}, {"1100":"2025-09-18"}],
-          "Éric": [{"1070":"2026-09-21"}, {"1080":"2026-09-21"}],
-          "Jamil": [{"1010":"2025-09-18"}, {"1020":"2025-09-18"}],
-          "Jean-Michel": [{ "1120": g1120[7] }, { "1080": g1080[7] }],
-          "Pierre-Paul": [{"1030":"2025-09-17"}, {"1040":"2025-09-17"}],
-          "Tommy": [{"1130":"2025-09-19"}],
-          "Philippe": [{"1070":"2025-09-18"}]
-        },
+        calendrier: buildCalendrierForIndex(7),
         tooltip:"cache"
       }
     },
@@ -226,15 +272,7 @@ const sidebars = {
       label: "5.1 - Intégration des notions",
       id: "cours/integration-for",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-09-22"}, {"1100":"2025-09-22"}],
-          "Éric": [{"1070":"2026-09-24"}, {"1080":"2026-09-24"}],
-          "Jamil": [{"1010":"2025-09-23"}, {"1020":"2025-09-23"}],
-          "Jean-Michel": [{ "1120": g1120[8] }, { "1080": g1080[8] }],
-          "Pierre-Paul": [{"1030":"2025-09-22"}, {"1040":"2025-09-22"}],
-          "Tommy": [{"1130":"2025-09-23"}],
-          "Philippe": [{"1070":"2025-09-22"}]
-        },
+        calendrier: buildCalendrierForIndex(8),
         tooltip:"cache"
       }
     },
@@ -243,15 +281,7 @@ const sidebars = {
       label: "5.2 - Formatif 1",
       id: "cours/formatif1",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-09-25"}, {"1100":"2025-09-25"}],
-          "Éric": [{"1070":"2026-09-28"}, {"1080":"2026-09-28"}],
-          "Jamil": [{"1010":"2025-09-25"}, {"1020":"2025-09-25"}],
-          "Jean-Michel": [{ "1120": g1120[9] }, { "1080": g1080[9] }],
-          "Pierre-Paul": [{"1030":"2025-09-24"}, {"1040":"2025-09-24"}],
-          "Tommy": [{"1130":"2025-09-26"}],
-          "Philippe": [{"1070":"2025-09-25"}]
-        },
+        calendrier: buildCalendrierForIndex(9),
         tooltip:"cache"
       }
     },
@@ -261,15 +291,7 @@ const sidebars = {
       id: "cours/examen1",
       className: "examen",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-09-29"}, {"1100":"2025-09-29"}],
-          "Éric": [{"1070":"2026-10-01"}, {"1080":"2026-10-01"}],
-          "Jamil": [{"1010":"2025-09-30"}, {"1020":"2025-09-30"}],
-          "Jean-Michel": [{ "1120": g1120[10] }, { "1080": g1080[10] }],
-          "Pierre-Paul": [{"1030":"2025-09-29"}, {"1040":"2025-09-29"}],
-          "Tommy": [{"1130":"2025-09-30"}],
-          "Philippe": [{"1070":"2025-09-29"}]
-        },
+        calendrier: buildCalendrierForIndex(10),
         tooltip:"cache"
       }
     },
@@ -280,15 +302,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.1,
-        calendrier: {
-          "David": [{"1090":"2025-10-02"}, {"1100":"2025-10-02"}],
-          "Éric": [{"1070":"2026-10-06"}, {"1080":"2026-10-06"}],
-          "Jamil": [{"1010":"2025-10-02"}, {"1020":"2025-10-02"}],
-          "Jean-Michel": [{ "1120": g1120[11] }, { "1080": g1080[11] }],
-          "Pierre-Paul": [{"1030":"2025-10-01"}, {"1040":"2025-10-01"}],
-          "Tommy": [{"1130":"2025-10-03"}],
-          "Philippe": [{"1070":"2025-10-02"}]
-        },
+        calendrier: buildCalendrierForIndex(11),
         tooltip:"cache"
       }
     },
@@ -299,15 +313,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.3,
-        calendrier: {
-          "David": [{"1090":"2025-10-06"}, {"1100":"2025-10-06"}],
-          "Éric": [{"1070":"2026-10-08"}, {"1080":"2026-10-08"}],
-          "Jamil": [{"1010":"2025-10-07"}, {"1020":"2025-10-07"}],
-          "Jean-Michel": [{ "1120": g1120[12] }, { "1080": g1080[12] }],
-          "Pierre-Paul": [{"1030":"2025-10-06"}, {"1040":"2025-10-06"}],
-          "Tommy": [{"1130":"2025-10-07"}],
-          "Philippe": [{"1070":"2025-10-06"}],
-        },
+        calendrier: buildCalendrierForIndex(12),
         tooltip:"cache"
       }
     },
@@ -318,15 +324,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.3,
-        calendrier: {
-          "David": [{"1090":"2025-10-09"}, {"1100":"2025-10-09"}],
-          "Éric": [{"1070":"2026-10-19"}, {"1080":"2026-10-19"}],
-          "Jamil": [{"1010":"2025-10-09"}, {"1020":"2025-10-09"}],
-          "Jean-Michel": [{ "1120": g1120[13] }, { "1080": g1080[13] }],
-          "Pierre-Paul": [{"1030":"2025-10-08"}, {"1040":"2025-10-08"}],
-          "Tommy": [{"1130":"2025-10-10"}],
-          "Philippe": [{"1070":"2025-10-09"}],
-        },
+        calendrier: buildCalendrierForIndex(13),
         tooltip:"cache"
       }
     },
@@ -337,15 +335,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2", 
         avancement: 0.6,
-        calendrier: {
-          "David": [{"1090":"2025-10-20"}, {"1100":"2025-10-20"}],
-          "Éric": [{"1070":"2026-10-22"}, {"1080":"2026-10-22"}],
-          "Jamil": [{"1010":"2025-10-21"}, {"1020":"2025-10-21"}],
-          "Jean-Michel": [{ "1120": g1120[14] }, { "1080": g1080[14] }],
-          "Pierre-Paul": [{"1030":"2025-10-20"}, {"1040":"2025-10-20"}],
-          "Tommy": [{"1130":"2025-10-21"}],
-          "Philippe": [{"1070":"2025-10-20"}],
-        },
+        calendrier: buildCalendrierForIndex(14),
         tooltip:"cache"
       }
     },
@@ -357,15 +347,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 1.0,
-        calendrier: {
-          "David": [{"1090":"2025-10-23"}, {"1100":"2025-10-23"}],
-          "Éric": [{"1070":"2026-10-26"}, {"1080":"2026-10-26"}],
-          "Jamil": [{"1010":"2025-10-23"}, {"1020":"2025-10-23"}],
-          "Jean-Michel": [{ "1120": g1120[15] }, { "1080": g1080[15] }],
-          "Pierre-Paul": [{"1030":"2025-10-22"}, {"1040":"2025-10-22"}],
-          "Tommy": [{"1130":"2025-10-24"}],
-          "Philippe": [{"1070":"2025-10-23"}],
-        },
+        calendrier: buildCalendrierForIndex(15),
         tooltip:"cache"
       }
     },
@@ -376,15 +358,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3 - Créé - ",
         avancement: 0.1,
-        calendrier: {
-          "David": [{"1090":"2025-10-27"}, {"1100":"2025-10-27"}],
-          "Éric": [{"1070":"2026-10-29"}, {"1080":"2026-10-29"}],
-          "Jamil": [{"1010":"2025-10-28"}, {"1020":"2025-10-28"}],
-          "Jean-Michel": [{ "1120": g1120[16] }, { "1080": g1080[16] }],
-          "Pierre-Paul": [{"1030":"2025-10-27"}, {"1040":"2025-10-27"}],
-          "Tommy": [{"1130":"2025-10-28"}],
-          "Philippe": [{"1070":"2025-10-27"}],
-        },
+        calendrier: buildCalendrierForIndex(16),
         tooltip:"cache"
       }
     },
@@ -396,15 +370,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.2,
-        calendrier: {
-          "David": [{"1090":"2025-10-30"}, {"1100":"2025-10-30"}],
-          "Éric": [{"1070":"2026-11-02"}, {"1080":"2026-11-02"}],
-          "Jamil": [{"1010":"2025-10-30"}, {"1020":"2025-10-30"}],
-          "Jean-Michel": [{ "1120": g1120[17] }, { "1080": g1080[17] }],
-          "Pierre-Paul": [{"1030":"2025-10-29"}, {"1040":"2025-10-29"}],
-          "Tommy": [{"1130":"2025-10-31"}],
-          "Philippe": [{"1070":"2025-10-30"}],
-        },
+        calendrier: buildCalendrierForIndex(17),
         tooltip:"cache"
       }
     },
@@ -415,15 +381,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.3,
-        calendrier: {
-          "David": [{"1090":"2025-11-03"}, {"1100":"2025-11-03"}],
-          "Éric": [{"1070":"2026-11-05"}, {"1080":"2026-11-05"}],
-          "Jamil": [{"1010":"2025-11-04"}, {"1020":"2025-11-04"}],
-          "Jean-Michel": [{ "1120": g1120[18] }, { "1080": g1080[18] }],
-          "Pierre-Paul": [{"1030":"2025-11-03"}, {"1040":"2025-11-03"}],
-          "Tommy": [{"1130":"2025-11-04"}],
-          "Philippe": [{"1070":"2025-11-03"}]
-        },
+        calendrier: buildCalendrierForIndex(18),
         tooltip:"cache"
       }
     },
@@ -432,15 +390,7 @@ const sidebars = {
       label: "10.2 - Formatif 2",
       id: "cours/formatif2",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-11-06"}, {"1100":"2025-11-06"}],
-          "Éric": [{"1070":"2026-11-09"}, {"1080":"2026-11-09"}],
-          "Jamil": [{"1010":"2025-11-06"}, {"1020":"2025-11-06"}],
-          "Jean-Michel": [{ "1120": g1120[19] }, { "1080": g1080[19] }],
-          "Pierre-Paul": [{"1030":"2025-11-05"}, {"1040":"2025-11-05"}],
-          "Tommy": [{"1130":"2025-11-07"}],
-          "Philippe": [{"1070":"2025-11-06"}]
-        },
+        calendrier: buildCalendrierForIndex(19),
         tooltip:"cache"
       }
     },
@@ -450,15 +400,7 @@ const sidebars = {
       id: "cours/examen2",
       className: "examen",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-11-13"}, {"1100":"2025-11-13"}],
-          "Éric": [{"1070":"2026-11-12"}, {"1080":"2026-11-12"}],
-          "Jamil": [{"1010":"2025-11-11"}, {"1020":"2025-11-11"}],
-          "Jean-Michel": [{ "1120": g1120[20] }, { "1080": g1080[20] }],
-          "Pierre-Paul": [{"1030":"2025-11-12"}, {"1040":"2025-11-12"}],
-          "Tommy": [{"1130":"2025-11-11"}],
-          "Philippe": [{"1070":"2025-11-13"}, {"1080":"2025-11-13"}]
-        },
+        calendrier: buildCalendrierForIndex(20),
         tooltip:"cache"
       }
     },
@@ -469,15 +411,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.7,
-        calendrier: {
-          "David": [{"1090":"2025-11-17"}, {"1100":"2025-11-17"}],
-          "Éric": [{"1070":"2026-11-16"}, {"1080":"2026-11-16"}],
-          "Jamil": [{"1010":"2025-11-13"}, {"1020":"2025-11-13"}],
-          "Jean-Michel": [{ "1120": g1120[21] }, { "1080": g1080[21] }],
-          "Pierre-Paul": [{"1030":"2025-11-17"}, {"1040":"2025-11-17"}],
-          "Tommy": [{"1130":"2025-11-14"}],
-          "Philippe": [{"1070":"2025-11-17"}]
-        },
+        calendrier: buildCalendrierForIndex(21),
         tooltip:"cache"
       }
     },
@@ -489,15 +423,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 1.0,
-        calendrier: {
-          "David": [{"1090":"2025-11-20"}, {"1100":"2025-11-20"}],
-          "Éric": [{"1070":"2026-11-19"}, {"1080":"2026-11-19"}],
-          "Jamil": [{"1010":"2025-11-18"}, {"1020":"2025-11-18"}],
-          "Jean-Michel": [{ "1120": g1120[22] }, { "1080": g1080[22] }],
-          "Pierre-Paul": [{"1030":"2025-11-19"}, {"1040":"2025-11-19"}],
-          "Tommy": [{"1130":"2025-11-18"}],
-          "Philippe": [{"1070":"2025-11-20"}]
-        },
+        calendrier: buildCalendrierForIndex(22),
         tooltip:"cache"
       }
     },
@@ -508,15 +434,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4 - Créé - ",
         avancement: 0.15,
-        calendrier: {
-          "David": [{"1090":"2025-11-27"}, {"1100":"2025-11-27"}],
-          "Éric": [{"1070":"2026-11-23"}, {"1080":"2026-11-23"}],
-          "Jamil": [{"1010":"2025-11-20"}, {"1020":"2025-11-20"}],
-          "Jean-Michel": [{ "1120": g1120[23] }, { "1080": g1080[23] }],
-          "Pierre-Paul": [{"1030":"2025-11-26"}, {"1040":"2025-11-26"}],
-          "Tommy": [{"1130":"2025-11-21"}],
-          "Philippe": [{"1070":"2025-11-27"}]
-        },
+        calendrier: buildCalendrierForIndex(23),
         tooltip:"cache"
       }
     },
@@ -527,15 +445,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.3,
-        calendrier: {
-          "David": [{"1090":"2025-12-01"}, {"1100":"2025-12-01"}],
-          "Éric": [{"1070":"2026-11-26"}, {"1080":"2026-11-26"}],
-          "Jamil": [{"1010":"2025-11-25"}, {"1020":"2025-11-25"}],
-          "Jean-Michel": [{ "1120": g1120[24] }, { "1080": g1080[24] }],
-          "Pierre-Paul": [{"1030":"2025-12-01"}, {"1040":"2025-12-01"}],
-          "Tommy": [{"1130":"2025-11-25"}],
-          "Philippe": [{"1070":"2025-12-01"}]
-        },
+        calendrier: buildCalendrierForIndex(24),
         tooltip:"cache"
       }
     },
@@ -546,15 +456,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.5,
-        calendrier: {
-          "David": [{"1090":"2025-12-04"}, {"1100":"2025-12-04"}],
-          "Éric": [{"1070":"2026-11-30"}, {"1080":"2026-11-30"}],
-          "Jamil": [{"1010":"2025-11-27"}, {"1020":"2025-11-27"}],
-          "Jean-Michel": [{ "1120": g1120[25] }, { "1080": g1080[25] }],
-          "Pierre-Paul": [{"1030":"2025-12-03"}, {"1040":"2025-12-03"}],
-          "Tommy": [{"1130":"2025-11-28"}],
-          "Philippe": [{"1070":"2025-12-04"}]
-        },
+        calendrier: buildCalendrierForIndex(25),
         tooltip:"cache"
       }
     },
@@ -565,15 +467,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.75,
-        calendrier: {
-          "David": [{"1090":"2025-12-08"}, {"1100":"2025-12-08"}],
-          "Éric": [{"1070":"2026-12-03"}, {"1080":"2026-12-03"}],
-          "Jamil": [{"1010":"2025-12-02"}, {"1020":"2025-12-02"}],
-          "Jean-Michel": [{ "1120": g1120[26] }, { "1080": g1080[26] }],
-          "Pierre-Paul": [{"1030":"2025-12-08"}, {"1040":"2025-12-08"}],
-          "Tommy": [{"1130":"2025-12-02"}],
-          "Philippe": [{"1070":"2025-12-08"}]
-        },
+        calendrier: buildCalendrierForIndex(26),
         tooltip:"cache"
       }
     },
@@ -585,15 +479,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 1.0,
-        calendrier: {
-          "David": [{"1090":"2025-12-15"}, {"1100":"2025-12-15"}],
-          "Éric": [{"1070":"2026-12-07"}, {"1080":"2026-12-07"}],
-          "Jamil": [{"1010":"2025-12-04"}, {"1020":"2025-12-04"}],
-          "Jean-Michel": [{ "1120": g1120[27] }, { "1080": g1080[27] }],
-          "Pierre-Paul": [{"1030":"2025-12-10"}, {"1040":"2025-12-10"}],
-          "Tommy": [{"1130":"2025-12-05"}],
-          "Philippe": [{"1070":"2025-12-11"}]
-        },
+        calendrier: buildCalendrierForIndex(27),
         tooltip:"cache"
       }
     },
@@ -602,15 +488,7 @@ const sidebars = {
       label: "15.1 - Formatif 3",
       id: "cours/formatif3",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-12-11"}, {"1100":"2025-12-11"}],
-          "Éric": [{"1070":"2026-12-14"}, {"1080":"2026-12-14"}],
-          "Jamil": [{"1010":"2025-12-11"}, {"1020":"2025-12-11"}],
-          "Jean-Michel": [{ "1120": g1120[28] }, { "1080": g1080[28] }],
-          "Pierre-Paul": [{"1030":"2025-12-15"}, {"1040":"2025-12-15"}],
-          "Tommy": [{"1130":"2025-12-16"}],
-          "Philippe": [{"1070":"2025-12-15"}]
-        },
+        calendrier: buildCalendrierForIndex(28),
         tooltip:"cache"
       }
     },
@@ -620,15 +498,7 @@ const sidebars = {
       id: "cours/examen3",
       className: "examen",
       customProps: {
-        calendrier: {
-          "David": [{"1090":"2025-12-18"}, {"1100":"2025-12-18"}],
-          "Éric": [{"1070":"2026-12-17"}, {"1080":"2026-12-17"}],
-          "Jamil": [{"1010":"2025-12-18"}, {"1020":"2025-12-18"}],
-          "Jean-Michel": [{ "1120": g1120[29] }, { "1080": g1080[29] }],
-          "Pierre-Paul": [{"1030":"2025-12-18"}, {"1040":"2025-12-18"}],
-          "Tommy": [{"1130":"2025-12-18"}],
-          "Philippe": [{"1070":"2025-12-18"}]
-        },
+        calendrier: buildCalendrierForIndex(29),
         tooltip:"cache"
       }
     }

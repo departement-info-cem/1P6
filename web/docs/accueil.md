@@ -47,54 +47,67 @@ La matière est expliquée dans chacun des cours, mais tu peux trouver plus d'in
 
 <DocsViewer
     tabs={[
-        {
-            id: "grid",
-            label: "Liste",
-            icon: "📋",
-            component: <MainDocsGrid />,
-        },
-        {
-            id: "calendar-david",
-            label: "David",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="David" />,
-        },
-        {
-            id: "calendar-eric",
-            label: "Éric",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Éric" />,
-        },
-        {
-            id: "calendar-jamil",
-            label: "Jamil",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Jamil" />,
-        },
-        {
-            id: "calendar-jean",
-            label: "Jean-Michel",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Jean-Michel" />,
-        },
-        {
-            id: "calendar-philippe",
-            label: "Philippe",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Philippe" />,
-        },
-        {
-            id: "calendar-pierre",
-            label: "Pierre-Paul",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Pierre-Paul" />,
-        },
-        {
-            id: "calendar-tommy",
-            label: "Tommy",
-            icon: "📅",
-            component: <MainDocsCalendar professorName="Tommy" />,
-        },
+    {
+        id: "cours",
+        label: "Planification des rencontres",
+        icon: "⭐",
+        component: <MainDocsGrid />,
+    }, 
+    {
+        id: "eric", label: "Éric", icon: "👾",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire d'Éric Mathieu"
+                                               dataUrl="/horaire_a26_eric.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Éric" /> },
+            ]} defaultTabId="horaire" /> </div> 
+    },
+    {
+        id: "jamil", label: "Jamil", icon: "🪈",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Jamil Gammoudi"
+                                               dataUrl="/horaire_a26_jamil.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Jamil" /> },
+            ]} defaultTabId="horaire" /> </div> 
+    },
+    {
+        id: "jeanmichel", label: "Jean-Michel", icon: "😺",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Jean-Michel Nadeau" 
+                                               dataUrl="/horaire_a26_jeanmichel.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Jean-Michel" /> },
+            ]} defaultTabId="horaire" /> </div> 
+    },
+    {
+        id: "sebastien", label: "Sébastien", icon: "🕹️",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Sébastien Derumière"
+                                               dataUrl="/horaire_a26_sebastien.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Sébastien" /> },
+            ]} defaultTabId="horaire" /> </div> 
+    },
+    {
+        id: "pierrepaul", label: "Pierre-Paul", icon: "🎲",
+        component: <div><DocsViewer
+            tabs={[
+                { id: "horaire", label: "Horaire", icon: "💼",
+                    component: <WeeklySchedule title="Horaire de Pierre-Paul Gallant"
+                                               dataUrl="/horaire_a26_pierrepaul.json" /> },
+                { id: "calendrier", label: "Calendrier", icon: "📅",
+                    component: <MainDocsCalendar professorName="Pierre-Paul" /> },
+            ]} defaultTabId="horaire" /> </div> 
+    },
     ]}
-    defaultTabId="grid"
+    defaultTabId="cours"
 />

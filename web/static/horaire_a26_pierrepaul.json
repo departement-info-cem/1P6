@@ -1,0 +1,101 @@
+{
+  "name": "Pierre-Paul Gallant",
+  "startHour": "08:00",
+  "endHour": "18:00",
+  "slotMinutes": 60,
+  "days": ["lundi", "mardi", "mercredi", "jeudi", "vendredi"],
+  "events": [
+    { "id": "1p6-1060-l", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1060", 
+      "day": "mardi", "start": "08:10", "end": "11:00", "room": "D0605"
+    },
+    { "id": "1p6-1060-t", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1060", 
+      "day": "jeudi", "start": "08:10", "end": "11:00", "room": "D0603"
+    },
+    { "id": "983-1100-t", "category": "yellow", "courseCode": "420-983-EM", 
+      "title": "Gestion de données", "courseGroup": "1100", 
+      "day": "vendredi", "start": "08:10", "end": "11:00", "room": "D0008"
+    },
+    { "id": "420a0-comite-infor", "category": "orange", "courseCode": "420A0", 
+      "title": "Comité programme - Informatique", 
+      "day": "lundi", "start": "13:10", "end": "15:00"
+    },
+    { "id": "41012-comite-tech", "category": "orange", "courseCode": "41012", 
+      "title": "Comité programme - Tech", 
+      "day": "mardi", "start": "13:10", "end": "15:10"
+    },
+    { "id": "1p6-1050-t", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1050", 
+      "day": "jeudi", "start": "13:10", "end": "16:00", "room": "D0604"
+    },
+    { "id": "983-1110-t", "category": "yellow", "courseCode": "420-983-EM", 
+      "title": "Gestion de données", "courseGroup": "1110", 
+      "day": "vendredi", "start": "12:10", "end": "15:00", "room": "D0008"
+    },
+    { "id": "983-1190-t", "category": "yellow", "courseCode": "420-983-EM", 
+      "title": "Gestion de données", "courseGroup": "1190", 
+      "day": "lundi", "start": "15:10", "end": "18:00", "room": "D0604"
+    },
+    { "id": "1p6-1050-l", "category": "blue", "courseCode": "420-1P6-EM", 
+      "title": "Introduction à la programmation", "courseGroup": "1050", 
+      "day": "mardi", "start": "15:10", "end": "18:00", "room": "D0602"
+    },
+    { "id": "dispo-bur-1", "category": "green",
+      "title": "Disponibilité à mon bureau",
+      "day": "null", "start": "00:10", "end": "03:00", "room": "E211"
+    },
+    { "id": "dispo-bur-2", "category": "green",
+      "title": "Disponibilité à mon bureau",
+      "day": "null", "start": "00:10", "end": "03:00", "room": "E211"
+    },
+    { "id": "reunion-dep", "category": "gray",
+      "title": "Réunion départementale",
+      "day": "null", "start": "12:30", "end": "14:00"
+    }
+  ],
+  "categories": {
+    "blue": {
+      "backgroundColor": "#dbeafe",
+      "textColor": "#1e3a8a",
+      "darkBackgroundColor": "#1e3a8a",
+      "darkTextColor": "#dbeafe"
+    },
+    "yellow": {
+      "backgroundColor": "#fef3c7",
+      "textColor": "#78350f",
+      "darkBackgroundColor": "#7c5e00",
+      "darkTextColor": "#fff4cc"
+    },
+    "green": {
+      "backgroundColor": "#dcfce7",
+      "textColor": "#14532d",
+      "darkBackgroundColor": "#14532d",
+      "darkTextColor": "#dcfce7"
+    },
+    "red": {
+      "backgroundColor": "#fce7f3",
+      "textColor": "#831843",
+      "darkBackgroundColor": "#831843",
+      "darkTextColor": "#fce7f3"
+    },
+    "purple": {
+      "backgroundColor": "#ede9fe",
+      "textColor": "#5b21b6",
+      "darkBackgroundColor": "#5b21b6",
+      "darkTextColor": "#ede9fe"
+    },
+    "orange": {
+      "backgroundColor": "#ffedd5",
+      "textColor": "#9a3412",
+      "darkBackgroundColor": "#9a3412",
+      "darkTextColor": "#ffedd5"
+    },
+    "gray": {
+      "backgroundColor": "#f3f4f6",
+      "textColor": "#374151",
+      "darkBackgroundColor": "#374151",
+      "darkTextColor": "#f3f4f6"
+    }
+  }
+}
