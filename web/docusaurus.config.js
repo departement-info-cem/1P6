@@ -4,6 +4,8 @@ import { themes } from "prism-react-renderer";
 
 const siteConfig = require("./config");
 const { fichiersSolutionsDefisCaches } = require("./solutions-defis");
+const baseUrl = process.env.DOCUSAURUS_BASE_URL || `/${siteConfig.nomUrl}/`;
+const brancheEdition = process.env.GITHUB_EDIT_BRANCH || "main";
 
 const lightCodeTheme = themes.vsLight;
 const darkCodeTheme = themes.vsDark;
@@ -13,7 +15,10 @@ const config = {
   title: siteConfig.nom,
   tagline: siteConfig.description,
   url: "https://info.cegepmontpetit.ca/",
-  baseUrl: `/${siteConfig.nomUrl}/`,
+  baseUrl,
+  customFields: {
+    brancheEdition,
+  },
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
 

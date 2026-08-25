@@ -1,0 +1,82 @@
+name: Aperçu solutionCacher
+
+on:
+  push:
+    branches:
+      - solutionCacher
+    paths:
+      - 'web/**'
+      - '.github/workflows/preview-solution-cacher.yml'
+      - '.github/workflows/deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Construire le site et son aperçu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer la branche principale
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: production
+
+      - name: Récupérer la branche à tester
+        uses: actions/checkout@v6
+        with:
+          ref: solutionCacher
+          path: preview
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            production/web/package-lock.json
+            preview/web/package-lock.json
+
+      - name: Construire le site principal
+        working-directory: ./production/web
+        run: |
+          npm ci
+          npm run build
+
+      - name: Construire l'aperçu de solutionCacher
+        working-directory: ./preview/web
+        env:
+          DOCUSAURUS_BASE_URL: /1P6/previews/solutionCacher/
+          GITHUB_EDIT_BRANCH: solutionCacher
+        run: |
+          npm ci
+          npm run build
+
+      - name: Ajouter l'aperçu au site principal
+        run: |
+          mkdir -p production/web/build/previews/solutionCacher
+          cp -R preview/web/build/. production/web/build/previews/solutionCacher/
+
+      - name: Téléverser l'artéfact Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./production/web/build
+
+  deploy:
+    name: Déployer l'aperçu
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}previews/solutionCacher/
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déploiement
+        id: deployment
+        uses: actions/deploy-pages@v5

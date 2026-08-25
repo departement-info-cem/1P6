@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: deploy-pages-${{ github.ref }}
+  group: deploy-pages
   cancel-in-progress: true
 
 jobs:

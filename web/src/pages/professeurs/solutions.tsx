@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from "react";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import solutionsInitiales from "@site/src/data/solutions-defis.json";
 import styles from "./solutions.module.css";
 
@@ -12,8 +13,6 @@ type SolutionDefi = {
 
 const MOT_DE_PASSE_SHA256 =
   "77f671c8a3119b01675d748017b7d369cfab96b1d4d96e9f9222e7059dd36309";
-const EDITEUR_GITHUB =
-  "https://github.com/departement-info-cem/1P6/edit/main/web/src/data/solutions-defis.json";
 
 async function calculerSha256(valeur: string): Promise<string> {
   const donnees = new TextEncoder().encode(valeur);
@@ -28,6 +27,11 @@ function nomDuDefi(id: string): string {
 }
 
 export default function GestionSolutionsDefis(): React.ReactElement {
+  const { siteConfig } = useDocusaurusContext();
+  const brancheEdition = String(siteConfig.customFields?.brancheEdition || "main");
+  const editeurGitHub = `https://github.com/departement-info-cem/1P6/edit/${encodeURIComponent(
+    brancheEdition
+  )}/web/src/data/solutions-defis.json`;
   const [motDePasse, setMotDePasse] = useState("");
   const [autorise, setAutorise] = useState(false);
   const [erreur, setErreur] = useState("");
@@ -76,7 +80,7 @@ export default function GestionSolutionsDefis(): React.ReactElement {
       setMessage(
         "Configuration copiée. Dans GitHub : Ctrl+A, Ctrl+V, puis Commit changes."
       );
-      window.open(EDITEUR_GITHUB, "_blank", "noopener,noreferrer");
+      window.open(editeurGitHub, "_blank", "noopener,noreferrer");
     } catch {
       const fichier = new Blob([contenu], { type: "application/json" });
       const lien = document.createElement("a");
@@ -87,7 +91,7 @@ export default function GestionSolutionsDefis(): React.ReactElement {
       setMessage(
         "Le fichier a été téléchargé. Remplace-le dans GitHub, puis confirme le commit."
       );
-      window.open(EDITEUR_GITHUB, "_blank", "noopener,noreferrer");
+      window.open(editeurGitHub, "_blank", "noopener,noreferrer");
     }
   };
 
