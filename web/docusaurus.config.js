@@ -88,6 +88,20 @@ const config = {
             label: "Laboratoires",
           }
           ,
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "defis",
+            label: "Défis",
+          }
+          ,
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "solution",
+            label: "Solutions",
+          }
+          ,
          
           {
             type: "docSidebar",
