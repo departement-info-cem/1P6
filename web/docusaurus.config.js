@@ -3,6 +3,7 @@
 import { themes } from "prism-react-renderer";
 
 const siteConfig = require("./config");
+const { fichiersSolutionsDefisCaches } = require("./solutions-defis");
 
 const lightCodeTheme = themes.vsLight;
 const darkCodeTheme = themes.vsDark;
@@ -43,6 +44,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
+          exclude: fichiersSolutionsDefisCaches(),
           editUrl: `https://github.com/departement-info-cem/${siteConfig.nomUrl}/tree/main/web`,
         },
         theme: {
@@ -118,7 +120,12 @@ const config = {
             position: "left",
             sidebarId: "extra",
             label: "Extra",
-          }
+          },
+          {
+            to: "/professeurs/solutions",
+            position: "left",
+            label: "Professeurs",
+          },
           
 
         ],
