@@ -1,13 +1,39 @@
-import React, { ReactNode } from "react";
-import "bootstrap/dist/css/bootstrap-grid.min.css";
+import React, { JSX, ReactNode } from "react";
+import "./styles.css";
 
 export default function Column({
   children,
   size,
+  vCenter = false,
 }: {
   children: ReactNode;
-  size?: number;
+  size?: number | string;
+  vCenter?: boolean;
 }): JSX.Element {
-  const strSize = size != null ? "col-" + size : "col";
-  return <div className={strSize}>{children}</div>;
+  let parsedSize: number | undefined;
+  if (typeof size === "number") {
+    parsedSize = size;
+  } else if (typeof size === "string" && size.trim() !== "") {
+    const numericSize = Number(size);
+    parsedSize = Number.isFinite(numericSize) ? numericSize : undefined;
+  }
+  const normalizedSize =
+    parsedSize != null && Number.isInteger(parsedSize) && parsedSize >= 1 && parsedSize <= 12
+      ? parsedSize
+      : undefined;
+  const className =
+    normalizedSize != null
+      ? `depinfo-col depinfo-col-${normalizedSize}`
+      : "depinfo-col";
+
+  return (
+    <div
+      className={className}
+      style={{
+        display: vCenter ? "flex" : "block",
+      }}
+    >
+      {children}
+    </div>
+  );
 }

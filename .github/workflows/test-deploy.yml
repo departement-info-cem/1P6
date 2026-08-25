@@ -4,6 +4,16 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'web/**'
+      - '.github/workflows/test-deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test-build:
@@ -13,11 +23,11 @@ jobs:
       run:
         working-directory: ./web
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           cache-dependency-path: "**/package-lock.json"
-          node-version: 20
+          node-version: 24
           cache: npm
       - name: Installer les dépendances
         working-directory: ./web

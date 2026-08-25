@@ -14,7 +14,6 @@ const config = {
   url: "https://info.cegepmontpetit.ca/",
   baseUrl: `/${siteConfig.nomUrl}/`,
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   organizationName: "departement-info-cem",
@@ -29,6 +28,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
 
   themes: ["@docusaurus/theme-mermaid", '@docusaurus/theme-live-codeblock'],
@@ -50,7 +52,15 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("./plugins/docs-metadata")],
+  plugins: [
+    '@docusaurus/plugin-ideal-image',
+    [
+      require.resolve("./plugins/docs-metadata"),
+      {
+        docsDir: "docs/01-cours",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -126,9 +136,8 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}. ${
-          siteConfig.nom
-        }. CÉGEP Édouard-Montpetit.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. ${siteConfig.nom
+          }. CÉGEP Édouard-Montpetit.`,
       },
       // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
       // algolia: {
@@ -141,7 +150,7 @@ const config = {
       prism: {
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ["csharp", "java", "dart"],
+        additionalLanguages: ["csharp", "java", "dart", "powershell"],
       },
       metadata: [
         {

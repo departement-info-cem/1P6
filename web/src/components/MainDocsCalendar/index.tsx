@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./MainDocsCalendar.module.css";
 import { useHistory } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { useColorMode } from "@docusaurus/theme-common";
 import sidebarDocs from "../MainDocsGrid/sidebarDocs";
 
 interface CalendarEvent {
@@ -12,6 +11,7 @@ interface CalendarEvent {
   date: string;
   className?: string;
   customProps?: any;
+  groupe?: string;
 }
 
 interface CalendarDay {
@@ -33,7 +33,48 @@ export default function MainDocsCalendar({
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
   const history = useHistory();
   const baseUrl = useBaseUrl("/");
-  const { colorMode } = useColorMode();
+
+  const resolveDocTitle = (doc: any): string => {
+    const frontmatterTitle =
+      typeof doc?.title === "string" && doc.title.trim().length > 0
+        ? doc.title.trim()
+        : undefined;
+    const sidebarTitle =
+      typeof doc?._sidebarLabel === "string" &&
+      doc._sidebarLabel.trim().length > 0
+        ? doc._sidebarLabel.trim()
+        : undefined;
+    const markdownTitle =
+      typeof doc?._documentTitle === "string" &&
+      doc._documentTitle.trim().length > 0
+        ? doc._documentTitle.trim()
+        : undefined;
+
+    return frontmatterTitle || sidebarTitle || markdownTitle || doc?.id || "";
+  };
+
+  // Fonction pour créer un hash simple d'une chaîne
+  const simpleHash = (str: string): number => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return Math.abs(hash);
+  };
+
+  // Fonction pour obtenir un index de couleur basé sur le nom du groupe
+  const getColorIndex = (groupe: string): number => {
+    // Amélioration: utiliser directement la valeur numérique pour les groupes numériques
+    const numericGroup = parseInt(groupe);
+    if (!isNaN(numericGroup)) {
+      // Pour les groupes numériques, utiliser une distribution plus prévisible
+      return numericGroup % 15;
+    }
+    // Pour les groupes non-numériques, utiliser le hash
+    return simpleHash(groupe) % 15;
+  };
 
   // Fonction pour détecter l'année à partir de la première date trouvée
   const detectYearFromSidebar = (): number => {
@@ -91,16 +132,14 @@ export default function MainDocsCalendar({
           const [groupe, date] = Object.entries(groupeObj)[0];
           events.push({
             id: doc.id, // Utiliser directement l'ID du document
-            title: groupe + " - " + (doc?.title || doc?._sidebarLabel || doc?.id),
+            title: `${groupe} - ${resolveDocTitle(doc)}`,
             description: doc?.description || "",
             date: date as string,
             className: doc._sidebarClassName,
             customProps: doc._sidebarProps,
+            groupe: groupe,
           });
-          console.log(events);
         })
-        //const groupe = doc._sidebarProps.calendrier[professorName];
-        //const date = doc._sidebarProps.calendrier[professorName];
         
       }
     });
@@ -127,7 +166,6 @@ export default function MainDocsCalendar({
 
     // Premier jour du mois
     const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
 
     // Premier lundi à afficher (peut être du mois précédent)
     const startDate = new Date(firstDay);
@@ -189,14 +227,9 @@ export default function MainDocsCalendar({
     );
   };
 
-  const getEventBackgroundColor = (className: string): string => {
-    if (className && className.includes("remise-tp")) {
-      return colorMode === "dark" ? "#1b4a3a" : "#e8f5e8";
-    }
-    if (className && className.includes("examen")) {
-      return colorMode === "dark" ? "#4a1b1b" : "#ffebee";
-    }
-    return colorMode === "dark" ? "#1e3a4a" : "#f0f9ff";
+  const getEventClassName = (groupe: string): string => {
+    const colorIndex = getColorIndex(groupe);
+    return `eventGroup${colorIndex}`;
   };
 
   const calendarDays = generateCalendarDays();
@@ -254,12 +287,7 @@ export default function MainDocsCalendar({
                 {day.events.map((event, eventIndex) => (
                   <div
                     key={eventIndex}
-                    className={styles.event}
-                    style={{
-                      backgroundColor: getEventBackgroundColor(
-                        event.className || ""
-                      ),
-                    }}
+                    className={`${styles.event} ${event.groupe ? styles[getEventClassName(event.groupe)] : ''}`}
                     onClick={() => handleEventClick(event)}
                     title={`${event.title} - ${professorName}`}
                   >
