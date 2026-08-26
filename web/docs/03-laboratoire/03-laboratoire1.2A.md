@@ -1,337 +1,757 @@
 ---
-title: A - Variables, affectation, opérations
+title: A - Questions de compréhension
 ---
 
-# 🧪 Labo 1.2A – Variables, affectation, opérations
+# 🧪 Labo 1.2A – Questions de compréhension
 
 ---
 
-### 🟢 Exercice 1 – Afficher un message  
-🎯 **Objectif** : Apprendre à afficher un message simple dans la console avec `Console.WriteLine`.
+## 🟢 Je comprends
 
-🧠 C# permet d'afficher du texte avec la commande `Console.WriteLine()`.
+> 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
-🛠️ **Instructions** :
-- Ouvre Visual Studio.
-- Crée un nouveau projet console.
-- Affiche les deux lignes suivantes :
+> ⚠️ Ces questions doivent être réalisés sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+
+Pour chaque question, **lisez l'objectif et le code fourni**.
+
+**Le code est-il correct?**
+Si le code est incorrect, **identifiez le problème**.
+
+
+### Partie A — Variables et nommage
+
+#### Question 1
+
+On veut déclarer une variable pour stocker l'âge d'un étudiant.
+
 ```csharp
-Bonjour
-Bienvenue au cours de programmation!
+int age = 18;
 ```
 
-✅ **Sortie attendue** :
-```plaintext
-Bonjour
-Bienvenue au cours de programmation!
-```
+**Le nom `age` respecte-t-il les standards habituels de nommage en C# ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui.
+
+En C#, les variables utilisent généralement le **camelCase** : le premier mot commence par une minuscule et les mots suivants commencent par une majuscule.
+
+`age` est donc un nom approprié.
+
+</details>
 
 ---
 
-### 🟢 Exercice 2 – Variable `int`  
-🎯 **Objectif** : Comprendre ce qu'est une variable entière.
+#### Question 2
 
-🧠 `int` permet de stocker un nombre entier.
+On veut stocker le prénom d'un étudiant.
 
-🛠️ **Instructions** :
-- Déclare une variable `int` nommée `anneeNaissance`.
-- Donne-lui la valeur `2006`.
-- Affiche-la avec un message.
-
-✅ **Sortie attendue** :
-```plaintext
-Année de naissance : 2006
+```csharp
+string Prenom = "Louis";
 ```
+
+**Le code est-il correct ? Le nom `Prenom` respecte-t-il la convention habituelle pour une variable ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Le code est correct, mais le nom `Prenom` ne respecte pas la convention habituelle pour une variable.
+
+On recommande :
+
+```csharp
+string prenom = "Louis";
+```
+
+Les variables utilisent généralement le **camelCase**.
+
+</details>
 
 ---
 
-### 🟢 Exercice 3 – Variable `char`  
-🎯 **Objectif** : Manipuler un caractère.
+#### Question 3
 
-🧠 `char` stocke un caractère entre apostrophes (`'A'`).
+On veut stocker une note finale.
 
-🛠️ **Instructions** :
-- Déclare une variable `char` appelée `initiale`.
-- Donne-lui la valeur `'L'`.
-- Affiche-la avec un message clair.
-
-✅ **Sortie attendue** :
-```plaintext
-Initiale : L
+```csharp
+double noteFinale = 85.5;
 ```
+
+**Le nom `noteFinale` respecte-t-il les standards de nommage en C# ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui.
+
+`noteFinale` utilise le **camelCase** et le nom décrit clairement le contenu de la variable.
+
+</details>
 
 ---
 
-### 🟢 Exercice 4 – Variable `double`  
-🎯 **Objectif** : Stocker des nombres décimaux.
+#### Question 4
 
-🧠 `double` permet de représenter des valeurs comme `3.14`.
+On veut stocker le nombre d'étudiants.
 
-🛠️ **Instructions** :
-- Déclare une variable `double` nommée `note`.
-- Donne-lui la valeur `87.5`.
-- Affiche-la.
-
-✅ **Sortie attendue** :
-```plaintext
-Note : 87,5
+```csharp
+int nb_etudiants = 25;
 ```
+
+**Le nom `nb_etudiants` respecte-t-il la convention habituelle en C# ? Si non, comment pourrait-on l'améliorer ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non.
+
+En C#, on recommande généralement le **camelCase** plutôt que d'utiliser des underscores pour séparer les mots.
+
+On pourrait écrire :
+
+```csharp
+int nbEtudiants = 25;
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 5 – Variable `bool`  
-🎯 **Objectif** : Utiliser des booléens (`true` ou `false`).
+#### Question 5
 
-🧠 `bool` représente un état vrai ou faux.
+On veut stocker le prix d'un produit.
 
-🛠️ **Instructions** :
-- Déclare une variable `bool` nommée `aReussi`.
-- Donne-lui la valeur `true`.
-- Affiche-la.
-
-✅ **Sortie attendue** :
-```plaintext
-Réussite : true
+```csharp
+double prixProduit = 19.99;
 ```
+
+**Pourquoi `prixProduit` est-il préférable à `p` ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`prixProduit` est plus explicite.
+
+Le nom permet de comprendre immédiatement ce que contient la variable, alors que `p` ne donne aucune information sur son contenu.
+
+</details>
 
 ---
 
-### 🟢 Exercice 6 – Variable `string`  
-🎯 **Objectif** : Travailler avec du texte.
+#### Question 6
 
-🧠 `string` stocke une chaîne de caractères.
+Le code suivant est-il valide en C# ?
 
-🛠️ **Instructions** :
-- Demande le nom de l’utilisateur avec `Console.ReadLine()`.
-- Affiche "Bonjour" suivi du nom.
-
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Entrez votre nom : Louis
-Bonjour Louis
+```csharp
+int 2age = 18;
 ```
+
+**Si non, quel est le problème ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non.
+
+Un nom de variable ne peut pas commencer par un chiffre.
+
+On pourrait écrire :
+
+```csharp
+int age2 = 18;
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 7 – Affectation après déclaration  
-🎯 **Objectif** : Déclarer une variable sans lui affecter immédiatement une valeur.
+#### Question 7
 
-🛠️ **Instructions** :
-- Déclare une variable `int` nommée `score`.
-- Affecte-lui ensuite la valeur `100`.
-- Affiche-la.
+Le code suivant est-il valide en C# ?
 
-✅ **Sortie attendue** :
-```plaintext
-Score : 100
+```csharp
+int age-etudiant = 18;
 ```
+
+**Si non, quel est le problème ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non.
+
+Le caractère `-` n'est pas permis dans un identifiant de variable de cette façon. Il est interprété comme l'opérateur de soustraction.
+
+On pourrait écrire :
+
+```csharp
+int ageEtudiant = 18;
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 8 – Concaténation de chaînes  
-🎯 **Objectif** : Utiliser l’opérateur `+` pour concaténer du texte.
+#### Question 8
 
-🛠️ **Instructions** :
-- Demande le prénom de l'utilisateur.
-- Affiche "Bonjour [prénom]!"
+On veut déclarer une variable contenant le nombre d'heures travaillées.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Quel est ton prénom ? Alice
-Bonjour Alice!
+Laquelle respecte le mieux les conventions de nommage en C# ?
+
+**A.**
+
+```csharp
+int NombreHeures = 35;
 ```
+
+**B.**
+
+```csharp
+int nombre_heures = 35;
+```
+
+**C.**
+
+```csharp
+int nombreHeures = 35;
+```
+
+**D.**
+
+```csharp
+int nh = 35;
+```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+**Réponse : C**
+
+```csharp
+int nombreHeures = 35;
+```
+
+Le nom utilise le **camelCase** et décrit clairement le contenu de la variable.
+
+</details>
 
 ---
 
-### 🟢 Exercice 9 – Conversion `string` en `int`  
-🎯 **Objectif** : Lire une saisie et la convertir en entier avec `int.Parse()`.
+#### Question 9
 
-🛠️ **Instructions** :
-- Demande l’âge.
-- Convertis-le avec `int.Parse()`.
-- Affiche l’âge.
+On veut stocker si un étudiant a réussi son examen.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Quel âge as-tu ? 17
-Tu as 17 ans
+```csharp
+bool reussi = true;
 ```
+
+**Le nom `reussi` est-il acceptable ? Pourrait-on choisir un nom plus explicite ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui, `reussi` est un nom valide et compréhensible.
+
+Cependant, pour une variable `bool`, un nom comme :
+
+```csharp
+bool aReussi = true;
+```
+
+est plus explicite, car il indique clairement qu'il s'agit d'une information vraie ou fausse.
+
+</details>
 
 ---
 
-### 🟢 Exercice 10 – Conversion `string` en `double`  
-🎯 **Objectif** : Lire un nombre à virgule et l’afficher.  
+#### Question 10
 
-🧠 Utiliser `double.Parse()` pour convertir une saisie en un nombre décimal.  
+Lequel de ces noms est le plus approprié pour une variable contenant le prix d'un produit ?
 
-🛠️ **Instructions** :  
-- Demande à l’utilisateur un prix (avec décimales).  
-- Convertis la saisie en `double` avec `double.Parse()`.  
-- Affiche : `"Prix saisi : X"`.  
+**A.**
 
-✅ **Entrée/Sortie attendue** :  
-```plaintext
-Entrez un prix : 19,95
-Prix saisi : 19,95
+```csharp
+double x = 19.99;
 ```
+
+**B.**
+
+```csharp
+double prix = 19.99;
+```
+
+**C.**
+
+```csharp
+double PrixProduit = 19.99;
+```
+
+**D.**
+
+```csharp
+double prix_produit = 19.99;
+```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+**Réponse : B**
+
+```csharp
+double prix = 19.99;
+```
+
+Le nom est clair, simple et respecte le camelCase.
+
+`PrixProduit` utilise plutôt une convention associée aux noms de types ou de membres publics en C#, tandis que `prix_produit` n'utilise pas la convention habituelle du camelCase.
+
+</details>
+
+
+### Partie B — Variables et types (8 questions)
+#### Question 11
+
+On veut stocker l'âge d'un étudiant.
+
+```csharp
+int age = 18;
+```
+
+**Le choix du type est-il approprié ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `int` permet de stocker un nombre entier.
+
+</details>
 
 ---
 
+#### Question 12
 
-### 🟢 Exercice 11 – Addition  
-🎯 **Objectif** : Additionner deux entiers.
+On veut stocker le prix d'un produit.
 
-🛠️ **Instructions** :
-- Demande deux nombres.
-- Additionne-les.
-- Affiche la somme.
-
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Entrez un nombre : 20
-Entrez un autre nombre : 12
-Somme : 32
+```csharp
+double prix = 19.99;
 ```
+
+**Le choix du type est-il approprié ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `double` permet de stocker un nombre qui peut contenir des décimales.
+
+</details>
 
 ---
 
-### 🟢 Exercice 12 – Soustraction  
-🎯 **Objectif** : Soustraire deux nombres.
+#### Question 13
 
-🛠️ **Instructions** :
-- Demande deux nombres.
-- Soustrais le second du premier.
-- Affiche le résultat.
+On veut stocker la première lettre du prénom d'un étudiant.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Entrez un nombre : 50
-Entrez un autre nombre : 8
-Résultat : 42
+```csharp
+char initiale = 'A';
 ```
+
+**Le choix du type est-il approprié ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `char` permet de stocker un seul caractère.
+
+</details>
 
 ---
 
-### 🟢 Exercice 13 – Multiplication  
-🎯 **Objectif** : Multiplier deux entiers.
+#### Question 14
 
-🛠️ **Instructions** :
-- Demande deux nombres.
-- Affiche leur produit.
+On veut savoir si un étudiant a réussi un examen.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Entrez un nombre : 6
-Entrez un autre nombre : 7
-Produit : 42
+```csharp
+bool aReussi = true;
 ```
+
+**Le choix du type est-il approprié ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `bool` permet de stocker une valeur vraie ou fausse.
+
+</details>
 
 ---
 
-### 🟢 Exercice 14 – Division entière  
-🎯 **Objectif** : Comprendre la perte de précision en division entière.
+#### Question 15
 
-🧠 Division de deux `int` coupe la partie décimale.
+On veut stocker le nombre d'heures travaillées.
 
-🛠️ **Instructions** :
-- `int a = 7`, `int b = 2`
-- Affiche `a / b`
-
-✅ **Sortie attendue** :
-```plaintext
-Résultat (int) : 3
+```csharp
+string heures = 35;
 ```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. `35` est un nombre entier, alors que `heures` est déclaré comme `string`.
+
+Le type approprié serait :
+
+```csharp
+int heures = 35;
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 15 – Division avec `double`  
-🎯 **Objectif** : Obtenir un résultat précis avec `double`.
+#### Question 16
 
-🛠️ **Instructions** :
-- `double a = 7`, `double b = 2`
-- Affiche `a / b`
+On veut stocker une note sur 100.
 
-✅ **Sortie attendue** :
-```plaintext
-Résultat (double) : 3,5
+```csharp
+int note = 87.5;
 ```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. `87.5` est un nombre décimal. Le type `int` ne permet pas de stocker des décimales.
+
+Le type approprié serait :
+
+```csharp
+double note = 87.5;
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 16 – Modulo  
-🎯 **Objectif** : Utiliser `%` pour obtenir le reste d’une division.
+#### Question 17
 
-🛠️ **Instructions** :
-- Demande un nombre.
-- Affiche le reste de la division par 10.
+On veut stocker une lettre.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Entrez un nombre : 23
-Reste de 23 ÷ 10 = 3
+```csharp
+char lettre = "B";
 ```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. Un `char` doit être placé entre apostrophes.
+
+La bonne déclaration est :
+
+```csharp
+char lettre = 'B';
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 17 – Ordre des opérations  
-🎯 **Objectif** : Comprendre la priorité des opérateurs.
+#### Question 18
 
-🛠️ **Instructions** :
-- Affiche le résultat de `2 + 3 * 4`
-- Puis de `(2 + 3) * 4`
+On veut stocker un prénom.
 
-✅ **Sortie attendue** :
-```plaintext
-Sans parenthèses : 14
-Avec parenthèses : 20
+```csharp
+string prenom = 'Louis';
 ```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. Une chaîne de caractères (`string`) doit être placée entre guillemets.
+
+La bonne déclaration est :
+
+```csharp
+string prenom = "Louis";
+```
+
+</details>
 
 ---
 
-### 🟢 Exercice 18 – Moyenne de deux notes  
-🎯 **Objectif** : Calculer la moyenne avec des `double`.
+### Partie C — Saisie et conversion
 
-🛠️ **Instructions** :
-- Demande deux notes.
-- Calcule et affiche leur moyenne.
+#### Question 19
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Note 1 : 75,5
-Note 2 : 82,0
-Moyenne : 78,75
+On veut demander l'âge de l'utilisateur.
+
+```csharp
+Console.Write("Votre âge : ");
+int age = int.Parse(Console.ReadLine());
 ```
+
+**Le code permet-il de stocker correctement l'âge saisi ? Expliquez.**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `Console.ReadLine()` récupère la saisie sous forme de `string`, puis `int.Parse()` la convertit en entier.
+
+</details>
 
 ---
 
-### 🟢 Exercice 19 – Conversion `string` en `double`  
-🎯 **Objectif** : Lire un prix et le convertir pour le doubler.
+#### Question 20
 
-🛠️ **Instructions** :
-- Demande un prix.
-- Affiche le double.
+On veut demander un prix.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Prix : 15,50
-Double du prix : 31
+```csharp
+Console.Write("Prix : ");
+double prix = double.Parse(Console.ReadLine());
 ```
+
+**Le code permet-il de stocker correctement le prix saisi ? Expliquez.**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `Console.ReadLine()` récupère la saisie comme une chaîne de caractères et `double.Parse()` la convertit en nombre décimal.
+
+</details>
 
 ---
 
-### 🟢 Exercice 20 – Permutation de deux valeurs  
-🎯 **Objectif** : Échanger le contenu de deux variables.
+#### Question 21
 
-🛠️ **Instructions** :
-- Demande deux nombres.
-- Échange-les.
-- Affiche le résultat.
+On veut demander le nom d'un utilisateur.
 
-✅ **Entrée/Sortie attendue** :
-```plaintext
-Nombre A : 4
-Nombre B : 7
-Après permutation : A = 7, B = 4
+```csharp
+Console.Write("Nom : ");
+string nom = Console.ReadLine();
 ```
 
+**Le code est-il correct ? Pourquoi ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Oui. `Console.ReadLine()` retourne une chaîne de caractères et `nom` est de type `string`.
+
+</details>
+
 ---
+
+#### Question 22
+
+```csharp
+Console.Write("Votre âge : ");
+int age = Console.ReadLine();
+```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. `Console.ReadLine()` retourne une valeur de type `string`.
+
+Il faut convertir la saisie avec `int.Parse()` :
+
+```csharp
+int age = int.Parse(Console.ReadLine());
+```
+
+</details>
+
+---
+
+#### Question 23
+
+```csharp
+Console.Write("Prix : ");
+double prix = Console.ReadLine();
+```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. `Console.ReadLine()` retourne une chaîne de caractères.
+
+Il faut utiliser `double.Parse()` :
+
+```csharp
+double prix = double.Parse(Console.ReadLine());
+```
+
+</details>
+
+---
+
+#### Question 24
+
+```csharp
+Console.Write("Nom : ");
+int nom = int.Parse(Console.ReadLine());
+```
+
+**Le code est-il correct ? Si non, quelle est l'erreur ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Non. Un nom est une chaîne de caractères. Il faut utiliser le type `string`.
+
+```csharp
+string nom = Console.ReadLine();
+```
+
+</details>
+
+---
+
+### Affectation
+
+#### Question 25
+
+```csharp
+int score;
+score = 100;
+score = 150;
+```
+
+**Quelle est la valeur de `score` à la fin de l'exécution ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur finale de `score` est **150**.
+
+La deuxième affectation remplace la valeur 100 par 150.
+
+</details>
+
+---
+
+#### Question 26
+
+```csharp
+int score = 50;
+score = score + 10;
+```
+
+**Quelle est la valeur de `score` à la fin de l'exécution ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur finale de `score` est **60**.
+
+On calcule d'abord `50 + 10`, puis le résultat est affecté à `score`.
+
+</details>
+
+---
+
+### Partie D — Expressions arithmétiques
+
+#### Question 27
+
+```csharp
+int resultat = 10 + 5 * 2;
+```
+
+**Quelle est la valeur de `resultat` ? Expliquez votre réponse.**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur de `resultat` est **20**.
+
+La multiplication est effectuée avant l'addition :
+
+`5 * 2 = 10`
+
+puis :
+
+`10 + 10 = 20`
+
+</details>
+
+---
+
+#### Question 28
+
+```csharp
+int resultat = (10 + 5) * 2;
+```
+
+**Quelle est la valeur de `resultat` ? Expliquez votre réponse.**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur de `resultat` est **30**.
+
+Les parenthèses sont évaluées en premier :
+
+`10 + 5 = 15`
+
+puis :
+
+`15 * 2 = 30`
+
+</details>
+
+---
+
+#### Question 29
+
+```csharp
+int resultat = 17 % 5;
+```
+
+**Quelle est la valeur de `resultat` ? Que représente l'opérateur `%` ?**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur de `resultat` est **2**.
+
+L'opérateur `%` donne le reste de la division entière.
+
+`17 ÷ 5` donne 3 avec un reste de **2**.
+
+</details>
+
+---
+
+#### Question 30
+
+```csharp
+int resultat = 7 / 2;
+```
+
+**Quelle est la valeur de `resultat` ? Expliquez votre réponse.**
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+La valeur de `resultat` est **3**.
+
+Les deux opérandes sont de type `int`. La division est donc une division entière et la partie décimale est supprimée.
+
+</details>
+
+
+---
+
