@@ -30,12 +30,16 @@
       "day": "vendredi", "start": "11:10", "end": "13:00", "room": "D0620"
     },
     { "id": "dispo-bur-1", "category": "green",
-      "title": "Disponibilité à mon bureau",
-      "day": "null", "start": "00:10", "end": "03:00", "room": "E211"
+      "title": "Disponibilité au centre d'aide",
+      "day": "mardi", "start": "15:10", "end": "18:00", "room": "E211"
     },
     { "id": "dispo-bur-2", "category": "green",
+      "title": "Disponibilité au centre d'aide",
+      "day": "mercredi", "start": "17:10", "end": "18:00", "room": "D0008"
+    },
+    { "id": "dispo-bur-3", "category": "green",
       "title": "Disponibilité à mon bureau",
-      "day": "null", "start": "00:10", "end": "03:00", "room": "E211"
+      "day": "vendredi", "start": "14:10", "end": "16:00", "room": "E211"
     },
     { "id": "reunion-dep", "category": "gray",
       "title": "Réunion départementale",
