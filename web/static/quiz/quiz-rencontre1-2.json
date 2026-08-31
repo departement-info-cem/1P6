@@ -1,0 +1,65 @@
+{
+  "titre": "Quiz test - Rencontre 1.2",
+  "questions": [
+    {
+	  "texte": "Quelle sera la valeur de la variable **total** à la fin ?\n\n```csharp\nint nombre = 10;\nint prix = 100;\nint total = 10;\ntotal = total + prix * (nombre + 1);\n```",
+	  "choix": ["1010", "1100", "1110", "1210"],
+	  "reponse": 2,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quels est l'identificateur accepté par C# et qui respecte les standards du cours pour nommer des variables ?",
+	  "choix": [
+		"1nbreCartes",
+		"NoombreCartes",
+		"nbre?Cartes",		
+		"nbreCartes",
+		"nbrecartes"
+	  ],
+	  "reponse": 3,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelle sera la valeur de la variable **resultat** à la fin ?\n\n```csharp\nint resultat;\nint nbre1 = 5;\nint nbre2 = 4;\nresultat = nbre1 + nbre2 / 2;\n```",
+	  "choix": ["4", "7", "9", "4,5"],
+	  "reponse": 1,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelle sera la valeur de la variable **total** à la fin ?\n\n```csharp\nint total = 0;\nint prixPommes = 15;\nint prixBananes = 10;\ntotal = prixPommes * 2;\ntotal = total + prixBananes * 4;\n```",
+	  "choix": ["55", "60", "70", "100"],
+	  "reponse": 2,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelle sera la valeur de la variable **resultat** à la fin ?\n\n```csharp\nint nbre1 = 23;\nint nbre2 = 7;\nint resultat = nbre1 % nbre2;\n```",
+	  "choix": ["2", "3", "4", "5"],
+	  "reponse": 2,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelles est la déclaration incorrecte ?",
+	  "choix": [
+		"int nbre1 = 6;\nint nbre2;\nint age = 12;",
+		"int nbre1 = 6, nbre2, age = 12;",
+		"int nbre1 = 6; nbre2; age = 12;"		
+	  ],
+	  "reponse": 2,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelle est la valeur de la variable **b** à la fin ?\n\n```csharp\nint a = 10;\nint b = 5;\na = b;\nb = a;\n```",
+	  "choix": ["5", "10", "15", "0"],
+	  "reponse": 0,
+	  "duree": 15
+	},
+	{
+	  "texte": "Quelle sera la valeur de la variable **nbre4** à la fin ?\n\n```csharp\nint nbre1 = 9;\nint nbre2 = 4;\nint nbre3 = 3;\nint nbre4 = nbre1 + nbre2 / nbre3 - 2;\n```",
+	  "choix": ["8", "9", "10", "11"],
+	  "reponse": 0,
+	  "duree": 15
+	}
+	
+   
+  ]
+}

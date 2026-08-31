@@ -2,6 +2,9 @@
 description: Structures conditionnelles if/else, booléens
 ---
 
+
+<Quiz file="/quiz/quiz-rencontre1-2.json" />
+
 # 🤔 Booléens, Conditions et Débogage
 
 ## 🎯 Objectif
