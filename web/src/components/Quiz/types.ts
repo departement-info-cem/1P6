@@ -7,6 +7,7 @@ export interface QuestionShowPayload {
   index: number;
   total: number;
   texte: string;
+  code?: string;
   choix: string[];
   duree: number;
   startAt: number;

@@ -1,0 +1,60 @@
+{
+  "titre": "Quiz - Les notions de base!",
+  "questions": [
+    {
+      "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+      "code": "int nbre1 = 23;\nint nbre2 = 7;\nint resultat = nbre1 % nbre2;",
+      "choix": ["1", "2", "3", "4"],
+      "reponse": 1,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle est la valeur de la variable b à la fin?",
+      "code": "int a = 10;\nint b = 5;\na = b;\nb = a;",
+      "choix": ["10", "5", "0", "Aucune idée"],
+      "reponse": 1,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable nbre4 à la fin?",
+      "code": "int nbre1 = 9;\nint nbre2 = 4;\nint nbre3 = 3;\nint nbre4 = nbre1 + nbre2 / nbre3 - 2;",
+      "choix": ["8", "10", "11", "12"],
+      "reponse": 0,
+      "duree": 20
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+      "code": "stirng resultat;\nstring a = 9;\nstring b = 4;\nresultat = a + b;",
+      "choix": ["9", "13", "94", "49"],
+      "reponse": 2,
+      "duree": 15
+    },
+    {
+      "texte": "Comment on écrit un commentaire sur une seule ligne en C#?",
+      "choix": ["// Ceci est un commentaire", "/* Ceci est un commentaire */", "/// Ceci est un commentaire", "Ceci est un commentaire"],
+      "reponse": 0,
+      "duree": 10
+    },
+    {
+      "texte": "Est-ce que le code suivant est correct?",
+      "code":  "string valeur = \"12\";\nint resultat = valeur + 3;",
+      "choix": ["Oui", "Non"],
+      "reponse": 1,
+      "duree": 10
+    },
+    {
+      "texte": "Est-ce que le code suivant est correct?",
+      "code":  "string valeur = \"12\";\nint resultat = double.Parse(valeur) + 3;",
+      "choix": ["Oui", "Non"],
+      "reponse": 1,
+      "duree": 10
+    },
+    {
+      "texte": "Est-ce que le code suivant est correct?",
+      "code":  "string valeur = \"12\";\nint resultat = int.Parse(valeur) + 3;",
+      "choix": ["Oui", "Non"],
+      "reponse": 0,
+      "duree": 10
+    }
+  ]
+}

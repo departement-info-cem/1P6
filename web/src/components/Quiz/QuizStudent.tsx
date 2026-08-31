@@ -167,6 +167,7 @@ export default function QuizStudent({
             <span className={styles.timer}>{timeLeft}s</span>
           </div>
           <p>{question.texte}</p>
+          {question.code && <pre><code>{question.code}</code></pre>}
           <ul className={styles.choices}>
             {question.choix.map((choix, index) => (
               <li key={choix}>
@@ -191,6 +192,7 @@ export default function QuizStudent({
       {phase === "reveal" && question && reveal && (
         <>
           <p>{question.texte}</p>
+          {question.code && <pre><code>{question.code}</code></pre>}
           <ul className={styles.choices}>
             {question.choix.map((choix, index) => {
               const isCorrect = index === reveal.reponse;

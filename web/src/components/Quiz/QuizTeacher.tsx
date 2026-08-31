@@ -153,6 +153,7 @@ export default function QuizTeacher({
       index: room.currentIndex,
       total: room.quiz.questions.length,
       texte: q.texte,
+      code: q.code,
       choix: q.choix,
       duree: room.questionDuration(),
       startAt: room.questionStartAt,
@@ -236,6 +237,7 @@ export default function QuizTeacher({
             <span className={styles.timer}>{timeLeft}s</span>
           </div>
           <p>{question.texte}</p>
+          {question.code && <pre><code>{question.code}</code></pre>}
           <ul className={styles.choices}>
             {question.choix.map((choix) => (
               <li key={choix} className={styles.choiceButton}>
@@ -255,6 +257,7 @@ export default function QuizTeacher({
       {phase === "reveal" && question && reveal && (
         <>
           <p>{question.texte}</p>
+          {question.code && <pre><code>{question.code}</code></pre>}
           <ul className={styles.choices}>
             {question.choix.map((choix, index) => (
               <li
