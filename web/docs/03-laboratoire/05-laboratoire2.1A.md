@@ -1,165 +1,296 @@
 ---
-title: A - Conditions
+title: A - Questions de compréhension
 ---
 
-# 🧪 Labo 2.1A – Conditions
-
----
-
-### 🟢 Exercice 1 – Condition booléenne simple ☕
-
-🎯 **Objectif** : Comprendre les booléens et utiliser une condition `if`.
-
-🛠️ Instructions :
-
-* Déclare une variable `bool` appelée `jeSuisFatigue` et donne-lui la valeur `true`
-* Si `jeSuisFatigue` est vraie (`true`), affiche `Voici la solution : café`
-
-✅ Sortie attendue :
-
-```
-
-Voici la solution : café
-
-```
+# 🧪 Labo 2.1A – Questions de compréhension
 
 ---
 
-### 🟢 Exercice 2 – Condition simple avec `if` 🎂
+## 🟢 Je comprends
 
-🎯 **Objectif** : Utiliser une structure `if`.
+> 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
-🛠️ Instructions :
+> ⚠️ Ces questions doivent être réalisés sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
-* Demande à l’utilisateur son âge
-* Si l’âge est supérieur ou égal à 18, affiche `Tu es majeur.`
+Pour chaque question, **lisez l'objectif et le code fourni**.
 
-✅ Exemple :
+**Le code est-il correct?**
+Si le code est incorrect, **identifiez le problème**.
 
+
+### Partie A — Expressipon booléennes
+
+#### Question 1
+
+Dans un musée, les enfants de moins de 6 ans et les personnes de plus de 65 ans ont accès gratuitement.
+
+Un étudiant propose l'expression suivante pour déterminer si une personne a droit à l'accès gratuit :
+
+```csharp
+age < 6 || age > 65
 ```
+Cette expression répond-elle correctement au besoin ?
 
-Quel est ton âge ? 19
-Tu es majeur.
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
-```
+`Oui` 
+
+</details>
 
 ---
 
-### 🟢 Exercice 3 – `if` + `else` 🔢
+#### Question 2
 
-🎯 **Objectif** : Gérer deux cas exclusifs.
+On veut vérifier si une note est entre 0 et 100 inclusivement.
 
-🛠️ Instructions :
+L'expression suivante permet-elle de vérifier correctement ce besoin ?
 
-* Demande un nombre à l’utilisateur
-* Si le nombre est pair (`% 2 == 0`), affiche `Nombre pair`
-* Sinon, affiche `Nombre impair`
-
-✅ Exemple :
-
+```csharp
+note >= 0 && nombre <= 100
 ```
 
-Entrez un nombre : 7
-Nombre impair
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
-```
+`oui` 
+
+</details>
 
 ---
 
-### 🟢 Exercice 4 – Prix des pantalons 👖💸
+#### Question 3
 
-🎯 **Objectif** : Gérer plusieurs conditions avec `if` et `else if`.
+On veut vérifier si un nombre est entre 10 et 20 inclusivement OU supérieur à 50.
 
-🛠️ Instructions :
+L'expression suivante permet-elle de vérifier correctement ce besoin ?
 
-* Demande un prix de pantalon à l’utilisateur
-* Si le prix est supérieur ou égal à 100, affiche `Je vais chercher un rip-off cheap sur Amazon à la place`
-* Si le prix est inférieur à 30, affiche `Wow c'est un beau prix. C'est sus`
-* Sinon, affiche `Prix raisonnable`
-
-✅ Exemple :
-
+```csharp
+nombre >= 10 && nombre <= 20 || nombre > 50
 ```
 
-Prix : 20
-Wow c'est un beau prix. C'est sus
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
-```
+`Oui` 
+
+</details>
 
 ---
 
-### 🟢 Exercice 5 – Aliments 🥦🍫
+#### Question 4
 
-🎯 **Objectif** : Comparer des chaînes et utiliser `else`.
+Une personne peut entrer si elle est majeure et possède un billet, ou si elle est accompagnée d'un adulte.
 
-🛠️ Instructions :
+L'expression suivante permet-elle de vérifier correctement ce besoin ?
 
-* Demande un aliment préféré
-* Si c’est `"brocoli"`, affiche `Miam. Un des aliments avec le plus de nutriments`
-* Sinon, affiche `Huh, c'est mieux le brocoli`
-
-✅ Exemple :
-
+```csharp
+(age >= 18 && aUnBillet) || !accompagnee
 ```
 
-Aliment préféré : chocolat
-Huh, c'est mieux le brocoli
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
+`Non` 
+
+La condition devrait être :
+
+```csharp
+(age >= 18 && aUnBillet) || accompagnee
 ```
+
+</details>
 
 ---
 
-### 🟢 Exercice 6 – Combinaison logique `&&` 😴
 
-🎯 **Objectif** : Utiliser l’opérateur logique ET.
+#### Question 5
 
-🛠️ Instructions :
+Quelle est la valeur de l'expression suivante ?
 
-* Demande l’âge et le nombre d’heures de sommeil
-* Si l’âge est entre 18 et 30 inclusivement **et** que le sommeil est inférieur à 6h, affiche `Jeune adulte fatigué`
-
-✅ Exemple :
-
+```csharp
+(8 > 5 && 3 > 10) || !(4 == 7)
 ```
 
-Âge : 22
-Heures de sommeil : 5
-Jeune adulte fatigué
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
-```
+`true` 
+
+</details>
 
 ---
 
-### 🟢 Exercice 7 – Combinaison logique `||` 🧸🧱
 
-🎯 **Objectif** : Utiliser l’opérateur logique OU.
+#### Question 6
 
-🛠️ Instructions :
+Quelle est la valeur de resultat à la fin du programme ?
 
-* Demande l’âge
-* Si l’âge est inférieur à 4 **ou** supérieur à 99, affiche `Tu ne peux pas jouer avec des LEGO`
-* Sinon, affiche `Tu peux jouer avec des LEGO`
+```csharp
+int a = 20;
+int resultat = 0;
+
+if (a >= 18)
+{
+    resultat = 100;
+}
+if (a >= 10)
+{
+    resultat = 50;
+}
+```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`50` 
+
+</details>
 
 ---
 
-### 🟢 Exercice 8 – Inversion logique `!` 🔁
 
-🎯 **Objectif** : Utiliser l’opérateur de négation.
+#### Question 7
 
-🛠️ Instructions :
+Quelle est la valeur de resultat à la fin du programme ?
 
-* Demande à l’utilisateur s’il est prêt (`true` ou `false`)
-* Si l'utilisateur n'est pas prêt, affiche `Tu n’es pas prêt.`
-Attention: évite d'utiliser la condition `== false` et favorise plutôt l'opérateur de négation `!`.
+```csharp
+int a = 20;
+int resultat = 0;
 
-✅ Exemple :
-
+if (a >= 18)
+{
+    resultat = 100;
+}
+else if (a >= 10)
+{
+    resultat = 50;
+}
 ```
 
-Es-tu prêt ? false
-Tu n’es pas prêt.
+<details>
+<summary>💡 Vérifier ma réponse</summary>
 
-```
+`100` 
+
+</details>
 
 ---
+
+
+#### Question 8
+
+Quelle est la valeur de resultat à la fin du programme ?
+
+```csharp
+int age = 20;
+int resultat = 0;
+
+if (age >= 18)
+{
+    if (age >= 21)
+    {
+        resultat = 2;
+    }
+    else
+    {
+        resultat = 1;
+    }
+}
+else
+{
+    resultat = 0;
+}
 ```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`1` 
+
+</details>
+
+---
+
+
+#### Question 9
+
+Que va afficher le programme suivant ?
+
+```csharp
+int age = 20;
+bool aUnBillet = true;
+
+if (age >= 18 && aUnBillet)
+{
+    Console.WriteLine("Accès autorisé");
+}
+else
+{
+    Console.WriteLine("Accès refusé");
+}
+```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`Accès autorisé` 
+
+</details>
+
+---
+
+
+#### Question 9
+
+Que va afficher le programme suivant ?
+
+```csharp
+int age = 20;
+bool aUnBillet = true;
+
+if (age >= 18)
+{
+    if (aUnBillet)
+    {
+        Console.WriteLine("Accès autorisé");
+    }
+    else
+    {
+        Console.WriteLine("Accès refusé");
+    }
+}
+else
+{
+    Console.WriteLine("Accès refusé");
+}
+```
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`Accès autorisé` 
+
+</details>
+
+---
+
+
+#### Question 10
+
+Une personne peut accéder à une activité si elle est majeure et possède un billet.
+
+Un étudiant propose les deux solutions présentées aux questions 8 et 9.
+
+Les deux solutions répondent-elles au même besoin ?
+
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+`Oui` 
+
+</details>
+
+---
