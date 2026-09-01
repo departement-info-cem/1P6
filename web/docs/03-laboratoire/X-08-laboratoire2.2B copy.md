@@ -1,8 +1,8 @@
 ---
-title: B - Trace d'exécution
+title: B - Portée des variables
 ---
 
-# 🧪 Labo 2.2B – Trace d'exécution
+# 🧪 Labo 2.2B – Portée des variables
 
 ### 🎯 Objectif
 
