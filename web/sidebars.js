@@ -226,9 +226,9 @@ const sidebars = {
         tooltip:"cache"
       },
     },
-   /* {
+    {
       type: "doc",
-      label: "2.2 - Fonctions",
+      label: "3.1 - Fonctions",
       id: "cours/fonctions",
       customProps: {
         avancementLabel: "TP1",
@@ -236,10 +236,10 @@ const sidebars = {
         calendrier: buildCalendrierForIndex(3),
         tooltip:"cache"
       },
-    },*/
+    },
     {
       type: "doc",
-      label: "3.1 - Intégration des fonctions",
+      label: "3.2 - Intégration des fonctions",
       id: "cours/integration-fonctions",
       customProps: {
         avancementLabel: "TP1",
@@ -250,7 +250,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "3.2 - TP1 - Créateur de personnage",
+      label: "4.1 - TP1 - Créateur de personnage",
       id: "cours/integration-tp1",
       className: "remise-tp1",
       customProps: {
@@ -262,7 +262,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "4.1 - Boucles for",
+      label: "4.2 - Boucles for",
       id: "cours/for",
       customProps: {
         calendrier: buildCalendrierForIndex(6),
@@ -271,7 +271,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "4.2 - Tableaux 1D",
+      label: "5.1 - Tableaux 1D",
       id: "cours/tableaux1d",
       customProps: {
         calendrier: buildCalendrierForIndex(7),
@@ -280,7 +280,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.1 - Intégration des notions",
+      label: "5.2 - Intégration des notions",
       id: "cours/integration-for",
       customProps: {
         calendrier: buildCalendrierForIndex(8),
@@ -289,7 +289,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.2 - Formatif 1",
+      label: "6.1 - Formatif 1",
       id: "cours/formatif1",
       customProps: {
         calendrier: buildCalendrierForIndex(9),
@@ -298,7 +298,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.1 - Examen 1",
+      label: "6.2 - Examen 1",
       id: "cours/examen1",
       className: "examen",
       customProps: {
@@ -308,7 +308,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.2 - Tableaux 2D",
+      label: "7.1 - Tableaux 2D",
       id: "cours/tableaux2d",
       customProps: {
         avancementLabel: "TP2",
@@ -319,7 +319,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.1 - Intégration des tableaux 2D",
+      label: "7.2 - Intégration des tableaux 2D",
       id: "cours/integration-2d",
       customProps: {
         avancementLabel: "TP2",
@@ -330,7 +330,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.2 - Switch, while, do while",
+      label: "8.1 - Switch, while, do while",
       id: "cours/switch-while",
       customProps: {
         avancementLabel: "TP2",
@@ -341,7 +341,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.1 - Intégration - TP2",
+      label: "8.2 - Intégration - TP2",
       id: "cours/integration-tp2-1",
       customProps: {
         avancementLabel: "TP2", 
@@ -352,7 +352,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - TP2 - Mini RPG",
+      label: "9.1 - TP2 - Mini RPG",
       id: "cours/integration-tp2-2",
       className: "remise-tp2",
       customProps: {
@@ -364,7 +364,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.1 - Écriture dans un fichier",
+      label: "9.2 - Écriture dans un fichier",
       id: "cours/ecriture-texte",
       customProps: {
         avancementLabel: "TP3 - Créé - ",
@@ -376,7 +376,7 @@ const sidebars = {
     {
       type: "doc",
       
-      label: "9.2 - Lecture de fichiers texte",
+      label: "10.1 - Lecture de fichiers texte",
       id: "cours/lecture-texte",
       customProps: {
         avancementLabel: "TP3",
@@ -387,7 +387,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.1 - Fichiers CSV et séparateurs",
+      label: "10.2 - Fichiers CSV et séparateurs",
       id: "cours/csv",
       customProps: {
         avancementLabel: "TP3",
@@ -398,7 +398,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Formatif 2",
+      label: "11.1 - Formatif 2",
       id: "cours/formatif2",
       customProps: {
         calendrier: buildCalendrierForIndex(19),
@@ -407,7 +407,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.1 - Examen 2",
+      label: "11.2 - Examen 2",
       id: "cours/examen2",
       className: "examen",
       customProps: {
@@ -417,7 +417,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.2 - TP3 - RPG avancé",
+      label: "12.1 - TP3 - RPG avancé",
       id: "cours/integration-tp3-1",
       customProps: {
         avancementLabel: "TP3",
@@ -428,24 +428,13 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.1 - TP3 - suite",
+      label: "12.2 - TP3 - suite",
       id: "cours/integration-tp3-2",
       className: "remise-tp3",
       customProps: {
         avancementLabel: "TP3",
         avancement: 1.0,
         calendrier: buildCalendrierForIndex(22),
-        tooltip:"cache"
-      }
-    },
-    {
-      type: "doc",
-      label: "12.2 - Interface graphique",
-      id: "cours/winform",
-      customProps: {
-        avancementLabel: "TP4 - Créé - ",
-        avancement: 0.15,
-        calendrier: buildCalendrierForIndex(23),
         tooltip:"cache"
       }
     },
