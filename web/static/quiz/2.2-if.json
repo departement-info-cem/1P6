@@ -3,7 +3,7 @@
   "questions": [
     {
       "texte": "Quelle sera la valeur de la variable categorie à la fin?",
-      "code": "int age = 21;\nstring categorie;\n\nif (age < 18)\n{\n    categorie = \"Mineur\";\n}\nelse\n{\n    catégorie = \"Majeur\";\n}",
+      "code": "int age = 21;\nstring categorie;\n\nif (age < 18)\n{\n    categorie = \"Mineur\";\n}\nelse\n{\n    categorie = \"Majeur\";\n}",
       "choix": ["Mineur", "Majeur", "vide", "Autre"],
       "reponse": 1,
       "duree": 15
