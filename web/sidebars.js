@@ -217,6 +217,17 @@ const sidebars = {
     },
     {
       type: "doc",
+      label: "2.2 - Intégration if et trace d'exécution",
+      id: "cours/integration-if-trace",
+      customProps: {
+        avancementLabel: "TP1",
+        avancement: 0.1,
+        calendrier: buildCalendrierForIndex(3),
+        tooltip:"cache"
+      },
+    },
+   /* {
+      type: "doc",
       label: "2.2 - Fonctions",
       id: "cours/fonctions",
       customProps: {
@@ -225,7 +236,7 @@ const sidebars = {
         calendrier: buildCalendrierForIndex(3),
         tooltip:"cache"
       },
-    },
+    },*/
     {
       type: "doc",
       label: "3.1 - Intégration des fonctions",

@@ -6,8 +6,25 @@ title: B - Trace d'exécution
 
 ### 🎯 Objectif
 
+Réaliser une trace d'exécution afin de suivre l'évolution des variables et comprendre le comportement d'un programme.
 
----
+
+### **Consigne générale :**
+
+> Réaliser une trace d'exécution afin de suivre l'évolution des variables et de comprendre le déroulement d'un programme.
+
+
+:::warning
+Le tableau de trace d’exécution fourni est conçu pour être utilisé tout au long de la session. Il contient donc des éléments qui n’ont pas encore été vus, comme la **pile d’appels**, les **fonctions appelées**, les **valeurs retournées** et les **portées des variables**.
+
+Pour les exercices de cette section, **utilisez uniquement les éléments qui ont été présentés en classe**. Les autres éléments seront introduits progressivement et seront utilisés dans de prochains exercices de trace plus complets.
+:::
+
+> 🖨️ [Imprimer le tableau de trace d’exécution pour pratiquer vos traces à la main.](https://info.cegepmontpetit.ca/420-SN1/assets/files/Traces_recto_verso-c4b18f20ba4ca97fa4a818fec269eae3.pdf) 
+
+
+### Exercice 1
+
 ```csharp
 1. int a = 10;
 2. int b = 4;
@@ -15,6 +32,7 @@ title: B - Trace d'exécution
 4. a = resultat * 2;
 5. b = a - 3;
 ```
+### Exercice 2
 
 ```csharp
 1. int a = 6;
@@ -24,6 +42,7 @@ title: B - Trace d'exécution
 5. Console.WriteLine(resultat);
 6. resultat = (a + b) * c;
 ```
+### Exercice 3
 
 ```csharp
 1. int x = 10;
@@ -33,7 +52,7 @@ title: B - Trace d'exécution
 5. Console.WriteLine(x);
 6. Console.WriteLine(y);
 ```
-## Trace d'exécution d'un code avec `if`
+### Exercice 4 Code avec `if` simple
 
 ```csharp
 1. int a = 11;
@@ -45,6 +64,7 @@ title: B - Trace d'exécution
 7. }
 ```
 
+### Exercice 5 Code avec `if else`
 
 ```csharp
 1. int a = 10;
@@ -68,6 +88,9 @@ title: B - Trace d'exécution
 19. }
 20. Console.WriteLine(resultat);
 ```
+
+### Exercice 6 Code avec `if` imbriquée
+
 ```csharp
 1. int distance = 8;
 2. bool paiementEffectue = true;
@@ -87,6 +110,9 @@ title: B - Trace d'exécution
 16.     Console.WriteLine("Distance trop grande");
 17. }
 ```
+
+### Exercice 7
+
 ```csharp
 1. int score = 0;
 2. int age = 22;
