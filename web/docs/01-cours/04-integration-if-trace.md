@@ -9,7 +9,7 @@ description: Intègration `if` et trace d'exécution
 ---
 
 ## 🏆 QUIZ de révision 
-<Quiz file="/quiz/2.1-base.json" />
+<Quiz file="/quiz/2.2-if.json" />
 
 ## 🎯 Objectif
 

@@ -1,0 +1,75 @@
+{
+  "titre": "Quiz - L astructure conditionnelle `if`!",
+  "questions": [
+    {
+      "texte": "Quelle sera la valeur de la variable categorie à la fin?",
+      "code": "int age = 21;\nstring categorie;\n\nif (age < 18)\n{\n    categorie = \"Mineur\";\n}\nelse\n{\n    catégorie = \"Majeur\";\n}",
+      "choix": ["Mineur", "Majeur", "vide", "Autre"],
+      "reponse": 1,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+      "code": "bool resultat;\nint nbre = 10;\nresultat = nbre > 5;",
+      "choix": ["true", "false", "10", "5", "Autre"],
+      "reponse": 0,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable categorie à la fin?",
+      "code": "int age = 15;\nstring categorie;\n\nif (age >= 18)\n{\n    categorie = \"Adulte\";\n}\nelse if (age >= 12)\n{\n    categorie = \"Adolescent\";\n}\nelse\n{\n    categorie = \"Enfant\";\n}",
+      "choix": ["Adulte", "Adolescent", "Enfant", "15", "Autre"],
+      "reponse": 1,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle est la valeur de la variable resultat à la fin?",
+      "code": "int nbre1 = 10;\nint nbre2 = 5;\nbool resultat = !(nbre1 + nbre2 > 20);",
+      "choix": ["true", "false", "15", "20", "Autre"],
+      "reponse": 0,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable nbre1 à la fin?",
+      "code": "int nbre1 = 2;\nint nbre2 = 8;\nif (nbre1 >= 4)\n{\n    nbre1 = nbre1 * 2;\n}\nif (nbre2 <= 6)\n{\n    nbre1 = nbre2 * 3;\n}\nelse\n{\n    nbre1 = 0;\n}",
+      "choix": ["2", "4", "8", "0", "Autre"],
+      "reponse": 3,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+      "code": "bool resultat;\nint nbre = 10;\nresultat = nbre > 5;\nresultat = !resultat;",
+      "choix": ["true", "false", "10", "Autre"],
+      "reponse": 1,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable nombre à la fin?",
+      "code": "int nombre = 20;\nif (nombre >= 30)\n{\n    nombre = nombre / 2;\n}\nelse if (nombre >= 15)\n{\n    nombre = nombre / 3;\n}\nelse\n{\n    nombre = nombre / 4;\n}",
+      "choix": ["5", "6", "10", "20", "Autre"],
+      "reponse": 1,
+      "duree": 30
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable prime à la fin?",
+      "code": "int anciennete = 4, nbreEnfant = 3;\nint prime;\nif (anciennete >= 10 || nbreEnfant != 0)\n{\n    prime = 50;\n}\nelse\n{\n    prime = 0;\n}",
+      "choix": ["0", "4", "50", "Autre"],
+      "reponse": 2,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable estAutorise à la fin?",
+      "code": "int age = 20;\nbool aUnBillet = false;\nbool estEtudiant = false;\nbool estAutorise = false;\nif (estEtudiant || age >= 18 && aUnBillet)\n{\n    estAutorise = true;\n}",
+      "choix": ["true", "false", "20", "Autre"],
+      "reponse": 1,
+      "duree": 30
+    },
+    {
+      "texte": "Quelle sera la valeur de la variable porteEstOuverte à la fin?",
+      "code": "int vies = 3;\nbool aUneCle = false;\nbool porteEstOuverte = false;\n\nif (vies > 0)\n{\n    if (aUneCle)\n    {\n        porteEstOuverte = true;\n    }\n}",
+      "choix": ["true", "false", "3", "Autre"],
+      "reponse": 1,
+      "duree": 20
+    }
+  ]
+}
