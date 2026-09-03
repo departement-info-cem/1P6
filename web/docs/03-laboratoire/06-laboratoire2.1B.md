@@ -646,4 +646,4 @@ Le programme affiche le score obtenu.
 
 Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
 
-👉 [Accéder au défi](../06-defis/04-defi2.1.md)
+👉 [Accéder au défi sur les conditions](../06-defis/conditions.md)

@@ -1,0 +1,96 @@
+---
+sidebar_position: 140
+sidebar_label: Fichiers CSV
+slug: /defis/fichiers-csv
+---
+
+# Défi — Fichiers CSV : Rapport de ventes
+
+## Avant de commencer
+
+:::tip Tu peux commencer ce défi si…
+- tu sais lire et écrire des fichiers texte;
+- tu sais séparer les colonnes d'une ligne avec `Split`;
+- tu sais convertir, parcourir et additionner des données.
+
+Si une notion te manque, révise les cours [Lecture de fichiers texte](../01-cours/17-lecture-texte.md), [Écriture dans un fichier texte](../01-cours/18-ecriture-texte.md) et [Fichiers CSV](../01-cours/19-csv.md).
+:::
+
+## Contexte
+
+Une petite boutique conserve ses ventes dans le fichier CSV `C:\EspaceLabo\ventes.csv`. Chaque ligne contient le nom du produit, sa catégorie, la quantité vendue et son prix unitaire en dollars entiers. Le revenu d'une ligne est calculé ainsi : `quantité × prix unitaire`.
+
+## Fichier d'exemple
+
+```text
+Produit,Catégorie,Quantité,Prix
+T-shirt,Vêtements,3,18
+Tasse,Souvenirs,2,12
+Affiche,Décoration,5,7
+```
+
+## Besoins
+
+Crée une application console qui lit le fichier CSV et produit un rapport contenant :
+
+- le nombre de lignes de vente valides ;
+- le revenu total ;
+- le produit qui a généré le plus grand revenu ;
+- le nombre total d'articles vendus par catégorie, en additionnant les quantités ;
+- le nombre de lignes rejetées ;
+- un fichier texte `C:\EspaceLabo\rapport-ventes.txt` qui contient les mêmes résultats.
+
+## Valeurs à utiliser
+
+Chaque ligne de vente valide contient quatre colonnes séparées par une virgule : un produit non vide, l'une des catégories exactes `Vêtements`, `Souvenirs` ou `Décoration`, une quantité entière supérieure à `0` et un prix unitaire entier supérieur à `0`. La première ligne est toujours l'en-tête et n'est pas une vente.
+
+Si plusieurs produits obtiennent le même revenu maximal, conserve le premier produit rencontré dans le fichier.
+
+## Notions à utiliser
+
+- lecture et écriture d'un fichier CSV;
+- séparation des colonnes avec `Split(',')`;
+- conversion des quantités et des prix, boucles et accumulations.
+
+## Contraintes
+
+- Ignore la ligne d'en-tête lors de l'analyse.
+- Valide la quantité et le prix avant de les utiliser dans les calculs.
+- Gère les lignes incomplètes sans interrompre le programme.
+- Ignore les lignes invalides dans les calculs et ajoute-les au nombre de lignes rejetées.
+- Si `ventes.csv` est absent, affiche `Fichier ventes.csv introuvable.` et ne crée pas le rapport.
+- Si l'en-tête est présent mais qu'aucune vente valide n'est trouvée, affiche `Aucune vente valide.`; affiche les compteurs, le revenu et les trois catégories à `0`, mais n'affiche pas de produit le plus rentable.
+- Utilise les notions de fichiers, de boucles, de conditions et de structures de données vues dans le cours.
+
+## Exemple de résultat
+
+**Données lues dans `ventes.csv` :** les trois lignes de vente de l'exemple, après la ligne d'en-tête.
+
+```text
+Ventes valides : 3
+Lignes rejetées : 0
+Revenu total : 113,00 $
+Produit le plus rentable : T-shirt (54,00 $)
+Vêtements : 3 articles
+Souvenirs : 2 articles
+Décoration : 5 articles
+Rapport : C:\EspaceLabo\rapport-ventes.txt
+```
+
+Le fichier `rapport-ventes.txt` doit contenir exactement les sept premières lignes de résultats, de `Ventes valides` à `Décoration`. La ligne `Rapport` est affichée seulement dans la console.
+
+## Critères de réussite
+
+- Les données sont lues depuis le CSV et le rapport est exact.
+- Le fichier de sortie est clair et réutilisable.
+- Les lignes invalides sont toujours ignorées et comptées de la même manière.
+
+## Tests manuels et résultats attendus
+
+| Lignes de vente dans `ventes.csv` | Résultat attendu |
+| --- | --- |
+| `T-shirt,Vêtements,3,18`<br />`Tasse,Souvenirs,2,12`<br />`Affiche,Décoration,5,7` | 3 ventes valides; 0 ligne rejetée; revenu total de 113,00 $; T-shirt est le plus rentable avec 54,00 $; catégories : 3, 2 et 5 articles; le rapport contient ces résultats. |
+| Les trois lignes ci-dessus, puis `Stylo,Papeterie,abc,2` | 3 ventes valides; 1 ligne rejetée; revenu total de 113,00 $; les autres résultats et le rapport demeurent fondés sur les trois lignes valides. |
+| `ProduitA,Vêtements,2,10`<br />`ProduitB,Souvenirs,4,5` | Les deux produits génèrent 20,00 $; `Produit le plus rentable : ProduitA (20,00 $)` est affiché parce qu'il apparaît en premier. |
+| En-tête seulement | 0 vente valide; 0 ligne rejetée; revenu et trois catégories à 0; message `Aucune vente valide.`; aucune ligne `Produit le plus rentable`; le rapport contient les mêmes résultats. |
+| Fichier `ventes.csv` absent | `Fichier ventes.csv introuvable.`; aucun calcul n'est affiché et `rapport-ventes.txt` n'est pas créé. |
