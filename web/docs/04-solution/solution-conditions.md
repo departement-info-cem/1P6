@@ -4,6 +4,25 @@ title: 🏆 Solution - Conditions
 
 # 🏆 Solution — Conditions : Tarif du centre des sciences
 
+## Analyse du mandat — éléments attendus
+
+Le programme doit choisir un seul tarif à partir de l'âge et, seulement pour une personne de `18` à `64` ans, de la présence d'une carte étudiante.
+
+La validation d'un âge impossible doit avoir lieu avant la tarification. Les tarifs déterminés uniquement par l'âge doivent aussi être distingués du tarif étudiant afin qu'une personne de `65` ans ou plus reçoive toujours le tarif aîné.
+
+| Âge frontière | Résultat attendu |
+| ---: | --- |
+| 5 | Gratuit |
+| 6 | `8 $`, tarif jeunesse |
+| 17 | `8 $`, tarif jeunesse |
+| 18 | Demander la carte; `10 $` avec carte ou `14 $` sans carte |
+| 64 | Demander la carte; `10 $` avec carte ou `14 $` sans carte |
+| 65 | `9 $`, tarif aîné, sans demander la carte |
+
+Un cas valide supplémentaire pourrait être `40` ans avec la réponse `non`, pour un tarif adulte de `14 $`. Un cas invalide supplémentaire pourrait être `121` ans, qui doit produire une erreur sans tarif.
+
+## Exemple de code
+
 ```csharp
 using System;
 

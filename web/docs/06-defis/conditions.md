@@ -52,6 +52,18 @@ L'âge est un entier de `0` à `120`. Pour une personne de 18 à 64 ans, demande
 - Une personne de 65 ans ou plus reçoit le tarif aîné, même si elle est étudiante. L'ordre des règles doit donc être respecté.
 - Prévois un message clair si un âge impossible est fourni.
 
+## Analyse avant de coder — soutien partiel
+
+Avant d'écrire les conditions :
+
+1. reformule le besoin principal du centre des sciences;
+2. indique pour quels âges la question sur la carte étudiante doit être posée;
+3. explique pourquoi le programme doit vérifier certaines règles avant les autres;
+4. prévois le résultat aux frontières suivantes : `5`, `6`, `17`, `18`, `64` et `65` ans;
+5. invente un cas valide et un cas invalide qui ne figurent pas dans les tests fournis.
+
+Pour chaque résultat prévu, indique la règle du mandat qui le justifie. Ne rédige pas encore les instructions `if`.
+
 ## Exemple de résultat
 
 **Entrées saisies :** âge `20` et carte étudiante `oui`.

@@ -13,11 +13,15 @@ Contrairement aux laboratoires, les défis ne donnent pas toutes les étapes à 
 
 ## Comment relever un défi
 
-1. Identifie les informations à demander, à calculer et à afficher.
-2. Choisis les variables, conditions, boucles, fonctions ou structures de données nécessaires.
-3. Commence par une version simple qui répond au besoin principal.
-4. Teste ton programme avec plusieurs situations, y compris des cas inhabituels.
-5. Améliore ton programme seulement lorsque la version de base fonctionne correctement.
+1. Reformule le besoin avec tes propres mots.
+2. Identifie les informations à demander, les règles à respecter et les résultats à produire.
+3. Prévois au moins un résultat avant de programmer.
+4. Choisis les variables, conditions, boucles, fonctions ou structures de données nécessaires.
+5. Commence par une version simple qui répond au besoin principal.
+6. Teste ton programme avec plusieurs situations, y compris des cas inhabituels.
+7. Améliore ton programme seulement lorsque la version de base fonctionne correctement.
+
+Les deux premiers défis portent uniquement sur la compréhension et l'analyse d'un mandat. Ils ne demandent aucun code. Dans les quatre premiers défis de programmation, une section **Analyse avant de coder** t'aide ensuite à appliquer la même méthode. Le soutien diminue progressivement afin que tu deviennes capable de préparer ta propre analyse.
 
 ## Ce que tu trouveras dans chaque défi
 
@@ -33,6 +37,8 @@ Les défis sont classés dans un ordre progressif, mais ils ne dépendent pas de
 
 | Défi | Tu peux commencer si tu sais… |
 | --- | --- |
+| [Compréhension : La commande de chandails](comprendre-consigne.md) | lire un court mandat et justifier une réponse à partir du texte; aucun code n'est demandé |
+| [Analyse : Le prêt d'équipement](analyser-probleme.md) | organiser des informations et effectuer des calculs simples; aucun code n'est demandé |
 | [Affichage et chaînes : Billet de bienvenue](affichage-chaines.md) | afficher du texte et utiliser une variable `string` |
 | [Variables et calculs : Coût des brochures](variables-calculs.md) | lire, convertir et calculer des valeurs numériques |
 | [Conditions : Tarif du centre des sciences](conditions.md) | utiliser `if`, `else if`, `else` et les opérateurs logiques |

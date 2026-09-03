@@ -57,6 +57,22 @@ Le nombre de brochures et le nombre de pages par brochure sont des entiers supé
 - Affiche les montants suivis du symbole `$`. À cette séance, `1,2 $` et `1,20 $` sont deux affichages acceptés pour le même montant.
 - N'utilise pas encore de conditions, de boucles ou de fonctions : le défi porte sur les variables et les opérations.
 
+## Analyse avant de coder — lecture guidée
+
+1. Résume en une phrase le calcul que l'imprimerie veut automatiser.
+2. Complète le tableau sans écrire de code.
+
+| Élément à repérer | Ta réponse |
+| --- | --- |
+| Trois valeurs saisies |  |
+| Deux résultats calculés |  |
+| Valeurs que le défi considère toujours valides |  |
+| Notions que tu ne dois pas utiliser |  |
+
+3. Réécris les deux calculs avec tes propres mots, sans utiliser les formules déjà données.
+4. Prévois le résultat pour `3` brochures de `4` pages à `0,10 $` la page.
+5. Invente un autre cas d'essai et calcule son résultat attendu avant de programmer.
+
 ## Exemple de résultat
 
 **Entrées saisies :** `4` brochures, `2` pages par brochure et `0,15` par page.

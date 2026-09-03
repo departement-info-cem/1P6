@@ -51,6 +51,22 @@ Pour la version de base, place dans des variables les valeurs de l'exemple : `Al
 - Le programme doit être lisible et chacune des informations doit apparaître sur une ligne appropriée.
 - Utilise les libellés `Nom`, `Groupe`, `Local` et `Début`, dans cet ordre. Tu peux choisir les bordures et les espaces du billet.
 
+## Analyse avant de coder — lecture guidée
+
+Relis le contexte, les besoins et les contraintes, puis complète cette fiche avant d'ouvrir ton éditeur de code.
+
+| Question | Ta réponse |
+| --- | --- |
+| À qui le billet est-il destiné? |  |
+| Quelles sont les quatre valeurs qui doivent pouvoir être modifiées facilement? |  |
+| Quels textes resteront normalement identiques d'une personne à l'autre? |  |
+| Quel ordre d'affichage est obligatoire? |  |
+| Quels choix de présentation peux-tu faire toi-même? |  |
+
+Explique ensuite, en une ou deux phrases, la différence entre une information conservée dans une variable et un texte fixe du billet.
+
+Enfin, invente un deuxième billet avec un autre nom, un autre groupe, un autre local et une autre heure. Écris le résultat que ton programme devrait afficher pour vérifier ces nouvelles valeurs.
+
 ## Exemple de résultat
 
 **Valeurs placées dans les variables :** nom `Alex Tremblay`, groupe `1090`, local `B-321` et début `8 h 00`.

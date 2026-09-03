@@ -61,6 +61,20 @@ Pour ce défi, suppose que les saisies respectent ces valeurs. Tu n'as pas à tr
 - Utilise les libellés de l'exemple et affiche les montants avec deux décimales.
 - Les fonctions doivent éviter de dépendre inutilement de variables globales.
 
+## Analyse avant de coder — travail autonome
+
+Prépare une courte analyse structurée du mandat. Choisis toi-même la présentation de ton analyse, mais assure-toi qu'elle permet de retrouver :
+
+- le besoin principal;
+- les données reçues et les résultats produits;
+- toutes les règles de prix et de taxation;
+- l'ordre des résultats qui dépendent les uns des autres;
+- une répartition possible des responsabilités entre plusieurs fonctions, sans écrire leur code;
+- deux erreurs de compréhension qui pourraient produire un mauvais total;
+- un cas d'essai différent de ceux qui sont fournis, avec son résultat attendu.
+
+Termine par une question que tu poserais à la pizzeria si tu devais transformer ce prototype en véritable application.
+
 ## Exemple de résultat
 
 **Entrées saisies :** taille `G`, `3` garnitures et livraison `oui`.
