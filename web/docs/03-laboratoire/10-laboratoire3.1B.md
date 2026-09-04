@@ -2,7 +2,7 @@
 title: B - Portée des variables
 ---
 
-# 🧪 Labo 2.2B – Portée des variables
+# 🧪 Labo 3.1B – Portée des variables
 
 ### 🎯 Objectif
 

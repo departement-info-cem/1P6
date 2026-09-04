@@ -2,7 +2,7 @@
 title: B - Tableaux 1D avec conditions et fonctions
 ---
 
-# 🧪 Labo 4.2B – Tableaux 1D
+# 🧪 Labo 5.1B – Tableaux 1D
 
 📎 **Référence** : [Tableau 1D – Documentation C#](https://info.cegepmontpetit.ca/notions-csharp/documentation/tableau/tableau-1d)
 

@@ -1,8 +1,8 @@
 ---
-title: 🔄 A - Intégration switch et while
+title: 🔄 A - Intégration switch et while - TP
 ---
 
-# 🧪 Labo 8.1 📝 Les films de Denis
+# 🧪 Labo 9.1 📝 Les films de Denis
 ## 🎯 **Objectif :**
 :::note Objectif    
  Pratiquer le Switch case, Do... while, les fonctions, les tableaux 2D, le parcours (par rangée et par colonne) et l'alignement de données  

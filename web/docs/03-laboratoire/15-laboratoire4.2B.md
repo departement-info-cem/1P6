@@ -2,7 +2,7 @@
 title: B - Exercices plus complexes
 ---
 
-# Labo 4.1B – Exercices de boucles
+# Labo 4.2B – Exercices de boucles
 
 Nous allons réaliser une série d’exercices permettant de pratiquer l'**utilisation de boucles for** en C#.
 

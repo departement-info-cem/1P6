@@ -2,7 +2,7 @@
 title: C - Tableaux 1D – Avancé
 ---
 
-# 🧠 Labo 4.2C – Tableaux et boucles `for` (avancé)
+# 🧠 Labo 5.1C – Tableaux et boucles `for` (avancé)
 
 ---
 

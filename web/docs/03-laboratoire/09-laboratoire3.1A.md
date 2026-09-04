@@ -2,7 +2,7 @@
 title: A - Fonctions avec paramètres
 ---
 
-# 🧪 Labo 2.2A – Fonctions avec paramètres
+# 🧪 Labo 3.1A – Fonctions avec paramètres
 
 Nous allons réaliser une série d’exercices permettant de pratiquer la **définition de fonctions avec paramètres** en C#.
 

@@ -1,8 +1,8 @@
 ---
-title: B - Labo 7.2B - Switch... case, While et Do... while – Avancé  
+title: B - Switch... case, While et Do... while – Avancé  
 ---
 
-# 🧪 Labo 7.2B - Switch... case, While et Do... while – Avancé
+# 🧪 Labo 8.2B - Switch... case, While et Do... while – Avancé
 
 ## 🔢Switch... case 
 ### 🟡 Exercice S2.1 – Calculer l’aire 2.0

@@ -2,7 +2,7 @@
 title: C - Fonctions avec retour
 ---
 
-# 🧪 Labo 2.2C – Fonctions avec retour
+# 🧪 Labo 3.1C – Fonctions avec retour
 
 Nous allons travailler une série d’exercices pour pratiquer la **définition de fonctions avec paramètres et retour de valeur**.
 

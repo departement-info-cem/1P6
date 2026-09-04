@@ -1,6 +1,10 @@
 ---
-title: 5.1C 📝 Mini-projet – entrée de données
+title: 📝 C - Intégration des boucles et des tableaux - Mini-projet – entrée de données
 ---
+
+# 🧪 Labo 5.2C 📝 Mini-projet – entrée de données
+
+
 
 ## 🎯 Objectif
 Créer un programme qui demande à l'utilisateur d'entrer une chaine de caractères contenant toutes les notes d'une classe.

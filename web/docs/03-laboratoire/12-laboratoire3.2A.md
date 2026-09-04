@@ -1,8 +1,8 @@
 ---
-title: A - 🎲 Mini-projet – Devine le nombre 
+title: A - 🎲 Intègration des fonctions - Mini-projet – Devine le nombre 
 ---
 
-# 🧪 Labo 3.1A 🎲 Mini-projet – Devine le nombre 
+# 🧪 Labo 3.2A 🎲 Mini-projet – Devine le nombre 
 
 ## 🎯 Objectif
 Créer un programme console où **l’utilisateur doit deviner un nombre secret** entre 1 et 10.  
