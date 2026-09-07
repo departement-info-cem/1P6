@@ -1,3 +1,3 @@
 ---
-title: 🔄 TP
+title: 🔄 TP Mini RPG
 ---
