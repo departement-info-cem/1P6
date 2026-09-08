@@ -233,7 +233,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 0.1,
-        calendrier: buildCalendrierForIndex(3),
+        calendrier: buildCalendrierForIndex(4),
         tooltip:"cache"
       },
     },
@@ -244,7 +244,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 0.4,
-        calendrier: buildCalendrierForIndex(4),
+        calendrier: buildCalendrierForIndex(5),
         tooltip:"cache"
       },
     },
@@ -256,7 +256,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 1.0,
-        calendrier: buildCalendrierForIndex(5),
+        calendrier: buildCalendrierForIndex(6),
         tooltip:"cache"
       },
     },
@@ -265,7 +265,7 @@ const sidebars = {
       label: "4.2 - Boucles for",
       id: "cours/for",
       customProps: {
-        calendrier: buildCalendrierForIndex(6),
+        calendrier: buildCalendrierForIndex(7),
         tooltip:"cache"
       }
     },
@@ -274,7 +274,7 @@ const sidebars = {
       label: "5.1 - Tableaux 1D",
       id: "cours/tableaux1d",
       customProps: {
-        calendrier: buildCalendrierForIndex(7),
+        calendrier: buildCalendrierForIndex(8),
         tooltip:"cache"
       }
     },
@@ -283,7 +283,7 @@ const sidebars = {
       label: "5.2 - Intégration des notions",
       id: "cours/integration-for",
       customProps: {
-        calendrier: buildCalendrierForIndex(8),
+        calendrier: buildCalendrierForIndex(9),
         tooltip:"cache"
       }
     },
@@ -292,7 +292,7 @@ const sidebars = {
       label: "6.1 - Formatif 1",
       id: "cours/formatif1",
       customProps: {
-        calendrier: buildCalendrierForIndex(9),
+        calendrier: buildCalendrierForIndex(10),
         tooltip:"cache"
       }
     },
@@ -302,7 +302,7 @@ const sidebars = {
       id: "cours/examen1",
       className: "examen",
       customProps: {
-        calendrier: buildCalendrierForIndex(10),
+        calendrier: buildCalendrierForIndex(11),
         tooltip:"cache"
       }
     },
@@ -313,7 +313,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.1,
-        calendrier: buildCalendrierForIndex(11),
+        calendrier: buildCalendrierForIndex(12),
         tooltip:"cache"
       }
     },
@@ -324,7 +324,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.3,
-        calendrier: buildCalendrierForIndex(12),
+        calendrier: buildCalendrierForIndex(13),
         tooltip:"cache"
       }
     },
@@ -335,7 +335,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.3,
-        calendrier: buildCalendrierForIndex(13),
+        calendrier: buildCalendrierForIndex(14),
         tooltip:"cache"
       }
     },
@@ -346,7 +346,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2", 
         avancement: 0.6,
-        calendrier: buildCalendrierForIndex(14),
+        calendrier: buildCalendrierForIndex(15),
         tooltip:"cache"
       }
     },
@@ -358,7 +358,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 1.0,
-        calendrier: buildCalendrierForIndex(15),
+        calendrier: buildCalendrierForIndex(16),
         tooltip:"cache"
       }
     },
@@ -369,7 +369,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3 - Créé - ",
         avancement: 0.1,
-        calendrier: buildCalendrierForIndex(16),
+        calendrier: buildCalendrierForIndex(17),
         tooltip:"cache"
       }
     },
@@ -381,7 +381,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.2,
-        calendrier: buildCalendrierForIndex(17),
+        calendrier: buildCalendrierForIndex(18),
         tooltip:"cache"
       }
     },
@@ -392,7 +392,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.3,
-        calendrier: buildCalendrierForIndex(18),
+        calendrier: buildCalendrierForIndex(19),
         tooltip:"cache"
       }
     },
@@ -401,7 +401,7 @@ const sidebars = {
       label: "11.1 - Formatif 2",
       id: "cours/formatif2",
       customProps: {
-        calendrier: buildCalendrierForIndex(19),
+        calendrier: buildCalendrierForIndex(20),
         tooltip:"cache"
       }
     },
@@ -411,7 +411,7 @@ const sidebars = {
       id: "cours/examen2",
       className: "examen",
       customProps: {
-        calendrier: buildCalendrierForIndex(20),
+        calendrier: buildCalendrierForIndex(21),
         tooltip:"cache"
       }
     },
@@ -422,7 +422,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.7,
-        calendrier: buildCalendrierForIndex(21),
+        calendrier: buildCalendrierForIndex(22),
         tooltip:"cache"
       }
     },
@@ -434,7 +434,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 1.0,
-        calendrier: buildCalendrierForIndex(22),
+        calendrier: buildCalendrierForIndex(23),
         tooltip:"cache"
       }
     },
