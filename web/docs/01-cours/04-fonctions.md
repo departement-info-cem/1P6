@@ -409,6 +409,6 @@ Console.WriteLine(montant.ToString("N0"));    // "1,235" (arrondi, séparateur)
 
 
 Vous devez réaliser les labos suivants :
- [🧪 Labo 2.2A](/laboratoire/laboratoire2.2A)
- [🧪 Labo 2.2B](/laboratoire/laboratoire2.2B)
- [🧪 Labo 2.2C](/laboratoire/laboratoire2.2C)
+ [🧪 Labo 3.1A](/laboratoire/laboratoire3.1A)
+ [🧪 Labo 3.1B](/laboratoire/laboratoire3.1B)
+ [🧪 Labo 3.1C](/laboratoire/laboratoire3.1C)

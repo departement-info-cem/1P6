@@ -397,5 +397,8 @@ for (int colonne = 0; colonne < notes.GetLength(1); colonne++)
 * [Valeurs par défaut pour chaque type](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values)
 
 Vous devez réaliser les laboratoires suivants :
-* [🧪 Labo 6.2A](/laboratoire/laboratoire6.2A)
-* [🧪 Labo 6.2B](/laboratoire/laboratoire6.2B)
+
+
+
+<!-- * [🧪 Labo 6.2A](/laboratoire/laboratoire6.2A)-->
+<!-- * [🧪 Labo 6.2B](/laboratoire/laboratoire6.2B)-->

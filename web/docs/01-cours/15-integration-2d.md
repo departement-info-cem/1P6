@@ -39,5 +39,6 @@ Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
 
 ## 💪 Exercices supplémentaires
 
-Vous devez réaliser le [🧪 Labo 6.2](/laboratoire/laboratoire6.2B)
+
+<!-- Vous devez réaliser le [🧪 Labo 6.2](/laboratoire/laboratoire6.2B)-->
 
