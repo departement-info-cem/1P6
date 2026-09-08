@@ -32,132 +32,205 @@ static double CalculerAireRectangle(double pLongueur, double pLargeur)
 
 ---
 
-## 🧩 Exercices
+## 🟢 J'APPLIQUE
 
-### 🔹 Exercice 1 – Somme
+### 🟢 Exercice 1 – Calculer une somme
 
-Créez une fonction qui prend **deux entiers** en paramètres et retourne leur **somme**.
+Créez une méthode `CalculerSomme` qui reçoit **deux entiers** en paramètres et **retourne leur somme**.
 
-#### 💬 Exemple d’utilisation en console :
+Votre méthode doit pouvoir être utilisée avec différentes valeurs.
 
-```
+Par exemple :
+
+```text
 Entrez un premier nombre : 5
 Entrez un deuxième nombre : 7
+
 Résultat : 12
 ```
 
+#### Questions pour vous guider
+
+1. Quelles informations la méthode doit-elle recevoir ?
+2. Combien de paramètres sont nécessaires ?
+3. Quel type doivent avoir ces paramètres ?
+4. Quel type de valeur la méthode doit-elle retourner ?
+5. Quelle valeur devez-vous placer après `return` ?
+
 ---
 
-### 🔹 Exercice 2 – Maximum entre deux puis trois valeurs
+### 🟢 Exercice 2 – Calculer l'aire d'un rectangle
 
-1. Créez une fonction qui retourne le **maximum entre deux entiers**.
- 
-2. Ensuite, utilisez **cette même fonction** pour obtenir le **maximum entre trois entiers**.\
-   L’astuce est d’appeler la fonction **à l’intérieur d’un autre appel**. Par exemple :
+Créez une méthode `CalculerAireRectangle` qui reçoit la **longueur** et la **largeur** d'un rectangle et retourne son aire.
 
-   ```csharp
-   int max3 = MaximumDeux(nombre1, MaximumDeux(nombre2, nombre3));
-   ```
+> Formule : `aire = longueur × largeur`
 
-   Ici, on commence par trouver le maximum entre `nombre2` et `nombre3`, puis on compare ce résultat avec `nombre1`.
+Exemple :
 
-#### 💬 Exemple d’utilisation en console :
+```text
+Longueur : 8
+Largeur : 5
 
+Aire : 40
 ```
-Entrez nombre Un : 12
-Entrez nombre Deux : 7
-Entrez nombre Trois : 4
+
+#### Questions pour vous guider
+
+1. Quelles données sont nécessaires pour calculer l'aire ?
+2. Quelles données doivent être des paramètres ?
+3. Quel type de valeur la méthode doit-elle retourner ?
+4. Où devez-vous effectuer le calcul ?
+5. Que devez-vous retourner ?
+
+Testez votre méthode avec plusieurs rectangles **sans modifier le code de la méthode**.
+
+---
+
+## 🟣 JE RÉSOUS
+
+### 🟣 Exercice 3 – Maximum entre deux et trois valeurs
+
+Écrivez une méthode `MaximumDeux` qui permet de déterminer et retourner le plus grand de deux nombres entiers.
+
+Réutilisez ensuite **cette même méthode** pour déterminer le maximum de **trois nombres entiers**.
+
+
+Par exemple :
+
+```text
+Entrez nombre 1 : 12
+Entrez nombre 2 : 7
+Entrez nombre 3 : 4
+
 Le plus grand est : 12
 ```
 
----
+#### 🔍 Questions pour vous guider
 
-### 🔹 Exercice 3 – Surcharge de fonction
+1. Quelles données `MaximumDeux` doit-elle recevoir ?
+2. Que doit-elle retourner ?
+3. Comment déterminer lequel des deux nombres est le plus grand ?
+4. Pour trouver le maximum de trois nombres, pouvez-vous réutiliser `MaximumDeux` ?
+5. Pouvez-vous utiliser le résultat d'un appel comme paramètre d'un autre appel ?
+6. Pouvez-vous écrire une solution qui fonctionne avec **n'importe quels trois nombres** ?
 
-Dans le **même projet que l’exercice 2**, créez une **deuxième fonction** portant le **même nom**, mais prenant **trois paramètres**. Elle doit retourner le **maximum des trois**. Ce procédé s'appelle une **surcharge**.
-
-#### 💬 Exemple d’utilisation en console :
-
-```
-Entrez nombre Un : 9
-Entrez nombre Deux : 15
-Entrez nombre Trois : 10
-Le maximum (avec fonction surchargée) est : 15
-```
+💡 **Objectif :** découvrir qu'une méthode qui retourne une valeur peut être utilisée comme une **expression** ou comme argument d'une autre méthode.
 
 ---
 
-### 🔹 Exercice 4 – Année bissextile (retour)
+### 🟣 Exercice 4 – Année bissextile : version avec retour
 
-Modifiez la fonction de l’exercice précédent sur les années bissextiles pour qu’elle **retourne un booléen** au lieu d’afficher le résultat. La fonction retourne `true` si l’année est bissextile, sinon `false`.
+Reprenez votre méthode de l'exercice sur l'année bissextile.
 
-#### 💬 Exemple d’utilisation en console :
+Modifiez-la afin qu'elle **retourne un booléen** plutôt que d'afficher directement le résultat.
 
-```
+La méthode doit :
+
+* retourner `true` si l'année est bissextile;
+* retourner `false` sinon.
+
+Exemple :
+
+```text
 Entrez une année : 2024
+
 Bissextile : True
 ```
 
----
+#### 🔍 Questions pour vous guider
 
-### 🔹 Exercice 5 – Nombre palindrome
-
-Créez une fonction qui prend un **entier à 3 chiffres** et retourne un **booléen** indiquant si ce nombre est un **palindrome** (il se lit de la même façon à l’endroit et à l’envers).
-
-#### 💡 Indices
-
-- Utiliser la division entière `/` et le reste `%` pour extraire les chiffres.
-- Comparer le chiffre des centaines et celui des unités.
-
-#### 💬 Exemple d’utilisation en console :
-
-```
-Entrez un nombre à 3 chiffres : 121
-Palindrome : True
-
-Entrez un nombre à 3 chiffres : 245
-Palindrome : False
-```
+1. Quelle information la méthode doit-elle recevoir ?
+2. Quel type doit avoir le paramètre ?
+3. La méthode doit-elle retourner un nombre, un texte ou une valeur booléenne ?
+4. Quelle différence y a-t-il maintenant entre **afficher** le résultat et **retourner** le résultat ?
 
 ---
 
-### 🔹 Défi 6 – Triangle valide
 
-Créez une fonction qui prend **trois côtés** (entiers) et retourne un booléen indiquant si ces trois côtés peuvent former un **triangle valide**.
+### 🟣 Exercice 5 – Vérifier un nombre palindrome
 
-📌 Règle : la somme de deux côtés doit toujours être **supérieure** au troisième.
+Un nombre à trois chiffres est un **palindrome** lorsqu'il se lit de la même façon de gauche à droite et de droite à gauche.
 
-#### 💬 Exemple d’utilisation en console :
+Exemples :
 
+* `121` → palindrome
+* `343` → palindrome
+* `123` → pas un palindrome
+
+Écrivez une méthode `EstPalindrome` qui permet de déterminer si un nombre entier à trois chiffres est un palindrome et retourne true si c’est le cas, sinon false.
+
+
+**Questions pour vous guider :**
+
+1. Quelle donnée la méthode doit-elle recevoir ?
+2. Quel type doit avoir le paramètre ?
+3. Quel type doit retourner la méthode ?
+4. Comment pouvez-vous extraire le chiffre des unités ?
+5. Comment pouvez-vous extraire le chiffre des centaines ?
+6. Votre méthode peut-elle être appelée avec différents nombres sans modifier son code ?
+
+---
+
+### 🟣 Exercice 6 – Vérifier si trois longueurs forment un triangle
+
+
+Écrivez une méthode `EstTriangleValide` qui permet de déterminer si trois longueurs peuvent former un triangle et retourne `true` si c’est le cas, sinon `false`.
+
+Pour qu'un triangle soit valide :
+
+```text
+a + b > c
+a + c > b
+b + c > a
 ```
-Valeur des trois côtés : 3, 4, 5
-Triangle valide : True
 
-Valeur des trois côtés : 2, 2, 5
-Triangle valide : False
+Exemple :
+
+```csharp
+bool resultat = EstTriangleValide(3, 4, 5);
+Console.WriteLine(resultat);
 ```
+
+**Questions pour vous guider :**
+
+1. Combien de paramètres la méthode doit-elle avoir ?
+2. Quel type doivent avoir ces paramètres ?
+3. Quel type doit retourner la méthode ?
+4. Combien de conditions devez-vous vérifier ?
+5. Votre méthode fonctionne-t-elle avec différentes longueurs ?
 
 ---
 
-### 🔹 Défi 7 – Devine la moyenne
+### 🟣 Exercice 7 – Classer une moyenne
 
-Créez une fonction qui prend **deux notes** et retourne :
+Écrivez une méthode `DeterminerMention` qui permet de déterminer et retourner une mention à partir **de deux notes**, selon la moyenne obtenue :
 
-- `"A"` si la moyenne est ≥ 90
-- `"B"` si elle est ≥ 80
-- `"C"` si elle est ≥ 70
-- `"Échec"` sinon
+| Moyenne     | Mention   |
+| ----------- | --------- |
+| 90 et plus  | `"A"`     |
+| 80 à 89     | `"B"`     |
+| 70 à 79     | `"C"`     |
+| Moins de 70 | `"Échec"` |
 
-#### 💬 Exemple d’utilisation en console :
+Exemple :
 
+```csharp
+string mention = DeterminerMention(85, 92);
+Console.WriteLine(mention);
 ```
-Entrez note 1 : 85
-Entrez note 2 : 92
-Résultat : B
 
-Entrez note 1 : 60
-Entrez note 2 : 70
-Résultat : Échec
-```
+**Questions pour vous guider :**
+
+1. Quelles informations la méthode doit-elle recevoir ?
+2. Combien de paramètres sont nécessaires ?
+3. Quel type doivent avoir les paramètres ?
+4. Quel type doit retourner la méthode ?
+5. Votre méthode peut-elle être utilisée avec n'importe quelles deux notes ?
 
 ---
+
+## ⚫ Je relève le défi
+
+Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
+
+👉 [Accéder au défi sur les fonctions](../06-defis/fonctions.md)

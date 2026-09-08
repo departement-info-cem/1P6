@@ -3,6 +3,15 @@ description: Fonctions, valeurs de retour et portée des variables
 ---
 
 # 🧩 Fonctions et portée des variables
+
+
+---
+
+## 🏆 QUIZ de révision 
+<Quiz file="/quiz/3.1-if.json" />
+
+
+
 ## 1️⃣ Introduction : Fonctions déjà vues
 
 > 💡 **Définition**  

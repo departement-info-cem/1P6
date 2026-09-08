@@ -1,0 +1,77 @@
+{
+  "titre": "Quiz - La structure conditionnelle `if`!",
+  "questions": [
+  {
+    "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+    "code": "bool resultat;\nint nbre1 = -1;\nint nbre2 = -2;\nint nbre3 = 0;\nresultat = !(nbre1 < 0 || nbre2 > 0 && nbre3 == 0);",
+    "choix": ["true", "false", "0", "1"],
+    "reponse": 1,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable resultat à la fin ?",
+    "code": "int nbre1 = 9;\nint nbre2 = 10;\nbool resultat = (nbre1 + 1) != nbre2 - 2;",
+    "choix": ["true", "false", "9", "8"],
+    "reponse": 0,
+    "duree": 15
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable resultat à la fin?",
+    "code": "int nbre1 = 7, nbre2 = 10, nbre3 = 9;\nbool resultat = (!(nbre1 > nbre2 || !(nbre1 > nbre3)));",
+    "choix": ["true", "false", "7", "9"],
+    "reponse": 1,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable nombre à la fin ?",
+    "code": "int nombre = 6;\nif ((nombre % 2) == 1 && nombre == 7)\n{\n    nombre = 5;\n}\nelse\n{\n    nombre = nombre * 3;\n}",
+    "choix": ["5", "6", "18", "21"],
+    "reponse": 2,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable nbre1 à la fin?",
+    "code": "int nbre1 = 6;\nbool valeur = (nbre1 % 2) == 1;\nif (valeur)\n{\n    if (nbre1 == 7)\n    {\n        nbre1 = 5;\n    }\n    else\n    {\n        nbre1 = nbre1 * 3;\n    }\n}\nelse\n{\n    if (nbre1 < -2)\n    {\n        nbre1 = nbre1 - 5;\n    }\n}",
+    "choix": ["5", "6", "18", "1"],
+    "reponse": 1,
+    "duree": 25
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable resultat à la fin ?",
+    "code": "int resultat, nbre1 = 4, nbre2 = 6, nbre3 = 8;\nif (nbre1 > nbre2)\n{\n    if (nbre1 > nbre3)\n    {\n        resultat = 1;\n    }\n    else\n    {\n        resultat = 2;\n    }\n}\nelse if (nbre3 != 0)\n{\n    resultat = 3;\n}\nelse\n{\n    resultat = 4;\n}",
+    "choix": ["1", "2", "3", "4"],
+    "reponse": 2,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable prixBillet à la fin?",
+    "code": "int age = 18;\nbool hauteSaison = true;\nint prixBillet = 500;\nint augmentation;\nif (age >= 60 || age <= 10 && !hauteSaison)\n{\n    augmentation = 0;\n}\nelse\n{\n    augmentation = 50;\n}\nprixBillet = prixBillet + augmentation;",
+    "choix": ["500", "550", "50", "0"],
+    "reponse": 1,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable nbre1 à la fin ?",
+    "code": "int nbre1 = 8;\nint nbre2 = -1;\nif (nbre1 < 4 && nbre2 > 5)\n{\n    nbre1 = nbre1 * 2;\n}\nelse\n{\n    nbre1 = nbre2 * 3;\n}",
+    "choix": ["16", "-3", "8", "5"],
+    "reponse": 1,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle sera la valeur de la variable resultat à la fin ?",
+    "code": "int nbre1 = 8;\nint nbre2 = -1;\nint resultat = 0;\nif (!(nbre1 >= 4 || nbre2 <= 5))\n{\n    resultat = nbre1 + nbre2;\n}\nelse\n{\n    resultat = nbre1 * nbre2;\n}",
+    "choix": ["7", "-8", "0", "8"],
+    "reponse": 1,
+    "duree": 20
+  },
+  {
+    "texte": "Quelle est la valeur de la variable nbre2 à la fin ?",
+    "code": "int nbre1 = 5;\nint nbre2;\nif (nbre1 != 0)\n{\n    if (nbre1 > 0)\n    {\n        nbre2 = 1;\n    }\n    else\n    {\n        nbre2 = -1;\n    }\n}\nelse\n{\n    nbre2 = 0;\n}",
+    "choix": ["-1", "0", "1", "5"],
+    "reponse": 2,
+    "duree": 20
+  }
+
+
+  ]
+}
