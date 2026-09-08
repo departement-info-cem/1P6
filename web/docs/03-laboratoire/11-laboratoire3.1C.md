@@ -34,7 +34,7 @@ static double CalculerAireRectangle(double pLongueur, double pLargeur)
 
 ## 🟢 J'APPLIQUE
 
-### 🟢 Exercice 1 – Calculer une somme
+### 🟢 Exercice 7 – Calculer une somme
 
 Créez une méthode `CalculerSomme` qui reçoit **deux entiers** en paramètres et **retourne leur somme**.
 
@@ -59,7 +59,7 @@ Résultat : 12
 
 ---
 
-### 🟢 Exercice 2 – Calculer l'aire d'un rectangle
+### 🟢 Exercice 8 – Calculer l'aire d'un rectangle
 
 Créez une méthode `CalculerAireRectangle` qui reçoit la **longueur** et la **largeur** d'un rectangle et retourne son aire.
 
@@ -88,7 +88,7 @@ Testez votre méthode avec plusieurs rectangles **sans modifier le code de la m�
 
 ## 🟣 JE RÉSOUS
 
-### 🟣 Exercice 3 – Maximum entre deux et trois valeurs
+### 🟣 Exercice 9 – Maximum entre deux et trois valeurs
 
 Écrivez une méthode `MaximumDeux` qui permet de déterminer et retourner le plus grand de deux nombres entiers.
 
@@ -118,7 +118,7 @@ Le plus grand est : 12
 
 ---
 
-### 🟣 Exercice 4 – Année bissextile : version avec retour
+### 🟣 Exercice 10 – Année bissextile : version avec retour
 
 Reprenez votre méthode de l'exercice sur l'année bissextile.
 
@@ -147,7 +147,7 @@ Bissextile : True
 ---
 
 
-### 🟣 Exercice 5 – Vérifier un nombre palindrome
+### 🟣 Exercice 11 – Vérifier un nombre palindrome
 
 Un nombre à trois chiffres est un **palindrome** lorsqu'il se lit de la même façon de gauche à droite et de droite à gauche.
 
@@ -171,7 +171,7 @@ Exemples :
 
 ---
 
-### 🟣 Exercice 6 – Vérifier si trois longueurs forment un triangle
+### 🟣 Exercice 12 – Vérifier si trois longueurs forment un triangle
 
 
 Écrivez une méthode `EstTriangleValide` qui permet de déterminer si trois longueurs peuvent former un triangle et retourne `true` si c’est le cas, sinon `false`.
@@ -201,7 +201,7 @@ Console.WriteLine(resultat);
 
 ---
 
-### 🟣 Exercice 7 – Classer une moyenne
+### 🟣 Exercice 13 – Classer une moyenne
 
 Écrivez une méthode `DeterminerMention` qui permet de déterminer et retourner une mention à partir **de deux notes**, selon la moyenne obtenue :
 
