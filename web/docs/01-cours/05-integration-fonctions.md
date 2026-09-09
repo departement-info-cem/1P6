@@ -111,7 +111,5 @@ Le nombre est : 0
 
 ## 💪 Exercices supplémentaires
 
-Vous devez réaliser les laboratoires
- [🧪 Labo 3.1A](/laboratoire/laboratoire3.1A) et 
- [🧪 Labo 3.1B](/laboratoire/laboratoire3.1B)
+Vous devez réaliser les laboratoires : [🧪 Labo 3.2A](/laboratoire/laboratoire3.2A) [🧪 Labo 3.2B](/laboratoire/laboratoire3.2B) [🧪 Défi](../06-defis/fonctions.md)
 
