@@ -20,7 +20,7 @@ Fais la **partie A en premier, sans ordinateur**. C'est ce format qui est évalu
 
 ---
 
-# ✏️ Partie A – Traces d'exécution
+## ✏️ Partie A – Traces d'exécution
 
 ### **Consigne générale**
 
@@ -38,7 +38,7 @@ Pour les exercices de cette section, **utilise uniquement les éléments qui ont
 Une boucle `for` évalue sa condition **une fois de trop** : celle qui est fausse et qui fait sortir de la boucle. Ce tour-là doit apparaître dans ta trace.
 :::
 
-## 🟢 Exercice A1 – Boucle avec accumulateur
+### 🟢 Exercice A1 – Boucle avec accumulateur
 
 Colonnes suggérées : `i` | `total` | Affichage
 
@@ -58,7 +58,7 @@ Colonnes suggérées : `i` | `total` | Affichage
 
 ---
 
-## 🟢 Exercice A2 – Incrément différent de 1
+### 🟢 Exercice A2 – Incrément différent de 1
 
 Colonnes suggérées : `i` | `valeurs[i]` | `somme` | Affichage
 
@@ -78,7 +78,7 @@ Colonnes suggérées : `i` | `valeurs[i]` | `somme` | Affichage
 
 ---
 
-## 🟢 Exercice A3 – Recherche du maximum
+### 🟢 Exercice A3 – Recherche du maximum
 
 Colonnes suggérées : `i` | `notes[i]` | `max` | `position` | Affichage
 
@@ -104,7 +104,7 @@ Colonnes suggérées : `i` | `notes[i]` | `max` | `position` | Affichage
 
 ---
 
-## 🟡 Exercice A4 – Boucles imbriquées : somme par rangée
+### 🟡 Exercice A4 – Boucles imbriquées : somme par rangée
 
 Colonnes suggérées : `r` | `c` | `grille[r, c]` | `sommeRangee` | Affichage
 
@@ -129,7 +129,7 @@ Colonnes suggérées : `r` | `c` | `grille[r, c]` | `sommeRangee` | Affichage
 
 ---
 
-## 🟡 Exercice A5 – Parcours par colonne
+### 🟡 Exercice A5 – Parcours par colonne
 
 Colonnes suggérées : `c` | `r` | `grille[r, c]` | Affichage
 
@@ -154,7 +154,7 @@ Colonnes suggérées : `c` | `r` | `grille[r, c]` | Affichage
 
 ---
 
-## 🟡 Exercice A6 – Appel de fonction dans une boucle
+### 🟡 Exercice A6 – Appel de fonction dans une boucle
 
 Colonnes suggérées : `i` | `valeur` | `n` | `resultat` | valeur retournée | `total`
 
@@ -186,7 +186,7 @@ Colonnes suggérées : `i` | `valeur` | `n` | `resultat` | valeur retournée | `
 
 ---
 
-## 🔴 Exercice A7 – Trouver le bogue par la trace
+### 🔴 Exercice A7 – Trouver le bogue par la trace
 
 Ce programme devrait afficher la **température moyenne**, soit `19`. Il affiche autre chose.
 
@@ -212,13 +212,13 @@ Colonnes suggérées : `i` | `temperatures[i]` | `somme` | `moyenne` | Affichage
 
 ---
 
-# 🔍 Partie B – Observer avec le débogueur
+## 🔍 Partie B – Observer avec le débogueur
 
 Pour cette partie, crée un **nouveau projet** dans Visual Studio et recopie le code.
 
 Les réponses sont des **valeurs précises** : lis-les dans **Variables locales**, dans **Automatique** ou dans la fenêtre **Espion**, ne les devine pas.
 
-## 🟢 Exercice B1 – Compter les passages et espionner une expression
+### 🟢 Exercice B1 – Compter les passages et espionner une expression
 
 🎯 **Objectif** : Placer un point d'arrêt, avancer avec `F10` et utiliser la fenêtre **Espion**.
 
@@ -269,7 +269,7 @@ Console.WriteLine($"Ruptures : {nbRuptures}");
 
 ---
 
-## 🟢 Exercice B2 – Entrer dans une fonction avec `F11`
+### 🟢 Exercice B2 – Entrer dans une fonction avec `F11`
 
 🎯 **Objectif** : Distinguer `F10` de `F11` et suivre une valeur de retour.
 
@@ -314,7 +314,7 @@ static void Main()
 
 ---
 
-## 🟡 Exercice B3 – Déplier un tableau dans Variables locales
+### 🟡 Exercice B3 – Déplier un tableau dans Variables locales
 
 🎯 **Objectif** : Repérer des cases jamais remplies en dépliant un tableau 2D.
 
@@ -357,7 +357,7 @@ for (int rangee = 0; rangee < plan.GetLength(0); rangee++)
 
 ---
 
-# 🐞 Partie C – Chasse aux bogues
+## 🐞 Partie C – Chasse aux bogues
 
 Pour chaque exercice : le **résultat attendu** est donné. Utilise le débogueur pour trouver la cause, puis corrige.
 
@@ -370,7 +370,7 @@ Pour chacun, remets ces trois éléments :
 * **comment** tu l'as trouvée (point d'arrêt placé où, quelle variable observée);
 * la **correction**.
 
-## 🟡 Exercice C1 – Le programme plante
+### 🟡 Exercice C1 – Le programme plante
 
 ```csharp
 int[] points = { 12, 8, 15, 6, 20 };
@@ -392,7 +392,7 @@ for (int i = 0; i <= points.Length; i++)
 
 ---
 
-## 🟡 Exercice C2 – Le total ne s'additionne pas
+### 🟡 Exercice C2 – Le total ne s'additionne pas
 
 ```csharp
 int[] ventes = { 250, 300, 175, 425 };
@@ -424,7 +424,7 @@ Celui-ci enchaîne une **erreur de compilation** (portée de la variable) et une
 
 ---
 
-## 🟡 Exercice C3 – La grille est tronquée
+### 🟡 Exercice C3 – La grille est tronquée
 
 ```csharp
 int[,] grille = { { 1, 2, 3, 4, 5 },
@@ -461,7 +461,7 @@ for (int rangee = 0; rangee < grille.GetLength(1); rangee++)
 
 ---
 
-## 🟡 Exercice C4 – Tout s'affiche en colonne
+### 🟡 Exercice C4 – Tout s'affiche en colonne
 
 ```csharp
 int[,] grille = { { 1, 2, 3 },
@@ -500,7 +500,7 @@ for (int rangee = 0; rangee < grille.GetLength(0); rangee++)
 
 ---
 
-## 🔴 Exercice C5 – Les moyennes sont fausses (sans plantage)
+### 🔴 Exercice C5 – Les moyennes sont fausses (sans plantage)
 
 ```csharp
 int[,] notes = { { 80, 70, 90 },
@@ -546,7 +546,7 @@ Un programme qui donne un résultat **plausible mais faux** ne se dénonce jamai
 
 ---
 
-## 🔴 Exercice C6 – Le maximum est toujours le même
+### 🔴 Exercice C6 – Le maximum est toujours le même
 
 ```csharp
 int[] temperatures = { -8, -3, -12, -5 };
@@ -579,18 +579,3 @@ Température la plus chaude : -3 °C
 3. Corrige l'initialisation. *(Astuce : relis l'exercice A3.)*
 4. Avec le tableau `{ 8, 3, 12, 5 }`, le programme donnait le bon résultat. Pourquoi ce bogue est-il resté invisible aussi longtemps ?
 
----
-
-# 🎁 Défi – Documenter un bogue
-
-Reprends **un** des programmes de la partie C et rédige un court rapport de 5 lignes :
-
-1. **Symptôme** — ce que le programme fait de travers.
-2. **Point d'arrêt** — où tu l'as placé, et pourquoi là.
-3. **Observation** — la variable observée et la valeur qui t'a mis sur la piste.
-4. **Cause** — la ligne fautive et la raison.
-5. **Correction** — le changement, et le test qui prouve que c'est réglé.
-
-:::tip
-Savoir expliquer un bogue clairement est aussi utile que savoir le corriger : c'est exactement ce qu'on te demandera de faire en stage et au travail.
-:::
