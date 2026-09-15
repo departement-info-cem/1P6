@@ -2,7 +2,7 @@
 title: Écriture dans un fichier texte
 ---
 
-# 🧪 Labo 9.1 – Écriture dans un fichier texte
+# 🧪 Labo 10.1 – Écriture dans un fichier texte
 
 📎 **Référence** : [Fichiers texte — StreamWriter](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamwriter--%C3%A9criture-dans-un-fichier-texte)
 

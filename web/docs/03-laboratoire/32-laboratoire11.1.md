@@ -2,7 +2,7 @@
 title: Lecture et écriture de fichiers CSV
 ---
 
-# 🧪 Labo 10.1 – Lecture et écriture de fichiers CSV
+# 🧪 Labo 11.1 – Lecture et écriture de fichiers CSV
 
 📎 **Référence** : [StreamReader](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamreader--lecture-dans-un-fichier-texte), [StreamWriter](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamwriter--%C3%A9criture-dans-un-fichier-texte), [Liste générique](https://info.cegepmontpetit.ca/notions-csharp/documentation/liste-generique-list-t)
 
