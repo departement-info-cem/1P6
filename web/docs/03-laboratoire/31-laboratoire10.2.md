@@ -2,7 +2,7 @@
 title: Lecture dans un fichier texte
 ---
 
-# 🧪 Labo 9.2 – Lecture dans un fichier texte
+# 🧪 Labo 10.2 – Lecture dans un fichier texte
 
 📎 **Référence** : [Fichiers texte — StreamReader](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamreader--lecture-dans-un-fichier-texte)
 

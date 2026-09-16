@@ -85,7 +85,7 @@ Prototype le plus performant : Delta
 ## Critères de réussite
 
 - Tous les résultats sont obtenus à partir des tableaux.
-- Le programme combine correctement les notions vues jusqu'à la séance 8.1.
+- Le programme combine correctement les notions vues jusqu'à la séance 8.2.
 - L'affichage reste clair pour une personne qui ne connaît pas les données de départ.
 
 ## Tests manuels et résultats attendus
