@@ -1,201 +1,174 @@
 ---
-title: A - Boucle For simple
+title: B - Exercices plus complexes
 ---
 
-# Labo 4.2A – Exercices simples de boucles
-
-Nous allons réaliser une série d’exercices permettant de pratiquer l'**utilisation de boucles for** en C#.
-
-Pour **chaque exercice**, créez un **nouveau projet** dans Visual Studio.
+# Labo 4.2B – Exercices de boucles
 
 ---
 
-## 📌 Rappel : Boucle simple
+## 🟢 Exercice 1 — Boucle dans une fonction
+
+### Besoin
+
+Vous devez créer une fonction `AfficherTableMultiplication` qui reçoit un nombre entier et affiche sa table de multiplication de `1` à `12`.
+
+Par exemple, l'appel :
 
 ```csharp
-//initialisation; test logique; incrémentation  
-for (int i = 0;   i < 10 ;   i++)
-{
-    // Block de code de la boucle
-}
+AfficherTableMultiplication(5);
 ```
 
+doit afficher :
 
+```text
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+...
+5 x 12 = 60
+```
+
+### Démarche
+
+1. Créez une fonction nommée `AfficherTableMultiplication`.
+2. La fonction doit recevoir le nombre dont vous voulez afficher la table.
+3. Dans la fonction, utilisez une boucle permettant de parcourir les multiplicateurs de `1` à `12`.
+4. À chaque répétition, calculez le produit du nombre reçu par la fonction et du compteur.
+5. Affichez le résultat.
+6. Dans `Main`, appelez la fonction avec différentes valeurs.
+
+### À vous de programmer
+
+Écrivez la fonction et testez-la avec au moins trois nombres différents.
 
 ---
 
-## 🧩 Exercices
+## 🔵 Exercice 2 Fonction dans une boucle
 
-### 🟢 Exercice 1 : Affichez des valeurs.
-Affichez les valeurs de 1 à 6 dans la console avec une boucle for.
-
-Résultat attendu :
-```
-1
-2
-3
-4
-5
-6
-```
+⚠️ **Important :** cette série d'exercices se réalise dans **le même projet**. Conservez le code développé d'un exercice à l'autre, car les exercices suivants réutilisent les fonctions créées précédemment.
 
 
-### 🟢 Exercice 2 : Affichage sur une ligne.
-Affichez sur UNE ligne, les valeurs de 10 à 20 (utiliser `console.write()`)
+### 🔵 Exercice 2-A — Fonction `ComposerLigneÉtoile()`
 
-Résultat attendu :
-```
-Sur une ligne : 10 11 12 13 14 15 16 17 18 19 20
-```
+Créez une fonction `ComposerLigneÉtoile()` qui reçoit un nombre d’étoiles et retourne une chaîne contenant ce nombre d’étoiles.
 
-### 🟢 Exercice 3 : Décrémentation d'index.
-Faites un compte à rebours par bons de 2 en partant de 10 et incluant le 0.
+##### Démarche
 
-Résultat attendu :
-```
-10
-8
-6
-4
-2
-0
-```
+* Créez une fonction `ComposerLigneÉtoile()` avec un paramètre représentant le nombre d’étoiles à produire et un retour de type `string`.
+* Utilisez une variable `string` initialisée avec une chaîne vide.
+* Utilisez une boucle `for` pour ajouter une étoile à la chaîne à chaque répétition.
+* La boucle doit se répéter autant de fois que le nombre d’étoiles demandé.
+* Retournez la chaîne obtenue.
 
+#### Vérification
 
-### 🟢 Exercice 4 : Incrémentation par bons.
-Affichez les nombres pairs de 0 à 20 inclusivement.
-Vous **devez** modifier l'incrémentation de votre index afin qu'il augmente de 2 à chaque itération de la boucle.
+Appelez la fonction avec les valeurs `3`, `5` et `9` et affichez les résultats.
 
-Résultat attendu :
-```
-0
-2
-4
-6
-8
-10
-12
-14
-16
-18
-20
-```
+**Résultat attendu :**
 
-### 🟢 Exercice 5 : Conditionnel dans une boucle.
-Affichez les nombres impairs de 10 à 25 inclusivement.
- * L'index de votre boucle **doit** commencer à la valeur 10, qui n'est **pas** un chiffre impair.
- * Vous **devez** donc utiliser un  `if` et un modulo ( `%` ) afin de vérifier que chaque index est impair avant de l'afficher.
-
-Résultat attendu :
-```
-11
-13
-15
-17
-19
-21
-23
-25
-```
-
-### 🟢 Exercice 6 : Conditionnel dans une boucle.
-Affichez les nombres de 1 à 50 sur une ligne **sauf** les multiples de 3.
-Vous devez vérifier si le nombre est divisible par 3 avec un modulo avant de l'afficher.
-Résultat attendu :
-```
-1 2 4 5 7 8 10 11 13 14 16 17 19 20 22 23 25 26 28 29 31 32 34 35 37 38 40 41 43 44 46 47 49 50
-```
-
-### 🟢 Exercice 7 : Accumulation de valeurs.
-Faites la somme des chiffres de 1 à 50.
-Affichez le résultat final.
-Vous aurez besoin de créer une variable compteur à laquelle vous additionnez les valeurs de votre boucle.
-
-Résultat attendu :
-```
-Total : 1275
-```
-
-### 🟢 Exercice 8 : Accumulation d'entrées d'utilisateur.
-Faites une boucle qui demande à l'utilisateur de rentrer 3 chiffres un après l'autre.
-Convertissez la valeur entrée en `double`.
-Additionnez chacun des chiffres entrés dans une variable.
-Faites la moyenne des chiffres entrés.
-
-Résultat attendu :
-```
-Entrez un chiffre : 3
-Entrez un chiffre : -5
-Entrez un chiffre : 21
-La moyenne est : 6,33 // ou bien 6,33333333
-```
-
-
-
-### 🟢 Exercice 9 : Boucles imbriquées
-🎯 **Objectif** : Utilisez deux boucles imbriquées pour faire un carré d'étoiles. 
-
-🛠️ **Instructions** :
-1. Faites une première boucle avec un index `i` commençant à 1 et allant jusqu'à 5.
-2. Dans le corps de votre première boucle, commencez par faire un saut de ligne dans la console avec `Console.WriteLine()`
-3. Encore dans le corps de votre première boucle, faites une deuxième boucle avec un index `j` allant de 1 à 5.
-4. Dans le corps de la **deuxième** boucle, imprimer le symbole __`*`__ sur une ligne sans retour de ligne avec `Console.Write()`
-
-**Pseudo-Code :**
-```
-DÉBUT
-    BOUCLE UN avec des valeurs d'index de 1 à 5 inclusivement
-        Impression d'un saut de ligne dans la console
-
-        BOUCLE DEUX avec des valeurs d'index de 1 à 5
-            Impression de '*' sur une ligne sans retour clavier
-        Fin de la boucle DEUX
-
-    Fin de la boucle UN
-FIN
-```
-**Notez** : Chaque itération de la première boucle fera **1** saut de ligne, suivi de l'exécution complète de la deuxième boucle. La deuxième boucle affichera 1 caractère à chaque itération, pour un total de **5** caractères. Le code dans la première boucle sera exécuté **5** fois tandis que le code dans la deuxième boucle sera exécuté **25** fois.
-
-
-Résultat attendu :
-```
+```text
+***
 *****
-*****
-*****
-*****
-*****
+*********
 ```
 
+---
 
-### 🟢 Exercice 10 : Boucles imbriquées
-🎯 **Objectif** : On fait une pyramide d'étoiles. Avec deux boucles imbriquées, on veut utiliser l'index de la première boucle dans la deuxième boucle. 
+### 🔵 Exercice 2-B — Appel d’une fonction dans une boucle
 
-🛠️ **Instructions** :
-1. Reprenez le code de l'exercice précédent.
-2. Changez le test conditionnel dans la deuxième boucle. Plutôt de que de faire `j <= 5`, faites `j <= i`
-3. Exécuter votre code.
+Utilisez la fonction `ComposerLigneÉtoile()` pour afficher une pyramide de `5` lignes.
 
-```
-DÉBUT
-    BOUCLE UN avec des valeurs d'index de 1 à 5 inclusivement
-        Impression d'un saut de ligne dans la console
+##### Démarche
 
-        BOUCLE DEUX avec des valeurs d'index de 1 à **INDEX DE LA PREMIÈRE BOUCLE**
-            Impression de '*' sur une ligne sans retour clavier
-        Fin de la boucle DEUX
+* Utilisez une boucle `for` dont le compteur permet de représenter le numéro de la ligne.
+* À chaque répétition, appelez la fonction `ComposerLigneÉtoile()`.
+* Utilisez le compteur de la boucle pour déterminer le nombre d’étoiles à afficher sur la ligne.
+* Affichez la chaîne retournée par la fonction.
 
-    Fin de la boucle UN
+**Résultat attendu :**
 
-FIN
-```
-
-**NOTEZ** : Vous faites encore 5 itérations de la première boucle. Mais le nombre d'itérations de la deuxième boucle varie à chaque fois. Le contenu de la deuxième boucle est d'abord exécuté **1** fois, puis **2**, **3**, **4**, et finalement **5** fois.
-
-Résultat attendu :
-```
+```text
 *
 **
 ***
 ****
 *****
 ```
+
+---
+
+### 🔵 Exercice 2-C — Créer la fonction `ImprimerPyramide()`
+
+Transformez la solution de l'exercice 2-B en une fonction appelée `ImprimerPyramide()` qui reçoit la taille de la pyramide.
+
+#### Démarche
+
+* Créez une fonction `ImprimerPyramide()` avec un paramètre représentant la taille de la pyramide.
+* Reprenez le principe de la boucle utilisée à l'exercice 2-B.
+* Utilisez la valeur reçue en paramètre pour déterminer le nombre de lignes à afficher.
+* À chaque répétition, appelez `ComposerLigneÉtoile()` avec le nombre d'étoiles correspondant à la ligne.
+* Affichez la chaîne retournée.
+* Dans `Main`, testez la fonction avec différentes tailles.
+
+**Exemples :**
+
+Pour une taille de `3` :
+
+```text
+*
+**
+***
+```
+
+Pour une taille de `5` :
+
+```text
+*
+**
+***
+****
+*****
+```
+
+---
+
+### 🔵 Exercice 2-D — Créer la fonction `ImprimerPyramideInverser()`
+
+Créez une fonction `ImprimerPyramideInverser()` qui reçoit la taille de la pyramide et affiche les lignes d'une pyramide en ordre décroissant.
+
+#### Démarche
+
+* Créez une fonction `ImprimerPyramideInverser()` avec un paramètre représentant la taille de la pyramide.
+* Utilisez une boucle `for` avec un compteur qui commence à la taille reçue en paramètre et diminue de `1` à chaque répétition.
+* À chaque répétition, appelez `ComposerLigneÉtoile()` en utilisant la valeur actuelle du compteur.
+* Affichez la chaîne retournée.
+* Dans `Main`, testez la fonction avec une taille de `4`.
+
+**Résultat attendu :**
+
+```text
+****
+***
+**
+*
+```
+
+#### Intégration
+
+Appelez ensuite `ImprimerPyramide()` suivie de `ImprimerPyramideInverser()` afin d'obtenir :
+
+```text
+*
+**
+***
+**
+*
+```
+
+
+---
+## ⚫ Je relève le défi
+
+Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
+
+👉 [Accéder au défi sur la boucle `for`](../06-defis/boucle-for.md)

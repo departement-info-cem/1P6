@@ -1,0 +1,130 @@
+{
+  "titre": "Quiz - Les méthodes!",
+  "questions": [
+  
+  
+  {
+      "texte": "Quelle valeur sera affichée par le programme suivant ?",
+      "code": "static void AfficherMessage(string message)\n{\n    Console.WriteLine(message);\n}\n\nstatic void Main()\n{\n    AfficherMessage(\"Bonjour\");\n}",
+      "choix": [
+        "Bonjour",
+        "message",
+        "Rien ne sera affiché.",
+        "Le programme ne compile pas."
+      ],
+      "reponse": 0,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle valeur sera affichée par le programme suivant ?",
+      "code": "static void AfficherDouble(int nombre)\n{\n    Console.WriteLine(nombre * 2);\n}\n\nstatic void Main()\n{\n    int valeur = 7;\n    AfficherDouble(valeur);\n}",
+      "choix": [
+        "7",
+        "9",
+        "14",
+        "Rien ne sera affiché."
+      ],
+      "reponse": 2,
+      "duree": 15
+    },
+  {
+  "texte": "Quelle valeur sera affichée par le programme suivant ? ?",
+  "code": "static void AfficherTemperature(double temperature, string unite)\n{\n    Console.WriteLine(temperature + \" \" + unite);\n}\n\nstatic void Main()\n{\n    AfficherTemperature(\"C\", 23.5);\n}",
+  "choix": [
+    "C 23.5",
+    "23.5 C",
+    "Rien ne sera affiché.",
+    "Le programme ne compile pas."
+  ],
+  "reponse": 3,
+  "duree": 15
+},
+  {
+  "texte": "On souhaite définir une méthode qui reçoit en paramètre le prix d'un produit et son taux de rabais, puis qui retourne le prix après rabais. Le code proposé répond-il au besoin ?",
+  "code": "static int CalculerPrixFinal(double prix, double rabais)\n{\n    return prix - rabais;\n}",
+  "choix": [
+    "Oui",
+    "Non"    
+  ],
+  "reponse": 1,
+  "duree": 15
+},
+
+    {
+      "texte": "Besoin : la méthode doit retourner true si le nombre est positif et false sinon. Le code proposé répond-il au besoin ?",
+      "code": "static bool EstPositif(int nombre)\n{\n    return false;\n\n    if (nombre > 0)\n    {\n        return true;\n    }\n}",
+      "choix": [
+        "Oui, car le if vérifie si le nombre est positif.",
+        "Non, car return false termine la méthode avant l'exécution du if.",
+        "Non, car une méthode bool ne peut avoir qu'un seul return.",
+        "Non, car return doit toujours être placé à la fin."
+      ],
+      "reponse": 1,
+      "duree": 15
+    },
+     {
+      "texte": "Besoin : la méthode doit retourner true si le nombre est pair et false sinon. Le code proposé répond-il au besoin ?",
+      "code": "static bool EstPair(int nombre)\n{\n    return nombre % 2 == 0;\n}",
+      "choix": [
+        "Oui, car l'expression nombre % 2 == 0 produit directement une valeur booléenne.",
+        "Non, car il faut utiliser un if pour retourner true ou false.",
+        "Non, car l'opérateur % ne peut pas être utilisé avec une méthode bool.",
+        "Non, car la méthode devrait retourner un int."
+      ],
+      "reponse": 0,
+      "duree": 15
+    },
+
+    {
+      "texte": "Quelle valeur sera affichée par le programme suivant ?",
+      "code": "static int nombre = 10;\n\nstatic void Doubler(int pNombre)\n{\n    int nombre = pNombre * 2;\n}\n\nstatic void Main()\n{\n    Doubler(nombre);\n    Console.WriteLine(nombre);\n}",
+      "choix": [
+        "10",
+        "20",
+        "30",
+        "Le programme provoque une erreur de compilation."
+      ],
+      "reponse": 0,
+      "duree": 15
+    },
+ {
+  "texte": "Quelle valeur sera affichée par le programme suivant ?",
+  "code": "static void AfficherPersonne(string nom, int age)\n{\n    Console.WriteLine(nom + \" a \" + age + \" ans.\");\n}\n\nstatic void Main()\n{\n    AfficherPersonne(25, \"Ali\");\n}",
+  "choix": [
+    "Ali a 25 ans.",
+    "25 a Ali ans.",
+    "Le programme provoque une erreur de compilation.",
+    "Ali a 25."
+  ],
+  "reponse": 2,
+  "duree": 15
+},
+  {
+      "texte": "Quelle valeur sera affichée par le programme suivant ?",
+      "code": "static int CalculerDouble(int nombre)\n{\n    return nombre * 2;\n}\n\nstatic void Main()\n{\n    int resultat = CalculerDouble(5) + 3;\n    Console.WriteLine(resultat);\n}",
+      "choix": [
+        "8",
+        "10",
+        "13",
+        "16"
+      ],
+      "reponse": 2,
+      "duree": 15
+    },
+    {
+      "texte": "Quelle valeur sera affichée par le programme suivant ?",
+      "code": "static bool EstMajeur(int age)\n{\n    return age >= 18;\n}\n\nstatic void Main()\n{\n    int age = 20;\n\n    if (EstMajeur(age))\n    {\n        Console.WriteLine(\"Majeur\");\n    }\n    else\n    {\n        Console.WriteLine(\"Mineur\");\n    }\n}",
+      "choix": [
+        "Majeur",
+        "Mineur",
+        "20",
+        "Le programme ne compile pas."
+      ],
+      "reponse": 0,
+      "duree": 15
+    }
+ 
+
+
+  ]
+}

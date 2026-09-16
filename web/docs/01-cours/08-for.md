@@ -5,6 +5,10 @@ description: Répétitions de code
 
 
 
+## 🏆 QUIZ de révision 
+<Quiz file="/quiz/4.2-methodes.json" />
+
+---
 # Boucles for
 
 
