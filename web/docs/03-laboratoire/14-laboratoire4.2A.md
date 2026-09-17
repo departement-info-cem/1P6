@@ -4,13 +4,17 @@ title: A - Boucle For simple
 
 # Labo 4.2A – Exercices simples de boucles
 
+---
+
+## Exercices simples de boucles
+
 Nous allons réaliser une série d’exercices permettant de pratiquer l'**utilisation de boucles for** en C#.
 
 Pour **chaque exercice**, créez un **nouveau projet** dans Visual Studio.
 
 ---
 
-## 📌 Rappel : Boucle simple
+### 📌 Rappel : Boucle simple
 
 ```csharp
 //initialisation; test logique; incrémentation  
@@ -19,52 +23,53 @@ for (int i = 0;   i < 10 ;   i++)
     // Block de code de la boucle
 }
 ```
+### 🟢 Exercice 1 — Affichez des valeurs
 
+Affichez les nombres de `1` à `6` dans la console avec une boucle `for`.
 
+#### Démarche
+
+* Utilisez une boucle `for` avec un compteur qui varie de `1` à `6`.
+* À chaque répétition, affichez la valeur du compteur.
 
 ---
 
-## 🧩 Exercices
+### 🟢 Exercice 2 — Affichage sur une ligne
 
-### 🟢 Exercice 1 : Affichez des valeurs.
-Affichez les valeurs de 1 à 6 dans la console avec une boucle for.
+Affichez les nombres de `10` à `20` sur une seule ligne.
 
-Résultat attendu :
-```
-1
-2
-3
-4
-5
-6
-```
+#### Démarche
 
+* Utilisez une boucle `for` avec un compteur qui varie de `10` à `20`.
+* À chaque répétition, affichez la valeur du compteur sans effectuer de retour à la ligne.
+* Ajoutez un espace entre les différentes valeurs.
 
-### 🟢 Exercice 2 : Affichage sur une ligne.
-Affichez sur UNE ligne, les valeurs de 10 à 20 (utiliser `console.write()`)
+---
 
-Résultat attendu :
-```
-Sur une ligne : 10 11 12 13 14 15 16 17 18 19 20
-```
+### 🟢 Exercice 3 — Décrémentation d’un compteur
 
-### 🟢 Exercice 3 : Décrémentation d'index.
-Faites un compte à rebours par bons de 2 en partant de 10 et incluant le 0.
+Affichez les nombres de `10` à `0` en diminuant la valeur de `2` à chaque répétition.
 
-Résultat attendu :
-```
-10
-8
-6
-4
-2
-0
-```
+#### Démarche
 
+* Utilisez une boucle `for` avec un compteur qui commence à `10`.
+* Faites diminuer le compteur de `2` à chaque répétition.
+* La répétition doit se poursuivre jusqu'à `0`.
+* À chaque répétition, affichez la valeur du compteur.
 
-### 🟢 Exercice 4 : Incrémentation par bons.
-Affichez les nombres pairs de 0 à 20 inclusivement.
-Vous **devez** modifier l'incrémentation de votre index afin qu'il augmente de 2 à chaque itération de la boucle.
+---
+
+### 🟢 Exercice 4 — Incrémentation par bonds
+
+Affichez les nombres pairs de `0` à `20`.
+
+#### Démarche
+
+* Utilisez une boucle `for` avec un compteur qui commence à `0`.
+* Faites augmenter le compteur de `2` à chaque répétition.
+* La répétition doit se poursuivre jusqu'à `20`.
+* À chaque répétition, affichez la valeur du compteur.
+
 
 Résultat attendu :
 ```
@@ -80,6 +85,8 @@ Résultat attendu :
 18
 20
 ```
+---
+
 
 ### 🟢 Exercice 5 : Conditionnel dans une boucle.
 Affichez les nombres impairs de 10 à 25 inclusivement.
@@ -130,6 +137,8 @@ Entrez un chiffre : 21
 La moyenne est : 6,33 // ou bien 6,33333333
 ```
 
+
+---
 
 
 ### 🟢 Exercice 9 : Boucles imbriquées
@@ -199,3 +208,63 @@ Résultat attendu :
 ****
 *****
 ```
+
+---
+
+
+### 🟣 Exercice 11 — Compter certaines valeurs
+
+Un programme doit demander à l'utilisateur **10 nombres entiers**.
+
+À la fin de la saisie, le programme doit afficher :
+
+* le nombre de valeurs positives;
+* le nombre de valeurs négatives;
+* le nombre de valeurs égales à `0`.
+
+Exemple :
+
+```text
+Nombre 1 : 12
+Nombre 2 : -4
+Nombre 3 : 0
+Nombre 4 : 8
+...
+
+Positifs : 5
+Négatifs : 3
+Zéros : 2
+```
+
+Déterminez les variables nécessaires et la façon de parcourir les 10 valeurs.
+
+---
+
+### 🟣 Exercice 12 — Trouver le plus grand nombre
+
+Un programme doit demander à l'utilisateur **10 nombres entiers**.
+
+À la fin, il doit afficher le plus grand nombre saisi.
+
+Exemple :
+
+```text
+Nombre 1 : 12
+Nombre 2 : 7
+Nombre 3 : 25
+Nombre 4 : 8
+...
+
+Plus grand nombre : 25
+```
+
+Vous devez déterminer comment conserver en mémoire la plus grande valeur rencontrée pendant la saisie.
+
+---
+## ⚫ Je relève le défi
+
+Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
+
+👉 [Accéder au défi sur la boucle `for`](../06-defis/boucle-for.md)
+
+

@@ -4,78 +4,90 @@ title: B - Exercices plus complexes
 
 # Labo 4.2B – Exercices de boucles
 
-Nous allons réaliser une série d’exercices permettant de pratiquer l'**utilisation de boucles for** en C#.
+---
 
-Pour **chaque exercice**, créez un **nouveau projet** dans Visual Studio.
+## 🟢 Exercice 1 — Boucle dans une fonction
+
+### Besoin
+
+Vous devez créer une fonction `AfficherTableMultiplication` qui reçoit un nombre entier et affiche sa table de multiplication de `1` à `12`.
+
+Par exemple, l'appel :
+
+```csharp
+AfficherTableMultiplication(5);
+```
+
+doit afficher :
+
+```text
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+...
+5 x 12 = 60
+```
+
+### Démarche
+
+1. Créez une fonction nommée `AfficherTableMultiplication`.
+2. La fonction doit recevoir le nombre dont vous voulez afficher la table.
+3. Dans la fonction, utilisez une boucle permettant de parcourir les multiplicateurs de `1` à `12`.
+4. À chaque répétition, calculez le produit du nombre reçu par la fonction et du compteur.
+5. Affichez le résultat.
+6. Dans `Main`, appelez la fonction avec différentes valeurs.
+
+### À vous de programmer
+
+Écrivez la fonction et testez-la avec au moins trois nombres différents.
 
 ---
 
+## 🔵 Exercice 2 Fonction dans une boucle
+
+⚠️ **Important :** cette série d'exercices se réalise dans **le même projet**. Conservez le code développé d'un exercice à l'autre, car les exercices suivants réutilisent les fonctions créées précédemment.
 
 
-## 🟡 Exercice 1 : Boucle dans une fonction.
-**Mise en situation** : On fait un petit programme pour aider les jeunes à apprendre leurs tables de multiplication.
+### 🔵 Exercice 2-A — Fonction `ComposerLigneÉtoile()`
 
-🎯 **Objectif** : Faire une fonction qui prend un `int` en paramètre et qui imprime la table de multiplication correspondante dans la console.
+Créez une fonction `ComposerLigneÉtoile()` qui reçoit un nombre d’étoiles et retourne une chaîne contenant ce nombre d’étoiles.
 
-🛠️ **Instructions** :
-1. Crée une fonction `AfficherTableMultiplication()` qui prend un int en paramètre et qui n'a pas de retour.
-2. La fonction doit contenir une boucle `for` allant de 1 à 12.
-3. Dans la boucle, imprimer la valeur passée en paramètre, ainsi que l'index et le résultat de leur multiplication.
-4. Appelez la fonction dans le `Main()` avec la valeur 7 en paramètre.
+##### Démarche
 
+* Créez une fonction `ComposerLigneÉtoile()` avec un paramètre représentant le nombre d’étoiles à produire et un retour de type `string`.
+* Utilisez une variable `string` initialisée avec une chaîne vide.
+* Utilisez une boucle `for` pour ajouter une étoile à la chaîne à chaque répétition.
+* La boucle doit se répéter autant de fois que le nombre d’étoiles demandé.
+* Retournez la chaîne obtenue.
 
-**Résultat attendu** :
-```
-    7 x 1 = 7
-    7 x 2 = 14
-    7 x 3 = 21
-    7 x 4 = 28
-    7 x 5 = 35
-    7 x 6 = 42
-    7 x 7 = 49
-    7 x 8 = 56
-    7 x 9 = 63
-    7 x 10 = 70
-    7 x 11 = 77
-    7 x 12 = 84
-```
----
+#### Vérification
 
-## 🟡 Exercice 2 : Fonction dans une boucle
-Cette série d'exercices se font dans le même projet.
+Appelez la fonction avec les valeurs `3`, `5` et `9` et affichez les résultats.
 
-### Exercice 2-A : Fonction `ComposerLigneÉtoile()`
+**Résultat attendu :**
 
-🎯 **Objectif** : Faire une fonction qui prend un `int` en paramètre et qui retourne un `string` avec un nombre d'étoiles **`*`** correspondant.
-
-🛠️ **Instructions** :
-1. Faites une fonction `ComposerLigneÉtoile()` qui prend un `int` en paramètre `pNbrÉtoiles` et qui retourne un `string`
-2. Dans la fonction, faites une variable de type `string` avec une chaine vide `""` comme valeur initiale
-3. Encore dans la fonction, faites une boucle avec un index commençant à **0** et en utilisant le `int` passé pour le test logique `index < pNbrÉtoiles`
-4. Dans la boucle, concaténez une étoile **`*`** à la variable `string` créée à l'étape 2.
-5. Une fois la boucle terminée, retourner la variable `string`
-
-Vérifiez votre fonction en l'appelant avec les valeurs **3**, **5**,  et **9** et en imprimant les retours dans la console.
-
-**Résultat attendu** :
-```
+```text
 ***
 *****
 *********
 ```
 
-### Exercice 2-B : Appel de fonction dans une boucle
-Dans le même projet que l'exercice 2-A.
+---
 
+### 🔵 Exercice 2-B — Appel d’une fonction dans une boucle
 
-🎯 **Objectif** : Faire un appel de fonction dans une boucle pour faire une pyramide.
+Utilisez la fonction `ComposerLigneÉtoile()` pour afficher une pyramide de `5` lignes.
 
-🛠️ **Instructions** :
-1. Faites une boucle qui appelle la fonction `ComposerLigneÉtoile()` 5 fois et qui imprime son retour.
-2. En paramètre de la fonction `ComposerLigneÉtoile()`, passez l'index de votre boucle.
+##### Démarche
 
-**Résultat attendu** :
-```
+* Utilisez une boucle `for` dont le compteur permet de représenter le numéro de la ligne.
+* À chaque répétition, appelez la fonction `ComposerLigneÉtoile()`.
+* Utilisez le compteur de la boucle pour déterminer le nombre d’étoiles à afficher sur la ligne.
+* Affichez la chaîne retournée par la fonction.
+
+**Résultat attendu :**
+
+```text
 *
 **
 ***
@@ -83,25 +95,34 @@ Dans le même projet que l'exercice 2-A.
 *****
 ```
 
-### Exercice 2-C : Appel de fonction dans une boucle
-Encore dans le même projet.
+---
 
-🎯 **Objectif** : Créer une fonction `ImprimerPyramide()` qui prend la taille de la pyramide en paramètre.
+### 🔵 Exercice 2-C — Créer la fonction `ImprimerPyramide()`
 
-🛠️ **Instructions** :
-1. Crée une nouvelle fonction `ImprimerPyramide()` qui prend un `int` en paramètre correspondant à la taille de la pyramide désirée.
-2. Reprenez votre boucle que vous venez de faire à l'exercice **2-B** et mettez le code dans votre nouvelle fonction.
-3. Modifier la boucle afin qu'elle utilise la valeur de taille passée en paramètre.
-4. Testez votre nouvelle fonction.
+Transformez la solution de l'exercice 2-B en une fonction appelée `ImprimerPyramide()` qui reçoit la taille de la pyramide.
 
-**Résultat attendu** :
-```Csharp
-// 3 passé en paramètre
+#### Démarche
+
+* Créez une fonction `ImprimerPyramide()` avec un paramètre représentant la taille de la pyramide.
+* Reprenez le principe de la boucle utilisée à l'exercice 2-B.
+* Utilisez la valeur reçue en paramètre pour déterminer le nombre de lignes à afficher.
+* À chaque répétition, appelez `ComposerLigneÉtoile()` avec le nombre d'étoiles correspondant à la ligne.
+* Affichez la chaîne retournée.
+* Dans `Main`, testez la fonction avec différentes tailles.
+
+**Exemples :**
+
+Pour une taille de `3` :
+
+```text
 *
 **
 ***
+```
 
-// 5 passé en paramètre
+Pour une taille de `5` :
+
+```text
 *
 **
 ***
@@ -109,31 +130,34 @@ Encore dans le même projet.
 *****
 ```
 
-**Notez** : Nous avons maintenant une fonction qui appelle une autre fonction. Il n'y a pas de limites au nombre de fonctions qui peuvent être appelées.
+---
 
+### 🔵 Exercice 2-D — Créer la fonction `ImprimerPyramideInverser()`
 
-### Exercice 2-D : Appel de fonction dans une boucle
-Encore dans le même projet.
+Créez une fonction `ImprimerPyramideInverser()` qui reçoit la taille de la pyramide et affiche les lignes d'une pyramide en ordre décroissant.
 
-🎯 **Objectif** : Créer une fonction `ImprimerPyramideInverser()` qui prend la taille de la pyramide en paramètre.
+#### Démarche
 
-🛠️ **Instructions** :
-1. Crée une nouvelle fonction `ImprimerPyramideInverser()` qui prend un `int` en paramètre correspondant à la taille de la pyramide désirée.
-2. Cette fonction doit contenir une boucle dont on initialise l'index à la valeur de taille passé en paramètre et qu'on itère en décrémentant l'index jusqu'à ce qu'il atteigne **0**
+* Créez une fonction `ImprimerPyramideInverser()` avec un paramètre représentant la taille de la pyramide.
+* Utilisez une boucle `for` avec un compteur qui commence à la taille reçue en paramètre et diminue de `1` à chaque répétition.
+* À chaque répétition, appelez `ComposerLigneÉtoile()` en utilisant la valeur actuelle du compteur.
+* Affichez la chaîne retournée.
+* Dans `Main`, testez la fonction avec une taille de `4`.
 
-**Résultat attendu** :
-```Csharp
-// 4 passé en paramètre
+**Résultat attendu :**
+
+```text
 ****
 ***
 **
 *
 ```
 
-Essayer d'appeler la fonction `ImprimerPyramide(3)` suivie de  `ImprimerPyramideInverser(2)`, vous devriez obtenir le résultat suivant : 
+#### Intégration
 
-**Résultat attendu** :
-```Csharp
+Appelez ensuite `ImprimerPyramide()` suivie de `ImprimerPyramideInverser()` afin d'obtenir :
+
+```text
 *
 **
 ***
@@ -142,4 +166,9 @@ Essayer d'appeler la fonction `ImprimerPyramide(3)` suivie de  `ImprimerPyramide
 ```
 
 
+---
+## ⚫ Je relève le défi
 
+Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
+
+👉 [Accéder au défi sur la boucle `for`](../06-defis/boucle-for.md)

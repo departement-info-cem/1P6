@@ -2,9 +2,13 @@
 description: Répétitions de code
 ---
 
+# Boucle for
 
 
+## 🏆 QUIZ de révision (Les méthodes)
+<Quiz file="/quiz/4.2-methodes.json" />
 
+---
 # Boucles for
 
 
