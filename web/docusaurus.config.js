@@ -125,6 +125,13 @@ const config = {
             sidebarId: "extra",
             label: "Extra",
           }
+          ,
+           {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "aide",
+            label: "Aide-mémoire",
+          }
           
 
         ],
