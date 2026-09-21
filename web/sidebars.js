@@ -278,10 +278,11 @@ const sidebars = {
         tooltip:"cache"
       }
     },
+    
     {
       type: "doc",
-      label: "5.2 - Intégration des notions",
-      id: "cours/integration-for",
+      label: "5.2 - Formatif 1",
+      id: "cours/formatif1",
       customProps: {
         calendrier: buildCalendrierForIndex(9),
         tooltip:"cache"
@@ -289,8 +290,9 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.1 - Formatif 1",
-      id: "cours/formatif1",
+      label: "6.1 - Examen 1",
+      id: "cours/examen1",
+      className: "examen",
       customProps: {
         calendrier: buildCalendrierForIndex(10),
         tooltip:"cache"
@@ -298,9 +300,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.2 - Examen 1",
-      id: "cours/examen1",
-      className: "examen",
+      label: "6.2 - Intégration des notions",
+      id: "cours/integration-for",
       customProps: {
         calendrier: buildCalendrierForIndex(11),
         tooltip:"cache"
@@ -578,7 +579,7 @@ const sidebars = {
       collapsed: collapseBloc1,
       items: ['laboratoire/laboratoire5.1A', 'laboratoire/laboratoire5.1B', 'laboratoire/laboratoire5.1C']
     },
-     {
+    {
       type: 'category',
       label: 'Laboratoire 5.2',
       collapsible: true,
