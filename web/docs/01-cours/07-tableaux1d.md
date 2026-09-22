@@ -258,6 +258,7 @@ Cela rend le code plus clair et permet de modifier facilement la taille du table
 
 
 Vous devez réaliser les labos suivants :
- [🧪 Labo 4.2A](/laboratoire/laboratoire4.2A)
- [🧪 Labo 4.2B](/laboratoire/laboratoire4.2B)
+ [🧪 Labo 5.1A](/laboratoire/laboratoire5.1A)
+ [🧪 Labo 5.1B](/laboratoire/laboratoire5.1B)
+ [🧪 Labo 5.1C](/laboratoire/laboratoire5.1C)
  
