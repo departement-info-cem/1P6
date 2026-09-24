@@ -139,49 +139,51 @@ Prix après taxes : 112,00$
 
 ---
 
-### 🔢 3.2. Programme console qui compte le nombre de mots dans une phrase
+### 🔤 3.2. Programme console qui formate le nom d’un étudiant
 
 #### Instructions :
 
 - Dans la fonction `Main` :
-  - Demander de rentrer une phrase.
-  - Utiliser une fonction `CalculerNbMots` pour calculer le nombre de mots dans la phrase, puis afficher le résultat.
-- La fonction `CalculerNbMots`:
-  - Accepte en paramètre une phrase.
-  - Elle découpe la phrase en mots et retourne le nombre de mots.
-    - **Indice :** Utiliser la fonction Split()
+  - Demander le prénom et le nom de famille de l’étudiant.
+  - Utiliser une fonction `FormaterNom` pour obtenir le nom formaté, puis afficher le résultat.
+- La fonction `FormaterNom` :
+  - Accepte en paramètre un prénom et un nom de famille.
+  - Elle retourne une chaîne contenant le nom de famille **en majuscules**, suivi d’une virgule et du prénom.
+    - **Indice :** Utiliser la fonction ToUpper()
 - Tester votre programme.
 
 
 #### Entrée / sortie attendue :
 ```
-------------------Je compterai le nombre de mots------------------
-Entrez une phrase : Le ciel est bleu
-Il y a 4 mots
+------------------Je formaterai votre nom------------------
+Entrez votre prénom : Mario
+Entrez votre nom : Tremblay
+Nom formaté : TREMBLAY, Mario
 ```
 
 ---
 
 ## 4. Boucle For et fonctions avec paramètres et retour
 
-### 🔢 4.1. Programme console qui compte le nombre de voyelles dans un mot
+### 🔢 4.1. Programme console qui compte les multiples d’un nombre
 
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Demander de rentrer un mot.
-  - Utiliser une fonction `CalculerNbVoyelles` pour calculer le nombre de voyelles dans le mot, puis afficher le résultat.  
-- La fonction `CalculerNbVoyelles` :
-  - Accepte en paramètre un mot.
-  - Elle calcule et retourne le nombre de voyelles dans le mot (toutes voyelles confondues). Utiliser une boucle pour parcourir les lettres du mot.
-  - La fonction n’est pas sensible à la casse : Ne tient pas compte de majuscule ou minuscule.
+  - Demander de rentrer une limite (nombre entier positif) et un diviseur.
+  - Utiliser une fonction `CompterMultiples` pour calculer combien de nombres entre 1 et la limite sont des multiples du diviseur, puis afficher le résultat.  
+- La fonction `CompterMultiples` :
+  - Accepte en paramètre la limite et le diviseur.
+  - Elle calcule et retourne le nombre de multiples du diviseur entre 1 et la limite (inclusivement). Utiliser une boucle pour parcourir les nombres.
+    - **Indice :** Un nombre est un multiple du diviseur si le reste de la division (`%`) vaut 0.
 - Tester votre programme.
 
 
 #### Entrée / Sortie attendue :
 ```
-Entrez un mot : Allo
-Nombre de voyelles : 2
+Entrez une limite : 20
+Entrez un diviseur : 3
+Il y a 6 multiples de 3 entre 1 et 20
 ```
 
 ---
@@ -209,82 +211,92 @@ Le résultat est : 55
 
 ---
 
-## 5. Tableaux et boucles
+## 5. Intégration : boucles, conditions et fonctions
 
-### 🔢 5.1. Programme console qui modifie les éléments d’un tableau en fonction de leur valeur
+### 📊 5.1. Programme console qui calcule les statistiques d’un groupe de notes
 
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Déclarer le tableau suivant : `tNombres = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}`.
-  - Afficher le contenu du tableau (avant les modifications, dans une seule ligne).
-  - Utiliser une fonction `RemplacerNombresPairs` qui remplace les **valeurs** paires du tableau par 0.
-  - Afficher la chaîne retournée, contenant les valeurs du tableau modifié.
-- La fonction `RemplacerNombresPairs` :
-  - Accepte en paramètre un tableau d’entiers.
-  - Elle remplace toute valeur paire dans le tableau par 0.
-  - Créer une chaine avec les valeurs du tableau. Les valeurs dans la chaine sont séparées par une virgule.
-  - Retourner la chaine de valeurs.
+  - Demander le nombre de notes à saisir.
+  - Utiliser une boucle pour demander chacune des notes (valeurs décimales).
+  - Pendant la boucle, calculer la somme des notes, la note la plus haute et la note la plus basse.
+  - Calculer la moyenne, puis utiliser la fonction `DeterminerMention` pour obtenir la mention associée.
+  - Afficher la moyenne (2 décimales), la note la plus haute, la note la plus basse et la mention.
+- La fonction `DeterminerMention` :
+  - Accepte en paramètre une moyenne.
+  - Elle retourne la mention selon la moyenne :
+    - 90 et plus : « Excellent »
+    - 75 à moins de 90 : « Très bien »
+    - 60 à moins de 75 : « Réussite »
+    - Moins de 60 : « Échec »
 - Tester votre programme.
 
-
-#### Sortie attendue :
+#### Entrée / Sortie attendue :
 ```
-Tableau avant les modifications :
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Combien de notes : 4
+Note 1 : 85
+Note 2 : 72,5
+Note 3 : 91
+Note 4 : 64,5
 
-Tableau après les modifications :
-1, 0, 3, 0, 5, 0, 7, 0, 9, 0
+Moyenne : 78,25
+Note la plus haute : 91
+Note la plus basse : 64,5
+Mention : Très bien
 ```
 
 ---
 
-### 🔢 5.2. Programme console qui modifie les éléments d’un tableau en fonction de leur position (index)
+### 🎯 5.2. Jeu : deviner un nombre secret
 
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Déclarer le tableau suivant : `tNombres = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}`.
-  - Convertir le tableau en une chaîne de caractères et l’afficher (tableau avant les modifications).
-  - Utiliser la fonction `RemplacerPositionsPairs` qui remplace les valeurs du tableau à une **position (index)** pair par 0.
-  - Convertir le tableau retourné en une chaîne de caractères et l’afficher.
-- La fonction `RemplacerPositionsPairs` :  
-  - Accepte en paramètre un tableau d’entiers.
-  - Définir un tableau de la même taille que le tableau en paramètre.
-  - Copier le tableau en paramètre dans ce nouveau tableau.
-  - Remplacer toute valeur à une position paire par 0.
-  - Retourner le nouveau tableau.
-- Tester votre programme.
+  - Générer aléatoirement un nombre secret entre 1 et 20.
+  - Utiliser une boucle `for` qui donne **au maximum 5 essais** au joueur.
+    - La boucle doit s’arrêter dès que le joueur trouve le nombre.
+      - **Indice :** Utiliser une variable `bool` dans la condition de la boucle.
+  - À chaque essai, demander un nombre et afficher le message retourné par la fonction `ComparerNombres`.
+  - Après la boucle, afficher « Bravo! Trouvé en X essai(s). » ou « Perdu! Le nombre était X. »
+- La fonction `ComparerNombres` :
+  - Accepte en paramètre l’essai du joueur et le nombre secret.
+  - Elle retourne « Trop petit! », « Trop grand! » ou « Exact! ».
+- Tester votre programme avec des valeurs aléatoires.
+- Tester votre programme avec un nombre secret fixe (ex. : 13) pour vérifier les deux fins possibles.
 
-
-#### Sortie attendue :
+#### Exemple d’exécution (nombre secret : 13) :
 ```
-Tableau avant les modifications
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-
-Tableau après les modifications
-0, 2, 0, 4, 0, 6, 0, 8, 0, 10
+Essai 1 : 10
+Trop petit!
+Essai 2 : 15
+Trop grand!
+Essai 3 : 13
+Exact!
+Bravo! Trouvé en 3 essai(s).
 ```
 
 ---
 
-### 🧾 5.3. Programme console qui compte le nombre d’occurrences dans un tableau
+### 🔲 5.3. Programme console qui dessine un rectangle creux
 
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Déclarer le tableau suivant : `tNombres = {10, 2, 3, 4, 5, 6, 7, 8, 9, 10}`.
-  - Utiliser la fonction `CompterNbOccurences` (une première fois) pour compter le nombre d’occurrences de `10` dans le tableau, puis afficher le résultat.
-  - Utiliser la fonction `CompterNbOccurences` (une deuxième fois) pour calculer le nombre d’occurrences de `20` dans le tableau, puis afficher le résultat.
-- La fonction `CompterNbOccurences` :
-  - Accepte en paramètre un tableau d’entiers et un nombre à rechercher.
-  - Compte et retourne le nombre de fois que ce nombre apparaît dans le tableau.
-- Tester votre programme.
+  - Demander la largeur et la hauteur du rectangle.
+  - Appeler la fonction `DessinerRectangle`.
+- La fonction `DessinerRectangle` :
+  - Accepte en paramètre une largeur et une hauteur.
+  - Ne retourne rien : elle affiche le rectangle dans la console.
+  - Utiliser deux boucles imbriquées : afficher `*` sur le contour (première et dernière ligne, première et dernière colonne) et un espace à l’intérieur.
+- Tester votre programme avec plusieurs dimensions (ex. : 6 × 4, 3 × 3, 10 × 2).
 
-
-
-#### Sortie attendue :
+#### Entrée / Sortie attendue :
 ```
-Le nombre 10 se trouve 2 fois dans le tableau.
-Le nombre 20 se trouve 0 fois dans le tableau.
+Largeur : 6
+Hauteur : 4
+******
+*    *
+*    *
+******
 ```

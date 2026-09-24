@@ -11,7 +11,7 @@ description: Pondération 15%
 
 :::danger Avant la séance (2h)
 
-L'examen porte sur l'ensemble du contenu du cours jusqu'ici. Afin de vous aider dans vos révisions, il est bon de:
+L'examen porte sur le contenu du cours jusqu'à la boucle `for` (rencontre 4.2) inclusivement. **Les tableaux 1D ne sont pas évalués à cet examen : ils seront évalués à l'examen 2.** Afin de vous aider dans vos révisions, il est bon de:
 
 - Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof
 - Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)
@@ -57,7 +57,7 @@ L’examen comporte cinq (5) questions.
 - Q2 : Structures conditionnelles ( 10% )  
 - Q3 : Création et utilisation de fonctions ( 20% )   
 - Q4 : Utilisation de boucles ( 30% ) 
-- Q5 : Utilisation de tableaux ( 30% )  
+- Q5 : Intégration des boucles et des fonctions ( 30% )  
 
 **Critères d’évaluation de chaque question** 
 
@@ -84,13 +84,12 @@ L’examen comporte cinq (5) questions.
 
 - Les structures de données 
     - Les variables/constante/type de données 
-    - Les chaines de caractères 
-    - Les tableaux 1D 
+    - Les chaines de caractères (concaténation, ToUpper(), ToLower(), ToString())
 - Les expressions arithmétiques et booléennes 
 - Les structures de contrôles 
     - L'affectation (assignation)
     - Selection if/else if/else 
-    - Boucle for simple 
+    - Boucle for simple (incluant les boucles imbriquées)
 - Les fonctions 
     - Avec/sans paramètres 
     - Avec/sans valeur de retour 
@@ -99,9 +98,6 @@ L’examen comporte cinq (5) questions.
     - Afficher des données (Console.WriteLine()) 
     - Convertir des données (int.Parse, double.Parse, etc) 
     - Générer des valeurs aléatoire (Random()) 
-    - Découper une chaine (Split()) 
-    - Recoller les éléments d’un tableau en une chaine (Join()  
-    - Trier les éléments d’un tableau (Sort())  
 
 :::
 
