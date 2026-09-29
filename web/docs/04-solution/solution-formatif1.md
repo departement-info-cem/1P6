@@ -4,40 +4,36 @@ title: 🏆 Solution - Formatif 1
 
 # 🏆 Solution — Examen formatif 1
 
-Ces dix programmes corrigent les exercices du [Formatif 1](../01-cours/10-formatif1.md). Chaque bloc de code est un programme console **indépendant** : copiez un seul bloc à la fois dans `Program.cs` pour l'exécuter.
+Ces dix programmes corrigent les exercices du [Formatif 1](../01-cours/10-formatif1.md). Chaque bloc de code est un programme console **indépendant** : copiez un seul bloc à la fois dans `Program.cs` pour l'exécuter. Les exemples de saisie utilisent la virgule décimale d'un poste configuré en français (Canada).
 
 ## 1. Types de variables et expressions arithmétiques
 
 ### 1.1. Salaire hebdomadaire
 
-Le salaire est le produit des heures travaillées et du taux horaire. Le type `decimal` convient aux montants d'argent. La culture `fr-CA` permet de saisir et d'afficher les décimales avec une virgule.
+Le salaire est le produit des heures travaillées et du taux horaire. Le type `double` sert à conserver les valeurs à virgule dans cet exercice.
 
 ```csharp
 using System;
-using System.Globalization;
 
 class Program
 {
     static void Main()
     {
-        // La même culture sert à lire les nombres et à afficher les montants.
-        CultureInfo culture = CultureInfo.GetCultureInfo("fr-CA");
-
         Console.WriteLine("==================LA PAIE=================");
         Console.Write("Nom de l'employé : ");
         string nom = Console.ReadLine();
         Console.Write("Nombre d'heures : ");
-        decimal heures = decimal.Parse(Console.ReadLine(), culture);
+        double heures = double.Parse(Console.ReadLine());
         Console.Write("Taux horaire : ");
-        decimal tauxHoraire = decimal.Parse(Console.ReadLine(), culture);
+        double tauxHoraire = double.Parse(Console.ReadLine());
 
         // Conserver le résultat du calcul avant de construire la phrase finale.
-        decimal salaire = heures * tauxHoraire;
+        double salaire = heures * tauxHoraire;
         Console.WriteLine();
-        Console.WriteLine(nom + " a travaillé " + heures.ToString(culture)
+        Console.WriteLine(nom + " a travaillé " + heures
             + " h par semaine avec un taux horaire de "
-            + tauxHoraire.ToString("F2", culture) + "$. Son salaire est de "
-            + salaire.ToString("F2", culture) + "$.");
+            + tauxHoraire.ToString("F2") + "$. Son salaire est de "
+            + salaire.ToString("F2") + "$.");
     }
 }
 ```
@@ -136,44 +132,48 @@ La fonction reçoit le prix et le choix de province, puis retourne le prix multi
 
 ```csharp
 using System;
-using System.Globalization;
 
 class Program
 {
-    static decimal CalculerPrixApresTaxes(decimal prix, int province)
+    // Constantes de la classe : accessibles depuis Main et les autres méthodes.
+    const double TAUX_QC = 0.15;
+    const double TAUX_ON = 0.13;
+    const double TAUX_AUTRE = 0.12;
+
+    static void Main()
+    {
+        Console.Write("Prix de l'article : ");
+        double prix = double.Parse(Console.ReadLine());
+        Console.WriteLine("Choisir la province? 1) QC, 2) ON, 3) Autre.");
+        Console.Write("Votre choix : ");
+        int province = int.Parse(Console.ReadLine());
+
+        double prixFinal = CalculerPrixApresTaxes(prix, province);
+        Console.WriteLine("Prix après taxes : "
+            + prixFinal.ToString("F2") + "$");
+    }
+
+    static double CalculerPrixApresTaxes(double prix, int province)
     {
         // Les trois choix reprennent exactement les taux de l'énoncé.
-        decimal taux;
+        double taux;
         if (province == 1)
         {
-            taux = 0.15m;
+            taux = TAUX_QC;
         }
         else if (province == 2)
         {
-            taux = 0.13m;
+            taux = TAUX_ON;
         }
         else
         {
-            taux = 0.12m; // Choix 3 : Autre
+            taux = TAUX_AUTRE; // Choix 3 : Autre
         }
 
         // 1 représente le prix de départ; le taux ajoute la taxe.
         return prix * (1 + taux);
     }
 
-    static void Main()
-    {
-        CultureInfo culture = CultureInfo.GetCultureInfo("fr-CA");
-        Console.Write("Prix de l'article : ");
-        decimal prix = decimal.Parse(Console.ReadLine(), culture);
-        Console.WriteLine("Choisir la province? 1) QC, 2) ON, 3) Autre.");
-        Console.Write("Votre choix : ");
-        int province = int.Parse(Console.ReadLine());
-
-        decimal prixFinal = CalculerPrixApresTaxes(prix, province);
-        Console.WriteLine("Prix après taxes : "
-            + prixFinal.ToString("F2", culture) + "$");
-    }
 }
 ```
 
@@ -188,12 +188,6 @@ using System;
 
 class Program
 {
-    static string FormaterNom(string prenom, string nom)
-    {
-        // ToUpper transforme le nom; le prénom reste tel qu'il a été saisi.
-        return nom.ToUpper() + ", " + prenom;
-    }
-
     static void Main()
     {
         Console.WriteLine("------------------Je formaterai votre nom------------------");
@@ -206,6 +200,13 @@ class Program
         string nomFormate = FormaterNom(prenom, nom);
         Console.WriteLine("Nom formaté : " + nomFormate);
     }
+
+    static string FormaterNom(string prenom, string nom)
+    {
+        // ToUpper transforme le nom; le prénom reste tel qu'il a été saisi.
+        return nom.ToUpper() + ", " + prenom;
+    }
+
 }
 ```
 
@@ -222,22 +223,6 @@ using System;
 
 class Program
 {
-    static int CompterMultiples(int limite, int diviseur)
-    {
-        int compteur = 0;
-
-        // Commencer à 1 et inclure la limite dans le parcours.
-        for (int nombre = 1; nombre <= limite; nombre++)
-        {
-            if (nombre % diviseur == 0)
-            {
-                compteur++;
-            }
-        }
-
-        return compteur;
-    }
-
     static void Main()
     {
         Console.Write("Entrez une limite : ");
@@ -255,6 +240,23 @@ class Program
         Console.WriteLine("Il y a " + nombreMultiples + " " + motMultiple + " de "
             + diviseur + " entre 1 et " + limite);
     }
+
+    static int CompterMultiples(int limite, int diviseur)
+    {
+        int compteur = 0;
+
+        // Commencer à 1 et inclure la limite dans le parcours.
+        for (int nombre = 1; nombre <= limite; nombre++)
+        {
+            if (nombre % diviseur == 0)
+            {
+                compteur++;
+            }
+        }
+
+        return compteur;
+    }
+
 }
 ```
 
@@ -269,6 +271,14 @@ using System;
 
 class Program
 {
+    static void Main()
+    {
+        Console.WriteLine("---Je peux vous aider à calculer la somme des carrés---");
+        Console.Write("Entrez un nombre : ");
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine("Le résultat est : " + SommeDesCarres(n));
+    }
+
     static int SommeDesCarres(int n)
     {
         int somme = 0;
@@ -281,13 +291,6 @@ class Program
         return somme;
     }
 
-    static void Main()
-    {
-        Console.WriteLine("---Je peux vous aider à calculer la somme des carrés---");
-        Console.Write("Entrez un nombre : ");
-        int n = int.Parse(Console.ReadLine());
-        Console.WriteLine("Le résultat est : " + SommeDesCarres(n));
-    }
 }
 ```
 
@@ -301,32 +304,16 @@ La boucle lit les notes une à une : aucun tableau n'est nécessaire. La premiè
 
 ```csharp
 using System;
-using System.Globalization;
 
 class Program
 {
-    static string DeterminerMention(decimal moyenne)
-    {
-        // Vérifier les seuils du plus élevé au plus bas.
-        if (moyenne >= 90)
-        {
-            return "Excellent";
-        }
-        else if (moyenne >= 75)
-        {
-            return "Très bien";
-        }
-        else if (moyenne >= 60)
-        {
-            return "Réussite";
-        }
-
-        return "Échec";
-    }
+    // Les seuils sont partagés par toutes les méthodes de la classe.
+    const double SEUIL_EXCELLENT = 90;
+    const double SEUIL_TRES_BIEN = 75;
+    const double SEUIL_REUSSITE = 60;
 
     static void Main()
     {
-        CultureInfo culture = CultureInfo.GetCultureInfo("fr-CA");
         Console.Write("Combien de notes : ");
         int nombreNotes = int.Parse(Console.ReadLine());
         if (nombreNotes <= 0)
@@ -335,13 +322,13 @@ class Program
             return; // Éviter une division par zéro.
         }
 
-        decimal somme = 0;
-        decimal maximum = 0;
-        decimal minimum = 0;
+        double somme = 0;
+        double maximum = 0;
+        double minimum = 0;
         for (int i = 1; i <= nombreNotes; i++)
         {
             Console.Write("Note " + i + " : ");
-            decimal note = decimal.Parse(Console.ReadLine(), culture);
+            double note = double.Parse(Console.ReadLine());
             somme += note;
 
             // La première note fixe les deux valeurs de référence.
@@ -363,14 +350,34 @@ class Program
             }
         }
 
-        decimal moyenne = somme / nombreNotes;
+        double moyenne = somme / nombreNotes;
         string mention = DeterminerMention(moyenne);
         Console.WriteLine();
-        Console.WriteLine("Moyenne : " + moyenne.ToString("F2", culture));
-        Console.WriteLine("Note la plus haute : " + maximum.ToString(culture));
-        Console.WriteLine("Note la plus basse : " + minimum.ToString(culture));
+        Console.WriteLine("Moyenne : " + moyenne.ToString("F2"));
+        Console.WriteLine("Note la plus haute : " + maximum);
+        Console.WriteLine("Note la plus basse : " + minimum);
         Console.WriteLine("Mention : " + mention);
     }
+
+    static string DeterminerMention(double moyenne)
+    {
+        // Vérifier les seuils du plus élevé au plus bas.
+        if (moyenne >= SEUIL_EXCELLENT)
+        {
+            return "Excellent";
+        }
+        else if (moyenne >= SEUIL_TRES_BIEN)
+        {
+            return "Très bien";
+        }
+        else if (moyenne >= SEUIL_REUSSITE)
+        {
+            return "Réussite";
+        }
+
+        return "Échec";
+    }
+
 }
 ```
 
@@ -385,6 +392,36 @@ using System;
 
 class Program
 {
+    // Les constantes de portée de classe sont déclarées avant Main.
+    const int NOMBRE_SECRET = 13; // Changer cette valeur pour varier le jeu.
+    const int MAX_ESSAIS = 5;
+
+    static void Main()
+    {
+        bool trouve = false;
+        int essaisEffectues = 0;
+
+        // Le booléen dans la condition arrête la boucle après la bonne réponse.
+        for (int numeroEssai = 1; numeroEssai <= MAX_ESSAIS && !trouve; numeroEssai++)
+        {
+            Console.Write("Essai " + numeroEssai + " : ");
+            int proposition = int.Parse(Console.ReadLine());
+            Console.WriteLine(ComparerNombres(proposition, NOMBRE_SECRET));
+
+            essaisEffectues = numeroEssai;
+            trouve = proposition == NOMBRE_SECRET;
+        }
+
+        if (trouve)
+        {
+            Console.WriteLine("Bravo! Trouvé en " + essaisEffectues + " essai(s).");
+        }
+        else
+        {
+            Console.WriteLine("Perdu! Le nombre était " + NOMBRE_SECRET + ".");
+        }
+    }
+
     static string ComparerNombres(int essai, int nombreSecret)
     {
         if (essai < nombreSecret)
@@ -399,32 +436,6 @@ class Program
         return "Exact!";
     }
 
-    static void Main()
-    {
-        const int nombreSecret = 13; // Changer cette valeur pour varier le jeu.
-        bool trouve = false;
-        int essaisEffectues = 0;
-
-        // Le booléen dans la condition arrête la boucle après la bonne réponse.
-        for (int numeroEssai = 1; numeroEssai <= 5 && !trouve; numeroEssai++)
-        {
-            Console.Write("Essai " + numeroEssai + " : ");
-            int proposition = int.Parse(Console.ReadLine());
-            Console.WriteLine(ComparerNombres(proposition, nombreSecret));
-
-            essaisEffectues = numeroEssai;
-            trouve = proposition == nombreSecret;
-        }
-
-        if (trouve)
-        {
-            Console.WriteLine("Bravo! Trouvé en " + essaisEffectues + " essai(s).");
-        }
-        else
-        {
-            Console.WriteLine("Perdu! Le nombre était " + nombreSecret + ".");
-        }
-    }
 }
 ```
 
@@ -439,6 +450,15 @@ using System;
 
 class Program
 {
+    static void Main()
+    {
+        Console.Write("Largeur : ");
+        int largeur = int.Parse(Console.ReadLine());
+        Console.Write("Hauteur : ");
+        int hauteur = int.Parse(Console.ReadLine());
+        DessinerRectangle(largeur, hauteur);
+    }
+
     static void DessinerRectangle(int largeur, int hauteur)
     {
         for (int ligne = 0; ligne < hauteur; ligne++)
@@ -463,14 +483,6 @@ class Program
         }
     }
 
-    static void Main()
-    {
-        Console.Write("Largeur : ");
-        int largeur = int.Parse(Console.ReadLine());
-        Console.Write("Hauteur : ");
-        int hauteur = int.Parse(Console.ReadLine());
-        DessinerRectangle(largeur, hauteur);
-    }
 }
 ```
 
