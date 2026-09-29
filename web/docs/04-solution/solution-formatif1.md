@@ -302,7 +302,7 @@ class Program
 
 ### 5.1. Statistiques d'un groupe de notes
 
-La boucle lit les notes une à une : aucun tableau n'est nécessaire. La première note initialise le minimum et le maximum, afin que les comparaisons suivantes aient un point de départ valide.
+La boucle lit les notes une à une : aucun tableau n'est nécessaire. La première note initialise le minimum et le maximum, afin que les comparaisons suivantes aient un point de départ valide. La fonction place la mention dans une variable et la retourne à la fin.
 
 ```csharp
 using System;
@@ -362,20 +362,25 @@ class Program
     static string DeterminerMention(double moyenne)
     {
         // Vérifier les seuils du plus élevé au plus bas.
+        string mention;
         if (moyenne >= SEUIL_EXCELLENT)
         {
-            return "Excellent";
+            mention = "Excellent";
         }
         else if (moyenne >= SEUIL_TRES_BIEN)
         {
-            return "Très bien";
+            mention = "Très bien";
         }
         else if (moyenne >= SEUIL_REUSSITE)
         {
-            return "Réussite";
+            mention = "Réussite";
+        }
+        else
+        {
+            mention = "Échec";
         }
 
-        return "Échec";
+        return mention;
     }
 
 }
