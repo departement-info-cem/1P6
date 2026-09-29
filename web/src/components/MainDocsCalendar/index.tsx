@@ -285,14 +285,16 @@ export default function MainDocsCalendar({
               <div className={styles.dayNumber}>{day.date.getDate()}</div>
               <div className={styles.eventsContainer}>
                 {day.events.map((event, eventIndex) => (
-                  <div
+                  <button
                     key={eventIndex}
+                    type="button"
                     className={`${styles.event} ${event.groupe ? styles[getEventClassName(event.groupe)] : ''}`}
                     onClick={() => handleEventClick(event)}
                     title={`${event.title} - ${professorName}`}
+                    aria-label={`${event.title}, ${day.date.toLocaleDateString("fr-CA", { day: "numeric", month: "long" })} — ouvrir la rencontre`}
                   >
                     <div className={styles.eventTitle}>{event.title}</div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

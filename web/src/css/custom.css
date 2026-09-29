@@ -1,41 +1,133 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --ifm-menu-link-padding-horizontal: 1.5em;
+  --ifm-color-primary: #176a49;
+  --ifm-color-primary-dark: #145f42;
+  --ifm-color-primary-darker: #115b3e;
+  --ifm-color-primary-darkest: #0d4d34;
+  --ifm-color-primary-light: #20805a;
+  --ifm-color-primary-lighter: #288b63;
+  --ifm-color-primary-lightest: #dff2e7;
+  --ifm-background-color: #f8faf7;
+  --ifm-background-surface-color: #fff;
+  --ifm-font-color-base: #203128;
+  --ifm-heading-color: #17291f;
+  --ifm-navbar-background-color: #fff;
+  --ifm-code-font-size: 0.9em;
+  --ifm-menu-link-padding-horizontal: 1rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --examen-bg: #ffebec;
-  --examen-font-color: #003100;
-  --remise-tp-bg: #e6f6e6;
-  --remise-tp-font-color: #003100;
+  --course-ink: #17291f;
+  --course-muted: #4e6356;
+  --course-accent: #176a49;
+  --course-accent-strong: #0e5639;
+  --course-accent-soft: #e6f4eb;
+  --course-border: #dce8df;
+  --course-border-strong: #b8d0bf;
+  --course-surface: #fff;
+  --course-hero-start: #f1f8f0;
+  --course-hero-end: #e9f3eb;
+  --course-shadow-soft: 0 10px 30px rgba(26, 67, 44, 0.06);
+  --course-assignment-bg: #f0f8f2;
+  --course-assignment-pill: #d8efdf;
+  --course-formative-bg: #fff9eb;
+  --course-formative-pill: #fcebc1;
+  --course-exam-bg: #fff1ed;
+  --course-exam-pill: #f9d9cf;
+  --examen-bg: #fff1ed;
+  --examen-font-color: #733b29;
+  --remise-tp-bg: #e6f4eb;
+  --remise-tp-font-color: #164e36;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #83d8a9;
+  --ifm-color-primary-dark: #6dcb98;
+  --ifm-color-primary-darker: #5ec18c;
+  --ifm-color-primary-darkest: #46a874;
+  --ifm-color-primary-light: #9ee3bd;
+  --ifm-color-primary-lighter: #b3eacb;
+  --ifm-color-primary-lightest: #cef3dc;
+  --ifm-background-color: #111a15;
+  --ifm-background-surface-color: #1b2921;
+  --ifm-font-color-base: #e4efe7;
+  --ifm-heading-color: #f2f8f3;
+  --ifm-navbar-background-color: #19251d;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --examen-bg: #4b1113;
-  --examen-font-color: #f4e7ec;
-  --remise-tp-bg: #003100;
-  --remise-tp-font-color: #d3f0e6;
+  --course-ink: #f2f8f3;
+  --course-muted: #bdcec1;
+  --course-accent: #83d8a9;
+  --course-accent-strong: #a9e8c4;
+  --course-accent-soft: #284333;
+  --course-border: #334a3b;
+  --course-border-strong: #52735b;
+  --course-surface: #1b2921;
+  --course-hero-start: #1e3527;
+  --course-hero-end: #16261c;
+  --course-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.14);
+  --course-assignment-bg: #203a2a;
+  --course-assignment-pill: #335d40;
+  --course-formative-bg: #3a321e;
+  --course-formative-pill: #625027;
+  --course-exam-bg: #3c2926;
+  --course-exam-pill: #684038;
+  --examen-bg: #3c2926;
+  --examen-font-color: #f9ddd7;
+  --remise-tp-bg: #203a2a;
+  --remise-tp-font-color: #d6f0df;
+}
+
+body { letter-spacing: -0.005em; }
+
+.navbar {
+  border-bottom: 1px solid var(--course-border);
+  box-shadow: 0 3px 20px rgba(21, 57, 34, 0.05);
+}
+
+.navbar__brand { margin-right: 1.7rem; }
+.navbar__title { font-weight: 800; letter-spacing: -0.025em; }
+
+.navbar__link {
+  margin: 0 0.08rem;
+  padding: 0.46rem 0.67rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  background: var(--course-accent-soft);
+  text-decoration: none;
+}
+
+.theme-doc-markdown {
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.theme-doc-markdown > h1 {
+  margin-bottom: 1.2rem;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  letter-spacing: -0.035em;
+}
+
+.theme-doc-markdown h2 { letter-spacing: -0.025em; }
+.theme-doc-markdown p { max-width: 82ch; }
+
+.theme-doc-sidebar-container { border-right-color: var(--course-border) !important; }
+.menu__link { border-radius: 8px; line-height: 1.35; }
+.menu__link--active { background: var(--course-accent-soft); font-weight: 700; }
+.table-of-contents { border-left-color: var(--course-border); }
+
+.pagination-nav__link {
+  border-color: var(--course-border);
+  border-radius: 12px;
+  background: var(--course-surface);
+}
+
+.pagination-nav__link:hover { border-color: var(--course-accent); }
+
+:where(a, button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid var(--course-accent);
+  outline-offset: 3px;
 }
 
 .examen {

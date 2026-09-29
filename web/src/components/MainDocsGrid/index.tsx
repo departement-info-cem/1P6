@@ -1,191 +1,159 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import Link from "@docusaurus/Link";
 import styles from "./MainDocsGrid.module.css";
-import { useHistory } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { useColorMode } from "@docusaurus/theme-common";
 import { usePluginData } from "@docusaurus/useGlobalData";
 import sidebarDocs from "./sidebarDocs";
-import ProgressBar from "./ProgressBar";
+
+const ranges = [
+  { start: 1, end: 5, title: "Rencontres 1 à 5" },
+  { start: 6, end: 10, title: "Rencontres 6 à 10" },
+  { start: 11, end: 15, title: "Rencontres 11 à 15" },
+];
+
+function formatDateFr(dateStr: string): string {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("fr-CA", {
+    day: "numeric",
+    month: "long",
+  });
+}
+
+function resolveDocTitle(doc: any): string {
+  return (
+    doc?.title?.trim() ||
+    doc?._sidebarLabel?.trim() ||
+    doc?._documentTitle?.trim() ||
+    doc?.id ||
+    "Rencontre"
+  );
+}
+
+function getKind(doc: any) {
+  const className = doc._sidebarClassName || "";
+  const title = resolveDocTitle(doc);
+  if (className.includes("examen")) return { label: "Examen", tone: styles.exam };
+  if (className.includes("remise")) return { label: "Remise", tone: styles.assignment };
+  if (/formatif/i.test(title)) return { label: "Formatif", tone: styles.formative };
+  if (/\bTP\d/i.test(title)) return { label: "TP", tone: styles.assignment };
+  return { label: "Cours", tone: "" };
+}
 
 export default function MainDocsGrid() {
-  const [docs, setDocs] = useState<any[]>([]);
   const [meta, setMeta] = useState<any[]>([]);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number } | null>(
-    null
-  );
-  const history = useHistory();
+  const metadataUrl = useBaseUrl("/docsMetadata.json");
   const baseUrl = useBaseUrl("/");
-  // Route des docs telle que configurée pour le plugin docs-metadata (ex : "notes")
   const { routeBasePath = "" } = (usePluginData(
     "docusaurus-plugin-docs-metadata"
   ) ?? {}) as { routeBasePath?: string };
-  const { colorMode } = useColorMode();
 
   useEffect(() => {
-    fetch("docsMetadata.json")
-      .then((res) => res.json())
-      .then((data) => setMeta(data));
-  }, []);
+    fetch(metadataUrl)
+      .then((response) => {
+        if (!response.ok) throw new Error("Métadonnées indisponibles");
+        return response.json();
+      })
+      .then((data) => setMeta(data))
+      .catch(() => {
+        // Les titres et les liens de la navigation restent disponibles.
+      });
+  }, [metadataUrl]);
 
-  useEffect(() => {
-    if (meta.length === 0) return;
-    // Pour chaque entrée de la sidebar, trouver le doc correspondant (même si doublon)
-    const docsList = sidebarDocs.map((entry: any) => {
-      // Retirer le préfixe numérique et le tiret (ex: 01-rencontre1.1 -> rencontre1.1)
-      const slug = entry.id.split("/").pop().replace(/^[0-9]+-/, "");
-      const doc = meta.find((d: any) => d.id.endsWith(slug));
-      return {
-        ...doc,
-        _sidebarLabel: entry.label,
-        _sidebarProps: entry.customProps,
-        _sidebarClassName: entry.className,
-        _slug: slug,
-      };
-    });
-    setDocs(docsList);
-  }, [meta]);
+  const docs = useMemo(
+    () =>
+      sidebarDocs.map((entry: any) => {
+        const slug = entry.id.split("/").pop().replace(/^[0-9]+-/, "");
+        const doc = meta.find((item: any) => item.id.endsWith(slug));
+        return {
+          ...doc,
+          id: entry.id,
+          _slug: slug,
+          _sidebarLabel: entry.label,
+          _sidebarProps: entry.customProps,
+          _sidebarClassName: entry.className,
+          _week: Number.parseInt(entry.label, 10),
+        };
+      }),
+    [meta]
+  );
 
-  const handleClick = (doc: any) => {
-    // Le slug vient de la sidebar : il reste valide même si le doc n’a pas de métadonnées
-    const slug = doc?._slug || doc?.id?.replace(/^[0-9]+-/, "");
-    if (!slug) return;
-    const prefix = routeBasePath ? `${routeBasePath}/` : "";
-    history.push(`${baseUrl}${prefix}${slug}`);
-  };
-
-  const getBackgroundColor = (className: string): string => {
-    if (className && className.includes("tp")) {
-      return "var(--remise-tp-bg)";
-    }
-    if (className && className.includes("examen")) {
-      return "var(--examen-bg)";
-    }
-    return "inherit";
-  };
-
-  const formatDateFr = (dateStr: string) => {
-    if (!dateStr) return "";
-    const [year, month, day] = dateStr.split("-").map(Number);
-    const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString("fr-FR", {
-      month: "long",
-      day: "numeric",
-    });
-  };
-
-  const resolveDocTitle = (doc: any): string => {
-    const frontmatterTitle =
-      typeof doc?.title === "string" && doc.title.trim().length > 0
-        ? doc.title.trim()
-        : undefined;
-    const sidebarTitle =
-      typeof doc?._sidebarLabel === "string" &&
-        doc._sidebarLabel.trim().length > 0
-        ? doc._sidebarLabel.trim()
-        : undefined;
-    const markdownTitle =
-      typeof doc?._documentTitle === "string" &&
-        doc._documentTitle.trim().length > 0
-        ? doc._documentTitle.trim()
-        : undefined;
-
-    return frontmatterTitle || sidebarTitle || markdownTitle || doc?.id || "";
-  };
+  const routePrefix = routeBasePath ? `${routeBasePath}/` : "";
 
   return (
-    <div
-      className={
-        styles.gridContainer +
-        (colorMode === "dark"
-          ? ` ${styles.gridContainerDark}`
-          : ` ${styles.gridContainerLight}`)
-      }
-    >
-      {docs.map((doc, i) => {
-        const calendrier = doc._sidebarProps?.calendrier;
-        const tooltip = doc._sidebarProps?.tooltip;
-        // Déterminer la position du tooltip (droite ou gauche)
-        let tooltipSide: "left" | "right" = "right";
-        if (hoveredIndex === i && tooltipPos) {
-          const tooltipWidth = 200; // px, valeur approximative
-          if (tooltipPos.x + tooltipWidth > window.innerWidth) {
-            tooltipSide = "left";
-          }
-        }
+    <div className={styles.groups}>
+      {ranges.map((range, groupIndex) => {
+        const groupDocs = docs.filter(
+          (doc) => doc._week >= range.start && doc._week <= range.end
+        );
         return (
-          <div
-            key={i}
-            className={styles.gridItem}
-            style={{
-              backgroundColor: getBackgroundColor(doc._sidebarClassName),
-              color: doc._sidebarProps?.color || "inherit",
-              position: "relative",
-            }}
-            onClick={() => handleClick(doc)}
-            onMouseEnter={(e) => {
-              if (tooltip !== "cache") {
-                setHoveredIndex(i);
-                const rect = (
-                  e.currentTarget as HTMLElement
-                ).getBoundingClientRect();
-                setTooltipPos({ x: rect.right + 8, y: rect.top });
-              }
-            }}
-            onMouseLeave={() => {
-              if (tooltip !== "cache") {
-                setHoveredIndex(null);
-                setTooltipPos(null);
-              }
-            }}
-          >
-            <div>
-              <h3>{resolveDocTitle(doc)}</h3>
-              <p>{doc?.description || ""}</p>
+          <details className={styles.group} key={range.start} open={groupIndex === 0}>
+            <summary className={styles.groupSummary}>
+              <span>
+                <span className={styles.groupKicker}>PARCOURS · {range.start}—{range.end}</span>
+                <strong>{range.title}</strong>
+              </span>
+              <span className={styles.groupCount}>
+                {groupDocs.length} rencontres <span aria-hidden="true">⌄</span>
+              </span>
+            </summary>
+            <div className={styles.gridContainer}>
+              {groupDocs.map((doc) => {
+                const kind = getKind(doc);
+                const calendar = doc._sidebarProps?.calendrier as
+                  | Record<string, Array<Record<string, string>>>
+                  | undefined;
+                const showDates = calendar && doc._sidebarProps?.tooltip !== "cache";
+                const progress = doc._sidebarProps?.avancement;
+                const progressLabel = doc._sidebarProps?.avancementLabel
+                  ?.split("-")[0]
+                  .trim();
+                const href = `${baseUrl}${routePrefix}${doc._slug}`;
+
+                return (
+                  <article
+                    className={`${styles.gridItem} ${kind.tone}`}
+                    key={doc.id}
+                  >
+                    <Link className={styles.cardLink} to={href}>
+                      <span className={styles.cardTop}>
+                        <span className={styles.kind}>{kind.label}</span>
+                        <span aria-hidden="true" className={styles.arrow}>→</span>
+                      </span>
+                      <strong className={styles.cardTitle}>{resolveDocTitle(doc)}</strong>
+                      <span className={styles.description}>
+                        {doc.description || "Ouvrir la rencontre et consulter les notes."}
+                      </span>
+                      {typeof progress === "number" && (
+                        <span className={styles.progressNote}>
+                          {progressLabel || "TP"} · {Math.round(progress * 100)} %
+                        </span>
+                      )}
+                    </Link>
+                    {showDates && (
+                      <details className={styles.dates}>
+                        <summary>Voir les dates par groupe</summary>
+                        <ul>
+                          {Object.entries(calendar).map(([teacher, groupDates]) => (
+                            <li key={teacher}>
+                              <strong>{teacher}</strong>
+                              <span>
+                                {groupDates
+                                  .map((groupDate) => {
+                                    const [group, date] = Object.entries(groupDate)[0];
+                                    return `${group} : ${formatDateFr(date)}`;
+                                  })
+                                  .join(" · ")}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </article>
+                );
+              })}
             </div>
-            <div>
-              {typeof doc?._sidebarProps?.avancement === "number" && (
-
-                <ProgressBar value={doc._sidebarProps.avancement} />
-              )}
-              <p className={styles.avancement}>
-                {typeof doc?._sidebarProps?.avancementLabel === "string" && (<>
-                  {doc._sidebarProps.avancementLabel}{" "}</>)}
-                {typeof doc?._sidebarProps?.avancement === "number" && (
-                  <>
-                    {doc._sidebarProps.avancement * 100}% complété</>)}
-              </p>
-
-
-            </div>
-            {hoveredIndex === i && calendrier && (
-              <div
-                className={
-                  styles.tooltip +
-                  (colorMode === "dark"
-                    ? " " + styles.tooltipDark
-                    : " " + styles.tooltipLight) +
-                  (tooltipSide === "left"
-                    ? " " + styles.tooltipLeft
-                    : " " + styles.tooltipRight)
-                }
-              >
-                <strong>Calendrier :</strong>
-                <ul style={{ margin: 0, paddingLeft: 16, whiteSpace: "nowrap" }}>
-                  {Object.entries(calendrier).map(([nom, groupedate]) => (
-                    (groupedate as Array<Record<string, string>>).map((groupeObj, index) => {
-                      const [groupe, date] = Object.entries(groupeObj)[0];
-                      return (
-                        <li key={index} style={{ whiteSpace: "nowrap" }}>
-                          {nom} - {groupe} : {formatDateFr(date)}
-                        </li>
-                      );
-                    })
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+          </details>
         );
       })}
     </div>

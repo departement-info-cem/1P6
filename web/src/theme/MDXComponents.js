@@ -6,6 +6,7 @@ import Row from "@site/src/components/Row";
 import Video from "@site/src/components/Video";
 import GHCode from "@site/src/components/GHCode";
 import MainDocsGrid from "@site/src/components/MainDocsGrid";
+import CourseHome from "@site/src/components/CourseHome";
 import MainDocsCalendar from "@site/src/components/MainDocsCalendar";
 import DocsViewer from "@site/src/components/DocsViewer";
 import ConsoleWindow from "@site/src/components/ConsoleWindow";
@@ -23,6 +24,7 @@ export default {
   Video,
   GHCode,
   MainDocsGrid,
+  CourseHome,
   MainDocsCalendar,
   DocsViewer,
   ConsoleWindow,

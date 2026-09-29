@@ -1,115 +1,196 @@
+.groups {
+  display: grid;
+  gap: 1rem;
+  margin: 1.4rem 0 3rem;
+}
+
+.group {
+  border: 1px solid var(--course-border);
+  border-radius: 16px;
+  background: var(--course-surface);
+  box-shadow: var(--course-shadow-soft);
+  overflow: hidden;
+}
+
+.groupSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.groupSummary::-webkit-details-marker { display: none; }
+.groupSummary:hover { background: var(--course-accent-soft); }
+
+.groupKicker {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--course-accent);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.groupSummary strong {
+  color: var(--course-ink);
+  font-size: 1.22rem;
+}
+
+.groupCount {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--course-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.groupCount [aria-hidden] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--course-accent-soft);
+  color: var(--course-accent);
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.group[open] .groupCount [aria-hidden] { transform: rotate(180deg); }
+
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.5rem;
-  margin: 1rem 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  padding: 0 1.35rem 1.35rem;
 }
 
 .gridItem {
-  background: var(--ifm-background-surface-color, #fff);
-  border: 1px solid var(--ifm-color-emphasis-200, #e0e0e0);
-  border-radius: 8px;
-  padding: 0.5rem;
-  transition: border-color 0.2s;
-  box-shadow: none;
-  font-size: 0.95em;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--course-border);
+  border-radius: 13px;
+  background: var(--course-surface);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.gridItem:hover,
+.gridItem:focus-within {
+  border-color: var(--course-accent);
+  box-shadow: var(--course-shadow-soft);
+  transform: translateY(-2px);
+}
+
+.assignment { background: var(--course-assignment-bg); }
+.formative { background: var(--course-formative-bg); }
+.exam { background: var(--course-exam-bg); }
+
+.cardLink {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-height: 165px;
+  padding: 1.1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-.gridItem:hover {
-  border-color: var(--ifm-color-primary, #25c2a0);
-  background: var(--ifm-hover-overlay, rgba(0, 0, 0, 0.03));
+.kind {
+  display: inline-flex;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  background: var(--course-accent-soft);
+  color: var(--course-accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
 }
 
-.gridItem h3 {
-  margin-top: 0;
-  margin-bottom: 0.3rem;
-  font-size: 1.05rem;
+.assignment .kind { background: var(--course-assignment-pill); }
+.formative .kind { background: var(--course-formative-pill); }
+.exam .kind { background: var(--course-exam-pill); }
+
+.arrow {
+  color: var(--course-accent);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.note {
-  text-align: center;
+.cardTitle {
+  color: var(--course-ink);
+  font-size: 1.02rem;
+  line-height: 1.4;
 }
 
-.avancement {
-  text-align: center;
-  font-size: 0.7rem !important;
+.description {
+  flex: 1;
+  color: var(--course-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
 }
 
-.gridItem p {
+.progressNote {
+  display: block;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--course-border);
+  color: var(--course-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.dates {
+  border-top: 1px solid var(--course-border);
+  color: var(--course-muted);
+  font-size: 0.78rem;
+}
+
+.dates summary {
+  padding: 0.65rem 1.1rem;
+  color: var(--course-accent);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dates ul {
   margin: 0;
-  color: var(--ifm-font-color-base, #444);
-  font-size: 0.95em;
+  padding: 0.2rem 1.1rem 0.9rem;
+  list-style: none;
 }
 
-.gridContainerDark .gridItem {
-  background: var(--ifm-background-surface-color, #23272f);
-  border-color: var(--ifm-color-emphasis-200, #444950);
-  color: var(--ifm-font-color-base, #f3f3f3);
+.dates li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  padding: 0.24rem 0;
 }
 
-.gridContainerDark .gridItem p {
-  color: var(--ifm-font-color-base, #bbb);
+.dates li strong { color: var(--course-ink); }
+
+@media (max-width: 996px) {
+  .gridContainer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-.gridContainerDark .gridItem:hover {
-  border-color: var(--ifm-color-primary, #25c2a0);
-  background: var(--ifm-hover-overlay, rgba(255, 255, 255, 0.03));
-}
-
-.gridContainerLight .gridItem {
-  background: var(--ifm-background-surface-color, #fff);
-  border-color: var(--ifm-color-emphasis-200, #e0e0e0);
-  color: var(--ifm-font-color-base, #222);
-}
-
-.gridContainerLight .gridItem:hover {
-  border-color: var(--ifm-color-primary, #25c2a0);
-  background: var(--ifm-hover-overlay, rgba(0, 0, 0, 0.03));
-}
-
-.tooltip {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: 8px;
-  z-index: 10;
-  background: var(--ifm-background-surface-color, #fff);
-  color: var(--ifm-font-color-base, #222);
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  min-width: 160px;
-  font-size: 0.95em;
-  pointer-events: none;
-  border: 1px solid var(--ifm-color-emphasis-200, #e0e0e0);
-}
-
-.tooltipDark {
-  background: #222;
-  color: #fff;
-  border: none;
-}
-
-.tooltipLight {
-  background: #fff;
-  color: #222;
-  border: 1px solid #ddd;
-}
-
-.tooltipRight {
-  left: 100%;
-  right: auto;
-  margin-left: 8px;
-  margin-right: 0;
-}
-
-.tooltipLeft {
-  left: auto;
-  right: 100%;
-  margin-left: 0;
-  margin-right: 8px;
+@media (max-width: 700px) {
+  .gridContainer { grid-template-columns: 1fr; padding: 0 0.85rem 0.85rem; }
+  .groupSummary { padding: 0.9rem; }
+  .groupCount { font-size: 0.76rem; }
+  .cardLink { min-height: 0; }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import styles from "./DocsViewer.module.css";
 
 interface TabConfig {
@@ -14,6 +14,7 @@ interface DocsViewerProps {
 }
 
 export default function DocsViewer({ tabs, defaultTabId }: DocsViewerProps) {
+  const panelId = useId();
   const [activeTabId, setActiveTabId] = useState<string>(
     defaultTabId || tabs[0]?.id || ""
   );
@@ -22,10 +23,13 @@ export default function DocsViewer({ tabs, defaultTabId }: DocsViewerProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.toggleContainer}>
+      <div className={styles.toggleContainer} aria-label="Choisir une vue">
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            type="button"
+            aria-pressed={activeTabId === tab.id}
+            aria-controls={panelId}
             className={`${styles.toggleButton} ${
               activeTabId === tab.id ? styles.active : ""
             }`}
@@ -37,7 +41,7 @@ export default function DocsViewer({ tabs, defaultTabId }: DocsViewerProps) {
         ))}
       </div>
 
-      <div className={styles.viewContainer}>
+      <div className={styles.viewContainer} id={panelId} role="region" aria-label={activeTab?.label}>
         {activeTab && activeTab.component}
       </div>
     </div>
