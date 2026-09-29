@@ -263,7 +263,13 @@ class Program
 
 **À tester :** limite `20`, diviseur `3` → `6` multiples; limite `6`, diviseur `2` → `3` multiples; limite `5`, diviseur `7` → compteur `0`.
 
-**Défi facultatif — singulier ou pluriel :** Le calcul est correct, mais avec une limite de `1` et un diviseur de `1`, le programme affiche « Il y a 1 multiples de 1 entre 1 et 1 ». Comment adapter seulement le message pour afficher « 1 multiple » dans ce cas et conserver « 6 multiples » dans le premier test ?
+**Défi facultatif — accorder « multiple » :** La méthode `CompterMultiples` calcule déjà le bon nombre. La phrase affichée dans `Main` doit employer le singulier seulement quand `nombreMultiples` vaut `1`.
+
+- Limite `1`, diviseur `1` → « Il y a 1 multiple de 1 entre 1 et 1 ».
+- Limite `20`, diviseur `3` → « Il y a 6 multiples de 3 entre 1 et 20 ».
+- Limite `5`, diviseur `7` → « Il y a 0 multiples de 7 entre 1 et 5 ».
+
+**À faire :** Modifie uniquement la phrase affichée dans `Main` pour choisir entre « multiple » et « multiples » selon `nombreMultiples`. Conserve le calcul et la méthode `CompterMultiples` tels quels.
 
 ### 4.2. Somme des carrés
 
