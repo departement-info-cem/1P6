@@ -238,7 +238,6 @@ class Program
         int diviseur = int.Parse(Console.ReadLine());
 
         int nombreMultiples = CompterMultiples(limite, diviseur);
-        // Défi : comment afficher "multiple" pour 1 et "multiples" sinon ?
         Console.WriteLine("Il y a " + nombreMultiples + " multiples de "
             + diviseur + " entre 1 et " + limite);
     }
@@ -263,6 +262,8 @@ class Program
 ```
 
 **À tester :** limite `20`, diviseur `3` → `6` multiples; limite `6`, diviseur `2` → `3` multiples; limite `5`, diviseur `7` → compteur `0`.
+
+**Défi facultatif — singulier ou pluriel :** Le calcul est correct, mais avec une limite de `1` et un diviseur de `1`, le programme affiche « Il y a 1 multiples de 1 entre 1 et 1 ». Comment adapter seulement le message pour afficher « 1 multiple » dans ce cas et conserver « 6 multiples » dans le premier test ?
 
 ### 4.2. Somme des carrés
 
