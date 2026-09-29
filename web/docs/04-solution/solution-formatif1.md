@@ -29,12 +29,17 @@ class Program
 
         // Conserver le résultat du calcul avant de construire la phrase finale.
         double salaire = heures * tauxHoraire;
+
+        // ToString("F2") affiche le taux avec deux décimales.
+        string tauxAffiche = tauxHoraire.ToString("F2");
+        // ToString("F2") affiche le salaire avec deux décimales.
+        string salaireAffiche = salaire.ToString("F2");
+
         Console.WriteLine();
-        // ToString("F2") convertit le nombre en texte avec deux décimales.
         Console.WriteLine(nom + " a travaillé " + heures
             + " h par semaine avec un taux horaire de "
-            + tauxHoraire.ToString("F2") + "$. Son salaire est de "
-            + salaire.ToString("F2") + "$.");
+            + tauxAffiche + "$. Son salaire est de "
+            + salaireAffiche + "$.");
     }
 }
 ```
@@ -150,9 +155,9 @@ class Program
         int province = int.Parse(Console.ReadLine());
 
         double prixFinal = CalculerPrixApresTaxes(prix, province);
-        // Le format F2 affiche toujours deux chiffres après la virgule.
-        Console.WriteLine("Prix après taxes : "
-            + prixFinal.ToString("F2") + "$");
+        // ToString("F2") affiche le prix avec deux décimales.
+        string prixAffiche = prixFinal.ToString("F2");
+        Console.WriteLine("Prix après taxes : " + prixAffiche + "$");
     }
 
     static double CalculerPrixApresTaxes(double prix, int province)
@@ -354,9 +359,11 @@ class Program
 
         double moyenne = somme / nombreNotes;
         string mention = DeterminerMention(moyenne);
-        Console.WriteLine();
         // ToString("F2") affiche deux décimales sans modifier la moyenne calculée.
-        Console.WriteLine("Moyenne : " + moyenne.ToString("F2"));
+        string moyenneAffichee = moyenne.ToString("F2");
+
+        Console.WriteLine();
+        Console.WriteLine("Moyenne : " + moyenneAffichee);
         Console.WriteLine("Note la plus haute : " + maximum);
         Console.WriteLine("Note la plus basse : " + minimum);
         Console.WriteLine("Mention : " + mention);
