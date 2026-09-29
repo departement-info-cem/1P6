@@ -30,6 +30,7 @@ class Program
         // Conserver le résultat du calcul avant de construire la phrase finale.
         double salaire = heures * tauxHoraire;
         Console.WriteLine();
+        // ToString("F2") convertit le nombre en texte avec deux décimales.
         Console.WriteLine(nom + " a travaillé " + heures
             + " h par semaine avec un taux horaire de "
             + tauxHoraire.ToString("F2") + "$. Son salaire est de "
@@ -149,6 +150,7 @@ class Program
         int province = int.Parse(Console.ReadLine());
 
         double prixFinal = CalculerPrixApresTaxes(prix, province);
+        // Le format F2 affiche toujours deux chiffres après la virgule.
         Console.WriteLine("Prix après taxes : "
             + prixFinal.ToString("F2") + "$");
     }
@@ -353,6 +355,7 @@ class Program
         double moyenne = somme / nombreNotes;
         string mention = DeterminerMention(moyenne);
         Console.WriteLine();
+        // ToString("F2") affiche deux décimales sans modifier la moyenne calculée.
         Console.WriteLine("Moyenne : " + moyenne.ToString("F2"));
         Console.WriteLine("Note la plus haute : " + maximum);
         Console.WriteLine("Note la plus basse : " + minimum);
