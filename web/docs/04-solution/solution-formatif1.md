@@ -1,8 +1,8 @@
 ---
-title: 🏆 Solution - Formatif 1
+title: 📝 Solution - Formatif 1
 ---
 
-# 🏆 Solution — Examen formatif 1
+# 📝 Solution — Examen formatif 1
 
 Ces dix programmes corrigent les exercices du [Formatif 1](../01-cours/10-formatif1.md). Chaque bloc de code est un programme console **indépendant** : copiez un seul bloc à la fois dans `Program.cs` pour l'exécuter. Les exemples de saisie utilisent la virgule décimale d'un poste configuré en français (Canada).
 
@@ -430,16 +430,21 @@ class Program
 
     static string ComparerNombres(int essai, int nombreSecret)
     {
+        string message;
         if (essai < nombreSecret)
         {
-            return "Trop petit!";
+            message = "Trop petit!";
         }
         else if (essai > nombreSecret)
         {
-            return "Trop grand!";
+            message = "Trop grand!";
+        }
+        else
+        {
+            message = "Exact!";
         }
 
-        return "Exact!";
+        return message;
     }
 
 }
