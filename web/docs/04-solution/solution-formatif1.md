@@ -237,14 +237,9 @@ class Program
         Console.Write("Entrez un diviseur : ");
         int diviseur = int.Parse(Console.ReadLine());
 
-        // Le diviseur doit être différent de zéro pour utiliser %.
         int nombreMultiples = CompterMultiples(limite, diviseur);
-        string motMultiple = "multiples";
-        if (nombreMultiples == 1)
-        {
-            motMultiple = "multiple";
-        }
-        Console.WriteLine("Il y a " + nombreMultiples + " " + motMultiple + " de "
+        // Défi : comment afficher "multiple" pour 1 et "multiples" sinon ?
+        Console.WriteLine("Il y a " + nombreMultiples + " multiples de "
             + diviseur + " entre 1 et " + limite);
     }
 
@@ -267,7 +262,7 @@ class Program
 }
 ```
 
-**À tester :** limite `20`, diviseur `3` → `6` multiples; limite `1`, diviseur `1` → `1` multiple; limite `5`, diviseur `7` → `0` multiple. L'exercice suppose un diviseur positif.
+**À tester :** limite `20`, diviseur `3` → `6` multiples; limite `6`, diviseur `2` → `3` multiples; limite `5`, diviseur `7` → compteur `0`.
 
 ### 4.2. Somme des carrés
 
@@ -323,11 +318,6 @@ class Program
     {
         Console.Write("Combien de notes : ");
         int nombreNotes = int.Parse(Console.ReadLine());
-        if (nombreNotes <= 0)
-        {
-            Console.WriteLine("Entrez au moins une note.");
-            return; // Éviter une division par zéro.
-        }
 
         double somme = 0;
         double maximum = 0;
