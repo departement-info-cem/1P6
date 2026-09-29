@@ -746,6 +746,7 @@ const sidebars = {
     'solution/Laboratoire-Solution4.2A',
     'solution/Laboratoire-Solution4.2B',
     'solution/Laboratoire-Solution4.2C',
+    'solution/solution-formatif1',
     'solution/solution-tableaux-1d',
     'solution/solution-integration-tableaux-1d',
     'solution/Laboratoire-Solution6.2A',

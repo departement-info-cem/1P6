@@ -72,7 +72,8 @@ C'est agréable!
 ---
 
 ### 🎲 2.2. Calcul du score d'une équipe de deux joueurs avec des dés  
-Chaque joueur d’une équipe doit lancer un dé à 6 faces. Le programme doit calculer et afficher le score de l’équipe selon les règles suivantes :  
+Chaque joueur d’une équipe entre le résultat de son dé à 6 faces, soit un nombre entier de `1` à `6`. Le programme doit calculer et afficher le score de l’équipe selon les règles suivantes :
+
 - Si les deux dés valent 6, le score est 100.
 - Si les deux dés valent 5 ou 4, le score est 75.
 - Si les deux dés sont identiques (même valeur), le score est 50.
@@ -82,11 +83,10 @@ Chaque joueur d’une équipe doit lancer un dé à 6 faces. Le programme doit c
 #### Instructions :
 
 - Dans la fonction `Main` :
-  - Générer aléatoirement deux nombres entre 1 et 6.
+  - Demander à l'utilisateur d'entrer la valeur du premier dé, puis celle du deuxième dé (de `1` à `6`).
   - Calculer le score de l’équipe en fonction des règles du jeu.
   - Afficher le score.
-- Tester votre programme avec des valeurs aléatoires.
-- Tester votre programme avec des valeurs non aléatoires données dans les exemples d’exécution.
+- Tester votre programme en entrant les couples de valeurs donnés dans les exemples d’exécution.
  
 
 #### Exemples d’exécution :
@@ -253,7 +253,7 @@ Mention : Très bien
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Générer aléatoirement un nombre secret entre 1 et 20.
+  - Définir un nombre secret fixe entre `1` et `20` (par exemple `13`).
   - Utiliser une boucle `for` qui donne **au maximum 5 essais** au joueur.
     - La boucle doit s’arrêter dès que le joueur trouve le nombre.
       - **Indice :** Utiliser une variable `bool` dans la condition de la boucle.
@@ -262,8 +262,7 @@ Mention : Très bien
 - La fonction `ComparerNombres` :
   - Accepte en paramètre l’essai du joueur et le nombre secret.
   - Elle retourne « Trop petit! », « Trop grand! » ou « Exact! ».
-- Tester votre programme avec des valeurs aléatoires.
-- Tester votre programme avec un nombre secret fixe (ex. : 13) pour vérifier les deux fins possibles.
+- Tester votre programme avec le nombre secret choisi (ex. : `13`) pour vérifier les deux fins possibles : trouvé en au plus 5 essais ou perdu après 5 essais.
 
 #### Exemple d’exécution (nombre secret : 13) :
 ```
