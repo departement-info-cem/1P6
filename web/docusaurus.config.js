@@ -124,9 +124,25 @@ const config = {
             position: "left",
             sidebarId: "extra",
             label: "Extra",
-          }
-          
-
+          },
+          {
+            label: "Ressources",
+            position: "left",
+            items: [
+              {
+                label: "Installation à la maison",
+                href: "https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/installation-des-logiciels/visual-studio",
+              },
+              {
+                label: "Règles sur le plagiat",
+                href: "https://info.cegepmontpetit.ca/plagiat",
+              },
+              {
+                label: "Documentation C#",
+                href: "https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/",
+              },
+            ],
+          },
         ],
       },
       footer: {

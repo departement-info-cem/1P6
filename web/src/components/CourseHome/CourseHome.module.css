@@ -161,6 +161,21 @@
   box-shadow: var(--course-shadow-soft);
 }
 
+.resourceCard {
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.resourceCard:hover,
+.resourceCard:focus-visible {
+  border-color: var(--course-accent);
+  box-shadow: var(--course-shadow-soft);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
 .pathNumber {
   color: var(--course-accent);
   font-size: 0.78rem;
@@ -191,16 +206,19 @@
 }
 
 .pathLinks a,
-.resourceCard a {
+.resourceLink {
   font-size: 0.87rem;
   font-weight: 750;
   text-decoration: none;
 }
 
-.pathLinks a:hover,
-.resourceCard a:hover {
+.resourceLink { color: var(--course-accent); }
+
+.pathLinks a:hover {
   text-decoration: underline;
 }
+
+.resourceCard:hover .resourceLink { text-decoration: underline; }
 
 .resourceGrid {
   display: grid;

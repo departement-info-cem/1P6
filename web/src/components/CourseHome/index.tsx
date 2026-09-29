@@ -65,6 +65,35 @@ export default function CourseHome() {
         </div>
       </section>
 
+      <section className={styles.section} aria-labelledby="home-resources">
+        <div className={styles.sectionHeading}>
+          <div>
+            <p className={styles.eyebrow}>ACCÈS RAPIDES</p>
+            <h2 id="home-resources">Ressources utiles pendant le cours</h2>
+          </div>
+        </div>
+        <div className={styles.resourceGrid}>
+          <a className={styles.resourceCard} href="https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/installation-des-logiciels/visual-studio">
+            <span aria-hidden="true" className={styles.resourceIcon}>⌘</span>
+            <h3>Installation à la maison</h3>
+            <p>Consulte la procédure pour installer Visual Studio et pratiquer à la maison.</p>
+            <span className={styles.resourceLink}>Installation de Visual Studio <span aria-hidden="true">→</span></span>
+          </a>
+          <a className={styles.resourceCard} href="https://info.cegepmontpetit.ca/plagiat">
+            <span aria-hidden="true" className={styles.resourceIcon}>§</span>
+            <h3>Règles sur le plagiat</h3>
+            <p>Les exercices peuvent être faits à plusieurs. Les travaux évalués sont individuels.</p>
+            <span className={styles.resourceLink}>Consulter les règles <span aria-hidden="true">→</span></span>
+          </a>
+          <a className={styles.resourceCard} href="https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/">
+            <span aria-hidden="true" className={styles.resourceIcon}>{"{ }"}</span>
+            <h3>Documentation C#</h3>
+            <p>Revois les outils et les explications complémentaires au cours.</p>
+            <span className={styles.resourceLink}>Bien débuter en C# <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+
       <section className={styles.section} aria-labelledby="home-paths">
         <div className={styles.sectionHeading}>
           <div>
@@ -88,41 +117,6 @@ export default function CourseHome() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className={styles.section} aria-labelledby="home-resources">
-        <div className={styles.sectionHeading}>
-          <div>
-            <p className={styles.eyebrow}>À GARDER SOUS LA MAIN</p>
-            <h2 id="home-resources">Ressources essentielles</h2>
-          </div>
-        </div>
-        <div className={styles.resourceGrid}>
-          <article className={styles.resourceCard}>
-            <span aria-hidden="true" className={styles.resourceIcon}>⌘</span>
-            <h3>Préparer son poste</h3>
-            <p>Installe Visual Studio pour pratiquer à la maison.</p>
-            <a href="https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/installation-des-logiciels/visual-studio">
-              Guide d'installation <span aria-hidden="true">→</span>
-            </a>
-          </article>
-          <article className={styles.resourceCard}>
-            <span aria-hidden="true" className={styles.resourceIcon}>§</span>
-            <h3>Travaux individuels</h3>
-            <p>Les exercices peuvent être faits à plusieurs. Les travaux évalués sont individuels.</p>
-            <a href="https://info.cegepmontpetit.ca/plagiat">
-              Règles sur le plagiat <span aria-hidden="true">→</span>
-            </a>
-          </article>
-          <article className={styles.resourceCard}>
-            <span aria-hidden="true" className={styles.resourceIcon}>{"{ }"}</span>
-            <h3>Documentation C#</h3>
-            <p>Revois les outils et les explications complémentaires au cours.</p>
-            <a href="https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/">
-              Bien débuter en C# <span aria-hidden="true">→</span>
-            </a>
-          </article>
         </div>
       </section>
     </>
