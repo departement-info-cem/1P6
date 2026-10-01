@@ -2,7 +2,7 @@
 title: 🔑 B - Intégration des boucles et des tableaux - Mini-projet - Générateur de mot de passe
 ---
 
-# 🧪 Labo 5.2B 🔑 Mini-projet – Générateur de mot de passe
+# 🧪 Labo 6.2B 🔑 Mini-projet – Générateur de mot de passe
 
 ## 🎯 Objectif
 Créer un programme qui demande la longueur du mot de passe désiré et si l'utilisateur veut inclure des caractères spéciaux. Génère un mot de passe aléatoire de la longueur spécifiée.

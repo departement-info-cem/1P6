@@ -23,7 +23,7 @@ Plusieurs séances d'intégration auront des exercices supplémentaires à compl
 
 :::info Travail à faire
 
-Exercices à compléter. Tu peux compléter les exercices ou essayer de refaire ceux qui t'ont posé problème. C'est une bonne préparation à l'examen où les exercices ont le même format.
+Exercices à compléter. Tu peux compléter les exercices ou essayer de refaire ceux qui t'ont posé problème.
 
 Tu dois avancer ton travail en cours et poser des questions si tu es actuellement bloqué.
 
@@ -39,5 +39,5 @@ Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
 
 ## 💪 Exercices supplémentaires
 
-Vous devez réaliser les labos : [🧪 Labo 5.1A](/laboratoire/laboratoire5.1A),  [🧪 Labo 5.1B](/laboratoire/laboratoire5.1B),  [🧪 Labo 5.1C](/laboratoire/laboratoire5.1C)
+Vous devez réaliser les labos : [🧪 Labo 6.2A](/laboratoire/laboratoire6.2A),  [🧪 Labo 6.2B](/laboratoire/laboratoire6.2B),  [🧪 Labo 6.2C](/laboratoire/laboratoire6.2C)
 

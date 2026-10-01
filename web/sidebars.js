@@ -581,10 +581,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Laboratoire 5.2',
+      label: 'Laboratoire 6.2',
       collapsible: true,
       collapsed: collapseBloc2,
-      items: ['laboratoire/laboratoire5.2A','laboratoire/laboratoire5.2B', 'laboratoire/laboratoire5.2C']
+      items: ['laboratoire/laboratoire6.2A','laboratoire/laboratoire6.2B', 'laboratoire/laboratoire6.2C']
     },
    
     {

@@ -2,7 +2,7 @@
 title: 🔄 A - Intégration des boucles et des tableaux - Mini-projet - Vérificateur de palindromes
 ---
 
-# 🧪 Labo 5.2A 📝 Mini-projet - Vérificateur de palindromes
+# 🧪 Labo 6.2A 📝 Mini-projet - Vérificateur de palindromes
 
 ## 🎯 Objectif
 Créer un programme qui est capable de prendre un tableau de `string` et qui vérifie si chaque `string` est un palindrome ou non.

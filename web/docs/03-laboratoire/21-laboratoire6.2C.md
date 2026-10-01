@@ -2,7 +2,7 @@
 title: 📝 C - Intégration des boucles et des tableaux - Mini-projet – entrée de données
 ---
 
-# 🧪 Labo 5.2C 📝 Mini-projet – entrée de données
+# 🧪 Labo 6.2C 📝 Mini-projet – entrée de données
 
 
 
