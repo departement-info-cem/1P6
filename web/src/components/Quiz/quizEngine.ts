@@ -1,6 +1,8 @@
 // Logique du jeu de quiz (état des salles, questions, calcul des scores).
 // Exécutée entièrement côté client : l'enseignant·e agit comme hôte de la partie.
 
+import { parseQuizMarkdown } from "./quizMarkdown";
+
 export interface Question {
   texte: string;
   choix: string[];
@@ -16,6 +18,16 @@ export interface QuizData {
 export interface PlayerState {
   pseudo: string;
   score: number;
+}
+
+/** Participant·e vu·e par l'hôte : comme PlayerState, mais avec son identifiant de connexion. */
+export interface RosterEntry extends PlayerState {
+  id: string;
+}
+
+/** Forme normalisée d'un pseudonyme, utilisée comme clé de la liste des bannis. */
+function normalizePseudo(pseudo: string): string {
+  return pseudo.trim().toLowerCase();
 }
 
 interface AnswerState {
@@ -62,10 +74,27 @@ export function validateQuiz(quiz: unknown): QuizData {
   return candidate as QuizData;
 }
 
+/**
+ * Charge un quiz : `file` est soit déjà un objet (JSON importé), soit un chemin,
+ * auquel cas `url` (le chemin résolu avec la baseUrl) est récupérée et lue
+ * comme du markdown ou du JSON selon son extension.
+ */
+export async function loadQuiz(file: string | QuizData, url: string): Promise<QuizData> {
+  if (typeof file !== "string") return validateQuiz(file);
+  const response = await fetch(url);
+  if (!response.ok) throw new Error("Fichier de quiz introuvable");
+  const isMarkdown = /\.md$/i.test(new URL(url, window.location.href).pathname);
+  return validateQuiz(isMarkdown ? parseQuizMarkdown(await response.text()) : await response.json());
+}
+
 /** État d'une partie de quiz, géré côté hôte (navigateur de l'enseignant·e). */
 export class QuizRoom {
   readonly quiz: QuizData;
   readonly players = new Map<string, PlayerState>();
+  /** Pseudonymes bannis : forme normalisée → pseudonyme tel qu'il a été affiché. */
+  readonly bannedPseudos = new Map<string, string>();
+  /** Connexions bannies : identifiant PeerJS → pseudonyme normalisé correspondant. */
+  private bannedIds = new Map<string, string>();
   private answers = new Map<string, AnswerState>();
   currentIndex = -1;
   questionStartAt = 0;
@@ -83,10 +112,46 @@ export class QuizRoom {
     return this.currentQuestion().duree || DEFAULT_DURATION_SECONDS;
   }
 
-  leaderboard(): PlayerState[] {
-    return Array.from(this.players.values())
-      .map(({ pseudo, score }) => ({ pseudo, score }))
+  /** Participant·e·s avec leur identifiant de connexion (usage interne à l'hôte). */
+  roster(): RosterEntry[] {
+    return Array.from(this.players.entries())
+      .map(([id, { pseudo, score }]) => ({ id, pseudo, score }))
       .sort((a, b) => b.score - a.score);
+  }
+
+  /** Classement diffusé aux participant·e·s : sans les identifiants de connexion. */
+  leaderboard(): PlayerState[] {
+    return this.roster().map(({ pseudo, score }) => ({ pseudo, score }));
+  }
+
+  isIdBanned(playerId: string): boolean {
+    return this.bannedIds.has(playerId);
+  }
+
+  isPseudoBanned(pseudo: string): boolean {
+    return this.bannedPseudos.has(normalizePseudo(pseudo));
+  }
+
+  /**
+   * Retire un·e participant·e de la partie (ex. pseudonyme obscène) et bloque
+   * son pseudonyme : il ou elle peut revenir, mais avec un autre pseudonyme.
+   */
+  ban(playerId: string): void {
+    const player = this.players.get(playerId);
+    if (!player) return;
+    const key = normalizePseudo(player.pseudo);
+    this.bannedIds.set(playerId, key);
+    this.bannedPseudos.set(key, player.pseudo);
+    this.players.delete(playerId);
+    this.answers.delete(playerId);
+  }
+
+  /** Réautorise un pseudonyme banni (clé normalisée telle que fournie par bannedPseudos). */
+  unban(normalizedPseudo: string): void {
+    this.bannedPseudos.delete(normalizedPseudo);
+    for (const [playerId, key] of this.bannedIds) {
+      if (key === normalizedPseudo) this.bannedIds.delete(playerId);
+    }
   }
 
   startQuestion(index: number): void {
@@ -97,7 +162,9 @@ export class QuizRoom {
   }
 
   recordAnswer(playerId: string, choiceIndex: number): boolean {
-    if (this.status !== "question" || this.answers.has(playerId)) return false;
+    if (this.status !== "question" || !this.players.has(playerId) || this.answers.has(playerId)) {
+      return false;
+    }
     this.answers.set(playerId, { choiceIndex, elapsed: Date.now() - this.questionStartAt });
     return true;
   }
@@ -106,18 +173,20 @@ export class QuizRoom {
     return this.answers.size;
   }
 
-  /** Révèle la bonne réponse et met à jour les scores. */
-  reveal(): { reponse: number; leaderboard: PlayerState[] } {
+  /** Révèle la bonne réponse, compte les réponses par choix et met à jour les scores. */
+  reveal(): { reponse: number; compteParChoix: number[]; leaderboard: PlayerState[] } {
     this.status = "reveal";
     const question = this.currentQuestion();
     const duration = this.questionDuration();
+    const compteParChoix = question.choix.map(() => 0);
     for (const [playerId, player] of this.players) {
       const answer = this.answers.get(playerId);
       const correct = Boolean(answer) && answer!.choiceIndex === question.reponse;
       const elapsed = answer ? answer.elapsed : Infinity;
+      if (answer) compteParChoix[answer.choiceIndex]++;
       player.score += computeScore(correct, elapsed, duration);
     }
-    return { reponse: question.reponse, leaderboard: this.leaderboard() };
+    return { reponse: question.reponse, compteParChoix, leaderboard: this.leaderboard() };
   }
 
   hasNextQuestion(): boolean {

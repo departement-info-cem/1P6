@@ -8,7 +8,7 @@ description: Fonctions, valeurs de retour et portée des variables
 ---
 
 ## 🏆 QUIZ de révision 
-<Quiz file="/quiz/3.1-if.json" />
+<Quiz file="/quiz/3.1-if.md" />
 
 
 
