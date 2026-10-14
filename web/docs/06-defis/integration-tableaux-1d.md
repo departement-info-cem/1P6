@@ -85,3 +85,5 @@ Message : Bravo Bilal pour ta première position !
 | Tableau des noms : `Amélie`, `Bilal`, `Chloé`<br />Tableau des points : `12`, `19`, `19` | Moyenne : 16,67 points; 2 personnes atteignent 15 points; Bilal est premier, car il apparaît avant Chloé; chaque nom est associé au bon pointage. |
 | Tableau des noms : `Maya`<br />Tableau des points : `8` | Maya est première; moyenne : 8 points; 0 personne atteint 15 points; aucun autre nom n'apparaît. |
 | Tableau des noms : `Noah`, `Emma`, `Liam`, `Zoé`<br />Tableau des points : `10`, `17`, `14`, `21` | Les quatre lignes sont affichées dans cet ordre; moyenne : 15,50 points; 2 personnes atteignent 15 points; Zoé est première avec 21 points et reçoit le message personnalisé. |
+
+<DefiSubmission challengeId="integration-tableaux-1d" />

@@ -100,3 +100,5 @@ Total à payer             : 31,62 $
 | `P` | 0 | `non` | `Pizza et garnitures : 12,00 $`; `Frais de livraison : 0,00 $`; `Montant taxable : 12,00 $`; `Taxes : 1,80 $`; `Total à payer : 13,80 $`. |
 | `G` | 3 | `oui` | `Pizza et garnitures : 22,50 $`; `Frais de livraison : 5,00 $`; `Montant taxable : 27,50 $`; `Taxes : 4,12 $`; `Total à payer : 31,62 $`. |
 | `P` | 2 | `oui` | `Pizza et garnitures : 15,00 $`; `Frais de livraison : 5,00 $`; `Montant taxable : 20,00 $`; `Taxes : 3,00 $`; `Total à payer : 23,00 $`. |
+
+<DefiSubmission challengeId="fonctions" />
