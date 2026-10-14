@@ -9,7 +9,7 @@ description: Structures conditionnelles if/else, booléens
 ---
 
 ## 🏆 QUIZ de révision 
-<Quiz file="/quiz/2.1-base.json" />
+<Quiz file="/quiz/2.1-base.md" />
 
 ## 🎯 Objectif
 

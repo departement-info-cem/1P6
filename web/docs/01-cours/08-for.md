@@ -6,7 +6,7 @@ description: Répétitions de code
 
 
 ## 🏆 QUIZ de révision (Les méthodes)
-<Quiz file="/quiz/4.2-methodes.json" />
+<Quiz file="/quiz/4.2-methodes.md" />
 
 ---
 # Boucles for
