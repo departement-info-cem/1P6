@@ -1,5 +1,7 @@
 # Validation des défis console
 
+Pour la revue de la PR, suivre le [guide de test pas à pas](GUIDE-REVUE.md).
+
 Cette partie ajoute la remise par copier-coller aux **11 défis console autonomes** de `web/docs/06-defis`. Les défis de lecture, de fichiers et `objets-classes` ne sont pas activés. Chaque défi validé rapporte un seul point; les essais suivants ne changent pas le score. Les résultats sont destinés à l'entraînement, pas à la note officielle.
 
 ## Parcours étudiant
