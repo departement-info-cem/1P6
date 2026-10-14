@@ -2,7 +2,7 @@
 description: Écriture dans un fichier texte avec StreamWriter
 ---
 
-# 🧾 10.1 — Écriture dans un fichier texte
+# 🧾 11.2 — Écriture dans un fichier texte
 
 ## 🎯 Objectif
 
