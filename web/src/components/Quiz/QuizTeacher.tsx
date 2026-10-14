@@ -1,21 +1,50 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import type { DataConnection, Peer, PeerOptions } from "peerjs";
 import Leaderboard from "./Leaderboard";
-import { QuizRoom, validateQuiz } from "./quizEngine";
+import QuestionText, { ChoiceWithCount } from "./QuestionText";
+import { QuizRoom, loadQuiz, type QuizData, type RosterEntry } from "./quizEngine";
 import { ROOM_ID_PREFIX, createPeerWithRetry } from "./peerUtils";
-import type { Player, PeerMessage, QuestionRevealPayload, QuestionShowPayload } from "./types";
+import type { PeerMessage, QuestionRevealPayload, QuestionShowPayload } from "./types";
 import styles from "./Quiz.module.css";
+import Peer, { DataConnection, PeerOptions } from "peerjs";
 
 type Phase = "chargement" | "attente" | "question" | "reveal" | "fin";
+
+/** Pseudonyme banni : clé normalisée (pour lever le bannissement) et libellé affiché. */
+interface BannedPseudo {
+  key: string;
+  pseudo: string;
+}
+
+/**
+ * Délai laissé au message « banned » pour atteindre l'étudiant·e avant de
+ * fermer la connexion pair-à-pair.
+ */
+const BAN_CLOSE_DELAY_MS = 1000;
+
+/** Question en cours, telle qu'envoyée aux participant·e·s. */
+function questionPayload(room: QuizRoom): QuestionShowPayload {
+  const q = room.currentQuestion();
+  return {
+    index: room.currentIndex,
+    total: room.quiz.questions.length,
+    texte: q.texte,
+    choix: q.choix,
+    duree: room.questionDuration(),
+    startAt: room.questionStartAt,
+  };
+}
 
 export default function QuizTeacher({
   file,
   peerOptions,
   onQuit,
 }: {
-  /** Chemin vers le fichier JSON de questions, ex: "/quiz/exemple.json" */
-  file: string;
+  /**
+   * Fichier de questions : soit un chemin vers un fichier markdown ou JSON
+   * (ex: "/quiz/exemple.md"), soit un objet importé directement, ce qui permet un chemin relatif.
+   */
+  file: string | QuizData;
   peerOptions?: PeerOptions;
   onQuit: () => void;
 }): JSX.Element {
@@ -23,7 +52,8 @@ export default function QuizTeacher({
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState<string | null>(null);
   const [titre, setTitre] = useState("");
-  const [players, setPlayers] = useState<Player[]>([]);
+  const [roster, setRoster] = useState<RosterEntry[]>([]);
+  const [banned, setBanned] = useState<BannedPseudo[]>([]);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [question, setQuestion] = useState<QuestionShowPayload | null>(null);
   const [reveal, setReveal] = useState<QuestionRevealPayload | null>(null);
@@ -31,9 +61,11 @@ export default function QuizTeacher({
   const [reconnecting, setReconnecting] = useState(false);
 
   const roomRef = useRef<QuizRoom | null>(null);
+  /** Dernière révélation, renvoyée aux participant·e·s qui arrivent pendant celle-ci. */
+  const lastRevealRef = useRef<QuestionRevealPayload | null>(null);
   const connectionsRef = useRef<Map<string, DataConnection>>(new Map());
   const peerRef = useRef<Peer | null>(null);
-  const fileUrl = useBaseUrl(file);
+  const fileUrl = useBaseUrl(typeof file === "string" ? file : undefined);
   const [retryCount, setRetryCount] = useState(0);
 
   const send = (conn: DataConnection, message: PeerMessage) => {
@@ -45,9 +77,42 @@ export default function QuizTeacher({
   };
 
   const updatePlayers = () => {
-    const list = roomRef.current!.leaderboard();
-    setPlayers(list);
-    broadcast({ type: "players", players: list });
+    const room = roomRef.current!;
+    setRoster(room.roster());
+    broadcast({ type: "players", players: room.leaderboard() });
+  };
+
+  const refreshBanned = () => {
+    const room = roomRef.current!;
+    setBanned(Array.from(room.bannedPseudos, ([key, pseudo]) => ({ key, pseudo })));
+  };
+
+  /** Retire un·e participant·e de la partie et bloque son pseudonyme. */
+  const banPlayer = (player: RosterEntry) => {
+    const room = roomRef.current;
+    if (!room) return;
+    const confirmed = window.confirm(
+      `Retirer « ${player.pseudo} » du quiz ? Ce pseudonyme ne pourra plus rejoindre la session.`
+    );
+    if (!confirmed) return;
+
+    room.ban(player.id);
+    const conn = connectionsRef.current.get(player.id);
+    if (conn) {
+      connectionsRef.current.delete(player.id);
+      send(conn, { type: "banned" });
+      setTimeout(() => conn.close(), BAN_CLOSE_DELAY_MS);
+    }
+    setAnsweredCount(room.answeredCount());
+    refreshBanned();
+    updatePlayers();
+  };
+
+  const unbanPseudo = (key: string) => {
+    const room = roomRef.current;
+    if (!room) return;
+    room.unban(key);
+    refreshBanned();
   };
 
   const handleMessage = (conn: DataConnection, data: PeerMessage) => {
@@ -55,8 +120,8 @@ export default function QuizTeacher({
     if (!room) return;
 
     if (data.type === "join") {
-      if (room.status !== "lobby") {
-        send(conn, { type: "joinAck", ok: false, message: "Le quiz est déjà commencé" });
+      if (room.status === "ended") {
+        send(conn, { type: "joinAck", ok: false, message: "Le quiz est terminé" });
         return;
       }
       const pseudo = String(data.pseudo || "").trim().slice(0, 20);
@@ -64,9 +129,29 @@ export default function QuizTeacher({
         send(conn, { type: "joinAck", ok: false, message: "Pseudonyme requis" });
         return;
       }
+      if (room.isIdBanned(conn.peer)) {
+        send(conn, { type: "joinAck", ok: false, message: "Vous avez été retiré de ce quiz par l'enseignant·e" });
+        return;
+      }
+      if (room.isPseudoBanned(pseudo)) {
+        send(conn, {
+          type: "joinAck",
+          ok: false,
+          message: "Ce pseudonyme a été bloqué par l'enseignant·e. Choisissez-en un autre.",
+        });
+        return;
+      }
       room.players.set(conn.peer, { pseudo, score: 0 });
       send(conn, { type: "joinAck", ok: true, titre: room.quiz.titre });
       updatePlayers();
+      // Arrivée en cours de partie : on envoie la question en cours (avec le temps
+      // qu'il reste pour y répondre) ou, si elle est déjà révélée, sa réponse.
+      if (room.status === "question" || room.status === "reveal") {
+        send(conn, { type: "question", payload: questionPayload(room) });
+      }
+      if (room.status === "reveal" && lastRevealRef.current) {
+        send(conn, { type: "reveal", payload: { ...lastRevealRef.current, leaderboard: room.leaderboard() } });
+      }
       return;
     }
 
@@ -84,9 +169,7 @@ export default function QuizTeacher({
 
     (async () => {
       try {
-        const response = await fetch(fileUrl);
-        if (!response.ok) throw new Error("Fichier de quiz introuvable");
-        const quiz = validateQuiz(await response.json());
+        const quiz = await loadQuiz(file, fileUrl);
         if (cancelled) return;
 
         roomRef.current = new QuizRoom(quiz);
@@ -147,17 +230,7 @@ export default function QuizTeacher({
   }, [question, phase]);
 
   const emitQuestion = () => {
-    const room = roomRef.current!;
-    const q = room.currentQuestion();
-    const payload: QuestionShowPayload = {
-      index: room.currentIndex,
-      total: room.quiz.questions.length,
-      texte: q.texte,
-      code: q.code,
-      choix: q.choix,
-      duree: room.questionDuration(),
-      startAt: room.questionStartAt,
-    };
+    const payload = questionPayload(roomRef.current!);
     setQuestion(payload);
     setReveal(null);
     setAnsweredCount(0);
@@ -175,9 +248,13 @@ export default function QuizTeacher({
     if (!room) return;
 
     if (room.status === "question") {
-      const payload = room.reveal();
+      const payload: QuestionRevealPayload = {
+        index: room.currentIndex,
+        ...room.reveal(),
+      };
+      lastRevealRef.current = payload;
       setReveal(payload);
-      setPlayers(payload.leaderboard);
+      setRoster(room.roster());
       setPhase("reveal");
       broadcast({ type: "reveal", payload });
       return;
@@ -189,10 +266,9 @@ export default function QuizTeacher({
         emitQuestion();
       } else {
         room.status = "ended";
-        const leaderboard = room.leaderboard();
-        setPlayers(leaderboard);
+        setRoster(room.roster());
         setPhase("fin");
-        broadcast({ type: "end", leaderboard });
+        broadcast({ type: "end", leaderboard: room.leaderboard() });
       }
     }
   };
@@ -212,6 +288,28 @@ export default function QuizTeacher({
     return <p>Création de la session… (jusqu'à une dizaine de secondes la première fois)</p>;
   }
 
+  const bannedList = banned.length > 0 && (
+    <>
+      <p className={styles.bannedNote}>Pseudonymes bloqués :</p>
+      <ul className={styles.bannedList}>
+        {banned.map(({ key, pseudo }) => (
+          <li key={key} className={styles.bannedItem}>
+            <span>{pseudo}</span>
+            <button
+              type="button"
+              className={styles.banButton}
+              title={`Réautoriser ${pseudo}`}
+              aria-label={`Réautoriser ${pseudo}`}
+              onClick={() => unbanPseudo(key)}
+            >
+              ↺
+            </button>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+
   return (
     <div className={styles.container}>
       <p>{titre}</p>
@@ -220,9 +318,10 @@ export default function QuizTeacher({
 
       {phase === "attente" && (
         <>
-          <p>Les étudiant·e·s rejoignent avec ce code. {players.length} participant(s) connecté(s).</p>
-          <Leaderboard players={players} />
-          <button className="button button--primary" onClick={start} disabled={players.length === 0}>
+          <p>Les étudiant·e·s rejoignent avec ce code. {roster.length} participant(s) connecté(s).</p>
+          <Leaderboard players={roster} onBan={banPlayer} />
+          {bannedList}
+          <button className="button button--primary" onClick={start} disabled={roster.length === 0}>
             Démarrer le quiz
           </button>
         </>
@@ -236,17 +335,16 @@ export default function QuizTeacher({
             </strong>
             <span className={styles.timer}>{timeLeft}s</span>
           </div>
-          <p>{question.texte}</p>
-          {question.code && <pre><code>{question.code}</code></pre>}
+          <QuestionText texte={question.texte} />
           <ul className={styles.choices}>
             {question.choix.map((choix) => (
               <li key={choix} className={styles.choiceButton}>
-                {choix}
+                <QuestionText texte={choix} compact />
               </li>
             ))}
           </ul>
           <p>
-            {answeredCount} / {players.length} ont répondu
+            {answeredCount} / {roster.length} ont répondu
           </p>
           <button className="button button--primary" onClick={advance}>
             Révéler la réponse
@@ -256,8 +354,7 @@ export default function QuizTeacher({
 
       {phase === "reveal" && question && reveal && (
         <>
-          <p>{question.texte}</p>
-          {question.code && <pre><code>{question.code}</code></pre>}
+          <QuestionText texte={question.texte} />
           <ul className={styles.choices}>
             {question.choix.map((choix, index) => (
               <li
@@ -268,22 +365,23 @@ export default function QuizTeacher({
                     : styles.choiceButton
                 }
               >
-                {choix}
+                <ChoiceWithCount choix={choix} count={reveal.compteParChoix[index]} />
               </li>
             ))}
           </ul>
-          <h4>Classement</h4>
-          <Leaderboard players={players} />
           <button className="button button--primary" onClick={advance}>
             {question.index + 1 < question.total ? "Question suivante" : "Voir le résultat final"}
           </button>
+          <h4>Classement</h4>
+          <Leaderboard players={roster} onBan={banPlayer} />
+          {bannedList}
         </>
       )}
 
       {phase === "fin" && (
         <>
           <h4>Résultat final</h4>
-          <Leaderboard players={players} />
+          <Leaderboard players={roster} />
         </>
       )}
 
