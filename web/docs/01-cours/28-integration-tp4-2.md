@@ -1,5 +1,5 @@
 ---
-description: Pondération 15%
+description: Temps en classe pour travailler sur le TP
 ---
 
 # Intégration - TP4 - Suite

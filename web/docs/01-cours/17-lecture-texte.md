@@ -2,7 +2,7 @@
 description: Lecture d'un fichier texte avec StreamReader
 ---
 
-# 10.2 – Lecture d'un fichier texte
+# 12.1 – Lecture d'un fichier texte
 
 ## 🎯 Objectif
 
