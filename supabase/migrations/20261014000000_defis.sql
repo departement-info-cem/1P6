@@ -54,6 +54,7 @@ alter table public.defi_profiles enable row level security;
 alter table public.defi_completions enable row level security;
 alter table public.defi_attempt_limits enable row level security;
 revoke all on public.defi_profiles, public.defi_completions, public.defi_attempt_limits from anon, authenticated;
+grant all on public.defi_profiles, public.defi_completions, public.defi_attempt_limits to service_role;
 
 create or replace function public.reserve_defi_attempt(p_user_id uuid)
 returns boolean
