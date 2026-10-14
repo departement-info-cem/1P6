@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {createClient, SupabaseClient} from '@supabase/supabase-js';
+import {createClient, FunctionsHttpError, SupabaseClient} from '@supabase/supabase-js';
 import styles from './styles.module.css';
 
 type Completion = {challenge_id: string; shared: boolean};
@@ -10,6 +10,17 @@ type Solution = {nickname: string; source: string; updatedAt: string};
 
 function errorText(error: unknown) {
   return error instanceof Error ? error.message : 'Une erreur est survenue.';
+}
+
+async function functionError(error: unknown, data: {error?: string} | null) {
+  if (data?.error) return data.error;
+  if (error instanceof FunctionsHttpError) {
+    try {
+      const response = await error.context.json();
+      if (typeof response?.error === 'string') return response.error;
+    } catch { /* Le service peut renvoyer une réponse sans JSON. */ }
+  }
+  return errorText(error);
 }
 
 export default function DefiSubmission({challengeId}: {challengeId: string}) {
@@ -41,8 +52,8 @@ export default function DefiSubmission({challengeId}: {challengeId: string}) {
       setProgress(null);
       return;
     }
-    client.functions.invoke('defis', {body: {action: 'my'}}).then(({data, error}) => {
-      if (error || data?.error) setMessage(data?.error || errorText(error));
+    client.functions.invoke('defis', {body: {action: 'my'}}).then(async ({data, error}) => {
+      if (error || data?.error) setMessage(await functionError(error, data));
       else setProgress(data);
     });
   }, [client, signedIn]);
@@ -50,7 +61,7 @@ export default function DefiSubmission({challengeId}: {challengeId: string}) {
   async function call(body: Record<string, unknown>) {
     if (!client) throw new Error('Le service des défis n’est pas configuré.');
     const {data, error} = await client.functions.invoke('defis', {body});
-    if (error || data?.error) throw new Error(data?.error || errorText(error));
+    if (error || data?.error) throw new Error(await functionError(error, data));
     return data;
   }
 
