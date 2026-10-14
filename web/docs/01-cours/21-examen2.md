@@ -11,7 +11,7 @@ description: Pondération 15%
 
 :::danger Avant la séance (2h)
 
-L'examen porte sur l'ensemble du contenu du cours jusqu'ici à l'exception des Fichiers texte et csv. Afin de vous aider dans vos révisions, il est bon de:
+L'examen porte sur l'ensemble du contenu du cours jusqu'ici, en particulier les tableaux 1D et 2D, le switch et les boucles while. Afin de vous aider dans vos révisions, il est bon de:
 
 - Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof
 - Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)
@@ -52,11 +52,12 @@ Vous avez le droit à :
 
 **Questions et pondérations** 
 
-L’examen comporte trois (3) questions. 
+L’examen comporte quatre (4) questions. 
 
 - Q1 : Utilisation de la structure conditionnelle switch case (10 pts)
 - Q2 : Utilisation de la structure itérative while (10 pts)
-- Q3 : Utilisation des boucles (imbriquées) avec des tableau 1D et 2D (15 pts)
+- Q3 : Utilisation des tableaux 1D (15 pts)
+- Q4 : Utilisation des boucles imbriquées avec des tableaux 1D et 2D (15 pts)
 
 
 **Critères d’évaluation** 
@@ -81,6 +82,9 @@ L’examen comporte trois (3) questions.
     - Déclaration
     - Initialisation
     - Parcours adéquats
+- Utilisation correcte des outils des tableaux 1D
+    - Découpage d'une chaîne (Split)
+    - Tri (Array.Sort) et affichage (string.Join)
 - Utilisation correcte des boucles imbriquées
     - Structure syntaxique adéquate   
     - Condition bien formulée
@@ -100,7 +104,24 @@ L’examen comporte trois (3) questions.
 
 :::tip ÉLÉMENTS DU CONTENU À RÉVISER POUR L'EXAMEN
 
-L'ensemble du contenu du cours jusqu'ici à l'exception des Fichiers texte et csv.
+L'ensemble du contenu du cours jusqu'ici, et plus particulièrement :
+
+- Les tableaux 1D (5.1)
+    - Déclaration, initialisation et accès par index
+    - La propriété Length et le parcours avec une boucle for
+    - Découper une chaîne avec Split()
+    - Trier avec Array.Sort() et afficher avec string.Join()
+    - Les constantes (const)
+- Les tableaux 2D (7.1)
+    - Déclaration, initialisation et accès aux éléments
+    - La méthode GetLength(dimension)
+    - Le parcours par rangée et par colonne avec des boucles for imbriquées
+- Le débogage et la trace d'exécution (7.2)
+- Les structures de contrôle (8.2)
+    - Sélection switch... case (incluant le cas par défaut)
+    - Boucles while et do... while
+    - Validation d'une saisie avec TryParse
+- Les éléments vus pour l'examen 1 (variables, conditions, fonctions, boucles for, Random)
 
 :::
 
