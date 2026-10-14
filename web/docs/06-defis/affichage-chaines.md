@@ -95,3 +95,5 @@ Bonne première journée !
 | --- | --- |
 | Nom `Alex Tremblay`, groupe `1090`, local `B-321`, début `8 h 00` | Le titre, les quatre lignes `Nom`, `Groupe`, `Local` et `Début`, puis le message d'encouragement apparaissent dans un seul billet lisible. |
 | Nom `Mia`, groupe `1080`, local `B-321`, début `8 h 00` | Les lignes affichent `Nom : Mia`, `Groupe : 1080`, `Local : B-321` et `Début : 8 h 00`; le titre et le message demeurent présents. |
+
+<DefiSubmission challengeId="affichage-chaines" />

@@ -100,3 +100,5 @@ Coût total : 1,2 $
 | 4 | 2 | 0,15 | `Pages imprimées : 8` et `Coût total : 1,2 $` ou `1,20 $` |
 | 10 | 1 | 0,20 | `Pages imprimées : 10` et `Coût total : 2 $` ou `2,00 $` |
 | 2 | 2 | 0,15 | `Pages imprimées : 4` et `Coût total : 0,6 $` ou `0,60 $` |
+
+<DefiSubmission challengeId="variables-calculs" />

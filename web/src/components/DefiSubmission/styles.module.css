@@ -1,0 +1,13 @@
+.panel { margin: 2rem 0; padding: 1.25rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 0.6rem; }
+.label { display: block; margin: 1rem 0 0.4rem; font-weight: 700; }
+.editor { display: block; width: 100%; min-height: 16rem; padding: 0.8rem; margin-bottom: 0.8rem; font: 0.9rem/1.5 var(--ifm-font-family-monospace); background: var(--ifm-background-color); color: var(--ifm-font-color-base); border: 1px solid var(--ifm-color-emphasis-400); border-radius: 0.3rem; resize: vertical; }
+.results { margin-top: 1rem; }
+.results li { margin-bottom: 0.45rem; }
+.results pre { white-space: pre-wrap; margin: 0.3rem 0 0.8rem; }
+.nickname, .sharing, .solutions { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--ifm-color-emphasis-300); }
+.nickname label, .sharing label { display: block; margin-bottom: 0.5rem; }
+.nickname input { display: block; width: min(100%, 24rem); padding: 0.5rem; margin-bottom: 0.6rem; }
+.sharing button { display: block; margin-top: 0.8rem; }
+.solutions details { margin: 0.5rem 0; }
+.solutions pre { max-height: 30rem; overflow: auto; }
+.message { margin-top: 0.8rem; font-weight: 600; }
