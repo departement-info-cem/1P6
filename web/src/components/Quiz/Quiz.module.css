@@ -12,6 +12,7 @@
 
 .modeButtons {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   margin-top: 1rem;
@@ -62,9 +63,53 @@
   border-radius: 6px;
   border: 2px solid var(--ifm-color-emphasis-300);
   background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-family: inherit;
   cursor: pointer;
   font-size: 1rem;
   text-align: left;
+}
+
+.choiceButton p:last-child,
+.choiceButton pre:last-child {
+  margin-bottom: 0;
+}
+
+.choiceWithCount {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.choiceContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.choiceCount {
+  flex: none;
+  min-width: 1.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.choiceCorrect .choiceCount {
+  background: var(--ifm-color-success);
+  color: var(--ifm-color-white);
+}
+
+.choiceCode {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  text-align: left;
+  overflow-x: auto;
 }
 
 .choiceButton:hover:not(:disabled) {
@@ -78,17 +123,29 @@
 
 .choiceSelected {
   border-color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-primary-contrast-background);
 }
 
 .choiceCorrect {
   border-color: var(--ifm-color-success);
-  background: var(--ifm-color-success-lightest);
+  background: var(--ifm-color-success-contrast-background);
 }
 
 .choiceWrong {
   border-color: var(--ifm-color-danger);
-  background: var(--ifm-color-danger-lightest);
+  background: var(--ifm-color-danger-contrast-background);
+}
+
+/* La bonne et la mauvaise réponse restent bien visibles une fois les choix désactivés. */
+.choiceCorrect:disabled,
+.choiceWrong:disabled {
+  opacity: 1;
+}
+
+.soloScore {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .leaderboard {
@@ -106,7 +163,7 @@
 }
 
 .leaderboardItemSelf {
-  background: var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-primary-contrast-background);
   border-radius: 6px;
 }
 
@@ -122,6 +179,47 @@
 
 .leaderboardScore {
   font-weight: 700;
+}
+
+.banButton {
+  border: none;
+  background: none;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.banButton:hover {
+  color: var(--ifm-color-danger);
+  background: var(--ifm-color-danger-contrast-background);
+}
+
+.bannedNote {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.bannedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.bannedItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.35rem 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-200);
+  font-size: 0.875rem;
 }
 
 .leaderboardEmpty {

@@ -26,6 +26,22 @@ const config = {
     locales: ["fr"],
   },
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com',
+      rel: 'preconnect',
+    },
+    {
+      href: 'https://fonts.gstatic.com',
+      rel: 'preconnect',
+      crossorigin: 'anonymous',
+    },
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap',
+      rel: 'stylesheet',
+    },
+  ],
+
   markdown: {
     mermaid: true,
     hooks: {
@@ -84,15 +100,19 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "cours/introduction",
+            // Mène au prochain cours selon l'horaire du premier prof trouvé dans
+            // sidebars.js, sinon au premier cours de la sidebar
+            type: "custom-prochainCours",
             position: "left",
+            sidebarId: "docs",
             label: "Cours",
           },
         
 
           {
-            type: "docSidebar",
+            // Mène au TP dont le nom (ex : « TP1 - ... ») est contenu dans le className
+            // du prochain cours qui en mentionne un (ex : remise-tp1), sinon au premier TP
+            type: "custom-tpCourant",
             position: "left",
             sidebarId: "tp",
             label: "Travaux Pratiques",
@@ -138,6 +158,12 @@ const config = {
               {
                 label: "GitHub",
                 href: `https://github.com/departement-info-cem/${siteConfig.nomUrl}`,
+              },
+              {
+                // Seul lien vers cette page, qui n'est ni dans le menu ni
+                // dans les barres latérales.
+                label: "Proposer une correction",
+                to: "/contribuer",
               },
             ],
           },
