@@ -85,3 +85,5 @@ Résultat : 77,00 °F
 | 2 | `-4` | Message indiquant que la distance doit être positive ou nulle, puis retour au menu. |
 | 3 | `bonjour` | Message de saisie invalide, puis retour au menu sans résultat de conversion. |
 | 9, puis 0 | Aucune valeur de conversion | Message indiquant que le choix 9 est invalide; le menu est réaffiché; le programme se ferme seulement après le choix 0. |
+
+<DefiSubmission challengeId="switch-boucles-conditionnelles" />

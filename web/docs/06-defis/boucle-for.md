@@ -75,3 +75,5 @@ Total d'articles préparés : 16
 | 6 | 1 | Une ligne avec 6 articles cumulés, puis `Total d'articles préparés : 6`. |
 | 0 | 4 | `Les valeurs doivent être supérieures à 0.`; aucun tableau ni total n'est affiché. |
 | 4 | -1 | `Les valeurs doivent être supérieures à 0.`; aucun tableau ni total n'est affiché. |
+
+<DefiSubmission challengeId="boucle-for" />

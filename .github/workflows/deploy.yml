@@ -33,6 +33,9 @@ jobs:
         run: npm ci
       - name: Build du site
         working-directory: ./web
+        env:
+          DEFIS_SUPABASE_URL: ${{ vars.DEFIS_SUPABASE_URL }}
+          DEFIS_SUPABASE_ANON_KEY: ${{ vars.DEFIS_SUPABASE_ANON_KEY }}
         run: npm run build
       - name: Corriger les permissions
         working-directory: ./web/build

@@ -13,6 +13,8 @@ import WeeklySchedule from "@site/src/components/WeeklySchedule";
 import NonVoyant from "@site/src/components/NonVoyant";
 import Quiz from "@site/src/components/Quiz";
 import GithubDownload from "@site/src/components/GithubDownload";
+import DefiSubmission from "@site/src/components/DefiSubmission";
+import DefiLeaderboard from "@site/src/components/DefiLeaderboard";
 
 export default {
   ...MDXComponents,
@@ -30,4 +32,6 @@ export default {
   NonVoyant,
   Quiz,
   GithubDownload,
+  DefiSubmission,
+  DefiLeaderboard,
 };

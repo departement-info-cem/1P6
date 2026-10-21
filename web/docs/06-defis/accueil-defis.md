@@ -23,6 +23,18 @@ Contrairement aux laboratoires, les défis ne donnent pas toutes les étapes à 
 
 Les deux premiers défis portent uniquement sur la compréhension et l'analyse d'un mandat. Ils ne demandent aucun code. Dans les quatre premiers défis de programmation, une section **Analyse avant de coder** t'aide ensuite à appliquer la même méthode. Le soutien diminue progressivement afin que tu deviennes capable de préparer ta propre analyse.
 
+## Faire valider un défi console
+
+Les défis console qui demandent seulement `Program.cs` peuvent maintenant être validés en ligne. Termine et teste ton programme dans Visual Studio. Dans `Program.cs`, fais **Ctrl+A**, puis **Ctrl+C** pour copier tout le fichier. Colle-le dans la zone **Faire valider ce défi** au bas de la page du défi et clique sur **Valider mon code**. Copier uniquement le contenu de `Main` ne suffit pas si ton programme contient aussi des fonctions.
+
+Connecte-toi avec ton compte GitHub scolaire pour conserver tes réussites. Tu n'as pas besoin d'utiliser Git ni de pousser ton code. Un défi validé vaut **un point**, même si tu l'essaies plusieurs fois. Après ta première réussite, choisis un pseudonyme pour le classement public; ton code étudiant ne sera pas affiché. Tu peux choisir de partager ou non ta solution validée, et voir les solutions partagées après avoir réussi le même défi.
+
+La validation vérifie des résultats sur plusieurs cas. Elle t'aide à repérer des erreurs, mais ne remplace pas la lecture de ton code et les tests que tu fais toi-même.
+
+Les défis de lecture, de fichiers et celui qui utilise la classe fournie `CompteFidelite` gardent leurs tests manuels pour le moment.
+
+<DefiLeaderboard />
+
 ## Ce que tu trouveras dans chaque défi
 
 Chaque défi présente un contexte, les besoins à respecter, les valeurs à utiliser, les notions attendues, les contraintes, un exemple complet et des critères de réussite. Les défis d'intégration sont plus longs et combinent plusieurs notions vues récemment.

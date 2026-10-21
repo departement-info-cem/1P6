@@ -83,3 +83,5 @@ Rangée avec le plus de sièges libres : rangée 3
 | `L O L L O L / O O L L L O / L L L O L L / O L O O L L` | 15 sièges libres; nombres occupés par rangée : 2, 3, 1 et 3; rangée 3 possède le plus de sièges libres. |
 | `O O O O O O / O O O O O O / O O O O O O / O O O O O O` | 0 siège libre; 6 sièges occupés dans chacune des quatre rangées; la première rangée est identifiée comme celle qui possède le plus de sièges libres; message `La salle est complète.` |
 | `L L L O O O / L L L O O O / L O O O O O / O O O O O O` | Les rangées 1 et 2 possèdent chacune 3 sièges libres; `Rangée avec le plus de sièges libres : rangée 1` est affiché. |
+
+<DefiSubmission challengeId="tableaux-2d" />

@@ -99,3 +99,5 @@ Prototype le plus performant : Delta
 | Choix `4`, seuil `21`, avec le tableau de départ | Message indiquant que le seuil doit être entre 0 et 20; retour au menu sans liste de robots. |
 | Choix `2`, avec Alpha `12, 10, 14`; Bêta `15, 9, 11`; Gamma `8, 16, 12`; Delta `13, 11, 11` | Alpha et Gamma totalisent 36 points; Alpha est affiché comme prototype le plus performant, car il est le premier à avoir le meilleur total dans le tableau. |
 | Choix `0` | Le programme se ferme. |
+
+<DefiSubmission challengeId="integration-menus-tableaux-2d" />

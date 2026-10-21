@@ -78,3 +78,5 @@ Première journée la plus chaude : jour 5
 | --- | --- |
 | `18, 21, 17, 23, 25, 20, 16` | Les sept lignes `Jour` sont affichées; minimum : 16 °C; maximum : 25 °C; moyenne : 20,00 °C; 4 journées de 20 °C ou plus; première journée la plus chaude : jour 5. |
 | `20, 20, 20, 20, 20, 20, 20` | Les sept journées affichent 20 °C; minimum et maximum : 20 °C; moyenne : 20,00 °C; 7 journées de 20 °C ou plus; première journée la plus chaude : jour 1. |
+
+<DefiSubmission challengeId="tableaux-1d" />

@@ -93,3 +93,5 @@ Raison : tarif étudiant
 | 72 | Non demandée | `Tarif applicable : 9 $` et raison `tarif aîné`. |
 | -1 | Non demandée | Un message d'erreur est affiché et aucun tarif n'est présenté. |
 | 150 | Non demandée | Un message d'erreur est affiché et aucun tarif n'est présenté. |
+
+<DefiSubmission challengeId="conditions" />

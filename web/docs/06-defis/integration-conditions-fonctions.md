@@ -73,3 +73,5 @@ Commentaire : Bonne participation
 | `Révision de C#` | 4 | 1 | Les valeurs 4 présentes et 1 absente sont affichées, puis 5 personnes inscrites, 80 % et `Bonne participation`. |
 | `Aide aux devoirs` | 0 | 3 | Les valeurs 0 présente et 3 absentes sont affichées, puis 3 personnes inscrites, 0 % et `Participation limitée`. |
 | `Préparation à l'examen` | 3 | 0 | Les valeurs 3 présentes et 0 absente sont affichées, puis 3 personnes inscrites, 100 % et `Excellente participation`. |
+
+<DefiSubmission challengeId="integration-conditions-fonctions" />
