@@ -37,8 +37,9 @@ Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
 
 </Row>
 
-## 💪 Exercices supplémentaires
+## 💪 À faire aujourd'hui
 
-
-<!-- Vous devez réaliser le [🧪 Labo 6.2](/laboratoire/laboratoire6.2B)-->
+* Compléter le [🧪 Labo 7.1](/laboratoire/laboratoire7.1B) et [🧪 Défi 7.1](/defis/tableaux-2d)
+* Si besoin, prenez le temps de vous mettre à jour et de poser vos questions sur les laboratoires précédents.
+* Vous pouvez ensuite poursuivre le TP2.
 
