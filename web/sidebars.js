@@ -614,7 +614,7 @@ const sidebars = {
       label: 'Laboratoire 8.2',
       collapsible: true,
       collapsed: collapseBloc2,
-      items: ['laboratoire/laboratoire8.2A', 'laboratoire/laboratoire8.2B']
+      items: ['laboratoire/laboratoire8.2A', 'laboratoire/laboratoire8.2B', 'laboratoire/laboratoire8.2C']
     },
    
     {
