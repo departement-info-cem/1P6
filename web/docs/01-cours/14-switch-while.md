@@ -297,6 +297,14 @@ else
 |`char` |"A" | ✅ |'A'|  
   
 
+## 💪 Laboratoie à faire
+
+* [🧪 Labo 8.2A](/laboratoire/laboratoire8.2A)
+* [🧪 Labo 8.2B](/laboratoire/laboratoire8.2B) 
+* [🧪 Labo 8.2C](/laboratoire/laboratoire8.2C)
+* [🧪 Défi 8.2](/defis/switch-boucles-conditionnelles)
+
+
   
   
 📎 **Références :**   

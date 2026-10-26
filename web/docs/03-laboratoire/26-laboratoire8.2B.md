@@ -1,8 +1,8 @@
 ---
-title: A - Switch... case, While et Do... while – Simple
+title: B - Switch... case, While et Do... while – Simple
 ---
 
-# 🧪 Labo 8.2A - Switch... case, While et Do... while – Simple
+# 🧪 Labo 8.2B - Switch... case, While et Do... while – Simple
 
 📎*Référence* : [Switch... case](https://info.cegepmontpetit.ca/notions-csharp/documentation/structures-de-controle/switch-case) | [While](https://info.cegepmontpetit.ca/notions-csharp/documentation/structures-de-controle/while) | [Do... while](https://info.cegepmontpetit.ca/notions-csharp/documentation/structures-de-controle/do-while)  | [TryParse](https://info.cegepmontpetit.ca/1P6/cours/integration-fonctions#-quest-ce-que-tryparse-)
 
