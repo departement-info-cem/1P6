@@ -247,3 +247,4 @@ Choix de la rangée (1 à 5): 4
 Choix de la colonne (1 à 5): 3
 Bravo, le magicien a été trouvé à la position [4,3] !
 ```
+## ➡️[🧪 Défi 8.2](/defis/switch-boucles-conditionnelles)
