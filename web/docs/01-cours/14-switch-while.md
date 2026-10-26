@@ -2,10 +2,10 @@
 description: Switch... case | While | Do... while | TryParse
 ---
 
-# 🏆 QUIZ de révision (Tableau 2D et boucle imbriquée)
-<Quiz file="/quiz/8.2-tableau2d.md" />
-
 # Switch... case | While | Do... while | TryParse
+
+## 🏆 QUIZ de révision (Tableau 2D et boucle imbriquée)
+<Quiz file="/quiz/8.2-tableau2d.md" />
 
 ## 1️⃣ Rappel : La structure conditionnelle IF  
 La structure `if` permet au programme de prendre des décisions si une condition est vraie.   
