@@ -22,7 +22,7 @@ description: Objets, propriétés, méthodes et apprendre à les utiliser
 
 ## 🔹 Les objets dans WinForms
 
-Dans le dernier cours (**WinForms**), nous avons manipulé des **objets** . Chaque élément de l’interface — un **Button**, un **TextBox**, un **Label**, ou même la **Form** — est un **objet** créé à partir d’une classe.
+Dans le [complément Windows Forms](24-winform.md), chaque élément de l'interface — un `Button`, un `TextBox`, un `Label` ou une `Form` — est un **objet** créé à partir d'une classe. Les exemples avec ces contrôles se placent dans un projet Windows Forms.
 
 Quand vous changez le texte d’un bouton, modifiez sa couleur, ou réagissez à son événement *Click*, vous travaillez avec les **propriétés**, **méthodes** et **événements** de cet objet.
 Cela signifie que vous utilisez déjà la **programmation orientée objet**, souvent sans vous en rendre compte.
@@ -62,6 +62,8 @@ MaClasse objet = new MaClasse();
 
 ### Exemples d’instanciation
 
+La démonstration téléchargeable plus bas contient une classe nommée `PouletMagique` (le personnage se présente comme « PouleMagique »). Les extraits qui l’utilisent se placent dans ce projet.
+
 #### 🟦 Exemple 1 : Classe `Random`
 
 ```csharp
@@ -77,10 +79,10 @@ b.Text = "Clique-moi";
 b.Width = 120;
 ```
 
-#### 🟦 Exemple 3 : Classe personnalisée `PouleMagique`
+#### 🟦 Exemple 3 : Classe personnalisée `PouletMagique`
 
 ```csharp
-PouleMagique p = new PouleMagique();
+PouletMagique p = new PouletMagique();
 p.Danser();
 ```
 
@@ -115,11 +117,11 @@ Random r = new Random();
 int nombre = r.Next(1, 10);  // Méthode Next()
 ```
 
-#### 🟦 Exemple 2 : Classe personnalisée `PouleMagique`
+#### 🟦 Exemple 2 : Classe personnalisée `PouletMagique`
 
 ```csharp
-PouleMagique p = new PouleMagique();
-// Faire dancer la poule
+PouletMagique p = new PouletMagique();
+// Faire danser la poule
 p.Danser();
 ```
 ### 🔹 Constantes
@@ -129,12 +131,12 @@ Elles n’appartiennent pas à l’objet mais à la **classe**.
 ```csharp
 int valeur = MaClasse.NomConstante;
 ```
-#### 🟦 Exemple  : Classe personnalisée `PouleMagique`
+#### 🟦 Exemple : Classe personnalisée `PouletMagique`
 
 ```csharp
-PouleMagique p = new PouleMagique();
+PouletMagique p = new PouletMagique();
 // Récupérer la taille maximale d'une poule magique
-int tailleMAx = PouleMagique.TAILLE_MAX;
+int tailleMax = PouletMagique.TAILLE_MAX;
 ```
 ### 🔹 Méthodes statiques
 Une méthode statique est une méthode qui appartient à la classe elle-même, et non aux objets créés à partir de cette classe. On l'appelle via la **classe**.
@@ -155,13 +157,13 @@ Stocke directement la valeur (`int`, `bool`, `decimal`, etc.)
 
 Stocke l’**adresse** pointant vers un objet (`string`, `Button`, `Random`, classes…).
 
-👉 Une variable non instanciée vaut **null**.
+👉 Un champ de type référence reçoit `null` par défaut. Une **variable locale** doit recevoir une valeur avant d'être lue : sa simple déclaration ne lui donne pas une valeur utilisable.
 
 ```csharp
-// Déclarer une varibale de type Button
-Button b; // La variable b est à null
+// Déclarer une variable locale de type Button
+Button b; // Pas encore affectée : on ne peut pas lire b à cet endroit
 // Instancier un objet de Type Button et l'affecter à la variable b
-b = new Button(); // La variable b pointe maintenant vers un objet de type Button. Elle contient sa référence ne mémoire.
+b = new Button(); // La variable b contient maintenant une référence vers un objet Button.
 
 ```
 ---
@@ -185,7 +187,7 @@ Accessibles partout dans la classe.
 * Placer un **point d’arrêt**
 * Survoler les objets dans Visual Studio pour voir :
 
-  * leurs propriétés (`b.Text`, `b.Width`, `p.Energie`…)
+  * leurs propriétés (`b.Text`, `b.Width`, `p.Taille`…)
   * leurs méthodes
   * leur état interne
 * Clic droit → **Atteindre la définition** pour voir la structure de la classe
@@ -237,7 +239,6 @@ et venez percer **mon secret** ! »
 👉 Notions C# : [Instanciation objet](https://info.cegepmontpetit.ca/notions-csharp/documentation/instanciation-objet)
 
 
-Vous devez réaliser le labo suivant :
- [🧪 Labo 13.1](/laboratoire/laboratoire13.1)
+Pour pratiquer avec une classe fournie : [🧪 Défi — Compte de fidélité](../06-defis/objets-classes.md).
 
 ---

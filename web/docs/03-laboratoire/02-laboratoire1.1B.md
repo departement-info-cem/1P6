@@ -18,7 +18,7 @@ Les exercices sont organisés en quatre niveaux. Chaque niveau demande progressi
 > 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
 > ⚠️ Ces exercices doivent être réalisés sans utiliser l'ordinateur.
-N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+N'ouvrez pas Visual Studio pour écrire et exécuter le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
 
 Pour chaque question, **lisez l'objectif et le code fourni**.
@@ -149,7 +149,7 @@ Le code est-il correct? Si non, expliquez le problème.
 **Objectif :** demander le prénom et le nom de l'utilisateur, puis afficher :
 
 ```text
-Bonjour Amine Tremblay!
+Bonjour Sébastien Derumière!
 ```
 
 si l'utilisateur saisit `Sébastien` et `Derumière`.
@@ -170,8 +170,6 @@ Console.WriteLine("Bonjour " + prenom + " " + nom + "!");
 Le code est-il correct? Expliquez votre réponse.
 
 ---
-
-Oui. Pour la question de synthèse, je prendrais un contexte différent et j'introduirais **une erreur de concaténation** que l'étudiant doit repérer.
 
 #### Question 10 — Synthèse
 
@@ -293,6 +291,8 @@ Quelle est l'erreur?
 **Objectif :** afficher le prénom saisi par l'utilisateur.
 
 ```csharp
+string prenom;
+
 Console.Write("Prénom : ");
 prenom = Console.ReadLine();
 
@@ -343,7 +343,7 @@ prenom = Console.ReadLine()
 Console.WriteLine("Bonjour " + prenom + "!");
 ```
 
-Identifiez **les deux erreurs** et indiquez comment les corriger.
+Identifiez **les trois erreurs** et indiquez comment les corriger.
 
 ---
 
@@ -357,7 +357,7 @@ Pour chaque exercice :
 2. Réalisez les étapes demandées dans l'ordre.
 3. Vérifiez votre programme à l'aide du résultat attendu.
 
-**Aucun code de départ n'est fourni.**
+**Aucun code de départ n'est fourni.** Créez un projet console et placez vos instructions dans `Main`, comme au [labo 1.1A](/laboratoire/laboratoire1.1). Utilisez `Console.ReadLine()` pour lire une réponse et `+` pour assembler le message.
 
 ---
 
@@ -457,7 +457,7 @@ Artiste préféré : Stromae
 Genre musical : Pop
 Chanson préférée : Alors on danse
 
-Alex aime la musique pop.
+Alex aime la musique Pop.
 Son artiste préféré est Stromae et sa chanson préférée est Alors on danse.
 ```
 
@@ -517,4 +517,10 @@ Type : Chien
 ----------------------------
 ```
 
-## 🟣 Je relève un défi
+## ⚫ Je relève un défi
+
+Réalisez le [défi sur l’affichage et les chaînes](/defis/affichage-chaines).
+
+---
+
+[Consulter le corrigé du laboratoire 1.1B](/solution/laboratoire-solution1.1B)

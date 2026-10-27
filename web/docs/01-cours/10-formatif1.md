@@ -3,7 +3,7 @@ description: Formatif 1
 ---
 
 # Examen formatif 1
-**Voici 10 exercices qui vous aideront à pratiquer les notions vues en classe.**  
+**Voici 10 exercices qui vous aideront à pratiquer les notions vues en classe.**
 Le jour de l'examen, on vous donnera des fichiers de départ et/ou une description du résultat attendu.  
 L'examen sera plus court que cette pratique ⚠️  
   
@@ -75,7 +75,7 @@ C'est agréable!
 Chaque joueur d’une équipe entre le résultat de son dé à 6 faces, soit un nombre entier de `1` à `6`. Le programme doit calculer et afficher le score de l’équipe selon les règles suivantes :
 
 - Si les deux dés valent 6, le score est 100.
-- Si les deux dés valent 5 ou 4, le score est 75.
+- Si les deux dés valent 5, ou si les deux dés valent 4, le score est 75. Un mélange de 5 et de 4 donne donc 9.
 - Si les deux dés sont identiques (même valeur), le score est 50.
 - Dans tous les autres cas, le score correspond à la somme des deux dés.
 
@@ -113,7 +113,7 @@ Dé 1 = 2, Dé 2 = 6 → Score = 8
 - La fonction `CalculerPrixApresTaxes` :  
   - Accepte en paramètre le prix de l’article et le choix de la province.  
   - Elle calcule et retourne le prix après taxe selon la province choisie.  
-  - Considérer le taux de taxation selon la province comme suit :  
+  - Utiliser les taux simplifiés suivants pour cet exercice (ils ne représentent pas une référence fiscale) :
     - Québec : 15%  
     - Ontario : 13%  
     - Autres : 12%
@@ -170,7 +170,7 @@ Nom formaté : TREMBLAY, Mario
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Demander de rentrer une limite (nombre entier positif) et un diviseur.
+  - Demander une limite et un diviseur, tous deux des entiers strictement positifs.
   - Utiliser une fonction `CompterMultiples` pour calculer combien de nombres entre 1 et la limite sont des multiples du diviseur, puis afficher le résultat.  
 - La fonction `CompterMultiples` :
   - Accepte en paramètre la limite et le diviseur.
@@ -193,11 +193,11 @@ Il y a 6 multiples de 3 entre 1 et 20
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Demander de rentrer un nombre entier positif N.
+  - Demander un nombre entier N compris entre 1 et 1860 inclusivement.
   - Utiliser une fonction `SommeDesCarres` pour calculer la somme des carrés des N premiers entiers, puis afficher le résultat.  
 - La fonction `SommeDesCarres` :
-  - Accepte en paramètre un nombre entier positif N
-  - Elle calcule et retourne la somme des carrées des N premiers entiers qu’on peut l’obtenir comme suit :
+  - Accepte en paramètre un `int` N compris entre 1 et 1860 inclusivement.
+  - Elle calcule et retourne, dans un `int`, la somme des carrés des N premiers entiers :
   - Exemple : SommeDesCarres(5) = 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> + 4<sup>2</sup> + 5<sup>2</sup>
 - Tester votre programme.
  
@@ -205,9 +205,13 @@ Il y a 6 multiples de 3 entre 1 et 20
 #### Entrée / Sortie attendue :
 ```
 ---Je peux vous aider à calculer la somme des carrés---
-Entrez un nombre : 5
+Entrez un nombre entre 1 et 1860 : 5
 Le résultat est : 55
 ```
+
+Cette version utilise des `int` : on suppose que la saisie respecte la plage de 1 à 1860. Pour N = 1860, la somme vaut 2146682110 et tient encore dans un `int`; pour N = 1861, elle dépasserait sa capacité.
+
+**Tests aux limites :** N = `1` → `1`; N = `1860` → `2146682110`. N = `0` ou `1861` est hors des préconditions de cette version.
 
 ---
 
@@ -218,7 +222,7 @@ Le résultat est : 55
 #### Instructions
 
 - Dans la fonction `Main` :
-  - Demander le nombre de notes à saisir.
+  - Demander le nombre de notes à saisir (entier strictement positif).
   - Utiliser une boucle pour demander chacune des notes (valeurs décimales).
   - Pendant la boucle, calculer la somme des notes, la note la plus haute et la note la plus basse.
   - Calculer la moyenne, puis utiliser la fonction `DeterminerMention` pour obtenir la mention associée.

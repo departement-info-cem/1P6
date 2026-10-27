@@ -14,7 +14,7 @@ namespace DefiCompteFidelite
 
         public bool AjouterPoints(int nombrePoints)
         {
-            if (nombrePoints <= 0)
+            if (nombrePoints <= 0 || nombrePoints > int.MaxValue - Points)
             {
                 return false;
             }

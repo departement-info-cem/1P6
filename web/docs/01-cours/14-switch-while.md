@@ -71,7 +71,7 @@ L'exécution d'une instruction `switch` implique les étapes suivantes :
 * si aucune étiquette ne correspond, le bloc associé au `default` est exécuté.
 * Il peut y avoir un nombre *quelconque* d’étiquettes `case`;
 * Chaque étiquette `case` doit avoir une valeur **unique**;  
-* L’instruction `break` est nécessaire après chaque bloc;
+* Dans ces exemples, chaque bloc se termine par `break`. Une autre instruction qui quitte le bloc, comme `return`, est aussi possible;
 * Les étiquettes `case` sont évaluées **dans l’ordre** d'apparition.
 
 
@@ -246,14 +246,18 @@ else
 **Exemple 2 : Double**  
 ```csharp
 string texte = "3.14";
-bool reussi = double.TryParse(texte, out double valeur);
+bool reussi = double.TryParse(texte,
+    System.Globalization.NumberStyles.Float,
+    System.Globalization.CultureInfo.InvariantCulture, out double valeur);
  
 if (reussi)
-    Console.WriteLine("Conversion réussie : " + valeur);
+    Console.WriteLine("Conversion réussie : " + valeur.ToString(System.Globalization.CultureInfo.InvariantCulture));
 else
     Console.WriteLine("Échec de conversion.");
 ```
 ✅ **Résultat**  : Conversion réussie : 3.14
+
+Cet exemple impose le point décimal avec `InvariantCulture`. La forme courte `double.TryParse(texte, out valeur)` utilise plutôt la culture courante : le séparateur attendu peut être une virgule. Le point dans un nombre écrit directement en code C# (`double x = 3.14;`) reste obligatoire.
 
 
     
@@ -297,12 +301,12 @@ else
 |`char` |"A" | ✅ |'A'|  
   
 
-## 💪 Laboratoie à faire
+## 💪 Laboratoires à faire
 
 * [🧪 Labo 8.2A](/laboratoire/laboratoire8.2A)
 * [🧪 Labo 8.2B](/laboratoire/laboratoire8.2B) 
 * [🧪 Labo 8.2C](/laboratoire/laboratoire8.2C)
-* [🧪 Défi 8.2](/defis/switch-boucles-conditionnelles)
+* [🧪 Défi — Switch et boucles conditionnelles](/defis/switch-boucles-conditionnelles)
 
 
   

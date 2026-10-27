@@ -4,6 +4,8 @@ title: 🏆 Solution - Boucle for
 
 # 🏆 Solution — Boucle `for` : Préparation de trousses d'accueil
 
+Les deux saisies restent des `int` strictement positifs. Le cumul et le compteur de boucle sont des `long`, un type entier de plus grande capacité : le produit de deux `int` positifs tient dans un `long`, et le compteur peut dépasser la dernière valeur d'un `int` pour terminer la boucle.
+
 ```csharp
 using System;
 
@@ -22,12 +24,12 @@ class Program
         }
         else
         {
-            int articlesCumules = 0;
+            long articlesCumules = 0;
 
             Console.WriteLine();
             Console.WriteLine("Trousse    Articles cumulés");
 
-            for (int numeroTrousse = 1; numeroTrousse <= nombreTrousses; numeroTrousse++)
+            for (long numeroTrousse = 1; numeroTrousse <= nombreTrousses; numeroTrousse++)
             {
                 articlesCumules = articlesCumules + articlesParTrousse;
                 Console.WriteLine(numeroTrousse + "          " + articlesCumules);
@@ -39,3 +41,5 @@ class Program
     }
 }
 ```
+
+**Test de capacité :** `50000` articles et `50000` trousses donnent `Total d'articles préparés : 2500000000`. Les exemples `4 × 4` et `6 × 1` donnent toujours `16` et `6`.

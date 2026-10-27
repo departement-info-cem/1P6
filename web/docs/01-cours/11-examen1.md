@@ -35,7 +35,7 @@ Vous avez le droit à :
 - [Notions C#](https://info.cegepmontpetit.ca/notions-csharp/)
 - Le site principal du cours ([1P6](https://info.cegepmontpetit.ca/1P6/)) incluant les solutionnaires des laboratoires
 
-**Il est strictement interdit** d'utiliser des appareils éléctroniques, internet et les outils de l'intelligence artificielle ou de communiquer avec d'autres personnes.
+Le poste utilisé pour l'examen permet de consulter les deux sites autorisés ci-dessus. **Il est strictement interdit** de consulter d'autres sites Internet, d'utiliser des appareils électroniques personnels ou des outils d'intelligence artificielle, ou de communiquer avec d'autres personnes.
 
 :::
 

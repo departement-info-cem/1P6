@@ -18,7 +18,7 @@ Tableau de mots à vérifier :
 
 ## 📋 Instructions
 1. Copier dans votre `Main()` la liste de mots à vérifier
-2. Créez deux fonctions afin de faire la vérification. 
+2. Créez deux fonctions afin de faire la vérification.
     * La fonction `InverserMot()` doit prendre un paramètre `string pMotAInverser` et retourner un `string`
     * La fonction `EstUnPalindrome()` doit prendre un paramètre `string pMot` et retourner un `bool`
 3. Dans le `Main()`, faites une boucle `for` sur le tableau de mots à vérifié.
@@ -33,7 +33,7 @@ Tableau de mots à vérifier :
 ### 1.`InverserMot()`
 * Prends `string pMotAInverser` en paramètre
 * Retourne un `string`
-1. Créez une variable **nouveauMot** de type `string`
+1. Créez une variable **nouveauMot** de type `string` initialisée à `""`
 2. Faites une boucle `for` décrémentée sur le string passé en paramètre.
     * L'index commence à la plus haute valeur d'index de **pMotAInverser**
     * La valeur de l'index diminue à chaque itération de la boucle.
@@ -47,8 +47,8 @@ Tableau de mots à vérifier :
 * Retourne un `bool`
 1. Créez une variable avec le texte de pMot en minuscule en utilisant la méthode ``.ToLower()``
 2. Appelez la méthode `InverserMot()` en lui passant en paramètre le mot en minuscule et capture le retour de la fonction.
-3. Comparez le mot en minuscule et le retour de la fonction. `InversrMot()`
-4. Retournez`true` si les deux strings sont pareils.
+3. Comparez le mot en minuscule et le retour de la fonction. `InverserMot()`
+4. Retournez `true` si les deux chaînes sont identiques, sinon `false`.
 
 ---
 
@@ -66,3 +66,7 @@ Montréal n'est PAS un palindrome
 Laval est un palindrome
 Toronto n'est PAS un palindrome
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 6.2A](/solution/laboratoire-solution6.2A)

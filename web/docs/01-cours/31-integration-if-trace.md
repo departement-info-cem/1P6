@@ -1,10 +1,10 @@
 ---
-description: Intègration `if` et trace d'exécution
+description: Intégration `if` et trace d'exécution
 ---
 
 
 
-# 🤔 Intègration `if` et trace d'exécution
+# 🤔 Intégration `if` et trace d'exécution
 
 ---
 
@@ -34,6 +34,8 @@ La trace d'exécution permet de :
 👉 Vous pouvez imprimer ce tableau de trace d'exécution pour pratiquer vos traces à la main.
 :::
 
+
+Les numéros placés devant les lignes servent à la trace : ne les copiez pas dans Visual Studio.
 
 ### Exemple 1 — Code avec instructions simples
 

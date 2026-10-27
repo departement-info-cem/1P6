@@ -8,11 +8,11 @@ title: Lecture dans un fichier texte
 
 ---
 
-## 🟢 Exercice 1 : Découvrir StreamReader
+## 🔵 Exercice 1 : Découvrir StreamReader
 **Objectif :** Lire un fichier texte ligne par ligne et afficher son contenu dans la console.
 
 **Instructions**
-1. Dans le répertoire `EspaceLabo`, créez manuellement un fichier texte nommé `sortileges.txt` contenant les lignes de suivantes:
+1. Dans le répertoire `EspaceLabo`, créez manuellement un fichier texte nommé `sortileges.txt` contenant les lignes suivantes:
 
 ```
 Sortilège de la mort : Avada Kedavra
@@ -34,7 +34,7 @@ Sortilège de torture : Doloris
 
 ---
 
-## 🟢 Exercice 2 : ReadLine vs ReadToEnd
+## 🔵 Exercice 2 : ReadLine vs ReadToEnd
 **Objectif :** Explorer la différence entre `ReadLine()` (lecture ligne par ligne) et `ReadToEnd()` (lecture complète du fichier d’un coup).
 
 **Instructions**
@@ -67,9 +67,7 @@ Vous ne pourrez jamais traverser l’océan si vous n’avez pas le courage de p
 
 ---
 
----
-
-## 🟢 Exercice 3 : Découper le contenu lu avec `ReadToEnd()`
+## 🔵 Exercice 3 : Découper le contenu lu avec `ReadToEnd()`
 **Objectif :** Lire tout le contenu d’un fichier d’un coup, puis séparer les lignes dans un tableau 1D à l’aide de la méthode `Split()`.
 
 **Instructions**
@@ -78,8 +76,8 @@ Vous ne pourrez jamais traverser l’océan si vous n’avez pas le courage de p
         - Ouvrez le fichier en mode **lecture**.
         - Lisez tout le contenu d’un coup avec `ReadToEnd()`.
         - Fermez le fichier.
-4. Séparez le texte obtenu dans un tableau 1D en utilisant la méthode `Split()` sur le caractère de fin de ligne.
-5. Affichez le contenu de la dernière ligne du tableau.
+3. Normalisez les fins de ligne avec `texte.Replace("\r\n", "\n")`, puis utilisez `.Split('\n', StringSplitOptions.RemoveEmptyEntries)` pour ignorer la case vide créée par un saut de ligne final.
+4. Affichez le dernier élément à l’indice `tableau.Length - 1`; gérez le cas d’un fichier vide avant cet accès.
 
 ✅ **Sortie attendue** :
 ```
@@ -89,8 +87,8 @@ Vous ne pourrez jamais traverser l’océan si vous n’avez pas le courage de p
 ---
 
 
-## 🟡 Exercice 4 : Créer et relire un fichier ✍️📖
-**Objectif :** Fusionner l’écriture (séance 9.1) et la lecture (9.2) : créer un fichier, y écrire des données, puis les relire.
+## 🟣 Exercice 4 : Créer et relire un fichier ✍️📖
+**Objectif :** Combiner l’écriture (labo 10.1) et la lecture (labo 10.2) : créer un fichier, y écrire des données, puis les relire.
 
 **Instructions**
 1. Demandez à l’utilisateur d’entrer 3 objectifs personnels pour l’année.
@@ -123,14 +121,14 @@ Partir en voyage l'été prochain.
 
 ---
 
-## 🟡 Exercice 5 : Ajouter et relire du contenu existant 🧾
+## 🟣 Exercice 5 : Ajouter et relire du contenu existant 🧾
 **Objectif :** Ajouter du texte **sans écraser le contenu existant**, puis le relire.
 
 **Instructions**
 1. Vérifiez si le fichier `objectifs.txt` existe avec `File.Exists()`.
 2. Si le fichier existe, ouvrez-le avec un `StreamWriter` en mode ajout.
 3. Ajoutez deux nouveaux objectifs et fermez le fichier.
-4. Rouvrez le fichier avec `StreamReader` et affichez son contenu complet.
+4. Si le fichier existait, rouvrez-le avec `StreamReader` et affichez son contenu complet. Sinon, affichez un message et terminez sans tenter de le lire.
 
 ✅ **Exemple** :
 ```
@@ -144,7 +142,7 @@ Lire 5 livres cette année.
 
 ---
 
-## 🔴 Exercice 6 : Sauvegarder et relire un tableau 1D 🎵
+## 🟣 Exercice 6 : Sauvegarder et relire un tableau 1D 🎵
 **Objectif :** Écrire le contenu d’un tableau 1D dans un fichier texte, puis le relire pour afficher les éléments dans la console.
 
 **Instructions**
@@ -155,7 +153,7 @@ Lire 5 livres cette année.
 ✅ **Exemple** :
 ```
 --- mes_repas_prefs.txt ---
-Pizza hawaiennne
+Pizza hawaïenne
 Pizza toute garnie
 Pizzaghetti
 Pizza Meat Lover
@@ -163,7 +161,7 @@ Pizza aux artichauts et aux olives noires
 
 --- Console ---
 Voici vos repas préférés :
-Pizza hawaiennne
+Pizza hawaïenne
 Pizza toute garnie
 Pizzaghetti
 Pizza Meat Lover
@@ -172,7 +170,7 @@ Pizza aux artichauts et aux olives noires
 
 ---
 
-## 🔴 Exercice 7 : Manipuler une matrice 2D 🔢 (avant-goût de la séance 10.1)
+## 🟣 Exercice 7 : Manipuler une matrice 2D 🔢 (préparation au laboratoire CSV 11.1)
 **Objectif :** Écrire et relire une matrice de nombres dans un fichier texte.
 
 **Instructions**
@@ -198,3 +196,7 @@ Pizza aux artichauts et aux olives noires
 8
 9
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 10.2](/solution/laboratoire-solution10.2)

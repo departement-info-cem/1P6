@@ -52,11 +52,11 @@ static void MaSuperFonction()
     // Code à exécuter dans la fonction
 }
 ```
- - **`static`** Mot clé, nous en reparlerons lorsque que la programmation objet sera introduite, pour l'instant ce n'est une mot clé obligatoire.
+ - **`static`** Mot-clé à conserver pour nos fonctions appelées directement depuis `Main`, qui est aussi statique. Nous préciserons son rôle avec la programmation objet.
  - **`void`** Type de la valeur de retour (int, double, string, etc.). Ici void signifie qu'il n'y a aucun retour
- - **`MaSuperFonction`** Nom de la fonction, chaque fonction doit avoir un nom unique.
- - Les **`()`** Emplacement pour les paramètres de la fonctione, les `()`sont obligatoires même si l'on n'a pas de paramètre.
- - Les **`{ }`** Porté de la fonction. Tout le code entre les `{ }` sera exécuté lorsque nous ferons un appel à la fonction.
+ - **`MaSuperFonction`** Nom de la fonction. Deux fonctions peuvent avoir le même nom si leurs paramètres diffèrent : c'est la surcharge, que nous verrons plus tard.
+ - Les **`()`** contiennent les paramètres de la fonction; elles sont obligatoires même sans paramètre.
+ - Les **`{ }`** délimitent le corps de la fonction, exécuté lors d'un appel.
 :::
 :::danger Emplacement de la fonction
 Attention! On ne peut pas placer une fonction à n'importe quel endroit, tant que nous n'avons pas vu la programmation objet, nous les placerons au même niveau que la fonction `Main`, voici un exemple. 👇
@@ -95,6 +95,8 @@ namespace Laboratoire1_Ex1
 
 > 🎯 **But** : éviter de copier-coller du code plusieurs fois, rendre le programme plus lisible et réutilisable.
 
+Dans les extraits suivants, place les définitions `static ...` dans la classe `Program`, à côté de `Main`, et les instructions d'appel ou d'utilisation dans `Main`.
+
 ---
 
 ### ❌ Code répétitif sans fonction
@@ -106,7 +108,7 @@ Console.WriteLine("Bonjour Inès !");
 Console.WriteLine("Bonjour Léa !");
 Console.WriteLine("Bonjour Marco !");
 Console.WriteLine("Bonjour Inès !");
-````
+```
 
 > ⚠️ **Problème**
 > Si on veut modifier une salutation ou ajouter un nom, il faut changer plusieurs lignes à la main.
@@ -205,8 +207,9 @@ Saluer("Inès");
 
 > 📌 **À retenir**
 >
-> * Un **paramètre** est une **variable temporaire** envoyée à la fonction
-> * Elle existe **uniquement à l’intérieur du bloc**
+> * Un **paramètre** est une variable déclarée dans la définition de la fonction (ex. `prenom`)
+> * Un **argument** est la valeur fournie lors de l'appel (ex. `"Léa"`)
+> * Le paramètre est accessible à l’intérieur de la fonction
 > * Elle permet de rendre la fonction **plus générale et réutilisable**
 
 ---
@@ -271,7 +274,7 @@ using System;
 
 class Program
 {
-    static int c = 100; // Variable de classe (globale à toutes les fonctions)
+    static int c = 100; // Champ statique partagé par les méthodes de Program
 
     static void Main()
     {
@@ -281,7 +284,7 @@ class Program
         {
             int b = 20; // Variable locale au bloc 'if'
             Console.WriteLine("a + b = " + (a + b));
-            Console.WriteLine("c = " + c); // OK : c est globale
+            Console.WriteLine("c = " + c); // OK : c est un champ de Program
         }
 
         // Console.WriteLine(b);  // ❌ Erreur : b n'existe plus ici
@@ -301,9 +304,13 @@ class Program
 
 ### 🔍 Explication
 
+![Portée du champ c, de la variable locale a et de la variable de bloc b](/img/R04/porteeVariables.svg)
+
+*Le champ statique `c` est accessible dans les méthodes de `Program`; `a` est accessible dans `Main` après sa déclaration; `b` est accessible seulement dans le bloc `if` après sa déclaration.*
+
 * `a` est locale à la fonction `Main`
 * `b` est locale au bloc `if` → **disparaît après le bloc**
-* `c` est **globale à la classe** → accessible dans toutes les fonctions
+* `c` est un **champ statique de `Program`** → accessible dans les méthodes de cette classe
 
 ---
 
@@ -311,7 +318,7 @@ class Program
 >
 > * `{ ... }` = **bloc de code**
 > * Une variable **locale** vit dans son bloc/fonction uniquement
-> * Une variable **de classe** vit tant que l’objet existe
+> * Le champ **statique** `c` est partagé par la classe, sans créer d'objet `Program`; sa durée de vie ne dépend pas d'une instance
 
 ---
 

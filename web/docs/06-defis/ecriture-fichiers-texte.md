@@ -70,7 +70,7 @@ Note       : Course au parc
 
 ## Tests manuels et résultats attendus
 
-Avant de commencer les tests, crée un fichier `C:\EspaceLabo\entrainement.txt` vide. Exécute ensuite les tests dans l'ordre du tableau.
+Avant de commencer les tests, crée le dossier `C:\EspaceLabo` s'il n'existe pas, puis un fichier `entrainement.txt` vide dans ce dossier. Exécute ensuite les tests dans l'ordre du tableau.
 
 | Date | Activité | Durée | Note | Résultat attendu |
 | --- | --- | ---: | --- | --- |

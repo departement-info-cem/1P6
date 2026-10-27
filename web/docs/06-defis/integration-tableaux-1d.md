@@ -44,6 +44,8 @@ Tu n'as pas à trier les membres. Le premier membre des tableaux demeure affich�
 
 Les noms sont des textes non vides. Les pointages sont des entiers de `0` ou plus. Le seuil à utiliser est toujours `15` points. En cas d'égalité pour le meilleur résultat, affiche la première personne rencontrée dans les tableaux.
 
+Conserve les pointages dans un tableau de `int`, mais utilise un `long` pour leur somme : ce type entier de plus grande capacité évite qu'un cumul dépasse celle d'un `int`. La somme doit être représentable dans un `long`; calcule ensuite la moyenne en `double`.
+
 ## Notions à utiliser
 
 - deux tableaux 1D de même longueur;
@@ -85,3 +87,4 @@ Message : Bravo Bilal pour ta première position !
 | Tableau des noms : `Amélie`, `Bilal`, `Chloé`<br />Tableau des points : `12`, `19`, `19` | Moyenne : 16,67 points; 2 personnes atteignent 15 points; Bilal est premier, car il apparaît avant Chloé; chaque nom est associé au bon pointage. |
 | Tableau des noms : `Maya`<br />Tableau des points : `8` | Maya est première; moyenne : 8 points; 0 personne atteint 15 points; aucun autre nom n'apparaît. |
 | Tableau des noms : `Noah`, `Emma`, `Liam`, `Zoé`<br />Tableau des points : `10`, `17`, `14`, `21` | Les quatre lignes sont affichées dans cet ordre; moyenne : 15,50 points; 2 personnes atteignent 15 points; Zoé est première avec 21 points et reçoit le message personnalisé. |
+| Tableau des noms : `Maya`, `Noah`<br />Tableau des points : `1500000000`, `1500000000` | Moyenne : 1500000000,00 points; 2 personnes atteignent 15 points; Maya est première en cas d'égalité. |

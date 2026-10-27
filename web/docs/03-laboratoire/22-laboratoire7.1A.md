@@ -12,7 +12,7 @@ Pour **chaque Labo**, créez un **nouveau projet** dans Visual Studio.
 
 ---
 
-## 🟢 Exercice 1 – Déclaration de tableau 2D **avec** initialisation
+## 🔵 Exercice 1 – Déclaration de tableau 2D **avec** initialisation
 
 🎯 **Objectif** : Comprendre la création des **tableaux 2D** avec des valeurs déjà présentes.
 
@@ -33,7 +33,7 @@ choix: 4
 L'amérique pleure, Les étoiles filantes, Sur mon épaule
 ```
 
-## 🟢 Exercice 2 – Déclaration de tableau 2D **sans** initialisation
+## 🔵 Exercice 2 – Déclaration de tableau 2D **sans** initialisation
 
 🎯 **Objectif** : Comprendre la création des **tableaux 2D** sans valeurs présentes.
 
@@ -55,7 +55,7 @@ False
 ---
 
 
-## 🟢 Exercice 3 – Modification d'un élément dans un tableau 2D
+## 🔵 Exercice 3 – Modification d'un élément dans un tableau 2D
 
 🎯 **Objectif** : Réussir la modification d'un élément dans un tableau 2D.
 
@@ -65,7 +65,7 @@ False
     * Étudiant 2 : Ses notes sont 76 et 68.
     * Étudiant 3 : Ses notes sont 55 et 65.
 2. Affiche les notes du dernier étudiant.
-3. Modifie la première note du dernier étudiant pour qu'il réussisse son cours.
+3. Pour cet exercice, chaque note doit être d’au moins 60 : modifie la première note du dernier étudiant à 60.
 4. Affiche à nouveau les notes du dernier étudiant.
 
 ✅ **Résultat attendu**:
@@ -76,7 +76,7 @@ Notes: 60 et 65
 
 ---
 
-## 🟢 Exercice 4 – Affichage complet avec boucle
+## 🔵 Exercice 4 – Affichage complet avec boucle
 
 🎯 **Objectif** : Parcourir un tableau 2D avec deux boucles `for` imbriquées.
 
@@ -120,7 +120,7 @@ Citation #1 : Soyez moins curieux des gens et plus curieux des idées.
 
 ---
 
-## 🟢 Exercice 5 – Comprendre les indices doubles des boucles
+## 🔵 Exercice 5 – Comprendre les indices doubles des boucles
 
 🎯 **Objectif** : Parcourir un tableau 2D avec deux boucles `for` imbriquées et comprendre les deux indices.
 
@@ -156,9 +156,9 @@ Citation #1 : Soyez moins curieux des gens et plus curieux des idées.
 ```
 ---
 
-## 🟢 Exercice 6 – Pointage Bowling
+## 🔵 Exercice 6 – Pointage Bowling
 
-Voici le pointage d'une partie de bowling faite entre ami(e)s :
+Voici les pointages de cinq parties de bowling faites entre ami(e)s :
 ```csharp
 int[] joueur1 = { 120, 145, 132, 160, 178 };
 int[] joueur2 = { 200, 185, 210, 195, 220 };
@@ -172,10 +172,14 @@ int[] joueur6 = { 75, 90, 85, 100, 95 };
 
 🛠️ **Instructions** :
 1. Transforme les scores des joueurs en un **tableau 2D**.
-2. Écris la fonction `MeilleurJoueur(int[,] tableau)` qui reçoit en paramètre le tableau 2D d'entiers et qui retourne le numéro du joueur gagnant.
-3. Affiche le numéro du joueur gagnant (de 1 à 6).
+2. Écris la fonction `MeilleurJoueur(int[,] tableau)` qui reçoit en paramètre le tableau 2D d'entiers et qui retourne le numéro du joueur gagnant, de 1 à 6. Additionne les cinq scores de chaque joueur; le plus grand total gagne. En cas d’égalité, retiens le premier joueur.
+3. Affiche directement le numéro retourné (de 1 à 6), sans lui ajouter 1.
 
 ✅ **Résultat attendu**:
 ```
 4
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 7.1A](/solution/laboratoire-solution7.1A)

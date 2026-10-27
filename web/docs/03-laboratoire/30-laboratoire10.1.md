@@ -8,7 +8,7 @@ title: Écriture dans un fichier texte
 
 ---
 
-## 🟢 Exercice 1 : Ciao Bye ✈️
+## 🔵 Exercice 1 : Ciao Bye ✈️
 
 **Objectif :** Écrire dans un fichier texte avec `WriteLine()`.
 
@@ -22,7 +22,7 @@ title: Écriture dans un fichier texte
    - Pour combien de temps partiriez-vous ?
    - Partiriez-vous seul ou accompagné ? Avec qui ?
    - Quel accessoire/objet fétiche apporteriez-vous pendant votre voyage ?
-3. Ouvrez le fichier manuellement et validez que vos réponses s’y trouvent.
+3. Fermez le `StreamWriter` avec `Close()` (ou un bloc `using`) pour terminer l’écriture. Ouvrez ensuite le fichier manuellement et vérifiez vos réponses.
 
 ✅ **Exemple CiaoBye.txt** :
 ```
@@ -35,12 +35,12 @@ Objet fétiche : ma caméra !
 
 ---
 
-## 🟢 Exercice 2 : Retranscrire un tableau 1D
+## 🔵 Exercice 2 : Retranscrire un tableau 1D
 
 **Objectif :** Écrire dans un fichier texte le contenu d’un tableau 1D à l’aide d’une boucle `for`.
 
 **Instructions :**
-1. Créez un tableau 1D contenant les titres de vos 5 séries/films préférés. 
+1. Créez un tableau 1D contenant les titres de vos 5 séries/films préférés.
 2. Créez un fichier texte nommé `SeriesFavories.txt`.
 3. Écrivez chaque élément du tableau dans le fichier texte, un élément par ligne.
 4. Fermez le fichier.
@@ -57,7 +57,7 @@ Avant le crash
 
 ---
 
-## 🟡 Exercice 3 : MiniMoi 👶
+## 🟣 Exercice 3 : MiniMoi 👶
 
 **Objectif :** Écrire les informations entrées par l’utilisateur dans un fichier texte.
 
@@ -68,6 +68,8 @@ Avant le crash
 4. Pour chaque enfant, demandez un nom et écrivez-le dans le fichier.
 5. Une fois les opérations complétées, affichez un message de validation dans la console.
 6. Ouvrez manuellement le fichier pour vérifier le résultat.
+
+Le nombre d'enfants est lu en `int`. Utilisez un compteur de boucle `long`, un entier de plus grande capacité, pour le parcours de `1` au nombre demandé : il peut dépasser `int.MaxValue` après le dernier tour et permettre la sortie normale de la boucle.
 
 ✅ **Exemple Console** :
 ```
@@ -90,13 +92,13 @@ Jean Neige
 
 ---
 
-## 🟡 Exercice 4 : L’ajout surprise 🎁
+## 🟣 Exercice 4 : L’ajout surprise 🎁
 
 **Objectif :** Ajouter du contenu dans un fichier texte existant **sans écraser le contenu précédent**.
 
 **Instructions :**
-1. Demandez à l'utilisater d’entrer le nom du fichier créé à l'exercice précédent.
-1. Dans votre programme, ouvrez le fichier créé à l'exercice précédent en mode ajout (*append*).
+1. Demandez à l'utilisateur d’entrer le nom du fichier créé à l'exercice précédent.
+2. Dans votre programme, ouvrez le fichier créé à l'exercice précédent en mode ajout (*append*).
 3. Ajoutez deux nouveaux noms d’enfants au fichier à l'aide d'une boucle `for`.
 4. Validez manuellement le résultat.
 
@@ -119,15 +121,17 @@ Séraphin
 
 ---
 
-## 🔴 Exercice 5 : Les dés sont jetés 🎲
+## 🟣 Exercice 5 : Les dés sont jetés 🎲
 
 **Objectif :** Générer des nombres aléatoires et les écrire dans un fichier texte.
 
 **Instructions :**
-1. Demandez à l’utilisateur combien de lancers de dé **à 10 faces** il souhaite effectuer.
+1. Demandez un nombre strictement positif de lancers de dé **à 10 faces**. Refusez zéro et les valeurs négatives avant de calculer une moyenne.
 2. Pour chaque lancer, générez un nombre aléatoire entre 1 et 10.
 3. Écrivez le résultat de chaque lancer dans un fichier `JeuDeDé.txt`.
 4. Calculez la moyenne des valeurs obtenues et écrivez-la dans le fichier **(avec 2 décimales :smirk:)**.
+
+Le nombre de lancers est un `int` strictement positif. Utilisez un `long` pour le compteur inclusif et pour la somme des lancers, puis un `double` pour la moyenne. Ce type entier de plus grande capacité contient le total maximal `10 × nombre de lancers`, même lorsque le nombre demandé vaut `int.MaxValue`.
 
 ✅ **Exemple Console** :
 ```
@@ -146,7 +150,7 @@ Moyenne des lancers : 5,25
 
 ---
 
-## 🔴 Exercice 6 : Journal des ventes
+## 🟣 Exercice 6 : Journal des ventes
 
 **Objectif :** Écrire plusieurs entrées structurées dans un fichier texte.
 
@@ -154,7 +158,7 @@ Moyenne des lancers : 5,25
 Créer un petit journal des ventes quotidiennes pour une boutique de jeux vidéo 🎮.
 Chaque fois qu’une vente est enregistrée, le programme ajoute une ligne au fichier texte sans écraser le contenu existant.
 
-**Péalable**
+**Préalable**
 Créez manuellement un fichier texte intitulé *journal_ventes.txt* et entrez les données suivantes:
 
 ```
@@ -166,7 +170,7 @@ Souris gamer Logitech G502 : 2 × 79,99 $ = 159,98 $
 
 **Instructions**
 1. Dans votre programme, demandez à l’utilisateur le nom du fichier à utiliser (ex. : *journal_ventes.txt*).
-2. Ouvrez ce fichier en prenant soin ne pas effacer les données existantes.
+2. Ouvrez ce fichier en prenant soin de ne pas effacer les données existantes.
 3. Demandez à l’utilisateur combien de ventes il souhaite enregistrer pour la journée.
 4. Pour chaque vente:
          - Demandez le nom du produit.
@@ -178,6 +182,8 @@ Souris gamer Logitech G502 : 2 × 79,99 $ = 159,98 $
                `nom_du_produit : quantité_vendue × prix_unitaire = total_vente`
 5. Une fois toutes les ventes enregistrées, ajoutez une ligne de séparation(-------------------------------------).
 6. Demandez à l'utilisateur s'il veut enregistrer de nouvelles ventes. **Si oui, le processus recommence ! 🎉**
+
+Le nombre de ventes est lu en `int`; utilisez un compteur `long` pour la boucle de `1` au nombre demandé, afin que son dernier incrément reste représentable. Les quantités vendues restent des `int`, les prix et les totaux des ventes des `double`.
 
 
 ✅ **Exemple Console** :
@@ -240,3 +246,7 @@ Manette Nintendo Switch Pro : 2 × 99,99 $ = 199,98 $
 Casque VR Meta Quest 3 (128 Go) : 1 × 649,99 $ = 649,99 $
 ---------------------------------------------
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 10.1](/solution/laboratoire-solution10.1)

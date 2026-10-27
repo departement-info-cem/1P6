@@ -1,8 +1,8 @@
 ---
-title: A - Intègration structure conditionnelle if
+title: A - Intégration structure conditionnelle if
 ---
 
-# 🧪 Labo 2.2A – Intègration structure conditionnelle if
+# 🧪 Labo 2.2A – Intégration structure conditionnelle if
 
 ## Exercice 1 - Prime de rendement d'un employé
 
@@ -28,9 +28,9 @@ Le programme doit afficher la prime totale obtenue ainsi qu'une explication.
 
 ### Valeurs à utiliser
 
-* Ventes : nombre réel positif.
-* Heures travaillées : entier positif.
-* Ancienneté : entier positif.
+* Ventes : nombre réel supérieur ou égal à zéro.
+* Heures travaillées : entier supérieur ou égal à zéro.
+* Ancienneté : entier supérieur ou égal à zéro.
 
 ### Notions à utiliser
 
@@ -42,7 +42,7 @@ Le programme doit afficher la prime totale obtenue ainsi qu'une explication.
 ### Contraintes
 
 * Une seule prime de base peut être accordée.
-* La prime d'ancienneté peut s'ajouter à la prime de base.
+* La prime d'ancienneté est accordée dès 5 ans, même si aucune prime de base n'est accordée. Elle s'ajoute au montant obtenu.
 * Prévoir un message d'erreur pour les valeurs négatives.
 
 ### Exemple de résultat
@@ -162,7 +162,7 @@ Crée un programme qui calcule le montant final à payer.
 
 ### Valeurs à utiliser
 
-* Montant de la commande : nombre réel positif.
+* Montant de la commande : nombre réel supérieur ou égal à zéro (une commande à 0 $ suit les mêmes règles de livraison).
 * Client Premium : `oui` ou `non`.
 
 ### Notions à utiliser
@@ -275,3 +275,6 @@ Conditions non respectées :
 | 60     | 60      | 60      | Réussite             |
 | 120    | 70      | 80      | Message d'erreur     |
 
+---
+
+[Consulter le corrigé du laboratoire 2.2A](/solution/laboratoire-solution2.2A)

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Link from "@docusaurus/Link";
 import styles from "./MainDocsGrid.module.css";
-import { useHistory } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { useColorMode } from "@docusaurus/theme-common";
 import { usePluginData } from "@docusaurus/useGlobalData";
@@ -14,8 +14,8 @@ export default function MainDocsGrid() {
   const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number } | null>(
     null
   );
-  const history = useHistory();
   const baseUrl = useBaseUrl("/");
+  const metadataUrl = useBaseUrl("/docsMetadata.json");
   // Route des docs telle que configurée pour le plugin docs-metadata (ex : "notes")
   const { routeBasePath = "" } = (usePluginData(
     "docusaurus-plugin-docs-metadata"
@@ -23,18 +23,22 @@ export default function MainDocsGrid() {
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    fetch("docsMetadata.json")
+    fetch(metadataUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error("Métadonnées des cours indisponibles");
+        return res;
+      })
       .then((res) => res.json())
-      .then((data) => setMeta(data));
-  }, []);
+      .then((data) => setMeta(data))
+      .catch(() => setMeta([]));
+  }, [metadataUrl]);
 
   useEffect(() => {
-    if (meta.length === 0) return;
     // Pour chaque entrée de la sidebar, trouver le doc correspondant (même si doublon)
     const docsList = sidebarDocs.map((entry: any) => {
       // Retirer le préfixe numérique et le tiret (ex: 01-rencontre1.1 -> rencontre1.1)
       const slug = entry.id.split("/").pop().replace(/^[0-9]+-/, "");
-      const doc = meta.find((d: any) => d.id.endsWith(slug));
+      const doc = meta.find((d: any) => d.id.replace(/^[0-9]+-/, "") === slug);
       return {
         ...doc,
         _sidebarLabel: entry.label,
@@ -46,12 +50,12 @@ export default function MainDocsGrid() {
     setDocs(docsList);
   }, [meta]);
 
-  const handleClick = (doc: any) => {
+  const docUrl = (doc: any): string => {
     // Le slug vient de la sidebar : il reste valide même si le doc n’a pas de métadonnées
     const slug = doc?._slug || doc?.id?.replace(/^[0-9]+-/, "");
-    if (!slug) return;
+    if (!slug) return baseUrl;
     const prefix = routeBasePath ? `${routeBasePath}/` : "";
-    history.push(`${baseUrl}${prefix}${slug}`);
+    return `${baseUrl}${prefix}${slug}`;
   };
 
   const getBackgroundColor = (className: string): string => {
@@ -114,15 +118,15 @@ export default function MainDocsGrid() {
           }
         }
         return (
-          <div
+          <Link
             key={i}
+            to={docUrl(doc)}
             className={styles.gridItem}
             style={{
               backgroundColor: getBackgroundColor(doc._sidebarClassName),
               color: doc._sidebarProps?.color || "inherit",
               position: "relative",
             }}
-            onClick={() => handleClick(doc)}
             onMouseEnter={(e) => {
               if (tooltip !== "cache") {
                 setHoveredIndex(i);
@@ -185,7 +189,7 @@ export default function MainDocsGrid() {
                 </ul>
               </div>
             )}
-          </div>
+          </Link>
         );
       })}
     </div>

@@ -52,7 +52,10 @@ namespace DemoPouleMagique
         public void CrisDeGuerre()
         {
             Rage += 5;
-            Taille++;
+            if (Taille < TAILLE_MAX)
+            {
+                Taille++;
+            }
             EstDore = false;
         }
 

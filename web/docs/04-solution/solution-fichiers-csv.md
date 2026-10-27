@@ -4,6 +4,8 @@ title: 🏆 Solution - Fichiers CSV
 
 # 🏆 Solution — Fichiers CSV : Rapport de ventes
 
+Comme dans l’énoncé, la quantité et le prix sont des `int` strictement positifs. Les compteurs et les nombres d’articles sont des `long`; les revenus par ligne, maximal et total sont des `decimal`. La conversion en `decimal` précède la multiplication pour éviter un calcul intermédiaire en `int`. On suppose que les compteurs restent représentables dans un `long` et les revenus dans un `decimal`.
+
 ```csharp
 using System;
 using System.IO;
@@ -21,13 +23,13 @@ class Program
             return;
         }
 
-        int ventesValides = 0;
-        int lignesRejetees = 0;
-        int revenuTotal = 0;
-        int articlesVetements = 0;
-        int articlesSouvenirs = 0;
-        int articlesDecoration = 0;
-        int revenuMaximum = 0;
+        long ventesValides = 0;
+        long lignesRejetees = 0;
+        decimal revenuTotal = 0;
+        long articlesVetements = 0;
+        long articlesSouvenirs = 0;
+        long articlesDecoration = 0;
+        decimal revenuMaximum = 0;
         string produitPlusRentable = "";
 
         using (StreamReader lecteur = new StreamReader(cheminVentes))
@@ -52,7 +54,7 @@ class Program
                 }
                 else
                 {
-                    int revenu = quantite * prix;
+                    decimal revenu = (decimal)quantite * prix;
                     ventesValides++;
                     revenuTotal = revenuTotal + revenu;
 
@@ -120,3 +122,13 @@ class Program
 ```
 
 > Le rapport contient les mêmes lignes de résultats que la console, sauf la ligne `Rapport`. Lorsqu'aucune vente valide n'est trouvée, la ligne `Aucune vente valide.` remplace la ligne `Produit le plus rentable`.
+
+## Tests de calcul
+
+Chaque essai utilise un nouveau fichier `ventes.csv` contenant l’en-tête, puis les lignes indiquées.
+
+| Lignes de vente | Résultats à vérifier dans la console et le rapport |
+| --- | --- |
+| `T-shirt,Vêtements,3,18`<br />`Tasse,Souvenirs,2,12`<br />`Affiche,Décoration,5,7` | 3 ventes valides; 0 ligne rejetée; revenu total de 113,00 $; T-shirt est le plus rentable avec 54,00 $; catégories : 3, 2 et 5 articles. |
+| `Test,Vêtements,50000,50000` | 1 vente valide; 0 ligne rejetée; revenu total de 2500000000,00 $; Test est le plus rentable avec 2500000000,00 $; Vêtements : 50000 articles. |
+| `ProduitA,Vêtements,2147483647,1`<br />`ProduitB,Vêtements,2147483647,1` | 2 ventes valides; 0 ligne rejetée; revenu total de 4294967294,00 $; Vêtements : 4294967294 articles; ProduitA reste le plus rentable avec 2147483647,00 $ (premier produit en cas d’égalité). |

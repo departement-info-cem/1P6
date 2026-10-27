@@ -36,3 +36,7 @@ Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
 </Column>
 
 </Row>
+
+## Travail d'intégration
+
+Poursuis le [TP3 — Super RPG Infini](../02-tp/03-tp3.md) : valide d'abord les déplacements et la condition de victoire, puis le chargement CSV, avant de travailler sur les événements et les combats. Réutilise les tests proposés à chaque étape et pose tes questions sur les notions qui te bloquent.

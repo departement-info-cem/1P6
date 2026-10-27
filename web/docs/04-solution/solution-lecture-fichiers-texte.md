@@ -4,6 +4,8 @@ title: 🏆 Solution - Lecture de fichiers texte
 
 # 🏆 Solution — Lecture de fichiers texte : Analyseur de journal
 
+Chaque durée est lue en `int`. Les compteurs et le total des minutes utilisent des `long`, des entiers de plus grande capacité : les additions sont ainsi faites directement en `long`. On suppose que ces cumuls restent représentables dans ce type. La durée maximale d'une seule tâche reste un `int` et la moyenne est calculée en `double`.
+
 ```csharp
 using System;
 using System.IO;
@@ -20,10 +22,10 @@ class Program
             return;
         }
 
-        int nombreTaches = 0;
-        int totalMinutes = 0;
-        int taches30MinutesOuPlus = 0;
-        int lignesRejetees = 0;
+        long nombreTaches = 0;
+        long totalMinutes = 0;
+        long taches30MinutesOuPlus = 0;
+        long lignesRejetees = 0;
         int dureeMaximum = 0;
         string tachePlusLongue = "";
 
@@ -78,3 +80,5 @@ class Program
     }
 }
 ```
+
+**Test de capacité :** les lignes `A;1500000000` et `B;1500000000` donnent `2` tâches, `3000000000` minutes au total, une moyenne de `1500000000,00` minutes et `A` comme première tâche de durée maximale.

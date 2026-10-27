@@ -19,8 +19,8 @@ type nomDeVariable = valeur;
 
 ### 📝 Règles de nommage
 [Identificateur](https://info.cegepmontpetit.ca/notions-csharp/documentation/identificateur) : un identificateur est un nom choisi pour désigner variables, méthodes, etc., selon des conventions précises de style.
-- Une variable commence par une lettre (pas de chiffre au début)
-- Elle ne peut pas contenir d'espaces ou de symboles spéciaux
+- Un nom de variable peut commencer par une lettre ou un soulignement (`_`), mais pas par un chiffre.
+- Les caractères suivants peuvent être des lettres, des chiffres ou des soulignements; les espaces et le trait d'union ne sont pas permis.
 - Convention : camelCase (`monNom`, `nombreTotal`)
 
 ### 🔹 Exemples
@@ -143,7 +143,7 @@ Console.WriteLine("Taxe : " + taxe); //Donne 1,9485
 ```
 
 ### ⚠️ Division entière
-Lorsque vous divisez deux `int`, le résultat est un entier (le reste est perdu). Pour un résultat avec décimales, utilisez `float`, `double` ou `decimal`.
+Lorsque vous divisez deux `int`, le résultat est un entier (la partie décimale est supprimée). Pour conserver les décimales, au moins un opérande doit être un `double` ou un autre type à virgule : `7.0 / 2` donne `3.5`. Placer `7 / 2` dans une variable `double` après le calcul donne toujours `3`.
 ```csharp
 int a = 7;
 int b = 2;
@@ -195,6 +195,8 @@ string entree = Console.ReadLine();
 double prix = double.Parse(entree);
 ```
 
+
+Le séparateur décimal attendu par `double.Parse()` dépend de la langue du système : généralement une virgule sur un poste configuré en français. Dans le **code C#**, les littéraux décimaux utilisent toujours un point, comme `12.99`.
 
 ### 🛑 Attention aux erreurs !
 Si l’utilisateur entre un texte non numérique (ex: "abc"), `int.Parse()` ou `double.Parse()` déclencheront une **erreur d’exécution**.

@@ -10,8 +10,8 @@ title: A - Questions de compréhension - Switch... case, While et Do... while �
 
 > 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
-> ⚠️ Ces questions doivent être réalisés **sans utiliser l'ordinateur**.
-N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+> ⚠️ Ces questions doivent être réalisées **sans utiliser l'ordinateur**.
+N'ouvrez pas Visual Studio pour écrire et exécuter le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
 Pour chaque question, **lisez l'objectif et le code fourni**.
 
@@ -84,7 +84,7 @@ On souhaite afficher le niveau d'un utilisateur à partir de la valeur de la var
 
 **Oui.**
 
-Les deux solutions affichent le même message pour les valeurs 1, 2 et 3. Pour toute autre valeur, elles affichent « Code invalide ».
+Les deux solutions affichent le même message pour les valeurs 1, 2 et 3. Pour toute autre valeur, elles affichent « Invalide ».
 
 La structure `if...else if...else` et la structure `switch` permettent ici d'obtenir le même résultat.
 
@@ -175,7 +175,7 @@ On souhaite déterminer si un jour correspond à un jour de semaine ou à une jo
 <summary>💡 Vérifier ma réponse</summary>
 
 1. Oui, les deux solutions produisent le même résultat.
-2. Les deux affichent : 
+2. Les deux affichent :
 ```text
 Fin de semaine
 ```
@@ -265,7 +265,8 @@ On souhaite rechercher la première occurrence du caractère 'a' dans une chaîn
 ```csharp
 string texte = "banane";
 
-for (int i = 0; i < texte.Length && texte[i] != 'a'; i++)
+int i = 0;
+for (; i < texte.Length && texte[i] != 'a'; i++)
 {
 }
 
@@ -336,3 +337,33 @@ La lettre 'a' est absente.
 La boucle parcourt toute la chaîne sans trouver la lettre 'a'. À la fin, i est égal à texte.Length, donc la condition `i < texte.Length` est fausse.
 
 </details>
+
+---
+
+### Question 5 — `while` ou `do…while` ?
+
+```csharp
+int nombre = 0;
+while (nombre > 0)
+{
+    Console.WriteLine("while");
+}
+
+do
+{
+    Console.WriteLine("do while");
+} while (nombre > 0);
+```
+
+Qu’affiche le programme ? Pourquoi les deux boucles n’exécutent-elles pas leur corps le même nombre de fois ?
+
+<details>
+<summary>💡 Vérifier ma réponse</summary>
+
+Seul `do while` est affiché, une fois. `while` vérifie sa condition avant le premier passage; `do…while` exécute son corps une fois avant de vérifier sa condition.
+
+</details>
+
+---
+
+[Consulter le corrigé du laboratoire 8.2A](/solution/laboratoire-solution8.2A)

@@ -10,7 +10,7 @@ Nous allons réaliser une série d’exercices permettant de pratiquer les **Tab
 
 Pour **chaque Labo**, créez un **nouveau projet** dans Visual Studio.
 
-## 🟡 Exercice 1 - Moyenne des salaires
+## 🟣 Exercice 1 - Moyenne des salaires
 
 Voici le revenu mensuel de plusieurs employé(e)s au sein de la compagnie XYZ.
 ```csharp
@@ -26,28 +26,28 @@ int[] employe4 = { 800, 1200, 950, 1100, 1000, 900, 1050, 980, 1020, 1150, 1080,
 🛠️ **Instructions** :
 1. Transforme le salaire mensuel de chaque employé(e) afin de le rendre accessible dans un **tableau 2D**.
 2. Écris la fonction `CalculerMoyenne(int[,] employes)` qui reçoit en paramètre un tableau 2D et qui retourne la moyenne salariale de chaque employé(e) dans un **tableau 1D**.
-3. Parcours le tableau des moyennes et affiche le salaire moyen de chaque employé(e).
+3. Calcule les moyennes avec une division réelle et affiche le salaire moyen de chaque employé(e) avec deux décimales (`ToString("F2")`).
 
 ✅ **Résultat attendu**:
 ```
-2841
-2816
-2000
-1028
+2841,67
+2816,67
+2000,00
+1028,33
 ```
 
 ---
 
-## 🟡 Exercice 2 – Sommation mensuelle
+## 🟣 Exercice 2 – Sommation mensuelle
 
 🎯 **Objectif** : Calculer la somme des salaires de tous les employé(e)s pour un mois donné.
 
 🛠️ **Instructions** :
-1. Reprends le code de l'exercice précédent.  
-2. Écris la fonction `CalculerSommeMensuelle(int[,] employes, int mois)` qui reçoit en paramètre un tableau 2D et l’indice du mois (**de 0 à 11**).  
-   Cette fonction doit retourner la somme des salaires de tous les employé(e)s pour le mois choisi.  
-3. Demande à l’utilisateur de choisir un mois.  
-4. Appelle la fonction et affiche la somme des salaires pour le mois en question.  
+1. Reprends le code de l'exercice précédent.
+2. Écris la fonction `CalculerSommeMensuelle(int[,] employes, int mois)` qui reçoit en paramètre un tableau 2D et l’indice du mois (**de 0 à 11**).
+   Cette fonction doit retourner la somme des salaires de tous les employé(e)s pour le mois choisi.
+3. Demande à l’utilisateur de choisir un mois.
+4. Appelle la fonction et affiche la somme des salaires pour le mois en question.
 
 ✅ **Résultat attendu** :
 ```
@@ -57,15 +57,15 @@ Total : 11600
 
 ---
 
-## 🟡 Exercice 3 – Total du revenu annuel de tous les employé(e)s de la compagnie XYZ
+## 🟣 Exercice 3 – Total du revenu annuel de tous les employé(e)s de la compagnie XYZ
 
 🎯 **Objectif** : Calculer la somme des salaires de tous les employé(e)s sur une année complète.
 
 🛠️ **Instructions** :
-1. Reprends le code de l'exercice 2.  
-2. Appelle la fonction `CalculerSommeMensuelle(int[,] employes, int mois)` de l'exercice 8 pour **chaque mois** automatiquement à l’aide d’une boucle `for`.  
-3. Additionne les résultats obtenus pour chaque mois.  
-4. Affiche le revenu total annuel de tous les employé(e)s.  
+1. Reprends le code de l'exercice 2.
+2. Appelle la fonction `CalculerSommeMensuelle(int[,] employes, int mois)` de l'exercice 2 pour **chaque mois** automatiquement à l’aide d’une boucle `for`.
+3. Additionne les résultats obtenus pour chaque mois.
+4. Affiche le revenu total annuel de tous les employé(e)s.
 
 ✅ **Résultat attendu** :
 ```
@@ -74,7 +74,7 @@ Total : 104240
 
 ---
 
-## 🟡 Exercice 4 – Statistiques des Pokémons
+## 🟣 Exercice 4 – Statistiques des Pokémons
 
 Voici les statistiques de 10 pokémons différents.
 ```csharp
@@ -99,8 +99,8 @@ int[] Gastly      = { 30, 35, 30, 80, 100 };
 2. Crée également un tableau **1D** contenant tous les noms de pokémons dans le même ordre que les statistiques, nommé `nomsPokemons`.
 3. Crée une fonction nommée `EstUnPokemonFaible(int sommeStat)` qui reçoit en paramètre la somme de toutes les statistiques d'un pokémon. La fonction doit retourner `true` si cette somme est inférieure à 250.
 4. À la fin du programme :
-    * Affiche le nom de tous les pokémons n'ayant **aucune statistique faible**.  
-    * Affiche le nombre de pokémons puissants sur le nombre total de pokémons.  
+    * Affiche le nom de tous les pokémons dont la **somme des statistiques est supérieure ou égale à 250**.
+    * Affiche le nombre de pokémons puissants sur le nombre total de pokémons.
 
 ✅ **Résultat attendu** :
 ```
@@ -116,12 +116,12 @@ Pokémons puissants : 6 / 10
 
 ---
 
-## 🟡 Exercice 5 – Affichage statistique et multiples tableaux
+## 🟣 Exercice 5 – Affichage statistique et multiples tableaux
 
 🎯 **Objectif** : Création d'une fonction qui retourne une dimension d'un tableau.
 
 🛠️ **Instructions** :
-1. Reprends le code de l'exercice 4.  
+1. Reprends le code de l'exercice 4.
 2. Crée un tableau **1D**  nommé `titresStatistiques` avec les informations suivantes `PV, Attaque, Défense, Vitesse, Spécial`.
 3. Crée une fonction nommée `StatistiqueParPokemon(int[,] statPokemons, int numeroPokemon)` qui reçoit en paramètre le tableau de statistiques des pokémons et le numéro du pokémon désiré. La fonction doit retourner la totalité des statistiques de ce pokémon.
 4. Demande à l'utilisateur d'entrer un nombre pour choisir le pokémon désiré.
@@ -155,3 +155,5 @@ Spécial : 50
 ```
 
 ---
+
+[Consulter le corrigé du laboratoire 7.1B](/solution/laboratoire-solution7.1B)

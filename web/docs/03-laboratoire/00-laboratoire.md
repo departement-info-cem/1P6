@@ -10,12 +10,14 @@ Les exercices de chaque laboratoire sont organisés selon quatre niveaux de prog
 
 Chaque niveau correspond à ce qui est attendu de vous lors de la réalisation des exercices.
 
+Dans le code C#, écrivez les nombres décimaux avec un point, par exemple `12.5`. À la saisie et à l’affichage, le séparateur dépend de la configuration du poste : les exemples avec une virgule supposent un poste configuré en français (Canada).
+
 ## 🟢 Comprendre
 
 > 🧠 **Je comprends** : je peux lire, interpréter et expliquer un programme simple.
 
 > ⚠️ Ces exercices doivent être réalisés sans utiliser l'ordinateur.
-N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+N'ouvrez pas Visual Studio pour écrire et exécuter le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
 À ce niveau, l'objectif est de vérifier votre compréhension des notions vues en classe.
 

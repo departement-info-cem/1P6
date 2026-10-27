@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Link from "@docusaurus/Link";
 import styles from "./MainDocsCalendar.module.css";
-import { useHistory } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import sidebarDocs from "../MainDocsGrid/sidebarDocs";
+import { dateDuJour } from "../NavigationRapide/navigationRapide";
 
 interface CalendarEvent {
   id: string;
@@ -27,12 +28,11 @@ interface MainDocsCalendarProps {
 export default function MainDocsCalendar({
   professorName,
 }: MainDocsCalendarProps) {
-  const [docs, setDocs] = useState<any[]>([]);
   const [meta, setMeta] = useState<any[]>([]);
   const [currentDate, setCurrentDate] = useState<Date | null>(null);
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
-  const history = useHistory();
   const baseUrl = useBaseUrl("/");
+  const metadataUrl = useBaseUrl("/docsMetadata.json");
 
   const resolveDocTitle = (doc: any): string => {
     const frontmatterTitle =
@@ -84,7 +84,7 @@ export default function MainDocsCalendar({
         const groupe = Object.values(groupedate[0]);
         const firstDate = Object.values(groupe[0])[0] as string;
         if (firstDate) {
-          return new Date(firstDate).getFullYear();
+          return Number(firstDate.slice(0, 4));
         }
       }
     }
@@ -99,26 +99,30 @@ export default function MainDocsCalendar({
   }, []);
 
   useEffect(() => {
-    fetch("docsMetadata.json")
+    fetch(metadataUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error("Métadonnées des cours indisponibles");
+        return res;
+      })
       .then((res) => res.json())
-      .then((data) => setMeta(data));
-  }, []);
+      .then((data) => setMeta(data))
+      .catch(() => setMeta([]));
+  }, [metadataUrl]);
 
   useEffect(() => {
-    if (meta.length === 0) return;
 
     // Pour chaque entrée de la sidebar, trouver le doc correspondant
     const docsList = sidebarDocs.map((entry: any) => {
       const suffix = entry.id.split("/").pop();
-      const doc = meta.find((d: any) => d.id.endsWith(suffix));
+      const doc = meta.find((d: any) => d.id.replace(/^[0-9]+-/, "") === suffix);
       return {
         ...doc,
+        _docId: entry.id,
         _sidebarLabel: entry.label,
         _sidebarProps: entry.customProps,
         _sidebarClassName: entry.className,
       };
     });
-    setDocs(docsList);
 
     // Créer les événements du calendrier pour le professeur spécifié
     const events: CalendarEvent[] = [];
@@ -131,7 +135,7 @@ export default function MainDocsCalendar({
         groupedate.forEach((groupeObj) => {
           const [groupe, date] = Object.entries(groupeObj)[0];
           events.push({
-            id: doc.id, // Utiliser directement l'ID du document
+            id: doc._docId,
             title: `${groupe} - ${resolveDocTitle(doc)}`,
             description: doc?.description || "",
             date: date as string,
@@ -145,18 +149,6 @@ export default function MainDocsCalendar({
     });
     setCalendarEvents(events);
   }, [meta, professorName]);
-
-  const handleEventClick = (event: CalendarEvent) => {
-    // Trouver le document correspondant
-    const doc = docs.find((d) => d.id === event.id);
-    if (doc) {
-      // Nettoyer l'ID pour créer le slug
-      const slug = doc.id.replace(/^cours\//, "").replace(/^[0-9]+-/, "");
-      history.push(`${baseUrl}cours/${slug}`);
-    } else {
-      console.warn(`Document non trouvé pour l'événement: ${event.id}`);
-    }
-  };
 
   const generateCalendarDays = (): CalendarDay[] => {
     if (!currentDate) return [];
@@ -184,7 +176,7 @@ export default function MainDocsCalendar({
         // Seulement lundi à vendredi
         const date = new Date(currentDateIter);
 
-        const dateStr = date.toISOString().split("T")[0];
+        const dateStr = dateDuJour(date);
         const dayEvents = calendarEvents.filter(
           (event) => event.date === dateStr
         );
@@ -285,14 +277,14 @@ export default function MainDocsCalendar({
               <div className={styles.dayNumber}>{day.date.getDate()}</div>
               <div className={styles.eventsContainer}>
                 {day.events.map((event, eventIndex) => (
-                  <div
+                  <Link
                     key={eventIndex}
+                    to={`${baseUrl}${event.id}`}
                     className={`${styles.event} ${event.groupe ? styles[getEventClassName(event.groupe)] : ''}`}
-                    onClick={() => handleEventClick(event)}
                     title={`${event.title} - ${professorName}`}
                   >
                     <div className={styles.eventTitle}>{event.title}</div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

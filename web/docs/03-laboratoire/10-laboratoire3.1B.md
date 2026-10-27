@@ -28,9 +28,9 @@ static void MessageDeBienvenue(string prenom, string nom)
 }
 ```
 
-## 🟢 J'applique
+## 🔵 J'applique
 
-### 🟢 Exercice 1 – Message personnalisé
+### 🔵 Exercice 1 – Message personnalisé
 
 
 Créez une méthode nommée AfficherMessage qui affiche les informations d'une personne.
@@ -58,7 +58,7 @@ Bonjour Benoit Caldairou, vous avez 20 ans et vous venez de Montréal.
 
 ---
 
-### 🟢 Exercice 2 – Périmètre d’un rectangle
+### 🔵 Exercice 2 – Périmètre d’un rectangle
 
 Créez une méthode nommée `AfficherPerimetre` qui affiche le **périmètre d'un rectangle**.
 
@@ -86,40 +86,34 @@ Périmètre : 16
 ---
 
 
-### 🟢 Exercice 3 – Portée des variables
+### 🔵 Exercice 3 – Portée des variables
 
 1. Créez un nouveau projet **Console App** nommé `ExercicePortee`.
-2. Copiez le code suivant, puis **essayez de le compiler tel quel** :
+2. Copiez le code suivant dans `Program.cs`, puis **compilez-le**. Les lignes qui illustrent une erreur de portée sont d’abord commentées.
 
 ```csharp
- 1  using System;
- 2
- 3  class Program
- 4  {
- 5      static int nombreGlobal = 42;
- 6
- 7      static void Main()
- 8      {
- 9          int nombreMain = 10;
-10
-11          if (nombreMain > 5)
-12          {
-13              int nombreBloc = 5;
-14              Console.WriteLine("Bloc if : " + nombreBloc);
-15          }
-16
-17          Console.WriteLine("Main : " + nombreMain);
-18          Console.WriteLine("Global : " + nombreGlobal);
-19
-20          // Console.WriteLine("Bloc : " + nombreBloc);
-21      }
-22
-23      static void AutreMethode()
-24      {
-25          // Console.WriteLine(nombreMain);
-26          Console.WriteLine("Global dans AutreMethode : " + nombreGlobal);
-27      }
-28  }
+using System;
+class Program
+{
+    static int nombreGlobal = 42;
+    static void Main()
+    {
+        int nombreMain = 10;
+        if (nombreMain > 5)
+        {
+            int nombreBloc = 5;
+            Console.WriteLine("Bloc if : " + nombreBloc);
+        }
+        Console.WriteLine("Main : " + nombreMain);
+        Console.WriteLine("Global : " + nombreGlobal);
+        // Console.WriteLine("Bloc : " + nombreBloc);
+    }
+    static void AutreMethode()
+    {
+        // Console.WriteLine(nombreMain);
+        Console.WriteLine("Global dans AutreMethode : " + nombreGlobal);
+    }
+}
 ```
 
 ---
@@ -139,45 +133,39 @@ Périmètre : 16
 
 
 ```csharp
- 1  using System;
- 2
- 3  class Program
- 4  {
- 5      static int nombreGlobal = 42;
- 6
- 7      static void Main()
- 8      {
- 9          int nombreMain = 10;
-10
-11          if (nombreMain > 5)
-12          {
-13              int nombreBloc = 5;
-14              Console.WriteLine("Bloc if : " + nombreBloc);
-15          }
-16
-17          Console.WriteLine("Main : " + nombreMain);
-18          Console.WriteLine("Global : " + nombreGlobal);
-19
-20          // Console.WriteLine("Bloc : " + nombreBloc);
-21      }
-22
-23      static void AutreMethode()
-24      {
-25          // Console.WriteLine(nombreMain);
-26          Console.WriteLine("Global dans AutreMethode : " + nombreGlobal);
-27      }
-28  }
+using System;
+class Program
+{
+    static int nombreGlobal = 42;
+    static void Main()
+    {
+        int nombreMain = 10;
+        if (nombreMain > 5)
+        {
+            int nombreBloc = 5;
+            Console.WriteLine("Bloc if : " + nombreBloc);
+        }
+        Console.WriteLine("Main : " + nombreMain);
+        Console.WriteLine("Global : " + nombreGlobal);
+        // Console.WriteLine("Bloc : " + nombreBloc);
+    }
+    static void AutreMethode()
+    {
+        // Console.WriteLine(nombreMain);
+        Console.WriteLine("Global dans AutreMethode : " + nombreGlobal);
+    }
+}
 ```
 
-Dans le programme fourni, observez les lignes **17, 18 et 20**.
+Dans le programme fourni, observez les trois instructions qui affichent `nombreMain`, `nombreGlobal` et `nombreBloc`. Pour la dernière, raisonnez comme si elle était décommentée.
 
 Pour chacune des instructions suivantes, indiquez si elle peut être exécutée sans erreur :
 
-| Ligne | Instruction                                      | Accessible ? |
-| ----- | ------------------------------------------------ | ------------ |
-| 18    | `Console.WriteLine("Global : " + nombreGlobal);` | ☐ Oui ☐ Non  |
-| 17    | `Console.WriteLine("Main : " + nombreMain);`     | ☐ Oui ☐ Non  |
-| 20    | `Console.WriteLine("Bloc : " + nombreBloc);`     | ☐ Oui ☐ Non  |
+| Instruction | Accessible ? |
+| ----------- | ------------ |
+| `Console.WriteLine("Global : " + nombreGlobal);` | ☐ Oui ☐ Non  |
+| `Console.WriteLine("Main : " + nombreMain);`     | ☐ Oui ☐ Non  |
+| `Console.WriteLine("Bloc : " + nombreBloc);`     | ☐ Oui ☐ Non  |
 
 **Pour chaque réponse, justifiez votre choix en indiquant la portée de la variable.**
 
@@ -233,7 +221,7 @@ static void AutreMethode(int nombre)
 
 #### ✅ À faire
 
-1. Corrigez les lignes commentées qui causent des erreurs.
+1. Décommentez les deux lignes signalées, compilez pour observer les erreurs de portée, puis corrigez-les en transmettant les valeurs nécessaires par paramètres.
 
 2. Ajoutez une nouvelle méthode `AfficherGlobalEtLocal()` qui essaie d'accéder aux différentes variables.
 
@@ -265,7 +253,7 @@ Par exemple, pour le nombre `3` :
 3 x 10 = 30
 ```
 
-La méthode doit pouvoir être utilisée pour afficher la table de **n'importe quel nombre entier**.
+La méthode doit recevoir un `int` et pouvoir afficher la table de **n'importe quelle valeur de ce type**. Pour calculer chaque produit, convertissez le nombre en `long` **avant** de le multiplier par le compteur : `(long)nombre * i`. Un `long` peut contenir des entiers plus grands qu'un `int`; tous les produits d'un `int` par les multiplicateurs de 1 à 10 y sont représentables.
 
 #### Pour vous guider
 
@@ -276,6 +264,8 @@ Avant d'écrire votre méthode, posez-vous les questions suivantes :
 3. Quel paramètre devez-vous prévoir ?
 4. Quel type doit avoir ce paramètre ?
 5. Pouvez-vous appeler votre méthode pour afficher les tables de `3`, `7` et `12` sans modifier la méthode ?
+
+**Essai avec une grande valeur :** pour `300000000`, la ligne du multiplicateur `8` doit afficher `300000000 x 8 = 2400000000`, sans devenir négative.
 
 ---
 
@@ -349,8 +339,6 @@ Avant d'écrire votre méthode, réfléchissez aux questions suivantes :
 
 Une fois votre méthode terminée, testez-la avec au moins trois autres années de votre choix.
 
+---
 
-
-
-
-
+[Consulter le corrigé du laboratoire 3.1B](/solution/laboratoire-solution3.1B)

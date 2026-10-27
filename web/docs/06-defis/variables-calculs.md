@@ -44,15 +44,17 @@ Utilise les calculs suivants :
 
 Le nombre de brochures et le nombre de pages par brochure sont des entiers supérieurs à `0`. Le prix par page est un nombre décimal supérieur à `0`, par exemple `0,15`.
 
+Les deux quantités saisies sont des `int`; conserve leur produit dans un `long`, un entier de plus grande capacité. Convertis une quantité en `long` **avant** de faire la multiplication. Le prix et le coût utilisent des `double`; on suppose que le coût calculé est représentable dans ce type.
+
 ## Notions à utiliser
 
-- variables `int` et `double`;
+- variables `int`, `long` et `double`;
 - lecture d'une valeur avec `Console.ReadLine()` et conversion avec `int.Parse()` ou `double.Parse()`;
 - multiplication et affectation du résultat dans une variable.
 
 ## Contraintes
 
-- Utilise des variables de types appropriés, notamment `int` pour les quantités et `double` pour le prix.
+- Utilise `int` pour les quantités saisies, `long` pour le total des pages et `double` pour le prix et le coût.
 - Utilise `Console.ReadLine()` et la conversion nécessaire pour lire les valeurs.
 - Affiche les montants suivis du symbole `$`. À cette séance, `1,2 $` et `1,20 $` sont deux affichages acceptés pour le même montant.
 - N'utilise pas encore de conditions, de boucles ou de fonctions : le défi porte sur les variables et les opérations.
@@ -100,3 +102,4 @@ Coût total : 1,2 $
 | 4 | 2 | 0,15 | `Pages imprimées : 8` et `Coût total : 1,2 $` ou `1,20 $` |
 | 10 | 1 | 0,20 | `Pages imprimées : 10` et `Coût total : 2 $` ou `2,00 $` |
 | 2 | 2 | 0,15 | `Pages imprimées : 4` et `Coût total : 0,6 $` ou `0,60 $` |
+| 50000 | 50000 | 0,10 | `Pages imprimées : 2500000000` et `Coût total : 250000000 $` |

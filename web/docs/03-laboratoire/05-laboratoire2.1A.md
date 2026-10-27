@@ -10,8 +10,8 @@ title: A - Questions de compréhension
 
 > 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
-> ⚠️ Ces questions doivent être réalisés sans utiliser l'ordinateur.
-N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+> ⚠️ Ces questions doivent être réalisées sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécuter le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
 Pour chaque question, **lisez l'objectif et le code fourni**.
 
@@ -19,7 +19,7 @@ Pour chaque question, **lisez l'objectif et le code fourni**.
 Si le code est incorrect, **identifiez le problème**.
 
 
-### Partie A — Expressipon booléennes
+### Partie A — Expressions booléennes
 
 #### Question 1
 
@@ -35,7 +35,7 @@ Cette expression répond-elle correctement au besoin ?
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Oui` 
+`Oui`
 
 </details>
 
@@ -54,7 +54,11 @@ note >= 0 && nombre <= 100
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`oui` 
+`Non`. L’expression vérifie deux variables différentes. Il faut écrire :
+
+```csharp
+note >= 0 && note <= 100
+```
 
 </details>
 
@@ -73,7 +77,7 @@ nombre >= 10 && nombre <= 20 || nombre > 50
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Oui` 
+`Oui`
 
 </details>
 
@@ -92,7 +96,7 @@ L'expression suivante permet-elle de vérifier correctement ce besoin ?
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Non` 
+`Non`
 
 La condition devrait être :
 
@@ -116,7 +120,7 @@ Quelle est la valeur de l'expression suivante ?
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`true` 
+`true`
 
 </details>
 
@@ -144,7 +148,7 @@ if (a >= 10)
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`50` 
+`50`
 
 </details>
 
@@ -172,7 +176,7 @@ else if (a >= 10)
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`100` 
+`100`
 
 </details>
 
@@ -207,7 +211,7 @@ else
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`1` 
+`1`
 
 </details>
 
@@ -235,14 +239,14 @@ else
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Accès autorisé` 
+`Accès autorisé`
 
 </details>
 
 ---
 
 
-#### Question 9
+#### Question 10
 
 Que va afficher le programme suivant ?
 
@@ -270,18 +274,18 @@ else
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Accès autorisé` 
+`Accès autorisé`
 
 </details>
 
 ---
 
 
-#### Question 10
+#### Question 11
 
 Une personne peut accéder à une activité si elle est majeure et possède un billet.
 
-Un étudiant propose les deux solutions présentées aux questions 8 et 9.
+Un étudiant propose les deux solutions présentées aux questions 9 et 10.
 
 Les deux solutions répondent-elles au même besoin ?
 
@@ -289,8 +293,10 @@ Les deux solutions répondent-elles au même besoin ?
 <details>
 <summary>💡 Vérifier ma réponse</summary>
 
-`Oui` 
+`Oui`
 
 </details>
 
 ---
+
+[Consulter le corrigé du laboratoire 2.1A](/solution/laboratoire-solution2.1A)

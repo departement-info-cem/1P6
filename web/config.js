@@ -1,6 +1,6 @@
 const config = {
     nom: "1P6 - Programmation 1",
-    description: "Site de référence du cours de x",
+    description: "Cours de programmation en C# : notions, laboratoires, défis et travaux pratiques.",
     nomUrl: "1P6"
 }
 

@@ -34,11 +34,15 @@ Le pourcentage de présence est calculé ainsi : nombre de personnes présentes 
 
 Le nom de l'atelier est un texte non vide. Le nombre de personnes présentes et le nombre de personnes absentes sont des entiers de `0` ou plus, et leur somme doit être au moins `1`.
 
+Lis les deux nombres en `int` et utilise un `long` pour leur total. Ce type entier de plus grande capacité peut contenir la somme des deux saisies; convertis une des valeurs en `long` avant l'addition. Une fonction qui retourne ce total doit donc avoir un retour `long`, et la fonction de pourcentage doit accepter ce total en `long`.
+
+Affiche le pourcentage avec une décimale sous le libellé `Présence (arrondie à une décimale)`. Le commentaire utilise le pourcentage exact **avant l'arrondi d'affichage**. Une valeur légèrement inférieure à 90 % peut ainsi s'afficher `90,0 %` tout en donnant `Bonne participation`; elle n'a pas atteint le seuil exact de 90 %.
+
 ## Notions à utiliser
 
 - fonctions avec paramètres et valeur de retour;
 - conditions `if`, `else if` et `else`;
-- calculs avec `double` et affichage d'un pourcentage.
+- total en `long`, calculs de pourcentage avec `double` et affichage d'un pourcentage.
 
 ## Contraintes
 
@@ -56,7 +60,7 @@ Atelier : Révision de C#
 Personnes présentes : 4
 Personnes absentes : 1
 Personnes inscrites : 5
-Présence : 80 %
+Présence (arrondie à une décimale) : 80,0 %
 Commentaire : Bonne participation
 ```
 
@@ -70,6 +74,9 @@ Commentaire : Bonne participation
 
 | Nom de l'atelier | Présentes | Absentes | Résultat attendu |
 | --- | ---: | ---: | --- |
-| `Révision de C#` | 4 | 1 | Les valeurs 4 présentes et 1 absente sont affichées, puis 5 personnes inscrites, 80 % et `Bonne participation`. |
-| `Aide aux devoirs` | 0 | 3 | Les valeurs 0 présente et 3 absentes sont affichées, puis 3 personnes inscrites, 0 % et `Participation limitée`. |
-| `Préparation à l'examen` | 3 | 0 | Les valeurs 3 présentes et 0 absente sont affichées, puis 3 personnes inscrites, 100 % et `Excellente participation`. |
+| `Révision de C#` | 4 | 1 | Les valeurs 4 présentes et 1 absente sont affichées, puis 5 personnes inscrites, 80,0 % et `Bonne participation`. |
+| `Aide aux devoirs` | 0 | 3 | Les valeurs 0 présente et 3 absentes sont affichées, puis 3 personnes inscrites, 0,0 % et `Participation limitée`. |
+| `Préparation à l'examen` | 3 | 0 | Les valeurs 3 présentes et 0 absente sont affichées, puis 3 personnes inscrites, 100,0 % et `Excellente participation`. |
+| `Révision générale` | 179 | 21 | 200 personnes inscrites, 89,5 % et `Bonne participation`. |
+| `Près du seuil` | 8996 | 1004 | 10000 personnes inscrites; 90,0 % affichés après arrondi, mais `Bonne participation`, car la valeur avant arrondi est 89,96 %. |
+| `Test de capacité` | 1500000000 | 1000000000 | 2500000000 personnes inscrites, 60,0 % et `Participation limitée`; le total ne devient pas négatif. |

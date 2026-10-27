@@ -5,7 +5,7 @@ title: A - Premiers pas en C#
 # 🧪 Labo 1.1A – Premiers pas en C#
 
 
-🎥 Visionne cette capsule pour bien démarrer :  
+🎥 Visionne cette capsule pour bien démarrer :
 <a href="https://youtu.be/PAdnzYcKcRQ?si=iacc8sIyPRtffAcT" target="_blank" rel="noopener noreferrer">Première application console en C#</a>
 
 ## 🎯 Objectif
@@ -26,9 +26,9 @@ Apprendre à :
 6. Cliquez sur **Suivant**.
 7. À l’étape **Informations supplémentaires** :
 
-   > ⚠️ **Important** :  
-   > Cochez **« N’utilisez pas d’instructions de niveau supérieur. »**  
-   > Cela générera un fichier `Program.cs` avec une **méthode `Main()` dans une classe `Program`**.  
+   > ⚠️ **Important** :
+   > Cochez **« N’utilisez pas d’instructions de niveau supérieur. »**
+   > Cela générera un fichier `Program.cs` avec une **méthode `Main()` dans une classe `Program`**.
    > Toutes vos méthodes seront définies **dans cette classe**, avec le mot-clé `static`.
 
 8. Cliquez sur **Créer**.
@@ -108,3 +108,7 @@ Bienvenue au cours de programmation!
 - Structure d’un programme C# avec `Main()`.
 - Affichage dans la console avec `Console.WriteLine`.
 - Importance de désactiver les instructions de niveau supérieur pour avoir un `Main()` classique.
+
+---
+
+[Consulter le corrigé du laboratoire 1.1A](/solution/laboratoire-solution1.1A)

@@ -20,7 +20,7 @@ Le tableau de trace d’exécution fourni est conçu pour être utilisé tout au
 Pour les exercices de cette section, **utilisez uniquement les éléments qui ont été présentés en classe**. Les autres éléments seront introduits progressivement et seront utilisés dans de prochains exercices de trace plus complets.
 :::
 
-> 🖨️ [Imprimer le tableau de trace d’exécution pour pratiquer vos traces à la main.](https://info.cegepmontpetit.ca/420-SN1/assets/files/Traces_recto_verso-c4b18f20ba4ca97fa4a818fec269eae3.pdf) 
+> 🖨️ [Imprimer le tableau de trace d’exécution pour pratiquer vos traces à la main.](https://info.cegepmontpetit.ca/420-SN1/assets/files/Traces_recto_verso-c4b18f20ba4ca97fa4a818fec269eae3.pdf)
 
 
 ### Exercice 1
@@ -123,7 +123,7 @@ Pour les exercices de cette section, **utilisez uniquement les éléments qui on
 7. {
 8.     score = score + 10;
 9.
-10.    if (estAvecExperience)
+10.    if (aUneExperience)
 11.    {
 12.        score = score + 20;
 13.    }
@@ -139,3 +139,7 @@ Pour les exercices de cette section, **utilisez uniquement les éléments qui on
 23. }
 24. Console.WriteLine(score);
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 2.2B](/solution/laboratoire-solution2.2B)

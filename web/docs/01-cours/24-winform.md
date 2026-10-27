@@ -1,8 +1,8 @@
 ---
-description: Remise TP3 et introduction à l'interface graphique (WinForm)
+description: Complément sur les interfaces graphiques Windows Forms
 ---
 
-# 12.2 — Remise TP3 et introduction à l'interface graphique (WinForm)
+# Complément — Introduction aux interfaces graphiques Windows Forms
 
 ## 🎯 Objectif
 
@@ -64,7 +64,7 @@ Nous pouvons mettre plusieurs éléments graphiques dans un conteneur. Par exemp
 >L’ajout de contrôles se fait facilement dans **Visual Studio** grâce à l’outil de conception visuelle : il suffit de **glisser-déposer** les éléments souhaités depuis la boîte à outils 🧰 vers le formulaire.
 
 
-![Démo Fiche Client 2. Contenant en ordre : 1 label, 1 txtbox, 1 label, 2 button radios, 1 label, 1 liste déroulante, 1 label, 3 checkbox, 3 buttons, et un listbox  ](_24-winform/winform-controles.png)
+![Fiche client : champs Nom et Adresse, choix du genre, liste Ville, cases Centres d'intérêt, boutons Ajouter, Effacer et Quitter, et liste des clients.](_24-winform/winform-controles.png)
 
 ---
 
@@ -184,7 +184,7 @@ Le Button est un contrôle **cliquable** qui permet à l’utilisateur de décle
 private void btnMessage_Click(object sender, EventArgs e)
 {
     // Récupérer le contenu du contrôle txtNom
-    string nom = txtNom.Text
+    string nom = txtNom.Text;
     MessageBox.Show("Bonjour " + nom);
 }
 ````
@@ -222,19 +222,19 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
 #### ▶️ Modifier l'état d'un RadioButton avec le code
 ```csharp
     // Cocher la case   
-    rdoFemme.Checked = true;
+    rbFemme.Checked = true;
     // Décocher la case
-    rdoFemme.Checked = false;  
+    rbFemme.Checked = false;
 ```
 ---
 ## 🧰 **CheckBox**
 
-Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour savoir s’il est sélectionné et la propriété Text pour récupérer le texte affiché.
+Pour manipuler un CheckBox, on utilise surtout la propriété `Checked` pour savoir s'il est coché et la propriété `Text` pour récupérer son libellé.
 
 ### 🎯 **Exemples de manipulations**
 #### ▶️ Vérifier si un CheckBox est sélectionné et récupérer son texte
 ```csharp
-    string centreInterets = "";
+    string centresInteret = "";
     // On veut récupérer les centres d'interêts du client       
     if (chkSport.Checked)
     {
@@ -292,12 +292,12 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
     lstFruits.Items.Add("Banane");
     lstFruits.Items.Add("Pomme");
     // Nous pouvons aussi remplir un ListBox à partir d'un tableau avec la méthode AddRange
-    string[] tabVilles = {"Kiwi", "Banane", "Pomme"};
-    lstFruits.Items.AddRange(tabVilles);
+    string[] tabFruits = {"Kiwi", "Banane", "Pomme"};
+    lstFruits.Items.AddRange(tabFruits);
    
             
 ```
-#### ▶️ Sélectionner un élément
+#### ▶️ Sélectionner un élément {#selectionner-un-element}
 ```csharp
     // Sélectionner par index
     lstFruits.SelectedIndex = 1;// Sélectionne l'élément à la position 1 (Banane)
@@ -307,10 +307,12 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
 #### ▶️ Récupérer un élément
 
 ```csharp
-   // Récupérer l'index de l'élément sélectionné
-    int index = lstFruits.SelectedIndex
-    // Récupérer la valeur de l'élément sélectionné
-    string valeur = lstFruits.SelectedItem.ToString(); // ou lstFruits.SelectedValue
+    // Récupérer l'index; -1 signifie qu'il n'y a aucune sélection
+    int index = lstFruits.SelectedIndex;
+    if (index != -1)
+    {
+        string valeur = lstFruits.SelectedItem.ToString();
+    }
     
 
 ```
@@ -318,9 +320,15 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
 
 ```csharp
     // Supprimer l'élément sélectionné
-    lstFruits.Items.Remove(lstFruitsFavoris.SelectedItem);
+    if (lstFruits.SelectedIndex != -1)
+    {
+        lstFruits.Items.RemoveAt(lstFruits.SelectedIndex);
+    }
     // Supprimer par Index
-    lstFruits.Items.RemoveAt(1);
+    if (lstFruits.Items.Count > 1)
+    {
+        lstFruits.Items.RemoveAt(1);
+    }
     // Supprimer par valeur
     lstFruits.Items.Remove("Banane");
 ```
@@ -340,11 +348,11 @@ Pour manipuler un RadioButton, on utilise surtout la propriété Checked pour sa
         // Récupérer le fruit à la position i
         string valeur = lstFruits.Items[i].ToString();
     }
-    // Parcourir la liste des notes dans un ListBox
-    for (int i = 0; i < lstFruits.Items.Count; i++)
+    // Dans un autre ListBox, lstNotes, contenant uniquement des notes numériques
+    for (int i = 0; i < lstNotes.Items.Count; i++)
     {
         // Récupérer la note à la position i
-        double note = double.Parse(lstFruits.Items[i].ToString());
+        double note = double.Parse(lstNotes.Items[i].ToString());
 
     }
 ```
@@ -363,8 +371,7 @@ Nous pouvons manipuler ce contrôle de la même façon qu’un ListBox, car ils 
 
 - Le mode d’affichage et d’interaction est différent : Le ComboBox présente l’ensemble des éléments dans une liste déroulante et n’affiche qu’un seul élément à la fois.
 - Le ComboBox peut permettre la saisie de texte, contrairement au ListBox.
-représente le texte actuellement affiché dans le contrôle.
-Elle correspond soit à l’élément sélectionné dans la liste, soit au texte saisi par l’utilisateur lorsque le ComboBox est en mode saisie
+La propriété `Text` représente soit l'élément sélectionné, soit le texte saisi lorsque le ComboBox permet la saisie.
 
 ### 🎯 **Propriétés et méthodes spécifiques**
 | Propriété       | Description                                               | 

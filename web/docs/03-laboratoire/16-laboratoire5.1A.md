@@ -8,7 +8,7 @@ title: A - Tableaux 1D - Simple
 
 ---
 
-## 🟢 Exercice 1 – Lecture et affichage simple
+## 🔵 Exercice 1 – Lecture et affichage simple
 🎯 **Objectif** : Comprendre la déclaration et l’affichage d’éléments dans un tableau.
 
 🛠️ **Instructions** :
@@ -24,7 +24,7 @@ Dernier élément : 20
 
 ---
 
-## 🟢 Exercice 2 – Modification d’élément
+## 🔵 Exercice 2 – Modification d’élément
 🎯 **Objectif** : Savoir modifier une valeur dans un tableau.
 
 🛠️ **Instructions** :
@@ -41,7 +41,7 @@ Vendredi
 
 ---
 
-## 🟢 Exercice 3 – Utilisation de `Length`
+## 🔵 Exercice 3 – Utilisation de `Length`
 🎯 **Objectif** : Utiliser la propriété `.Length` pour connaître le nombre d’éléments et faire un calcul simple.
 
 🛠️ **Instructions** :
@@ -56,22 +56,22 @@ Nombre d’éléments : 3
 
 ---
 
-## 🟢 Exercice 4 – Calcul de moyenne
+## 🔵 Exercice 4 – Calcul de moyenne
 🎯 **Objectif** : Manipuler des valeurs dans un tableau et faire un calcul.
 
 🛠️ **Instructions** :
 1. Déclarez un tableau `double` : `{ 12.5, 15.0, 20.0 }`.
 2. Calculez la **moyenne manuellement** en additionnant les éléments du tableau et en divisant par le nombre d’éléments.
-3. Affichez la moyenne.
+3. Affichez la moyenne avec deux décimales (`moyenne.ToString("F2")`).
 
 ✅ **Exemple attendu** :
 ```
-Moyenne : 15.83
+Moyenne : 15,83
 ```
 
 ---
 
-## 🟢 Exercice 5 – Interaction avec l’utilisateur
+## 🔵 Exercice 5 – Interaction avec l’utilisateur
 🎯 **Objectif** : Remplir un tableau avec des données saisies par l’utilisateur.
 
 🛠️ **Instructions** :
@@ -89,7 +89,7 @@ Les prénoms sont : Alex, Sam, Léa
 
 ---
 
-## 🟢 Exercice 6 – Remplacement d'une valeur
+## 🔵 Exercice 6 – Remplacement d'une valeur
 🎯 **Objectif** : Modifier un élément selon une logique définie.
 
 🛠️ **Instructions** :
@@ -104,7 +104,7 @@ Valeurs : 1, 4, 3, 4
 
 ---
 
-## 🟢 Exercice 7 – Remplacement d'une valeur en utilisant Length
+## 🔵 Exercice 7 – Remplacement d'une valeur en utilisant Length
 🎯 **Objectif** : Utiliser `Length` pour cibler le dernier élément.
 
 🛠️ **Instructions** :
@@ -121,7 +121,7 @@ Valeurs : 1, 4, 3, 4
 
 ---
 
-## 🟢 Exercice 8 – Utilisation de `Split()`
+## 🔵 Exercice 8 – Utilisation de `Split()`
 🎯 **Objectif** : Transformer une chaîne en tableau.
 
 🛠️ **Instructions** :
@@ -138,7 +138,7 @@ orange
 
 ---
 
-## 🟢 Exercice 9 – Utilisation de `Array.Sort()`
+## 🔵 Exercice 9 – Utilisation de `Array.Sort()`
 🎯 **Objectif** : Trier un tableau.
 
 🛠️ **Instructions** :
@@ -156,7 +156,7 @@ orange
 
 ---
 
-## 🟢 Exercice 10 – Utilisation de `string.Join()`
+## 🔵 Exercice 10 – Utilisation de `string.Join()`
 🎯 **Objectif** : Afficher un tableau sous forme de texte.
 
 🛠️ **Instructions** :
@@ -171,18 +171,20 @@ Alice, Bob, Charlie
 
 ---
 
-## 🟢 Exercice 11 – Utilisation de constantes
+## 🔵 Exercice 11 – Utilisation de constantes
 🎯 **Objectif** : Comprendre l’utilité des constantes.
 
 🛠️ **Instructions** :
 1. Déclarez une constante `const double PI = 3.14159;`.
 2. Demandez à l’utilisateur d’entrer un rayon.
-3. Calculez et affichez la circonférence du cercle avec la formule `2 * PI * rayon`.
+3. Calculez la circonférence avec `2 * PI * rayon` et affichez-la avec deux décimales (`circonference.ToString("F2")`).
 
 ✅ **Exemple attendu** :
 ```
 Entrez le rayon : 5
-Circonférence = 31.42
+Circonférence = 31,42
 ```
 
 ---
+
+[Consulter le corrigé du laboratoire 5.1A](/solution/laboratoire-solution5.1A)

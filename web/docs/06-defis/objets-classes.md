@@ -48,10 +48,12 @@ La classe expose exactement les membres suivants :
 
 - le constructeur `CompteFidelite(string nom)`;
 - les propriétés en lecture `Nom` et `Points`;
-- `AjouterPoints(int nombrePoints)`, qui retourne `true` seulement lorsque le nombre est supérieur à `0`;
+- `AjouterPoints(int nombrePoints)`, qui retourne `true` seulement lorsque le nombre est supérieur à `0` et que l'ajout ne dépasse pas la capacité du solde;
 - `EchangerPoints(int nombrePoints)`, qui retourne `true` seulement lorsque le nombre est supérieur à `0` et ne dépasse pas le solde.
 
 Le solde initial est toujours `0` et il ne peut pas être modifié directement depuis le programme principal.
+
+Le solde peut contenir au maximum `2147483647` points (`int.MaxValue`). Un ajout qui dépasserait cette capacité est refusé : `AjouterPoints` retourne `false` et le solde reste inchangé.
 
 ## Notions à utiliser
 
@@ -113,3 +115,12 @@ Effectue les tests dans l'ordre, à partir d'une nouvelle exécution de l'applic
 | Choisir `1`, puis saisir `bonjour` | `Entrez un nombre entier de points.` et `Points disponibles : 70`. |
 | Choisir `9` | `Choix invalide.` et le menu est affiché de nouveau. |
 | Choisir `3` | `Au revoir!`, puis l'application se termine. |
+
+### Test de la capacité du solde
+
+Effectue ce test dans une **nouvelle exécution**, séparée des tests précédents :
+
+| Action et valeur à saisir | Résultat attendu |
+| --- | --- |
+| Choisir `1`, puis saisir `2147483647` | `Ajout effectué.` et `Points disponibles : 2147483647`. |
+| Choisir `1`, puis saisir `1` | `Ajout refusé.` et `Points disponibles : 2147483647`; le solde ne devient pas négatif. |

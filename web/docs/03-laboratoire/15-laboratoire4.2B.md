@@ -6,11 +6,11 @@ title: B - Exercices plus complexes
 
 ---
 
-## 🟢 Exercice 1 — Boucle dans une fonction
+## 🔵 Exercice 1 — Boucle dans une fonction
 
 ### Besoin
 
-Vous devez créer une fonction `AfficherTableMultiplication` qui reçoit un nombre entier et affiche sa table de multiplication de `1` à `12`.
+Vous devez créer une fonction `AfficherTableMultiplication` qui reçoit un `int` et affiche sa table de multiplication de `1` à `12`. Elle doit fonctionner pour toute valeur `int`. Pour calculer les produits, convertissez le nombre en `long` **avant** la multiplication : `(long)nombre * i`. Un `long` peut représenter des entiers plus grands qu’un `int`; tous les produits d’un `int` par les multiplicateurs de 1 à 12 y sont représentables.
 
 Par exemple, l'appel :
 
@@ -40,6 +40,8 @@ doit afficher :
 ### À vous de programmer
 
 Écrivez la fonction et testez-la avec au moins trois nombres différents.
+
+**Essai avec une grande valeur :** pour `300000000`, les lignes des multiplicateurs `8` et `12` doivent afficher `300000000 x 8 = 2400000000` et `300000000 x 12 = 3600000000`, sans devenir négatives.
 
 ---
 
@@ -155,7 +157,7 @@ Créez une fonction `ImprimerPyramideInverser()` qui reçoit la taille de la pyr
 
 #### Intégration
 
-Appelez ensuite `ImprimerPyramide()` suivie de `ImprimerPyramideInverser()` afin d'obtenir :
+Appelez ensuite `ImprimerPyramide(3)` suivie de `ImprimerPyramideInverser(2)` afin d'obtenir une seule ligne de trois étoiles au sommet :
 
 ```text
 *
@@ -172,3 +174,7 @@ Appelez ensuite `ImprimerPyramide()` suivie de `ImprimerPyramideInverser()` afin
 Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
 
 👉 [Accéder au défi sur la boucle `for`](../06-defis/boucle-for.md)
+
+---
+
+[Consulter le corrigé du laboratoire 4.2B](/solution/laboratoire-solution4.2B)

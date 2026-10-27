@@ -43,7 +43,7 @@ int[] notesEleve5 = { 65, 70, 72, 60, 68, 21 };
 ❌ **Inconvénients** :
 - Trop de variables à déclarer.
 - Difficile à traiter automatiquement (par exemple pour calculer la moyenne de la classe).
-- Impossible de retourner toutes les notes des élèves depuis une fonction.
+- Peu pratique de retourner toutes les notes depuis une fonction lorsqu'elles sont réparties dans plusieurs variables distinctes.
 
 ✅ **Solution** : utiliser un seul conteneur capable de stocker toutes les valeurs : **un tableau 2D**.
 
@@ -127,21 +127,19 @@ string[,] pouvoirsSuperheros = {
 };
 ```
 :::info
-Il est possible de définir un tableau à plusieurs dimensions en une seule ligne. Cependant, il est important de s'assurer que le code reste lisible au premier regard. S'il est nécessaire d'utiliser la barre de défilement vertical pour voir l'entièreté du code, ajouter des sauts de lignes peut s'avérer utile.
+Il est possible de définir un tableau à plusieurs dimensions en une seule ligne. Cependant, il est important de s'assurer que le code reste lisible au premier regard. S'il est nécessaire d'utiliser la barre de défilement horizontal pour voir l'entièreté du code, ajouter des sauts de ligne peut s'avérer utile.
 :::
 
 ```csharp
 string[,] pouvoirsSuperheros = {{ "Vol", "Super force", "Vision laser", "Invulnérabilité"},{ "Intelligence", "Arts martiaux", "Technologie", "Stratégie"},{ "Vitesse", "Voyage temporel", "Réflexes accrus", "Guérison rapide"},{ "Force divine", "Lasso de vérité", "Vol", "Agilité surhumaine"}};
 ```
-:::
-
 ### 📄 Déclaration **SANS** initialisation
 Cependant, il arrive parfois que les données du tableau soient créées pendant la vie du programme, à partir d'une logique métier. Dans ce cas, il faut être en mesure de créer un tableau sans données. Voici un exemple de déclaration d'un tableau sans initialisation :
 
 ```csharp
-int[,] notesEleves = new int[3, 2]; // 3 rangées et 2 colonnes vides.
+int[,] notesEleves = new int[3, 2]; // 3 rangées et 2 colonnes; chaque élément vaut 0.
 ```
-Lorsque le tableau n'est pas initialisé, chaque élément possède la valeur par défaut du type de données (les tableaux eux-mêmes ne sont pas `null` en C# lorsqu'ils sont créés avec `new`).
+Lorsqu'un tableau est créé avec `new` sans fournir de valeurs explicites, chaque élément reçoit la valeur par défaut de son type. Le tableau créé existe bien : il n'est pas `null`.
 
 - L'opérateur `new` instancie (crée) l'objet tableau.
 - Le type de données des valeurs qui seront assignées au tableau est défini.
@@ -400,5 +398,7 @@ Vous devez réaliser les laboratoires suivants :
 
 
 
-<!-- * [🧪 Labo 6.2A](/laboratoire/laboratoire6.2A)-->
-<!-- * [🧪 Labo 6.2B](/laboratoire/laboratoire6.2B)-->
+* [🧪 Labo 7.1A](/laboratoire/laboratoire7.1A)
+* [🧪 Labo 7.1B](/laboratoire/laboratoire7.1B)
+
+Pour approfondir les sommes par rangée et par colonne : [Parcours des tableaux 2D](13-parcours2d.md).

@@ -23,7 +23,7 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
   language="csharp" 
   startLine="7"
   endLine="48"  
-  branch="formatif2"
+  branch="main"
   trimLineStart="true"
   showLineNumber="true"
 />
@@ -36,7 +36,7 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
   language="csharp" 
   startLine="7"
   endLine="35"
-  branch="formatif2"
+  branch="main"
   trimLineStart="true"
   showLineNumber="true"
 />
@@ -48,7 +48,7 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
   language="csharp" 
   startLine="7"
   endLine="44"
-  branch="formatif2"
+  branch="main"
   trimLineStart="true"
   showLineNumber="true"
 />

@@ -47,6 +47,8 @@ Si plusieurs tâches partagent la durée maximale, conserve la première tâche 
 
 Chaque ligne du fichier contient un nom de tâche non vide, suivi d'un `;`, puis d'une durée entière supérieure à `0`. Par exemple : `Faire le laboratoire;55`.
 
+Convertis chaque durée en `int`. Utilise des `long` pour les compteurs et le total des minutes : ce sont des entiers de plus grande capacité, et les additions doivent se faire dans ce type. On suppose que les compteurs et le total sont représentables dans un `long`. La durée maximale d'une tâche reste un `int` et la moyenne utilise un `double`.
+
 ## Notions à utiliser
 
 - lecture d'un fichier texte ligne par ligne;
@@ -89,4 +91,5 @@ Lignes rejetées : 0
 | Les quatre lignes ci-dessus, puis `Préparer mon sac;` | La dernière ligne est ignorée; les statistiques demeurent 4 tâches, 135 minutes, 33,75 minutes, `Faire le laboratoire` et 2 tâches de 30 minutes ou plus; `Lignes rejetées : 1`. |
 | Fichier vide | `Nombre de tâches : 0`, `Total des minutes : 0`, `Lignes rejetées : 0` et `Aucune tâche valide.`; aucune moyenne ni tâche la plus longue. |
 | `Première tâche;40`<br />`Deuxième tâche;40` | 2 tâches; total de 80 minutes; moyenne de 40,00 minutes; `Tâche la plus longue : Première tâche`; 2 tâches de 30 minutes ou plus; 0 ligne rejetée. |
+| `A;1500000000`<br />`B;1500000000` | 2 tâches; total de 3000000000 minutes; moyenne de 1500000000,00 minutes; tâche la plus longue : A (première en cas d'égalité); 2 tâches de 30 minutes ou plus; 0 ligne rejetée. |
 | Fichier `taches.txt` absent | `Fichier taches.txt introuvable.`; le programme se termine sans afficher de statistiques. |

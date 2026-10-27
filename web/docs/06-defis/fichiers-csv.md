@@ -42,7 +42,9 @@ Crée une application console qui lit le fichier CSV et produit un rapport conte
 
 ## Valeurs à utiliser
 
-Chaque ligne de vente valide contient quatre colonnes séparées par une virgule : un produit non vide, l'une des catégories exactes `Vêtements`, `Souvenirs` ou `Décoration`, une quantité entière supérieure à `0` et un prix unitaire entier supérieur à `0`. La première ligne est toujours l'en-tête et n'est pas une vente.
+Chaque ligne de vente valide contient quatre colonnes séparées par une virgule : un produit non vide, l'une des catégories exactes `Vêtements`, `Souvenirs` ou `Décoration`, une quantité et un prix unitaire convertibles en `int` et supérieurs à `0` (au plus 2147483647). La première ligne est toujours l'en-tête et n'est pas une vente.
+
+Utilise des `long` pour compter les ventes, les lignes rejetées et les articles par catégorie : ils permettent de dépasser la capacité d'un `int`. Utilise des `decimal` pour le revenu de chaque ligne, le revenu maximal et le revenu total. Convertis la quantité en `decimal` **avant** de la multiplier par le prix, puis affiche les revenus avec `F2`. On suppose que les données du fichier donnent des compteurs représentables dans un `long` et des revenus représentables dans un `decimal`.
 
 Si plusieurs produits obtiennent le même revenu maximal, conserve le premier produit rencontré dans le fichier.
 
@@ -92,5 +94,7 @@ Le fichier `rapport-ventes.txt` doit contenir exactement les sept premières lig
 | `T-shirt,Vêtements,3,18`<br />`Tasse,Souvenirs,2,12`<br />`Affiche,Décoration,5,7` | 3 ventes valides; 0 ligne rejetée; revenu total de 113,00 $; T-shirt est le plus rentable avec 54,00 $; catégories : 3, 2 et 5 articles; le rapport contient ces résultats. |
 | Les trois lignes ci-dessus, puis `Stylo,Papeterie,abc,2` | 3 ventes valides; 1 ligne rejetée; revenu total de 113,00 $; les autres résultats et le rapport demeurent fondés sur les trois lignes valides. |
 | `ProduitA,Vêtements,2,10`<br />`ProduitB,Souvenirs,4,5` | Les deux produits génèrent 20,00 $; `Produit le plus rentable : ProduitA (20,00 $)` est affiché parce qu'il apparaît en premier. |
+| `Test,Vêtements,50000,50000` | 1 vente valide; revenu total de 2500000000,00 $; Test est le plus rentable avec 2500000000,00 $; Vêtements : 50000 articles. |
+| `ProduitA,Vêtements,2147483647,1`<br />`ProduitB,Vêtements,2147483647,1` | 2 ventes valides; revenu total de 4294967294,00 $; Vêtements : 4294967294 articles; ProduitA reste le plus rentable avec 2147483647,00 $ (égalité). |
 | En-tête seulement | 0 vente valide; 0 ligne rejetée; revenu et trois catégories à 0; message `Aucune vente valide.`; aucune ligne `Produit le plus rentable`; le rapport contient les mêmes résultats. |
 | Fichier `ventes.csv` absent | `Fichier ventes.csv introuvable.`; aucun calcul n'est affiché et `rapport-ventes.txt` n'est pas créé. |

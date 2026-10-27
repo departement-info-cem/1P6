@@ -24,7 +24,7 @@ Résultat : toutes les données disparaissent à chaque redémarrage. 👻
 
 Une fois les données écrites dans un fichier :
 - elles restent accessibles après la fermeture du programme,
-- elles peuvent être relues plus tard (ce sera le sujet de la **prochaine séance 9.2** 👀).
+- elles peuvent être relues plus tard (ce sera le sujet de la **séance 12.1** 👀).
 
 ---
 
@@ -37,7 +37,7 @@ Une fois les données écrites dans un fichier :
 
 ---
 
-## 🧰 Étape 1 — Le package `System.IO`
+## 🧰 Étape 1 — L'espace de noms `System.IO`
 
 Avant tout, assurez-vous d'ajouter **cette ligne au début de votre programme :**
 
@@ -73,6 +73,8 @@ StreamWriter outputFile = new StreamWriter("C:\\EspaceLabo\\culture_quebecoise_1
 ```
 
 Ainsi, vous avez un meilleur contrôle sur l'emplacement où les fichiers sont sauvegardés. 🗂️
+
+Pour les exemples avec ce chemin, créez d'abord le dossier `C:/EspaceLabo`. `StreamWriter` crée le fichier, mais ne crée pas les dossiers manquants.
 
 ---
 
@@ -128,6 +130,8 @@ StreamWriter outputFile = new StreamWriter("culture_quebecoise_101.txt", true);
 Le `true` indique que tu veux **ajouter** au fichier existant plutôt que de le recréer.
 Par défaut, cet argument est à `false`.
 
+Le mode ajout n'insère pas de saut de ligne avant le nouveau texte. Pour commencer une nouvelle ligne, la dernière écriture précédente doit avoir terminé sa ligne avec `WriteLine()`.
+
 ---
 
 ## 🧩 Exemple complet
@@ -147,7 +151,7 @@ class Program
         outputFile.WriteLine("Avoir de la broue dans le toupet");
 
         outputFile.Write("Attache ta tuque ");
-        outputFile.Write("avec d’la broche !");
+        outputFile.WriteLine("avec d’la broche !");
 
         outputFile.Close(); // Fermeture du fichier
 
@@ -198,4 +202,4 @@ Se tirer une bûche
 
 
 Vous devez réaliser le labo suivant :
- [🧪 Labo 9.1](/laboratoire/laboratoire9.1)
+ [🧪 Labo 10.1](/laboratoire/laboratoire10.1)

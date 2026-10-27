@@ -2,7 +2,7 @@
  * QUESTION 2 - Interface d'achat de cartes Pokemon
  * 
  * DESCRIPTION:
- * À partir des mêmes données qu'à la première question, mais cette fois c'est un tableau 3D directement 
+ * À partir des mêmes données qu'à la première question, mais cette fois c'est un tableau 2D directement
  * dans le code, compléter l'interface pour qu'on puisse acheter une carte Pokemon.
  * 
  * OBJECTIF:
@@ -13,7 +13,7 @@
  * - Récupérer le nom du client dans le champ texte
  * - Afficher les cartes dans le ListBox
  * - Lors du changement d'item sélectionné dans le ListBox (listBoxCartes_SelectedIndexChanged), 
- * afficher l'image de la carte dans le PictureBox pbCarte
+ * afficher l'image de la carte dans le PictureBox pictureBoxCarte
  * - Le bouton "Acheter" affiche un MessageBox avec les informations de la commande
  * 
  * EXEMPLE DE RÉSULTAT ATTENDU:
@@ -59,9 +59,12 @@ namespace Question2_AchatPokemon
                 // Récupérer les données
                 string nom = cartes[ligne,0];
                 string rarete = cartes[ligne, 1];
-                string prixUSD = cartes[ligne, 3];
-                ;
-                listBoxCartes.Items.Add($"{nom} - {prixUSD:F2}$ ({rarete})");
+                // Les données fournies emploient la virgule ou le point décimal.
+                double prixUSD = double.Parse(cartes[ligne, 3].Replace(',', '.'),
+                    System.Globalization.CultureInfo.InvariantCulture);
+                string prixAffiche = prixUSD.ToString("F2",
+                    System.Globalization.CultureInfo.GetCultureInfo("fr-CA"));
+                listBoxCartes.Items.Add($"{nom} - {prixAffiche}$ ({rarete})");
 
             }
         }
@@ -79,12 +82,18 @@ namespace Question2_AchatPokemon
 
         private void btnAcheter_Click(object sender, EventArgs e)
         {
+            if (listBoxCartes.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une carte.");
+                return;
+            }
+
             // Récupérer les informations
             string nomClient = txtNomClient.Text;
             string carteSelectionnee = listBoxCartes.SelectedItem.ToString();
 
             // Afficher le message de confirmation
-            string message = $"{nomClient} a acheté la carte {carteSelectionnee}$";
+            string message = $"{nomClient} a acheté la carte {carteSelectionnee}";
             MessageBox.Show(message, "Confirmation d'achat", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

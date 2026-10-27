@@ -8,7 +8,7 @@ title: Lecture et écriture de fichiers CSV
 
 ---
 
-## 🟢 Exercice 1 : Créer un fichier CSV simple
+## 🔵 Exercice 1 : Créer un fichier CSV simple
 
 **Instructions** : Écrivez un programme qui génère un fichier `fruits.csv` contenant 5 fruits avec leur couleur. N'oubliez pas **l'entête** !
 
@@ -24,11 +24,11 @@ Citron,Jaune
 
 ---
 
-## 🟢 Exercice 2 : Lire et afficher le contenu d'un fichier CSV
+## 🔵 Exercice 2 : Lire et afficher le contenu d'un fichier CSV
 
 **Instructions** : Écrivez un programme qui lit le fichier `fruits.csv`, et affiche chaque fruit ainsi que sa couleur. N'oubliez pas de vérifier si le fichier existe 😉
 
-⚠️ Utilisez `Split(',')` pour séparer les colonnes et une boucle `while (!EndOfStream)` pour lire chaque ligne.
+⚠️ Avec un `StreamReader` nommé `sr`, lisez d’abord l’en-tête avec `sr.ReadLine()` sans l’afficher. Utilisez ensuite une boucle `while (!sr.EndOfStream)` et `Split(',')` pour traiter les données.
 
 
 ✅ **Sortie attendue** :
@@ -42,7 +42,7 @@ Citron est de couleur jaune.
 
 ---
 
-## 🟡 Exercice 3 : Calculer la moyenne d’un groupe d’étudiants
+## 🟣 Exercice 3 : Calculer la moyenne d’un groupe d’étudiants
 
 **Votre programme doit** :
 
@@ -59,7 +59,7 @@ Jean-Michel,59
 Philippe,100
 ```
 
-2. Lire le fichier ligne par ligne.
+2. Lire et ignorer l’en-tête, puis traiter les lignes de données une par une.
 3. Calculer la moyenne des notes.
 4. Afficher le résultat **avec 2 décimales** 😉
 
@@ -71,7 +71,7 @@ La moyenne du groupe est de 84,71 %
 
 ---
 
-## 🟡 Exercice 4 : Inverser les colonnes d'un CSV
+## 🟣 Exercice 4 : Inverser les colonnes d'un CSV
 
 **Instructions** : Lisez le fichier `fruits.csv` et écrivez un **nouveau fichier** `fruits_inverse.csv`
 où l’ordre des colonnes est inversé (la couleur avant le fruit).
@@ -88,7 +88,7 @@ Jaune,Citron
 
 ---
 
-## 🔴 Exercice 5 : Construire une grille dynamique à partir d’un CSV
+## 🟣 Exercice 5 : Construire une grille dynamique à partir d’un CSV
 
 **Note** : Bien que cet exercice ait été complété en démonstration, ce serait une bonne pratique de pouvoir le programmer vous-même !
 
@@ -109,7 +109,7 @@ Jaune,Citron
 
 ---
 
-## 🔴 Exercice 6 : Sauvegarder et relire une matrice numérique
+## 🟣 Exercice 6 : Sauvegarder et relire une matrice numérique
 
 **Votre programme doit** :
 1. Initialiser un tableau 2D de nombres, comme celui-ci :
@@ -122,7 +122,7 @@ int[,] matrice = {
 };
 ```
 
-2. Faites le code afin d'écrire cette matrice dans un fichier `matrice.csv` (une ligne par rangée) sans oublier de séparer chaque élément par **une vigule**.
+2. Faites le code afin d'écrire cette matrice dans un fichier `matrice.csv` (une ligne par rangée) sans oublier de séparer chaque élément par **une virgule**.
 
 ⚠️ **Votre programme doit pouvoir fonctionner avec des matrices de taille différente !**
 
@@ -172,7 +172,7 @@ int[,] matrice = {
 Répétez tant que tentativesRestantes > 0 et gagne == false :
 1. Affichez le mot masqué en séparant chaque lettre par un espace.
 2. Affichez le nombre de tentatives restantes.
-3. Demandez à l’utilisateur une lettre (une seule lettre).
+3. Demandez une seule lettre; si la saisie est vide ou contient plusieurs caractères, redemandez sans retirer de tentative. Convertissez la lettre en majuscule avant la comparaison.
 4. Vérifiez si la lettre est présente dans le mot :
     * Si oui, remplacez les `'_'` correspondants dans le mot masqué.
     * Si non, diminuez tentativesRestantes de 1.
@@ -192,7 +192,7 @@ Sinon, affichez :
 💀 Vous avez perdu ! Le mot était : [MOT]
 ```
 
-✅ **Exemple** 
+✅ **Exemple**
 ```
 Mot : _ _ _ _ _ _ _ _ _ _
 Tentatives restantes : 6
@@ -259,7 +259,6 @@ Lettre : u
 🚢,🌊,🚢,🌊,🌊
 🌊,🌊,🌊,🌊,🚢
 🌊,🚢,🌊,🌊,🌊
-
 ```
 
 2. Dans votre programme :
@@ -283,9 +282,8 @@ Lettre : u
 
 **Étapes à suivre**
 
-1. Demandez au joueur de saisir une coordonnée numériques (ligne, colonne).
-2. Si la case contient un 🚢, affichez “💥 Touché !” et remplacez-la par 💥.
-   Sinon, affichez “💦 Raté !” et remplacez-la par 💦.
+1. Demandez une ligne de 1 au nombre de rangées et une colonne de 1 au nombre de colonnes. Validez la conversion et les bornes, puis soustrayez 1 avant l’accès au tableau.
+2. Si la case contient un 🚢, affichez “💥 Touché !” et remplacez-la par 💥. Si elle contient 🌊, affichez “💦 Raté !” et remplacez-la par 💦. Si elle contient déjà 💥 ou 💦, affichez “Déjà visé !” sans la modifier.
 3. Après chaque tir, affichez la grille mise à jour.
 4. Quand tous les bateaux sont détruits, affichez "🎉 Tous les bateaux sont coulés !".
 
@@ -299,3 +297,7 @@ Entrez la colonne : 3
 🌊 🌊 🌊 🌊 🚢
 🌊 🚢 🌊 🌊 🌊
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 11.1](/solution/laboratoire-solution11.1)

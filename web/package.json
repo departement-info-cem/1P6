@@ -12,7 +12,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "node --test scripts/test-site.cjs",
+    "audit:site": "python scripts/audit-site.py"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",

@@ -10,8 +10,8 @@ title: A - Questions de compréhension
 
 > 🧠 **Je comprends :** je peux lire un programme simple et déterminer s'il répond à l'objectif demandé.
 
-> ⚠️ Ces questions doivent être réalisés sans utiliser l'ordinateur.
-N'ouvrez pas Visual Studio pour écrire et exécutez le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
+> ⚠️ Ces questions doivent être réalisées sans utiliser l'ordinateur.
+N'ouvrez pas Visual Studio pour écrire et exécuter le code. L'objectif est de développer votre capacité à comprendre et à analyser le code par vous-même.
 
 Pour chaque question, **lisez l'objectif et le code fourni**.
 
@@ -755,3 +755,4 @@ Les deux opérandes sont de type `int`. La division est donc une division entiè
 
 ---
 
+[Consulter le corrigé du laboratoire 1.2A](/solution/laboratoire-solution1.2A)

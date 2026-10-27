@@ -38,6 +38,8 @@ Ajoutez la bibliothèque `System.IO` :
 using System.IO;
 ```
 
+Créez d'abord le dossier `C:/EspaceLabo` utilisé dans les exemples; `StreamWriter` ne crée pas les dossiers manquants.
+
 ---
 
 ## ✍️ Écrire un fichier CSV avec `StreamWriter`
@@ -80,6 +82,8 @@ Snow,Jon,81
 
 Pour lire un CSV, on lit **chaque ligne** du fichier, puis on **sépare les valeurs** à l’aide de la méthode `.Split(',')`.
 
+Les exemples de ce cours utilisent un CSV simple : aucune valeur ne contient de virgule, de guillemet ou de saut de ligne. Pour un CSV général, `Split(',')` ne suffit pas : un lecteur CSV doit aussi gérer les champs entre guillemets.
+
 ```csharp
 using System.IO;
 
@@ -114,7 +118,13 @@ class Program
                 // Séparer la ligne en plusieurs éléments, en utilisant la virgule comme séparateur
                 string[] valeurs = ligne.Split(','); 
 
-                Console.WriteLine($"{valeurs[1]} {valeurs[0]} à {valeurs[2]}%");
+                if (valeurs.Length != 3)
+                {
+                    Console.WriteLine("Ligne invalide : trois valeurs sont attendues.");
+                    return;
+                }
+
+                Console.WriteLine($"{valeurs[1]} {valeurs[0]} a {valeurs[2]} %");
             }
         }
     }
@@ -124,10 +134,10 @@ class Program
 ✅ **Sortie console :**
 ```
 En-têtes : Nom,Prenom,Note
-James Bond à 100%
-Harry Potter à 87%
-Indiana Jones à 59%
-Jon Snow à 81%
+James Bond a 100 %
+Harry Potter a 87 %
+Indiana Jones a 59 %
+Jon Snow a 81 %
 ```
 
 ---
@@ -230,9 +240,26 @@ class Program
             }
         }
 
+        if (lignesTemp.Count == 0)
+        {
+            Console.WriteLine("Le fichier est vide !");
+            return;
+        }
+
         // Déterminer les dimensions du donjon
         int nbLignes = lignesTemp.Count;
         int nbColonnes = lignesTemp[0].Split(',').Length; // Nombre de colonnes à partir de la première ligne
+
+        // Chaque rangée doit contenir le même nombre de cases
+        for (int i = 0; i < nbLignes; i++)
+        {
+            if (string.IsNullOrWhiteSpace(lignesTemp[i]) ||
+                lignesTemp[i].Split(',').Length != nbColonnes)
+            {
+                Console.WriteLine("Grille invalide : les rangées doivent être non vides et de même longueur.");
+                return;
+            }
+        }
 
         // Créer le tableau 2D
         string[,] donjon = new string[nbLignes, nbColonnes];
@@ -255,9 +282,9 @@ class Program
 
 ✅ **Sortie console :**
 ```
-🗿,💀,💎
-👹,🧙‍,🗝
-🚪,🧟,👺
+🗿 💀 💎
+👹 🧙‍ 🗝
+🚪 🧟 👺
 ```
 
 ---
@@ -276,6 +303,6 @@ class Program
 
 
 Vous devez réaliser le labo suivant :
- [🧪 Labo 10.1](/laboratoire/laboratoire10.1)
+ [🧪 Labo 11.1](/laboratoire/laboratoire11.1)
 
 ---

@@ -39,8 +39,6 @@ Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
 
 ## 💪 À faire aujourd'hui
 
-* Compléter le [🧪 Labo 9.1](/laboratoire/laboratoire9.1) et [🧪 Défi 9.1](/defis/integration-menus-tableaux-2d)
+* Compléter le [🧪 Labo 9.1](/laboratoire/laboratoire9.1) et [🧪 Défi — Menus et tableaux 2D](/defis/integration-menus-tableaux-2d)
 * Si besoin, prenez le temps de vous mettre à jour et de poser vos questions sur les laboratoires précédents.
 * Vous pouvez ensuite poursuivre le TP2.
-
-<!-- Vous devez réaliser le [🧪 Labo 8.1](/laboratoire/laboratoire8.1A)-->

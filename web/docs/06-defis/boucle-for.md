@@ -33,6 +33,8 @@ Le programme doit afficher un tableau indiquant le numéro de chaque trousse et 
 
 Le nombre d'articles par trousse et le nombre de trousses sont des entiers supérieurs à `0`.
 
+Lis ces deux valeurs en `int` et utilise un `long` pour le cumul des articles et le compteur de boucle. Un `long` est un entier de plus grande capacité qu'un `int` : le produit des deux saisies tient dans ce type, et le compteur peut terminer le parcours même si le nombre de trousses vaut `int.MaxValue`.
+
 ## Notions à utiliser
 
 - boucle `for`;
@@ -73,5 +75,6 @@ Total d'articles préparés : 16
 | ---: | ---: | --- |
 | 4 | 4 | Quatre lignes avec 4, 8, 12 et 16 articles cumulés, puis `Total d'articles préparés : 16`. |
 | 6 | 1 | Une ligne avec 6 articles cumulés, puis `Total d'articles préparés : 6`. |
+| 50000 | 50000 | 50000 lignes sont produites; le total final est `Total d'articles préparés : 2500000000`, sans valeur négative. |
 | 0 | 4 | `Les valeurs doivent être supérieures à 0.`; aucun tableau ni total n'est affiché. |
 | 4 | -1 | `Les valeurs doivent être supérieures à 0.`; aucun tableau ni total n'est affiché. |

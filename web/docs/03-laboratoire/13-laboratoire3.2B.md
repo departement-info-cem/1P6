@@ -1,8 +1,8 @@
 ---
-title: B - 🎬 Intègration des fonctions - Mini-projet – Calculateur de coût de sortie au cinéma
+title: B - 🎬 Intégration des fonctions - Mini-projet – Calculateur de coût de sortie au cinéma
 ---
 
-# 🧪 Labo 3.2 🎬 Mini-projet – Calculateur de coût de sortie au cinéma 
+# 🧪 Labo 3.2B 🎬 Mini-projet – Calculateur de coût de sortie au cinéma
 
 ## 🎯 Objectif
 Créer un programme console qui calcule le coût d’une sortie au cinéma pour **un participant**, en tenant compte :
@@ -38,18 +38,22 @@ Le programme doit utiliser **plusieurs méthodes `static`** qui retournent des v
 
 ## 📋 Instructions
 
-1. **Demander le type de film** (1 = Standard, 2 = 3D, 3 = IMAX)  
-2. **Demander l’âge du participant**  
-3. **Utiliser la méthode `ObtenirPrixBillet`** pour déterminer le prix du billet  
-4. **Afficher la liste des collations et demander un choix** (1, 2 ou 3)  
-5. **Utiliser la méthode `ObtenirPrixCollation`** pour déterminer le prix de la collation choisie  
-6. **Calculer le total avant taxes** avec `CalculerTotal`  
-7. **Appliquer les taxes** avec `AjouterTaxes`  
-8. **Afficher le récapitulatif complet**
+1. **Demander le type de film** (1 = Standard, 2 = 3D, 3 = IMAX)
+2. **Demander l’âge du participant**
+3. **Utiliser la méthode `ObtenirPrixBillet`** pour déterminer le prix du billet
+4. **Afficher la liste des collations et demander un choix** (1, 2 ou 3)
+5. **Utiliser la méthode `ObtenirPrixCollation`** pour déterminer le prix de la collation choisie
+6. **Calculer le total avant taxes** avec `CalculerTotal`
+7. **Appliquer les taxes** avec `AjouterTaxes`
+8. **Afficher le récapitulatif complet** : le nom du type de film et tous les montants avec deux décimales.
+
+Pour cet exercice, on suppose que les saisies sont des entiers. Si le type de film ou la collation est hors de 1 à 3, ou si l’âge est négatif, affichez un message d’erreur et terminez avant de calculer.
+
+Pour cet exercice, les taxes sont fixées à 15 %. Arrondissez le total à deux décimales avec `Math.Round(total, 2, MidpointRounding.AwayFromZero)` : 20,125 devient 20,13.
 
 ---
 
-## 📝 Pseudo-code principal 
+## 📝 Pseudo-code principal
 
 ```
 DEBUT
@@ -60,6 +64,10 @@ DEBUT
     AFFICHER "Âge du participant : "
     LIRE age
 
+    SI typeFilm HORS DE 1 À 3 OU age NÉGATIF ALORS
+        AFFICHER "Entrée invalide"
+        TERMINER
+
     prixBillet = ObtenirPrixBillet(age, typeFilm)
 
     AFFICHER "Choisissez une collation :"
@@ -68,6 +76,10 @@ DEBUT
     AFFICHER "3 - Breuvage (4.25 $)"
     LIRE choixCollation
 
+    SI choixCollation HORS DE 1 À 3 ALORS
+        AFFICHER "Entrée invalide"
+        TERMINER
+
     prixCollation = ObtenirPrixCollation(choixCollation)
 
     totalAvantTaxes = CalculerTotal(prixBillet, prixCollation)
@@ -75,7 +87,7 @@ DEBUT
     totalAvecTaxes = AjouterTaxes(totalAvantTaxes)
 
     AFFICHER "--- Récapitulatif ---"
-    AFFICHER "Type de film : ", typeFilm
+    AFFICHER "Type de film : ", nom correspondant à typeFilm (Standard, 3D ou IMAX)
     AFFICHER "Prix billet : ", prixBillet
     AFFICHER "Collation : ", prixCollation
     AFFICHER "Total avant taxes : ", totalAvantTaxes
@@ -86,10 +98,12 @@ FIN
 
 ---
 
-## 🛠️ Méthodes à créer 
+## 🛠️ Méthodes à créer
 
 ### 1️⃣ `ObtenirPrixBillet`
 ```
+prix = 0
+
 SI typeFilm EST ÉGAL À 1 ALORS
     SI age PLUS PETIT QUE 12 ALORS prix = 6.00
     SINON SI age PLUS PETIT OU ÉGAL À 17 ALORS prix = 8.00
@@ -115,6 +129,7 @@ RETOURNER prix
 
 ### 2️⃣ `ObtenirPrixCollation`
 ```
+prix = 0
 SI choixCollation EST ÉGAL À 1 ALORS prix = 5.50
 SI choixCollation EST ÉGAL À 2 ALORS prix = 6.75
 SI choixCollation EST ÉGAL À 3 ALORS prix = 4.25
@@ -136,7 +151,7 @@ RETOURNER total
 ```
 taxe = montant MULTIPLIER PAR 0.15
 montantTotal = montant PLUS taxe
-RETOURNER montantTotal
+RETOURNER montantTotal arrondi à 2 décimales (milieu arrondi en s’éloignant de zéro)
 ```
 
 ---
@@ -153,8 +168,12 @@ Choisissez une collation :
 
 --- Récapitulatif ---
 Type de film : IMAX
-Prix billet : 12.00 $
-Collation : 5.50 $
-Total avant taxes : 17.50 $
-Total avec taxes : 20.13 $
+Prix billet : 12,00 $
+Collation : 5,50 $
+Total avant taxes : 17,50 $
+Total avec taxes : 20,13 $
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 3.2B](/solution/laboratoire-solution3.2B)

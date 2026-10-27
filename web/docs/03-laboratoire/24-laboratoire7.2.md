@@ -35,7 +35,7 @@ Pour les exercices de cette section, **utilise uniquement les éléments qui ont
 > 🖨️ [Imprimer le tableau de trace d'exécution pour pratiquer tes traces à la main.](https://info.cegepmontpetit.ca/420-SN1/assets/files/Traces_recto_verso-c4b18f20ba4ca97fa4a818fec269eae3.pdf)
 
 :::tip Rappel : n'oublie pas le dernier tour
-Une boucle `for` évalue sa condition **une fois de trop** : celle qui est fausse et qui fait sortir de la boucle. Ce tour-là doit apparaître dans ta trace.
+Une boucle `for` qui se termine normalement évalue sa condition une dernière fois : elle est alors fausse et fait sortir de la boucle. Ce dernier test doit apparaître dans ta trace, même si le corps de la boucle n’est plus exécuté.
 :::
 
 ### 🟢 Exercice A1 – Boucle avec accumulateur
@@ -104,7 +104,7 @@ Colonnes suggérées : `i` | `notes[i]` | `max` | `position` | Affichage
 
 ---
 
-### 🟡 Exercice A4 – Boucles imbriquées : somme par rangée
+### 🟢 Exercice A4 – Boucles imbriquées : somme par rangée
 
 Colonnes suggérées : `r` | `c` | `grille[r, c]` | `sommeRangee` | Affichage
 
@@ -129,7 +129,7 @@ Colonnes suggérées : `r` | `c` | `grille[r, c]` | `sommeRangee` | Affichage
 
 ---
 
-### 🟡 Exercice A5 – Parcours par colonne
+### 🟢 Exercice A5 – Parcours par colonne
 
 Colonnes suggérées : `c` | `r` | `grille[r, c]` | Affichage
 
@@ -154,7 +154,7 @@ Colonnes suggérées : `c` | `r` | `grille[r, c]` | Affichage
 
 ---
 
-### 🟡 Exercice A6 – Appel de fonction dans une boucle
+### 🟢 Exercice A6 – Appel de fonction dans une boucle
 
 Colonnes suggérées : `i` | `valeur` | `n` | `resultat` | valeur retournée | `total`
 
@@ -186,7 +186,7 @@ Colonnes suggérées : `i` | `valeur` | `n` | `resultat` | valeur retournée | `
 
 ---
 
-### 🔴 Exercice A7 – Trouver le bogue par la trace
+### 🟢 Exercice A7 – Trouver le bogue par la trace
 
 Ce programme devrait afficher la **température moyenne**, soit `19`. Il affiche autre chose.
 
@@ -218,7 +218,7 @@ Pour cette partie, crée un **nouveau projet** dans Visual Studio et recopie le 
 
 Les réponses sont des **valeurs précises** : lis-les dans **Variables locales**, dans **Automatique** ou dans la fenêtre **Espion**, ne les devine pas.
 
-### 🟢 Exercice B1 – Compter les passages et espionner une expression
+### 🔵 Exercice B1 – Compter les passages et espionner une expression
 
 🎯 **Objectif** : Placer un point d'arrêt, avancer avec `F10` et utiliser la fenêtre **Espion**.
 
@@ -269,7 +269,7 @@ Console.WriteLine($"Ruptures : {nbRuptures}");
 
 ---
 
-### 🟢 Exercice B2 – Entrer dans une fonction avec `F11`
+### 🔵 Exercice B2 – Entrer dans une fonction avec `F11`
 
 🎯 **Objectif** : Distinguer `F10` de `F11` et suivre une valeur de retour.
 
@@ -314,7 +314,7 @@ static void Main()
 
 ---
 
-### 🟡 Exercice B3 – Déplier un tableau dans Variables locales
+### 🔵 Exercice B3 – Déplier un tableau dans Variables locales
 
 🎯 **Objectif** : Repérer des cases jamais remplies en dépliant un tableau 2D.
 
@@ -370,7 +370,7 @@ Pour chacun, remets ces trois éléments :
 * **comment** tu l'as trouvée (point d'arrêt placé où, quelle variable observée);
 * la **correction**.
 
-### 🟡 Exercice C1 – Le programme plante
+### 🟣 Exercice C1 – Le programme plante
 
 ```csharp
 int[] points = { 12, 8, 15, 6, 20 };
@@ -392,7 +392,7 @@ for (int i = 0; i <= points.Length; i++)
 
 ---
 
-### 🟡 Exercice C2 – Le total ne s'additionne pas
+### 🟣 Exercice C2 – Le total ne s'additionne pas
 
 ```csharp
 int[] ventes = { 250, 300, 175, 425 };
@@ -415,16 +415,16 @@ Total des ventes : 1150 $
 
 **Questions :**
 1. Pourquoi `total` n'existe-t-il pas à l'extérieur de la boucle ?
-2. Déplace la déclaration pour que le programme compile. Il affiche maintenant `425`. Explique pourquoi avec ta trace de l'exercice A7.
-3. Corrige complètement le programme.
+2. Déplace la déclaration `int total = 0;` avant la boucle et retire-la du bloc de boucle.
+3. Vérifie avec une trace que le programme affiche maintenant `1150`. Pourquoi l’accumulateur doit-il être initialisé une seule fois ?
 
-:::note Deux bogues pour le prix d'un
-Celui-ci enchaîne une **erreur de compilation** (portée de la variable) et une **erreur de logique** (accumulateur remis à zéro). C'est très fréquent : corriger la première révèle la seconde.
+:::note Une déclaration au bon endroit
+Placer l’accumulateur avant la boucle lui donne la bonne portée et évite de le remettre à zéro à chaque tour.
 :::
 
 ---
 
-### 🟡 Exercice C3 – La grille est tronquée
+### 🟣 Exercice C3 – La grille est tronquée
 
 ```csharp
 int[,] grille = { { 1, 2, 3, 4, 5 },
@@ -461,7 +461,7 @@ for (int rangee = 0; rangee < grille.GetLength(1); rangee++)
 
 ---
 
-### 🟡 Exercice C4 – Tout s'affiche en colonne
+### 🟣 Exercice C4 – Tout s'affiche en colonne
 
 ```csharp
 int[,] grille = { { 1, 2, 3 },
@@ -500,7 +500,9 @@ for (int rangee = 0; rangee < grille.GetLength(0); rangee++)
 
 ---
 
-### 🔴 Exercice C5 – Les moyennes sont fausses (sans plantage)
+### 🟣 Exercice C5 – Les moyennes entières sont fausses (sans plantage)
+
+Dans cet exercice, la division entière est volontaire : la partie décimale est supprimée. Le bogue à rechercher concerne les indices du tableau.
 
 ```csharp
 int[,] notes = { { 80, 70, 90 },
@@ -546,7 +548,7 @@ Un programme qui donne un résultat **plausible mais faux** ne se dénonce jamai
 
 ---
 
-### 🔴 Exercice C6 – Le maximum est toujours le même
+### 🟣 Exercice C6 – Le maximum est toujours le même
 
 ```csharp
 int[] temperatures = { -8, -3, -12, -5 };
@@ -579,3 +581,6 @@ Température la plus chaude : -3 °C
 3. Corrige l'initialisation. *(Astuce : relis l'exercice A3.)*
 4. Avec le tableau `{ 8, 3, 12, 5 }`, le programme donnait le bon résultat. Pourquoi ce bogue est-il resté invisible aussi longtemps ?
 
+---
+
+[Consulter le corrigé du laboratoire 7.2](/solution/laboratoire-solution7.2)

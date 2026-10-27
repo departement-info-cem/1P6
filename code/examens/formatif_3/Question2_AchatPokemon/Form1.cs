@@ -13,7 +13,7 @@
  * - Récupérer le nom du client dans le champ texte
  * - Afficher les cartes dans le ListBox
  * - Lors du changement d'item sélectionné dans le ListBox (listBoxCartes_SelectedIndexChanged), 
- * afficher l'image de la carte dans le PictureBox pbCarte
+ * afficher l'image de la carte dans le PictureBox pictureBoxCarte
  * - Le bouton "Acheter" affiche un MessageBox avec les informations de la commande
  * 
  * EXEMPLE DE RÉSULTAT ATTENDU:

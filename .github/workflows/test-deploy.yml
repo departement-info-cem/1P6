@@ -35,3 +35,7 @@ jobs:
       - name: Build du site
         working-directory: ./web
         run: npm run build
+      - name: Vérifier les composants et les quiz
+        run: npm run typecheck && npm test
+      - name: Vérifier les liens, les ancres et les fichiers orphelins
+        run: python3 scripts/audit-site.py

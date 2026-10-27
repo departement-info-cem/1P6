@@ -4,10 +4,10 @@ title: 🔄 A - Intégration switch et while - TP
 
 # 🧪 Labo 9.1 📝 Les films de Denis
 ## 🎯 **Objectif :**
-:::note Objectif    
- Pratiquer le Switch case, Do... while, les fonctions, les tableaux 2D, le parcours (par rangée et par colonne) et l'alignement de données  
- 
-🛠️ **Instructions :**   
+:::note Objectif
+ Pratiquer le Switch case, Do... while, les fonctions, les tableaux 2D, le parcours (par rangée et par colonne) et l'alignement de données
+
+🛠️ **Instructions :**
 * Déclarez le tableau suivant :
 ```csharp
 string[,] filmsDenis = {
@@ -29,27 +29,27 @@ string[,] filmsDenis = {
 :::note Menu
 * Affichez le menu suivant à l’aide de `Do …  While` et réaffichez tant que l’utilisateur ne demande pas de quitter :
  1) Lister tous les films (résumé)
- 2) Lister tous les films (détails)    
- 3) Fiche technique d'un film  
+ 2) Lister tous les films (détails)
+ 3) Fiche technique d'un film
  4) Quitter
-* Capturez le choix de l'utilisateur à l'aide de `Switch... case`
+* Lisez le choix avec `int.TryParse`, puis traitez-le avec `switch`. Un choix invalide réaffiche le menu; un numéro de film doit être compris entre 1 et 11 avant tout accès au tableau.
 * Chaque case appelle une fonction afin de faire la tâche demandée :
  1) Lister tous les films (résumé)
-      * Lister **seulement** les 3 premières colonnes pour tous les films, à l’aide des boucles imbriquées (parcours par rangée)  
-      * Alignez les informations par colonne (voir Note)  
+      * Lister **seulement** les 3 premières colonnes pour tous les films, à l’aide des boucles imbriquées (parcours par rangée)
+      * Alignez les informations par colonne (voir Note)
  2) Lister tous les films (détails)
-      * Lister toutes les informations pour tous les films, à l’aide des boucles imbriquées (parcours par rangée)  
-      * Alignez les informations par colonne (voir Note)   
+      * Lister toutes les informations pour tous les films, à l’aide des boucles imbriquées (parcours par rangée)
+      * Alignez les informations par colonne (voir Note)
  3) Fiche technique d'un film
       * Demandez quel film on veut consulter, affichez la fiche détaillée du film (parcours par colonne, voir exemple plus bas)
  4) Quitter
 
 * Nettoyez l'écran avant d'afficher les informations demandées. Demandez à l'utilisateur de peser sur une touche afin de retourner au menu principal.
-   
-➡️ NOTE : Pour aligner les informations, regardez : `String.Format(alignement, valeur)`
 
-    
-✅ **Entrée / sortie attendue :**     
+➡️ NOTE : Pour aligner les informations, regardez : `string.Format("{0,-7}", valeur)` : la valeur occupe une colonne d’au moins 7 caractères, alignée à gauche. Adaptez la largeur à chaque colonne.
+
+
+✅ **Entrée / sortie attendue :**
 ```bash
 **********************************************************
 *            Les films de Denis Villeneuve               *
@@ -59,7 +59,7 @@ string[,] filmsDenis = {
 3. Fiche technique d'un film
 4. Quitter
 
-Votre choix : 
+Votre choix :
 ```
 :::
 ## Résumé des films
@@ -124,3 +124,5 @@ Producteur : Non
 ```
 :::
 ---
+
+[Consulter le corrigé du laboratoire 9.1](/solution/laboratoire-solution9.1)

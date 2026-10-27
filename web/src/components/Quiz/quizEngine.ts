@@ -60,15 +60,25 @@ export function validateQuiz(quiz: unknown): QuizData {
     throw new Error("Le fichier de quiz ne contient aucune question");
   }
   for (const question of candidate.questions) {
-    if (typeof question.texte !== "string" || !Array.isArray(question.choix)) {
+    if (
+      !question ||
+      typeof question.texte !== "string" ||
+      !question.texte.trim() ||
+      !Array.isArray(question.choix) ||
+      question.choix.length < 2 ||
+      question.choix.some((choix) => typeof choix !== "string" || !choix.trim())
+    ) {
       throw new Error("Une question du fichier de quiz est mal formée");
     }
     if (
-      typeof question.reponse !== "number" ||
+      !Number.isInteger(question.reponse) ||
       question.reponse < 0 ||
       question.reponse >= question.choix.length
     ) {
       throw new Error("Une question du fichier de quiz a une réponse invalide");
+    }
+    if (question.duree !== undefined && (!Number.isFinite(question.duree) || question.duree <= 0)) {
+      throw new Error("La durée d'une question doit être un nombre positif de secondes");
     }
   }
   return candidate as QuizData;
@@ -165,7 +175,16 @@ export class QuizRoom {
     if (this.status !== "question" || !this.players.has(playerId) || this.answers.has(playerId)) {
       return false;
     }
-    this.answers.set(playerId, { choiceIndex, elapsed: Date.now() - this.questionStartAt });
+    const elapsed = Date.now() - this.questionStartAt;
+    if (
+      !Number.isInteger(choiceIndex) ||
+      choiceIndex < 0 ||
+      choiceIndex >= this.currentQuestion().choix.length ||
+      elapsed >= this.questionDuration() * 1000
+    ) {
+      return false;
+    }
+    this.answers.set(playerId, { choiceIndex, elapsed });
     return true;
   }
 

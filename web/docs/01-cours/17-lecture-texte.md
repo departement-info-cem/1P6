@@ -18,15 +18,15 @@ Nous verrons comment ouvrir un fichier en mode **Lecture** et y lire des donnée
 3. **Lire ou écrire** les données.
 4. **Fermer le fichier** → pour éviter toute perte ou blocage 💥
 
-Lors de la séance 9.1, nous avons appris à *écrire* dans un fichier texte.  
+Lors de la séance 11.2, nous avons appris à *écrire* dans un fichier texte.
 Aujourd’hui, place à la lecture ! 
 
 ---
 
-## 🧰 Étape 1 — Le package `System.IO`
+## 🧰 Étape 1 — L'espace de noms `System.IO`
 
 Cette étape ne change pas :
-Assurez-vous d’ajouter **le package System.IO** au début du programme :
+Assurez-vous d’ajouter **la directive `using System.IO;`** au début du programme :
 
 ```csharp
 using System.IO;
@@ -147,7 +147,7 @@ Se tirer une bûche
 #### 🔁 Lire un fichier complet avec une boucle `while`
 
 Dans les séances précédentes, nous avons vu que la boucle `while` permet d’exécuter du code en boucle tant qu’une condition est vraie. En combinant la boucle `while` et la méthode `ReadLine()`, il est possible de lire un fichier, une ligne à la fois, jusqu’à atteindre la fin du fichier. 
-Pour ce faire, on veut vérifier après chaque lecture si nous avons atteint le `EndOfStream` de notre fichier :
+Pour ce faire, on vérifie **avant chaque lecture** la propriété `EndOfStream` de notre fichier :
 
 ```csharp
 string expressionQuebecoise;
@@ -173,7 +173,7 @@ Boucle : Avons-nous atteint EndOfStream ?
 
 ### 🧩 Option 2 — Lire tout le fichier d’un coup : `ReadToEnd()` 🏎
 
-La fonction `ReadToEnd()` permet de lire tout le contenu d'un fichier d'un coup et de le capturer dans **une seule variable** :
+La fonction `ReadToEnd()` lit **tout le contenu restant à partir de la position actuelle** et le capture dans une seule variable. Pour lire le fichier entier, on l'appelle dès l'ouverture du fichier, avant tout `ReadLine()` :
 
 ```csharp
 string contenu = inputFile.ReadToEnd();
@@ -241,10 +241,6 @@ class Program
                 Console.WriteLine(ligne);
             }
 
-            // Lecture de tout le contenu d'un seul coup
-            string contenu = reader.ReadToEnd();
-            Console.WriteLine(contenu);
-
         }
     }
 }
@@ -267,7 +263,7 @@ class Program
 
 * Toujours vérifier si le fichier existe avant de le lire.
 * `ReadLine()` → lit une seule ligne à la fois.
-* `ReadToEnd()` → lit tout le contenu d’un coup.
+* `ReadToEnd()` → lit tout le contenu restant d’un coup (une chaîne vide si on est déjà à la fin).
 * `EndOfStream` → permet de vérifier si on a atteint la fin du fichier.
 * Toujours fermer le fichier avec `.Close()` (ou utiliser `using`).
 
@@ -277,5 +273,5 @@ class Program
 👉 Notions C# : [Fichiers texte — StreamReader](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamreader--lecture-dans-un-fichier-texte)
 
 Vous devez réaliser le labo suivant :
- [🧪 Labo 9.2](/laboratoire/laboratoire9.2)
+ [🧪 Labo 10.2](/laboratoire/laboratoire10.2)
 

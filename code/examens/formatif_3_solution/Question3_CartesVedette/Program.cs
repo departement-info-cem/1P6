@@ -75,10 +75,10 @@ namespace Question3_CartesVedette
             Console.WriteLine("=== AUTRES CARTES ===");
             Console.WriteLine();
 
-            // Parcourir les cartes (éviter les 3 en vedette en mémorisant le prix)
+            // Parcourir les cartes sans répéter l'objet retenu comme carte en vedette.
             for (int i = 0; i < toutesLesCartes.Length; i++)
             {
-                if(toutesLesCartes[i].Prix != carteEnVedette.Prix)
+                if (toutesLesCartes[i] != carteEnVedette)
                 {
                     Console.WriteLine($"{toutesLesCartes[i].Nom} - {toutesLesCartes[i].Prix:F2}$");
                 }

@@ -19,7 +19,7 @@ Vous devez télécharger le .zip, puis l'extraire sur votre poste et **ouvrir le
 ## Solutionnaire
 
 :::danger
-**Ne pas regarder le solutionaire avant d'avoir complété l'examen formatif!**
+**Ne pas regarder le solutionnaire avant d'avoir complété l'examen formatif!**
 :::
 
 Disponible ici 👇

@@ -2,7 +2,7 @@
 description: Temps en classe pour travailler sur le TP
 ---
 
-# Intégration - TP2 - Mini RPG
+# Intégration - TP2 - Mini-système d'inventaire
 
 
 <Row>

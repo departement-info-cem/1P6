@@ -28,26 +28,32 @@ export default function GHCode({
   ignore?: string;
   trimLineStart?: boolean;
 }) {
-  const [code, setCode] = useState(null);
+  const [code, setCode] = useState("");
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
     getCode(user, repo, filePath, branch)
       .then((code) => {
+        if (cancelled) return;
         setCode(code);
         setLoading(false);
       })
       .catch((error) => {
-        setError(error);
+        if (cancelled) return;
+        setError(error instanceof Error ? error.message : String(error));
         setLoading(false);
       });
-  }, []);
+    return () => { cancelled = true; };
+  }, [user, repo, filePath, branch]);
 
   if (loading) return <div>Chargement...</div>;
 
   if (error)
-    return <div>Une erreur est survenue. Appellez votre enseignant!</div>;
+    return <div role="alert">Le code n’a pas pu être chargé. Réessayez ou contactez votre enseignant.</div>;
 
   if (language == null) {
     language = filePath.split(".").at(-1);
@@ -64,7 +70,7 @@ export default function GHCode({
     lines = adjustForIgnoredLines(lines, ignore);
   }
 
-  endLine = endLine ?? lines.at(-1).lineNumber;
+  endLine = endLine ?? lines.at(-1)?.lineNumber ?? 0;
   lines = lines.filter(
     (line: Line) => line.lineNumber >= startLine && line.lineNumber <= endLine
   );
@@ -94,23 +100,11 @@ async function getCode(
   filePath: string,
   branch: string
 ): Promise<string> {
-  var request = new XMLHttpRequest();
-  return new Promise(function (resolve, reject) {
-    request.onreadystatechange = function () {
-      if (request.readyState == 4) {
-        if (request.status >= 300) {
-          reject("Error, status code = " + request.status);
-        } else {
-          resolve(request.responseText);
-        }
-      }
-    };
-    request.open(
-      "GET",
-      `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filePath}`
-    );
-    request.send();
-  });
+  const response = await fetch(
+    `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${filePath}`
+  );
+  if (!response.ok) throw new Error(`Chargement du code : HTTP ${response.status}`);
+  return response.text();
 }
 
 function adjustForIgnoredLines(lines: Line[], ignore: string): Line[] {

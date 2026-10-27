@@ -222,10 +222,10 @@ if (couleur1 == couleur2 && couleur2 == couleur3) {
 * Ne pas bien grouper les conditions logiques avec des parenthèses :
 
   ```csharp
-  // Mauvais
+  // Correct : && est évalué avant ||
   if (a > 5 && b > 5 || c > 5) { ... }
 
-  // Meilleur
+  // Même condition, avec des parenthèses qui rendent la priorité explicite
   if ((a > 5 && b > 5) || c > 5) { ... }
   ```
 

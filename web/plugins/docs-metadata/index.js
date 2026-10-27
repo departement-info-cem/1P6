@@ -8,8 +8,8 @@ const path = require("path");
 // Dossier lu par défaut, relatif à la racine du site Docusaurus
 const DEFAULT_DOCS_DIR = "docs/01-cours";
 
-// Début du nom d'une page de TP : TP suivi de son numéro (ex : « TP1 - Calculatrice »)
-const TP_NAME_PREFIX = /^TP\d+/i;
+// Numéro du TP dans le titre, même si une icône le précède.
+const TP_NAME_PATTERN = /(?:^|\s)(TP\d+)\b/i;
 
 /**
  * Extrait le frontmatter d'un contenu Markdown
@@ -159,12 +159,15 @@ function extractTravauxPratiques(allContent) {
   const docs = docsContent?.loadedVersions?.[0]?.docs ?? [];
   const travauxPratiques = [];
   for (const doc of docs) {
-    const match = [doc.title, doc.frontMatter?.sidebar_label]
+    if (doc.sidebar !== "tp") continue;
+    const idMatch = doc.id.match(/(?:^|\/)(tp\d+)$/i);
+    const titleMatch = [doc.title, doc.frontMatter?.sidebar_label]
       .filter((name) => typeof name === "string")
-      .map((name) => name.trim().match(TP_NAME_PREFIX))
+      .map((name) => name.trim().match(TP_NAME_PATTERN))
       .find(Boolean);
-    if (match) {
-      travauxPratiques.push({ id: doc.id, sidebar: doc.sidebar, nom: match[0] });
+    const nom = idMatch?.[1] ?? titleMatch?.[1];
+    if (nom) {
+      travauxPratiques.push({ id: doc.id, sidebar: doc.sidebar, nom: nom.toUpperCase() });
     }
   }
   return travauxPratiques;

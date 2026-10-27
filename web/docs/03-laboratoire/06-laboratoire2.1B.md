@@ -1,14 +1,14 @@
 ---
-title: B - Exercices pratiques - Conditions, assignation composées
+title: B - Exercices pratiques - Conditions, assignations composées
 ---
 
-# 🧪 Labo 2.1B – Exercices pratiques : Conditions, assignation composées
+# 🧪 Labo 2.1B – Exercices pratiques : Conditions, assignations composées
 
 ---
 
-## 🟢 J'applique
+## 🔵 J'applique
 
-### 🟢 Exercice 1 – Besoin de café ☕
+### 🔵 Exercice 1 – Besoin de café ☕
 
 **🎯 Objectif :** utiliser une variable booléenne avec une structure `if`.
 
@@ -43,7 +43,7 @@ Voici la solution : café
 
 ---
 
-### 🟢 Exercice 2 – Contrôle de majorité 🎂
+### 🔵 Exercice 2 – Contrôle de majorité 🎂
 
 **🎯 Objectif :** utiliser une comparaison dans une structure `if`.
 
@@ -61,7 +61,7 @@ Le programme demande l'âge de l'utilisateur et affiche `Tu es majeur.` lorsque 
 
 2. **Utiliser une structure `if` pour vérifier que l'âge est supérieur ou égal à `18`.**.
 
-    * Dans le bloc du if, afficher `Tu es majeur.`.  
+    * Dans le bloc du if, afficher `Tu es majeur.`.
 
 #### 🧪 Tests
 
@@ -73,7 +73,7 @@ Le programme demande l'âge de l'utilisateur et affiche `Tu es majeur.` lorsque 
 
 ---
 
-### 🟢 Exercice 3 – Le mot magique 🪄
+### 🔵 Exercice 3 – Le mot magique 🪄
 
 **🎯 Objectif :** comparer des chaînes de caractères avec `==` et utiliser `if` / `else`.
 
@@ -109,7 +109,7 @@ Le programme affiche `Tu connais la magie toi !` lorsque le mot saisi est correc
 ---
 
 
-### 🟢 Exercice 4 – Nombre pair ou impair 🔢
+### 🔵 Exercice 4 – Nombre pair ou impair 🔢
 
 **🎯 Objectif :** utiliser `if` et `else` avec l'opérateur `%`.
 
@@ -159,7 +159,7 @@ Nombre pair.
 
 ---
 
-### 🟢 Exercice 5 – Les LEGO 🧸
+### 🔵 Exercice 5 – Les LEGO 🧸
 
 **🎯 Objectif :** combiner deux conditions avec l'opérateur logique `||`.
 
@@ -196,7 +196,7 @@ Le programme affiche `Tu ne peux pas jouer avec des LEGO` pour ces situations et
 
 ---
 
-### 🟢 Exercice 6 – Es-tu prêt ? 🔁
+### 🔵 Exercice 6 – Es-tu prêt ? 🔁
 
 **🎯 Objectif :** utiliser l'opérateur logique `!`.
 
@@ -230,7 +230,7 @@ Lorsque l'utilisateur n'est pas prêt, le programme affiche `Tu n'es pas prêt.`
 
 ---
 
-### 🟢 Exercice 7 – Jeune adulte fatigué 😴
+### 🔵 Exercice 7 – Jeune adulte fatigué 😴
 
 **🎯 Objectif :** combiner plusieurs conditions avec `&&`.
 
@@ -274,7 +274,7 @@ Le programme affiche `Jeune adulte fatigué` pour cette catégorie et `Tu semble
 
 ---
 
-### 🟢 Exercice 8 – Le prix du pantalon 👖💸
+### 🔵 Exercice 8 – Le prix du pantalon 👖💸
 
 **🎯 Objectif :** utiliser plusieurs conditions avec `if`, `else if` et `else`.
 
@@ -319,7 +319,7 @@ Les règles commerciales sont les suivantes :
 
 ---
 
-### 🟢 Exercice 9 – Contrôle de température 🌡️
+### 🔵 Exercice 9 – Contrôle de température 🌡️
 
 **🎯 Objectif :** utiliser `if`, `else if` et `else` pour traiter plusieurs intervalles.
 
@@ -364,7 +364,7 @@ Les règles de l'application sont les suivantes :
 ---
 
 
-### 🟢 Exercice 10 – Le plus grand des trois 🏆
+### 🔵 Exercice 10 – Le plus grand des trois 🏆
 
 **🎯 Objectif :** utiliser des conditions imbriquées pour comparer plusieurs valeurs.
 
@@ -406,7 +406,7 @@ Le plus grand est : 12
 
 ---
 
-### 🟢 Exercice 11 – Questionnaire éclair ⚡
+### 🔵 Exercice 11 – Questionnaire éclair ⚡
 
 **🎯 Objectif :** combiner des variables booléennes, des conditions et un calcul de score.
 
@@ -462,7 +462,7 @@ Le résultat dépend du score obtenu :
 
 ---
 
-### 🟢 Exercice 12 – Gym pour variables 🏋️
+### 🔵 Exercice 12 – Gym pour variables 🏋️
 
 **🎯 Objectif :** utiliser les opérateurs d'assignation composée et d'incrémentation.
 
@@ -619,7 +619,7 @@ Une application simule un jeu avec **deux dés à six faces**.
 Le programme demande la valeur obtenue par chacun des deux dés et calcule un score selon les règles suivantes :
 
 * Si les deux dés affichent **6**, le joueur obtient **100 points**.
-* Si les deux dés affichent **5** ou **4**, le joueur obtient **75 points**.
+* Si les deux dés affichent **5** (double 5) ou affichent tous les deux **4** (double 4), le joueur obtient **75 points**.
 * Si les deux dés affichent **la même valeur**, le joueur obtient **50 points**.
 * Dans tous les autres cas, le joueur obtient un nombre de points correspondant à **la somme des deux dés**.
 
@@ -647,3 +647,7 @@ Le programme affiche le score obtenu.
 Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
 
 👉 [Accéder au défi sur les conditions](../06-defis/conditions.md)
+
+---
+
+[Consulter le corrigé du laboratoire 2.1B](/solution/laboratoire-solution2.1B)

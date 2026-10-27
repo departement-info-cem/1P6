@@ -26,8 +26,8 @@ Dans notre scénario, les notes proviennent d'un autre programme et consistent e
 
 ## 📋 Instructions
 1. Dans votre `Main()`, demandez à l'utilisateur d'entrer les notes de la classe et saisissez l'entrée dans la console.
-2. Transformer le `string` saisi en un tableau de `string[]` avec la méthode `.split()`
-3. Appelez la méthode `TransformerEnTableauDeInt()` et passer lui le tableau de `string[]` en paramètre. Capturez le tableau de `int[]` retourné dans une variable.
+2. Transformer le `string` saisi en un tableau de `string[]` avec la méthode `.Split('|')`
+3. Appelez la méthode `TransformerEnTableauDeInt()` et passez-lui le tableau de `string[]` en paramètre. Capturez le tableau de `int[]` retourné dans une variable.
 4. Appelez les fonctions `CompterNombreÉchecs()` et `CalculerMoyenne()` en leur passant le tableau de `int[]` en paramètres afin d'obtenir des statistiques.
 5. Affichez le nombre de notes, la moyenne de la classe, et le nombre d'échecs (voir résultat attendu)
 
@@ -38,22 +38,24 @@ Dans notre scénario, les notes proviennent d'un autre programme et consistent e
 
 ## 🛠️ Fonctions à faire
 ### 1.`TransformerEnTableauDeInt()`
-* Prends un `string[]` en paramètre.
+* Prend un `string[]` en paramètre.
 * Retourne un `int[]` équivalent.
-1. Créez un nouveau tableau de `int[]`¸d'une même longueur que le tableau passé en paramètre.
-2. Faites une boucle `for` pour passer à travers le tableau passé en paramètre. Pour chaque valeur, utiliser `int.Parse()` ou `int.TryParse()` afin d'obtenir un `int`.
-4. Retournez le nouveau tableau de `int[]`.
+1. Créez un nouveau tableau de `int[]` d'une même longueur que le tableau passé en paramètre.
+2. Faites une boucle `for` pour passer à travers le tableau passé en paramètre. Pour chaque valeur, utilisez `int.Parse()` pour obtenir un `int` et placez-le au même indice dans le nouveau tableau. Pour cet exercice, les données fournies sont des notes entières valides entre 0 et 100 et le tableau n’est pas vide.
+3. Retournez le nouveau tableau de `int[]`.
 
 ### 2. `CompterNombreÉchecs()`
-* Prends un `int[]` en paramètre.
+* Prend un `int[]` en paramètre.
 * Retourne un `int`
 Retourne le nombre de valeurs en dessous de 60 dans le tableau passé en paramètre.
 
 
 ### 3. `CalculerMoyenne()`
-* Prends un `int[]` en paramètre.
+* Prend un `int[]` en paramètre.
 * Retourne un `double`.
-Calcule la moyenne des notes du tableau passé en paramètre.
+Calcule la moyenne des notes du tableau passé en paramètre. Utilisez un `long` pour la somme : cet entier de plus grande capacité peut accumuler les notes `int` du tableau. Effectuez ensuite une division réelle, par exemple `(double)somme / notes.Length`, pour conserver les décimales; affichez avec `F2`. Le retour de la fonction reste un `double`, les notes restent entre `0` et `100` et le tableau n'est pas vide.
+
+**Contrôle de capacité par calcul, sans créer un grand tableau :** `21474837` notes valant `100` auraient une somme de `2147483700`, supérieure à la capacité d'un `int`, et une moyenne de `100,00`. Le cumul en `long` permet ce calcul.
 
 ---
 
@@ -88,3 +90,7 @@ Il y a 11 notes.
 La moyenne est : 50,00
 Il y a 6 échecs
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 6.2C](/solution/laboratoire-solution6.2C)

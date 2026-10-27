@@ -1,11 +1,11 @@
 ---
-title: A - 🎲 Intègration des fonctions - Mini-projet – Devine le nombre 
+title: A - 🎲 Intégration des fonctions - Mini-projet – Devine le nombre
 ---
 
-# 🧪 Labo 3.2A 🎲 Mini-projet – Devine le nombre 
+# 🧪 Labo 3.2A 🎲 Mini-projet – Devine le nombre
 
 ## 🎯 Objectif
-Créer un programme console où **l’utilisateur doit deviner un nombre secret** entre 1 et 10.  
+Créer un programme console où **l’utilisateur doit deviner un nombre secret** entre 1 et 10.
 Le joueur a **3 tentatives maximum**, et le programme donne un indice (« plus grand » ou « plus petit ») après chaque essai.
 
 ⚠️ **Pas de boucles** : on écrit les trois tentatives de manière répétée.
@@ -46,11 +46,11 @@ int nombre = generateur.Next(1, 11); // génère un nombre entre 1 et 10
 4. Si c’est correct, afficher le message final et **ne pas faire les autres tentatives**.
 5. Sinon, passer à la tentative suivante.
 6. Répéter jusqu’à 3 tentatives.
-7. **Afficher le résultat final** avec `AfficherResultatFinal`.
+7. **Afficher le résultat final** avec `ObtenirResultatFinal`.
 
 ---
 
-## 📝 Pseudo-code principal 
+## 📝 Pseudo-code principal
 ```
 DEBUT
 
@@ -81,7 +81,7 @@ DEBUT
         SI proposition EST ÉGAL À nombreSecret ALORS
             trouve = VRAI
 
-    resultatFinal = AfficherResultatFinal(trouve, nombreSecret)
+    resultatFinal = ObtenirResultatFinal(trouve, nombreSecret)
     AFFICHER resultatFinal
 
 FIN
@@ -89,7 +89,7 @@ FIN
 
 ---
 
-## 🛠️ Méthodes à créer 
+## 🛠️ Méthodes à créer
 
 ### 1️⃣ `VerifierProposition`
 ```
@@ -103,7 +103,7 @@ SINON
 
 ---
 
-### 2️⃣ `AfficherResultatFinal`
+### 2️⃣ `ObtenirResultatFinal`
 ```
 SI trouve EST VRAI ALORS
     RETOURNER "🎉 Félicitations, vous avez gagné !"
@@ -134,3 +134,7 @@ Tentative 3 : Entrez un nombre entre 1 et 10 : 6
 Le nombre secret est plus petit.
 😢 Vous avez perdu. Le nombre secret était : 5
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 3.2A](/solution/laboratoire-solution3.2A)

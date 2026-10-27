@@ -174,7 +174,7 @@ Le compte rendu peut être réalisé seul ou en équipe de deux. Il doit être r
 <details>
 <summary>Voir le corrigé de l'exercice 2</summary>
 
-1. Le travail doit être fait seul ou à deux, remis en PDF, remis avant lundi à `8 h` et limité à deux pages de texte principal. Les sources doivent aussi être présentées sur une page séparée.
+1. Le travail doit être fait seul ou à deux, remis en PDF, remis avant lundi à `8 h` et limité à deux pages de texte principal. La page des sources est exclue de la limite de deux pages.
 2. **Non.** La consigne permet une personne ou une équipe de deux.
 3. **Oui.** La page des sources n'est pas comprise dans la limite de deux pages.
 

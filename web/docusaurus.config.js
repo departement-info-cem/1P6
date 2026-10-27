@@ -56,6 +56,7 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        blog: false,
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
@@ -69,6 +70,7 @@ const config = {
   ],
 
   plugins: [
+    require.resolve("./plugins/html-integrity"),
     '@docusaurus/plugin-ideal-image',
     [
       require.resolve("./plugins/docs-metadata"),

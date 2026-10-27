@@ -223,7 +223,7 @@ class Program
 
 ### 4.1. Compter les multiples
 
-Un entier est un multiple du diviseur lorsque le reste de la division vaut zéro. On parcourt tous les entiers de `1` à la limite, inclusivement.
+Un entier est un multiple du diviseur lorsque le reste de la division vaut zéro. On parcourt tous les entiers de `1` à la limite, inclusivement. Le compteur de parcours utilise un `long`, un entier de plus grande capacité : après `int.MaxValue`, il peut atteindre `2147483648` et sortir de la boucle. Les saisies et le nombre de multiples restent des `int`.
 
 ```csharp
 using System;
@@ -247,7 +247,7 @@ class Program
         int compteur = 0;
 
         // Commencer à 1 et inclure la limite dans le parcours.
-        for (int nombre = 1; nombre <= limite; nombre++)
+        for (long nombre = 1; nombre <= limite; nombre++)
         {
             if (nombre % diviseur == 0)
             {
@@ -271,7 +271,7 @@ class Program
 
 ### 4.2. Somme des carrés
 
-La boucle additionne `1² + 2² + ... + N²`. L'énoncé suppose que `N` est positif.
+La boucle additionne `1² + 2² + ... + N²`. Comme l'énoncé, cette version utilise des `int` et suppose que `N` est compris entre 1 et 1860 inclusivement. La somme pour 1860 vaut 2146682110; celle pour 1861 dépasserait la capacité d'un `int`.
 
 ```csharp
 using System;
@@ -281,11 +281,12 @@ class Program
     static void Main()
     {
         Console.WriteLine("---Je peux vous aider à calculer la somme des carrés---");
-        Console.Write("Entrez un nombre : ");
+        Console.Write("Entrez un nombre entre 1 et 1860 : ");
         int n = int.Parse(Console.ReadLine());
         Console.WriteLine("Le résultat est : " + SommeDesCarres(n));
     }
 
+    // Précondition : n est compris entre 1 et 1860 inclusivement.
     static int SommeDesCarres(int n)
     {
         int somme = 0;
@@ -301,13 +302,13 @@ class Program
 }
 ```
 
-**À tester :** `5` → `55`; `1` → `1`.
+**À tester :** `5` → `55`; borne inférieure `1` → `1`; borne supérieure `1860` → `2146682110`. `0` et `1861` sont hors des préconditions de cette version.
 
 ## 5. Intégration : boucles, conditions et fonctions
 
 ### 5.1. Statistiques d'un groupe de notes
 
-La boucle lit les notes une à une : aucun tableau n'est nécessaire. La première note initialise le minimum et le maximum, afin que les comparaisons suivantes aient un point de départ valide. La fonction place la mention dans une variable et la retourne à la fin.
+La boucle lit les notes une à une : aucun tableau n'est nécessaire. La première note initialise le minimum et le maximum, afin que les comparaisons suivantes aient un point de départ valide. La fonction place la mention dans une variable et la retourne à la fin. Le compteur de parcours utilise un `long` pour pouvoir dépasser la dernière note et terminer même si le nombre de notes saisi vaut `int.MaxValue`; cette saisie reste un `int`.
 
 ```csharp
 using System;
@@ -327,7 +328,7 @@ class Program
         double somme = 0;
         double maximum = 0;
         double minimum = 0;
-        for (int i = 1; i <= nombreNotes; i++)
+        for (long i = 1; i <= nombreNotes; i++)
         {
             Console.Write("Note " + i + " : ");
             double note = double.Parse(Console.ReadLine());

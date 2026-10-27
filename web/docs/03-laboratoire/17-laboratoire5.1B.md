@@ -8,12 +8,12 @@ title: B - Tableaux 1D avec conditions et fonctions
 
 ---
 
-## 🟡 Exercice 1 – Fonction qui prend un tableau de notes et retourne une moyenne pondérée
+## 🟣 Exercice 1 – Fonction qui prend un tableau de notes et retourne une moyenne pondérée
 🎯 **Objectif** : Faire une fonction qui prend un `double[]` en paramètre et retourne un `double`.
 
 🛠️ **Instructions** :
 1. Déclarez un tableau `double[]` préinitialisé avec les valeurs : `{70.0, 80.5 ,90.0}`.
-2. Créez une fonction **CalculerMoyenneFinale()** qui prend un tableau `double[]` en paramètre. 
+2. Créez une fonction **CalculerMoyenneFinale()** qui prend un tableau `double[]` en paramètre.
 3. Cette fonction doit faire une moyenne, mais la première note compte pour 30%, la deuxième pour 20%, et la troisième pour 50%.
 4. Appelez la fonction et capturez son retour.
 
@@ -23,7 +23,7 @@ Notes : 70, 80,5, 90
 Moyenne : 82,1
 ```
 
-## 🟡 Exercice 2 - Ajout d'instructions conditionnelles
+## 🟣 Exercice 2 - Ajout d'instructions conditionnelles
 🎯 **Objectif** : Valider nos paramètres avec `.Length` et des if-else.
 
 🛠️ **Instructions** :
@@ -47,8 +47,8 @@ Notes : -3, 80,5, 90
 Moyenne : 0
 ```
 
-## 🟡 Exercice 3 - Fonction qui compare deux tableaux
-🎯 **Objectif** : Faire une fonction qui prend deux tableaux `int[]` en paramètre et qui retourne le plus grand des deux.
+## 🟣 Exercice 3 - Fonction qui compare deux tableaux
+🎯 **Objectif** : Faire une fonction qui prend deux tableaux `int[]` en paramètre et qui retourne celui qui contient le plus d’éléments. En cas d’égalité, retournez le premier tableau.
 
 Copiez ce code dans votre `Main()`
 ```csharp
@@ -67,10 +67,10 @@ Faites la fonction **ObtenirPlusGrandTableau()** afin d'obtenir le résultat sui
 Le plus grand tableau est : 1, 2, 3, 4, 5
 ```
 
-## 🟡 Exercice 4 - recherche par index
+## 🟣 Exercice 4 - recherche par index
 
 🛠️ **Instructions** :
-1. Faites une fonction qui prend deux paramètres, un `int` **pIndex** et un tableau `string[]` **pTableau** et qui retourne un `string` correspondant à la valeur à l'index **SI** l'index est inférieur à la longueur du tableau et plus grand que 0.
+1. Faites une fonction qui prend deux paramètres, un `int` **pIndex** et un tableau `string[]` **pTableau** et qui retourne un `string` correspondant à la valeur à l'index **SI** l'index est inférieur à la longueur du tableau et supérieur ou égal à 0.
 2. Sinon, retourner le `string` "Erreur, index non valide".
 
 Copiez ce code dans votre `Main()`
@@ -93,7 +93,7 @@ Avec index 1 : Éric
 
 
 ---
-## 🟡 Exercice 5 – Compter les lettres d’un mot
+## 🟣 Exercice 5 – Compter les lettres d’un mot
 🎯 **Objectif** : Manipuler une chaîne de caractères comme un tableau de `char`.
 
 🛠️ **Instructions** :
@@ -116,3 +116,7 @@ a
 Nombre de lettres : 6
 Nombre de 'a' : 3
 ```
+
+---
+
+[Consulter le corrigé du laboratoire 5.1B](/solution/laboratoire-solution5.1B)

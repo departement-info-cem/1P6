@@ -17,13 +17,13 @@ Pour **chaque exercice**, créez un **nouveau projet** dans Visual Studio.
 ### 📌 Rappel : Boucle simple
 
 ```csharp
-//initialisation; test logique; incrémentation  
+//initialisation; test logique; incrémentation
 for (int i = 0;   i < 10 ;   i++)
 {
-    // Block de code de la boucle
+    // Bloc de code de la boucle
 }
 ```
-### 🟢 Exercice 1 — Affichez des valeurs
+### 🔵 Exercice 1 — Affichez des valeurs
 
 Affichez les nombres de `1` à `6` dans la console avec une boucle `for`.
 
@@ -34,7 +34,7 @@ Affichez les nombres de `1` à `6` dans la console avec une boucle `for`.
 
 ---
 
-### 🟢 Exercice 2 — Affichage sur une ligne
+### 🔵 Exercice 2 — Affichage sur une ligne
 
 Affichez les nombres de `10` à `20` sur une seule ligne.
 
@@ -46,7 +46,7 @@ Affichez les nombres de `10` à `20` sur une seule ligne.
 
 ---
 
-### 🟢 Exercice 3 — Décrémentation d’un compteur
+### 🔵 Exercice 3 — Décrémentation d’un compteur
 
 Affichez les nombres de `10` à `0` en diminuant la valeur de `2` à chaque répétition.
 
@@ -59,7 +59,7 @@ Affichez les nombres de `10` à `0` en diminuant la valeur de `2` à chaque rép
 
 ---
 
-### 🟢 Exercice 4 — Incrémentation par bonds
+### 🔵 Exercice 4 — Incrémentation par bonds
 
 Affichez les nombres pairs de `0` à `20`.
 
@@ -88,9 +88,9 @@ Résultat attendu :
 ---
 
 
-### 🟢 Exercice 5 : Conditionnel dans une boucle.
+### 🔵 Exercice 5 : Conditionnel dans une boucle.
 Affichez les nombres impairs de 10 à 25 inclusivement.
- * L'index de votre boucle **doit** commencer à la valeur 10, qui n'est **pas** un chiffre impair.
+ * L'index de votre boucle **doit** commencer à la valeur 10, qui n'est **pas** un nombre impair.
  * Vous **devez** donc utiliser un  `if` et un modulo ( `%` ) afin de vérifier que chaque index est impair avant de l'afficher.
 
 Résultat attendu :
@@ -105,7 +105,7 @@ Résultat attendu :
 25
 ```
 
-### 🟢 Exercice 6 : Conditionnel dans une boucle.
+### 🔵 Exercice 6 : Conditionnel dans une boucle.
 Affichez les nombres de 1 à 50 sur une ligne **sauf** les multiples de 3.
 Vous devez vérifier si le nombre est divisible par 3 avec un modulo avant de l'afficher.
 Résultat attendu :
@@ -113,27 +113,27 @@ Résultat attendu :
 1 2 4 5 7 8 10 11 13 14 16 17 19 20 22 23 25 26 28 29 31 32 34 35 37 38 40 41 43 44 46 47 49 50
 ```
 
-### 🟢 Exercice 7 : Accumulation de valeurs.
-Faites la somme des chiffres de 1 à 50.
+### 🔵 Exercice 7 : Accumulation de valeurs.
+Faites la somme des nombres de 1 à 50.
 Affichez le résultat final.
-Vous aurez besoin de créer une variable compteur à laquelle vous additionnez les valeurs de votre boucle.
+Vous aurez besoin de créer une variable accumulateur à laquelle vous additionnez les valeurs de votre boucle.
 
 Résultat attendu :
 ```
 Total : 1275
 ```
 
-### 🟢 Exercice 8 : Accumulation d'entrées d'utilisateur.
-Faites une boucle qui demande à l'utilisateur de rentrer 3 chiffres un après l'autre.
+### 🔵 Exercice 8 : Accumulation d'entrées d'utilisateur.
+Faites une boucle qui demande à l'utilisateur de rentrer 3 nombres un après l'autre.
 Convertissez la valeur entrée en `double`.
-Additionnez chacun des chiffres entrés dans une variable.
-Faites la moyenne des chiffres entrés.
+Additionnez chacun des nombres entrés dans une variable.
+Faites la moyenne des nombres entrés.
 
 Résultat attendu :
 ```
-Entrez un chiffre : 3
-Entrez un chiffre : -5
-Entrez un chiffre : 21
+Entrez un nombre : 3
+Entrez un nombre : -5
+Entrez un nombre : 21
 La moyenne est : 6,33 // ou bien 6,33333333
 ```
 
@@ -141,12 +141,12 @@ La moyenne est : 6,33 // ou bien 6,33333333
 ---
 
 
-### 🟢 Exercice 9 : Boucles imbriquées
-🎯 **Objectif** : Utilisez deux boucles imbriquées pour faire un carré d'étoiles. 
+### 🔵 Exercice 9 : Boucles imbriquées
+🎯 **Objectif** : Utilisez deux boucles imbriquées pour faire un carré d'étoiles.
 
 🛠️ **Instructions** :
 1. Faites une première boucle avec un index `i` commençant à 1 et allant jusqu'à 5.
-2. Dans le corps de votre première boucle, commencez par faire un saut de ligne dans la console avec `Console.WriteLine()`
+2. À la fin de chaque tour de la première boucle, après la deuxième boucle, faites un saut de ligne avec `Console.WriteLine()`
 3. Encore dans le corps de votre première boucle, faites une deuxième boucle avec un index `j` allant de 1 à 5.
 4. Dans le corps de la **deuxième** boucle, imprimer le symbole __`*`__ sur une ligne sans retour de ligne avec `Console.Write()`
 
@@ -154,16 +154,15 @@ La moyenne est : 6,33 // ou bien 6,33333333
 ```
 DÉBUT
     BOUCLE UN avec des valeurs d'index de 1 à 5 inclusivement
-        Impression d'un saut de ligne dans la console
-
         BOUCLE DEUX avec des valeurs d'index de 1 à 5
             Impression de '*' sur une ligne sans retour clavier
         Fin de la boucle DEUX
+        Impression d'un saut de ligne dans la console
 
     Fin de la boucle UN
 FIN
 ```
-**Notez** : Chaque itération de la première boucle fera **1** saut de ligne, suivi de l'exécution complète de la deuxième boucle. La deuxième boucle affichera 1 caractère à chaque itération, pour un total de **5** caractères. Le code dans la première boucle sera exécuté **5** fois tandis que le code dans la deuxième boucle sera exécuté **25** fois.
+**Notez** : Chaque itération de la première boucle exécute complètement la deuxième boucle, puis effectue **1** saut de ligne. La deuxième boucle affiche 1 caractère à chaque itération, pour un total de **5** caractères par ligne. Le corps de la première boucle est exécuté **5** fois tandis que celui de la deuxième boucle est exécuté **25** fois.
 
 
 Résultat attendu :
@@ -176,22 +175,21 @@ Résultat attendu :
 ```
 
 
-### 🟢 Exercice 10 : Boucles imbriquées
-🎯 **Objectif** : On fait une pyramide d'étoiles. Avec deux boucles imbriquées, on veut utiliser l'index de la première boucle dans la deuxième boucle. 
+### 🔵 Exercice 10 : Boucles imbriquées
+🎯 **Objectif** : On fait une pyramide d'étoiles. Avec deux boucles imbriquées, on veut utiliser l'index de la première boucle dans la deuxième boucle.
 
 🛠️ **Instructions** :
 1. Reprenez le code de l'exercice précédent.
-2. Changez le test conditionnel dans la deuxième boucle. Plutôt de que de faire `j <= 5`, faites `j <= i`
+2. Changez le test conditionnel dans la deuxième boucle. Plutôt que de faire `j <= 5`, faites `j <= i`
 3. Exécuter votre code.
 
 ```
 DÉBUT
     BOUCLE UN avec des valeurs d'index de 1 à 5 inclusivement
-        Impression d'un saut de ligne dans la console
-
         BOUCLE DEUX avec des valeurs d'index de 1 à **INDEX DE LA PREMIÈRE BOUCLE**
             Impression de '*' sur une ligne sans retour clavier
         Fin de la boucle DEUX
+        Impression d'un saut de ligne dans la console
 
     Fin de la boucle UN
 
@@ -267,4 +265,6 @@ Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes conna
 
 👉 [Accéder au défi sur la boucle `for`](../06-defis/boucle-for.md)
 
+---
 
+[Consulter le corrigé du laboratoire 4.2A](/solution/laboratoire-solution4.2A)

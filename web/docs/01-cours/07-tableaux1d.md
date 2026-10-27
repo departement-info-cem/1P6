@@ -114,7 +114,7 @@ Console.WriteLine(notes[notes.Length - 1]); // 88, dernier élément
 
 ## 7️⃣ Les chaînes de caractères comme tableaux
 
-Un `string` peut être vu comme un **tableau de caractères**.
+On peut lire les caractères d'un `string` par indice, comme dans un tableau. Une chaîne reste toutefois **immuable** : on ne peut pas modifier directement `mot[0]` comme on modifierait un élément de tableau.
 
 ```csharp
 string mot = "Bonjour";

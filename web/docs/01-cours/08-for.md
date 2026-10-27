@@ -9,7 +9,7 @@ description: Répétitions de code
 <Quiz file="/quiz/4.2-methodes.md" />
 
 ---
-# Boucles for
+## Répéter des instructions
 
 
 Certains problèmes nécessitent un traitement répétitif. 
@@ -67,6 +67,8 @@ for (int i = 0; i < 10 ; i++)
      5. }
      6. Console.Write("Total de : " + resultat);
      ```
+
+     Les numéros devant les lignes servent à la trace et ne font pas partie du code à copier.
 
      Ce code répète `resultat += index;` trois fois.
      À la fin, `resultat` vaut **6** (somme de 1 à 3).
@@ -170,17 +172,18 @@ Par contraste :
 
   for (int i = 1; i <= 100 ; i++)
   {
-      int total += i;
+      int total = 0;
+      total += i;
   }
   Console.WriteLine("Total : " + total);
 ```
 
-Ce code ne compilera pas. La variable **total** n'existe pas hors de la boucle `for`.
+Ce code ne compilera pas : la variable **total** est locale au bloc de la boucle et n'est pas accessible dans le `Console.WriteLine` qui suit. De plus, elle est remise à zéro à chaque itération, ce qui empêcherait l'accumulation même si on affichait sa valeur dans la boucle.
 
 
 
 ### 5. Boucles imbriquées
-Il arrive qu'on doive répété certaines portions de codes un plus grand nombre de fois que d'autres.
+Il arrive qu'on doive répéter certaines portions de code un plus grand nombre de fois que d'autres.
 Dans ce cas, nous utiliserons des boucles dans des boucles.
 
 ```csharp
@@ -190,7 +193,7 @@ for (int i = 1; i <= 10; i++) // Boucle A, exécuter 10 fois
 
     for (int j = 1; j <= 3; j++) // Boucle B, exécuter 3 fois... par itération de la boucle A !
     {
-        Console.WriteLine($"    Itération {j} de la boucle B (Total d'exécutions : {i*j})" );
+        Console.WriteLine($"    Itération {j} de la boucle B (Total d'exécutions : {(i - 1) * 3 + j})");
     }
 }
 ```
@@ -202,20 +205,20 @@ for (int i = 1; i <= 10; i++) // Boucle A, exécuter 10 fois
 L'utilisation de boucles engendre deux types d'erreurs particulièrement fréquentes. Les boucles infinies et les boucles non exécutées.
 
 #### Boucles infinies
-Une boucle infinie est une boucle dont le test logique est toujours vrai. Par exemple, lorsqu'on fait une boucle dont l'index diminue, mais dont le test logique est vrai tant que l'index est plus petit qu'une valeur. 
+Une boucle infinie continue sans atteindre une condition de sortie. Par exemple, si on oublie de modifier le compteur, le test reste vrai :
 
 ```csharp
-for (int index = 1; index <= 10; index--) // La valeur d'index fait que le test est toujours vrai.
+for (int index = 1; index <= 10;) // Incrémentation oubliée : index reste à 1.
 {
     Console.Write(index + " ");
 }
 ```
 **Résultat :** 
   ```
-  1 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20 -21 -22 -23 -24 -25...
+  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1...
   ```
 
-L'index continue de diminuer et le test est donc toujours vrai puisque `index <= 10` serait toujours `true`.
+L'index reste à `1`, donc `index <= 10` reste `true`. Ajouter `index++` dans la troisième partie du `for` permet de terminer après dix itérations.
 
 #### Boucles non exécutées
 

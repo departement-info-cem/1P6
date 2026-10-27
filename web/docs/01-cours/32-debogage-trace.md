@@ -83,7 +83,9 @@ Dans **Variables locales**, clique sur la ▸ à gauche d'un tableau pour voir *
 
 ## 3️⃣ Trace d'exécution d'une boucle
 
-La **trace d'exécution** est la version **papier** du débogueur : on suit le programme instruction par instruction en notant l'évolution des variables. Tu en as besoin à l'examen, où il n'y a pas de Visual Studio.
+La **trace d'exécution** est la version **papier** du débogueur : on suit le programme instruction par instruction en notant l'évolution des variables. Elle permet de prévoir un résultat sans lancer le programme et de justifier son raisonnement.
+
+Les numéros placés devant les lignes servent à lire les tableaux de trace; ils ne font pas partie du code à copier dans Visual Studio.
 
 ### Exemple 1 — Boucle `for` avec accumulateur
 
@@ -107,7 +109,7 @@ La **trace d'exécution** est la version **papier** du débogueur : on suit le p
 |                    3 |   2 |         70 |     170 |     —     |
 |                    5 |   2 |         70 |     240 |     —     |
 |                    3 |   3 |      ❌ n/a |     240 |     —     |
-|                    7 |   3 |          — |     240 |    240    |
+|                    7 |   — |          — |     240 |    240    |
 
 :::note Le dernier tour compte
 Remarque l'avant-dernière ligne : `i` vaut **3**, le test `i < 3` est **`false`**, on **sort** de la boucle. C'est exactement ce que tu verras en appuyant sur `F10` une fois de trop.

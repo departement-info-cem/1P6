@@ -49,21 +49,22 @@ Contrairement à `Parse` qui lève une exception si la conversion échoue, `TryP
 
 ---
 
-### 🔹 Signature générale
+### 🔹 Forme d'un appel
 
 
 Exemple avec `int` :
 
 ```csharp
-int resultat = 0; 
-bool int.TryParse(string? texte, out resultat);
+string texte = "123";
+int resultat;
+bool reussi = int.TryParse(texte, out resultat);
 ```
 
  - `texte` : le texte à convertir
  - `resultat` : (mot-clé **`out`**) variable qui contiendra la valeur convertie si la conversion réussit
- - Retourne : true si la conversion a réussi, false sinon
+ - `reussi` : vaut `true` si la conversion a réussi, `false` sinon; en cas d'échec, `resultat` vaut `0`
 
-`TryParse` est disponible avec tous les types de données
+`TryParse` est disponible avec plusieurs types de données, par exemple :
  - int.TryParse
  - double.TryParse
  - decimal.TryParse

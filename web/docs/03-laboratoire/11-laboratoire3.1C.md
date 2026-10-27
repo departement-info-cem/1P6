@@ -18,7 +18,7 @@ static TypeRetour NomDeLaFonction(type pParam1, type pParam2)
     // calculs
     return valeur;
 }
-````
+```
 
 ### Exemple
 
@@ -32,11 +32,11 @@ static double CalculerAireRectangle(double pLongueur, double pLargeur)
 
 ---
 
-## 🟢 J'APPLIQUE
+## 🔵 J'APPLIQUE
 
-### 🟢 Exercice 7 – Calculer une somme
+### 🔵 Exercice 7 – Calculer une somme
 
-Créez une méthode `CalculerSomme` qui reçoit **deux entiers** en paramètres et **retourne leur somme**.
+Créez une méthode `CalculerSomme` qui reçoit **deux `int`** en paramètres et **retourne leur somme dans un `long`**. Un `long` peut contenir des entiers plus grands qu’un `int` : il permet de représenter la somme de n’importe quelles deux valeurs `int`. Convertissez le premier paramètre en `long` **avant** l’addition : `(long)a + b`.
 
 Votre méthode doit pouvoir être utilisée avec différentes valeurs.
 
@@ -57,9 +57,11 @@ Résultat : 12
 4. Quel type de valeur la méthode doit-elle retourner ?
 5. Quelle valeur devez-vous placer après `return` ?
 
+**Tests :** `5` et `7` → `12`; `int.MaxValue` et `1` → `2147483648`; `int.MinValue` et `int.MinValue` → `-4294967296`. Pour les essais avec la console, `int.MaxValue` correspond à `2147483647` et `int.MinValue` à `-2147483648`.
+
 ---
 
-### 🟢 Exercice 8 – Calculer l'aire d'un rectangle
+### 🔵 Exercice 8 – Calculer l'aire d'un rectangle
 
 Créez une méthode `CalculerAireRectangle` qui reçoit la **longueur** et la **largeur** d'un rectangle et retourne son aire.
 
@@ -208,8 +210,8 @@ Console.WriteLine(resultat);
 | Moyenne     | Mention   |
 | ----------- | --------- |
 | 90 et plus  | `"A"`     |
-| 80 à 89     | `"B"`     |
-| 70 à 79     | `"C"`     |
+| De 80 à moins de 90 | `"B"`     |
+| De 70 à moins de 80 | `"C"`     |
 | Moins de 70 | `"Échec"` |
 
 Exemple :
@@ -234,3 +236,7 @@ Console.WriteLine(mention);
 Prêt à relever un défi ? Rends-toi sur la page du défi pour mettre tes connaissances à l'épreuve !
 
 👉 [Accéder au défi sur les fonctions](../06-defis/fonctions.md)
+
+---
+
+[Consulter le corrigé du laboratoire 3.1C](/solution/laboratoire-solution3.1C)

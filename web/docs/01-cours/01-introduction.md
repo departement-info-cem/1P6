@@ -39,7 +39,7 @@ Accès via : [Omnivox - Cégep Édouard-Montpetit](https://cegepmontpetit.omnivo
 Accès via : <a href="https://info.cegepmontpetit.ca/notions-csharp/" target="_blank" rel="noopener noreferrer">Notions C#</a>
 
 
-👉 Consultez particulièrement la section [Bien débuter](https://info.cegepmontpetit.ca/notions-csharp/bien-debuter/) pour installer les logiciels nécessaires et découvrir les outils recommandés pour suivre le cours efficacement.
+👉 Consultez particulièrement la section [Bien débuter](https://info.cegepmontpetit.ca/notions-csharp/bien-debuter) pour installer les logiciels nécessaires et découvrir les outils recommandés pour suivre le cours efficacement.
 
 ### 💽 Installation de Visual Studio (pour le travail à la maison)
 
@@ -116,5 +116,5 @@ Console.WriteLine("Bonjour, " + prenom + "!");
 ## 💪 Exercice
 
 Vous devez réaliser les labos suivants :
- [🧪 Labo 1A](/laboratoire/laboratoire1.1)
- [🧪 Labo 1B](/laboratoire/laboratoire1.1B)
+ [🧪 Labo 1.1A](/laboratoire/laboratoire1.1)
+ [🧪 Labo 1.1B](/laboratoire/laboratoire1.1B)
