@@ -264,8 +264,8 @@ On souhaite rechercher la première occurrence du caractère 'a' dans une chaîn
 
 ```csharp
 string texte = "banane";
-
-for (int i = 0; i < texte.Length && texte[i] != 'a'; i++)
+int i;
+for (i = 0; i < texte.Length && texte[i] != 'a'; i++)
 {
 }
 
