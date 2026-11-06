@@ -16,6 +16,62 @@ L'examen formatif a le même format que l'examen 2. Il porte sur la matière vue
 ## Partie papier
 Votre enseignant vous remet la partie papier en classe. Vous la remettez avant de commencer la partie sur ordinateur.
 
+📄 [Télécharger la partie papier (Word)](./fichiers/420-1P6-A26-Formatif2-Partie-papier.docx)
+
+### Question 1 (4 pts) : Trace d'exécution
+Complétez la trace d'exécution du code suivant, une ligne du tableau par instruction exécutée. Les trois premières lignes sont déjà remplies. Écrivez le texte affiché dans la dernière colonne.
+
+```csharp showLineNumbers
+int[] prix = { 7, 5, 4 };
+int total = 0;
+int i = 0;
+while (total < 10)
+{
+    total = total + prix[i];
+    i++;
+}
+Console.WriteLine($"{i} articles : {total} $");
+```
+
+| Instruction exécutée | i | total | Affichage |
+| :---: | :---: | :---: | :---: |
+| 2 | — | 0 | — |
+| 3 | 0 | 0 | — |
+| 4 | 0 | 0 | — |
+| 6 | | | |
+| 7 | | | |
+| 4 | | | |
+| 6 | | | |
+| 7 | | | |
+| 4 | | | |
+| 9 | | | |
+
+### Question 2 (4 pts) : Tableaux 2D
+Soit la déclaration suivante. Indiquez la valeur de chaque expression.
+
+```csharp
+int[,] mesures = { { 4, 9, 1 },
+                   { 7, 2, 6 } };
+```
+
+| Expression | Valeur |
+| --- | :---: |
+| `mesures[0, 1]` | |
+| `mesures[1, 2]` | |
+| `mesures.GetLength(1)` | |
+| `mesures[1, 0] + mesures[0, 2]` | |
+
+### Question 3 (2 pts) : Boucle while
+Qu'arrive-t-il lorsqu'on exécute ce code ? Quelle ligne faut-il ajouter pour afficher 1, 2, 3 et 4, puis arrêter ?
+
+```csharp
+int n = 1;
+while (n < 5)
+{
+    Console.WriteLine(n);
+}
+```
+
 ## Partie sur ordinateur
 
 ### Télécharger le projet de départ
