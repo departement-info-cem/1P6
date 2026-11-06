@@ -11,7 +11,7 @@ description: Pondération 15%
 
 :::danger Avant la séance (2h)
 
-L'examen porte sur l'ensemble du contenu du cours jusqu'ici, en particulier les tableaux 1D et 2D, le switch et les boucles while. Afin de vous aider dans vos révisions, il est bon de:
+L'examen porte sur la matière vue depuis le cours 5.1 : les tableaux 1D et 2D, le débogage et la trace d'exécution, le switch, les boucles while et do... while, et TryParse. Le [formatif 2](/cours/formatif2) a le même format que l'examen. Afin de vous aider dans vos révisions, il est bon de:
 
 - Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof
 - Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)
@@ -28,9 +28,12 @@ Si vous avez droit à du temps supplémentaire, vous devez aviser votre professe
 
 :::info Séance d'examen
 
-L'examen dure 2h (plus si vous avez droit à du temps supplémentaire). Il s'agit d'exercices pratiques. On vous donne des fichiers de départ et/ou une description du résultat attendu. Vous rendrez les fichiers complétés.
+L'examen dure 2h (plus si vous avez droit à du temps supplémentaire). Il a deux parties :
 
-Vous avez le droit à :
+1. **Partie papier (20 minutes, sans documentation)** : une trace d'exécution et de courtes questions de compréhension. Vous la remettez avant de commencer la partie sur ordinateur.
+2. **Partie sur ordinateur** : trois exercices pratiques. On vous donne des fichiers de départ et une description du résultat attendu. Vous rendrez les fichiers complétés.
+
+Pour la partie sur ordinateur, vous avez le droit à :
 
 - [Notions C#](https://info.cegepmontpetit.ca/notions-csharp/)
 - Le site principal du cours ([1P6](https://info.cegepmontpetit.ca/1P6/)) incluant les solutionnaires des laboratoires
@@ -52,18 +55,19 @@ Vous avez le droit à :
 
 **Questions et pondérations** 
 
-L’examen comporte quatre (4) questions. 
+L’examen comporte une partie papier et trois (3) questions pratiques. 
 
-- Q1 : Utilisation de la structure conditionnelle switch case (10 pts)
-- Q2 : Utilisation de la structure itérative while (10 pts)
-- Q3 : Utilisation des tableaux 1D (15 pts)
-- Q4 : Utilisation des boucles imbriquées avec des tableaux 1D et 2D (15 pts)
+- Partie papier : trace d'exécution et compréhension, sans documentation (10 pts)
+- Q1 : Utilisation du switch case et d'une boucle while ou do... while (10 pts)
+- Q2 : Utilisation des tableaux 1D (10 pts)
+- Q3 : Utilisation des boucles imbriquées avec des tableaux 1D et 2D (10 pts)
 
 
 **Critères d’évaluation** 
 
 
 - Respect du fonctionnement attendu dans chaque question
+- Trace d'exécution exacte et lecture correcte du code (partie papier)
 - Utilisation correcte de la boucle while
     - Structure syntaxique adéquate   
     - Condition bien formulée  
@@ -73,15 +77,15 @@ L’examen comporte quatre (4) questions.
 - Affichage du résultat final
     - Affichage clair et conforme à l’exemple
     - Formatage numérique adéquat
-- Génération du nombre aléatoire
-    - Utilisation correcte et fonctionnelle de Random et Next
+- Validation d'une saisie
+    - Utilisation correcte de TryParse
 - Utilisation correcte du switch case 
     - Structure syntaxique adéquate  
     - Gestion adéquate du cas par défaut 
 - Utilisation correcte des tableaux 1D et 2D
     - Déclaration
     - Initialisation
-    - Parcours adéquats
+    - Parcours adéquats (par rangée et par colonne)
 - Utilisation correcte des outils des tableaux 1D
     - Découpage d'une chaîne (Split)
     - Tri (Array.Sort) et affichage (string.Join)
@@ -104,7 +108,7 @@ L’examen comporte quatre (4) questions.
 
 :::tip ÉLÉMENTS DU CONTENU À RÉVISER POUR L'EXAMEN
 
-L'ensemble du contenu du cours jusqu'ici, et plus particulièrement :
+La matière vue depuis le cours 5.1, soit :
 
 - Les tableaux 1D (5.1)
     - Déclaration, initialisation et accès par index
@@ -121,7 +125,8 @@ L'ensemble du contenu du cours jusqu'ici, et plus particulièrement :
     - Sélection switch... case (incluant le cas par défaut)
     - Boucles while et do... while
     - Validation d'une saisie avec TryParse
-- Les éléments vus pour l'examen 1 (variables, conditions, fonctions, boucles for, Random)
+
+Les notions de l'examen 1 (variables, conditions, boucles for) restent nécessaires pour écrire vos programmes, mais elles ne sont pas évaluées pour elles-mêmes.
 
 :::
 
