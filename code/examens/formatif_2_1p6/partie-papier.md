@@ -14,7 +14,7 @@ while (total < 10)
 Console.WriteLine($"{i} articles : {total} $");
 ```
 
-| Instruction exécutée | i | total | total<10 | Affichage |
+| Instruction exécutée | i | total | `total<10` | Affichage |
 | :---: | :---: | :---: | :---: | :---: |
 | 2 | — | 0 | TRUE | — |
 | 3 | 0 | 0 | TRUE | — |

@@ -67,7 +67,7 @@ def en_ligne(texte, **kw):
     runs = []
     for bout in re.split(r"(`[^`]+`|\*\*[^*]+\*\*)", texte):
         if bout.startswith("`"):
-            runs.append(run(bout[1:-1], police="Consolas", taille=20))
+            runs.append(run(bout[1:-1], police="Consolas", taille=20, gras=kw.get("gras", False)))
         elif bout.startswith("**"):
             runs.append(run(bout[2:-2], gras=True))
         elif bout:
@@ -123,7 +123,7 @@ def tableau(lignes):
     if largeurs[-1] < COL_MIN:
         raise ValueError(f"Tableau trop large : {lignes[0]}")
     rangees = [rangee([
-        cellule(para(run(t, gras=True), apres=0, jc=j), l, BLEU) for t, l, j in zip(entete, largeurs, jc)
+        cellule(para(*en_ligne(t, gras=True), apres=0, jc=j), l, BLEU) for t, l, j in zip(entete, largeurs, jc)
     ])]
     for r in corps:
         # Une case déjà remplie est grisée, sauf le code, qui fait partie de la question.
