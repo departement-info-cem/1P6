@@ -11,7 +11,7 @@ description: Pondération 15%
 
 :::danger Avant la séance (2h)
 
-L'examen porte sur la matière vue depuis le cours 5.1 : les tableaux 1D et 2D, le débogage et la trace d'exécution, le switch, les boucles while et do... while, et TryParse. Le [formatif 2](/cours/formatif2) a le même format que l'examen. Afin de vous aider dans vos révisions, il est bon de:
+L'examen porte sur la matière vue depuis le cours 5.1 : les tableaux 1D et 2D, le débogage et la trace d'exécution, le switch et les boucles while et do... while. Le [formatif 2](/cours/formatif2) a le même format que l'examen. Afin de vous aider dans vos révisions, il est bon de:
 
 - Revoir les exercices vus jusqu'ici et identifier ceux que vous ne savez pas faire sans votre solution ou le prof
 - Reprendre les éléments de contenu qui y correspondent (vidéos et présentations)
@@ -31,7 +31,7 @@ Si vous avez droit à du temps supplémentaire, vous devez aviser votre professe
 L'examen dure 2h (plus si vous avez droit à du temps supplémentaire). Il a deux parties :
 
 1. **Partie papier (20 minutes, sans documentation)** : une trace d'exécution et de courtes questions de compréhension. Vous la remettez avant de commencer la partie sur ordinateur.
-2. **Partie sur ordinateur** : trois exercices pratiques. On vous donne des fichiers de départ et une description du résultat attendu. Vous rendrez les fichiers complétés.
+2. **Partie sur ordinateur** : quatre exercices pratiques. On vous donne des fichiers de départ et une description du résultat attendu. Vous rendrez les fichiers complétés.
 
 Pour la partie sur ordinateur, vous avez le droit à :
 
@@ -55,12 +55,13 @@ Pour la partie sur ordinateur, vous avez le droit à :
 
 **Questions et pondérations** 
 
-L’examen comporte une partie papier et trois (3) questions pratiques. 
+L’examen comporte une partie papier et quatre (4) questions pratiques. 
 
 - Partie papier : trace d'exécution et compréhension, sans documentation (10 pts)
-- Q1 : Utilisation du switch case et d'une boucle while ou do... while (10 pts)
-- Q2 : Utilisation des tableaux 1D (10 pts)
-- Q3 : Utilisation des boucles imbriquées avec des tableaux 1D et 2D (10 pts)
+- Q1 : Utilisation d'une boucle while (5 pts)
+- Q2 : Utilisation du switch case (5 pts)
+- Q3 : Utilisation des tableaux 1D (10 pts)
+- Q4 : Utilisation des boucles imbriquées avec des tableaux 1D et 2D (10 pts)
 
 
 **Critères d’évaluation** 
@@ -77,8 +78,6 @@ L’examen comporte une partie papier et trois (3) questions pratiques.
 - Affichage du résultat final
     - Affichage clair et conforme à l’exemple
     - Formatage numérique adéquat
-- Validation d'une saisie
-    - Utilisation correcte de TryParse
 - Utilisation correcte du switch case 
     - Structure syntaxique adéquate  
     - Gestion adéquate du cas par défaut 
@@ -124,7 +123,6 @@ La matière vue depuis le cours 5.1, soit :
 - Les structures de contrôle (8.2)
     - Sélection switch... case (incluant le cas par défaut)
     - Boucles while et do... while
-    - Validation d'une saisie avec TryParse
 
 Les notions de l'examen 1 (variables, conditions, boucles for) restent nécessaires pour écrire vos programmes, mais elles ne sont pas évaluées pour elles-mêmes.
 
