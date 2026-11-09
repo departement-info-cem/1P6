@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "docx": "python3 scripts/docx/generer_docx.py || python scripts/docx/generer_docx.py",
+    "start": "(npm run docx || echo Word non genere : Python est requis) && docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

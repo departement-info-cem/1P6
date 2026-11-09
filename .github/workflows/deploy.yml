@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'web/**'
+      - 'code/examens/**/*.md'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -31,6 +32,9 @@ jobs:
       - name: Installer les dépendances
         working-directory: ./web
         run: npm ci
+      - name: Générer les .docx des parties papier
+        working-directory: ./web
+        run: python3 scripts/docx/generer_docx.py
       - name: Build du site
         working-directory: ./web
         run: npm run build

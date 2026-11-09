@@ -76,6 +76,7 @@ const config = {
         docsDir: "docs/01-cours",
       },
     ],
+    require.resolve("./plugins/markdown-examens"),
     [
       require.resolve("./plugins/quiz"),
       {

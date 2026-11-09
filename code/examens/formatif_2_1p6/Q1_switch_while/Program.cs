@@ -15,7 +15,7 @@
                     - Utilise un switch case pour ajouter le prix de l'article au total.
                     - Affiche "Choix invalide." pour tout autre choix.
                     - Utilise int.TryParse pour lire le choix : le programme ne doit pas planter si on entre du texte.
-                    - Affiche le total à payer avec 2 décimales à la fin.
+                    - Affiche le total à payer à la fin.
 
                 Rappel : si la conversion échoue, TryParse donne la valeur 0 à la variable.
 
@@ -43,12 +43,9 @@
                 2. Switch case .......................................................... /3
                     → Un cas par article, cas par défaut pour les choix invalides
 
-                3. Lecture du choix avec int.TryParse ................................... /1
+                3. Lecture du choix avec int.TryParse ................................... /2
 
                 4. Calcul du total ...................................................... /2
-
-                5. Affichage du résultat final .......................................... /1
-                    → Conforme à l'exemple, 2 décimales
                 =====================================================================================================================
             */
 
