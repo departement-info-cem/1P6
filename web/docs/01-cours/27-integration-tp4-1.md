@@ -2,7 +2,7 @@
 description: Temps en classe pour travailler sur le TP
 ---
 
-# Intégration  - TP4 - Démineur
+# Intégration - TP4 - Évènements et combats
 
 
 <Row>
