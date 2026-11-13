@@ -2,18 +2,16 @@
 description: Pondération 15%
 ---
 
-# Intégration - TP4 - Suite
+# TP4 - Suite et remise
 
 
 <Row>
 
 <Column>
 
-:::tip Intégration
+:::tip TP4
 
-Pendant les séances d'intégration, il n'y a pas de nouveau contenu. Le but est de consolider ce que tu as vu dans les séances précédentes.
-
-Plusieurs séances d'intégration auront des exercices supplémentaires à compléter durant la séance.
+Aujourd'hui, tu poursuis le [TP4 – Évènements et combats](../02-tp/04-tp4.md) et prépares sa remise.
 
 :::
 
@@ -23,13 +21,7 @@ Plusieurs séances d'intégration auront des exercices supplémentaires à compl
 
 :::info Travail à faire
 
-Exercices à compléter. Tu peux compléter les exercices ou essayer de refaire ceux qui t'ont posé problème. C'est une bonne préparation à l'examen où les exercices ont le même format.
-
-Tu dois avancer ton travail en cours et poser des questions si tu es actuellement bloqué.
-
-Ton professeur est disponible pour des questions sur tout le contenu vu jusqu'ici.
-
-Tu peux prendre de l'avance en regardant le contenu des semaines qui arrivent.
+Profite de la séance pour avancer dans ton TP. Ton professeur est disponible pour répondre à tes questions et t'aider si tu es bloqué.
 
 :::
 
