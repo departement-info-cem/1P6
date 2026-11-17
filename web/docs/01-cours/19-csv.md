@@ -275,7 +275,9 @@ class Program
 👉 Notions C# : [Liste générique](https://info.cegepmontpetit.ca/notions-csharp/documentation/liste-generique-list-t)
 
 
-Vous devez réaliser le labo suivant :
- [🧪 Labo 10.1](/laboratoire/laboratoire10.1)
+ ## 💪 Laboratoie à faire
+
+*  [🧪 Labo 12.2](/laboratoire/laboratoire12.2)
+* [🧪 Défi 12.2](/defis/fichiers-csv)
 
 ---

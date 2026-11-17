@@ -197,5 +197,7 @@ Se tirer une bûche
 👉 Notions C# : [Fichiers texte — StreamWriter](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamwriter--%C3%A9criture-dans-un-fichier-texte)
 
 
-Vous devez réaliser le labo suivant :
- [🧪 Labo 9.1](/laboratoire/laboratoire9.1)
+ ## 💪 Laboratoie à faire
+
+*  [🧪 Labo 11.2](/laboratoire/laboratoire11.2)
+* [🧪 Défi 11.2](/defis/ecriture-fichiers-texte)

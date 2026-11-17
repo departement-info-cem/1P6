@@ -276,6 +276,7 @@ class Program
 
 👉 Notions C# : [Fichiers texte — StreamReader](https://info.cegepmontpetit.ca/notions-csharp/documentation/fichier-texte#la-classe-streamreader--lecture-dans-un-fichier-texte)
 
-Vous devez réaliser le labo suivant :
- [🧪 Labo 9.2](/laboratoire/laboratoire9.2)
+ ## 💪 Laboratoie à faire
 
+*  [🧪 Labo 12.1](/laboratoire/laboratoire12.1)
+* [🧪 Défi 12.1](/defis/lecture-fichiers-texte)
